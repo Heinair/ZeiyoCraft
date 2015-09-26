@@ -1,0 +1,16 @@
+[
+{
+  "modid": "zeiyo",
+  "name": "Zeiyo",
+  "description": "Zeiyo mod.",
+  "version": "${version}",
+  "mcversion": "1.8.x",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Heinair","Mawadinger"],
+  "credits": "Forge",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

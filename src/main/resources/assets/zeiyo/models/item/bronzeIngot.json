@@ -1,0 +1,6 @@
+{
+    "parent":"zeiyo:item/standard_item",
+    "textures": {
+        "layer0":"zeiyo:items/bronzeIngot"
+    }
+}
