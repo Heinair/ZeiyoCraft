@@ -1,12 +1,23 @@
-*.class
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+/paulscode/
+/net/
+/ibxm/
+/cpw/
+/Start.java
+/deobfuscation_data-1.6.4.lzma
+/fml_at.cfg
+/fml_marker.cfg
+/fmlversion.properties
+/forge_at.cfg
+/forge_at.cfg~
+/forge_logo.png
+/mcpmod.info
+*~
+*.iml
+*.ipr
+*.iws
+/eclipse
+/out
+/.project
+/.classpath
+/.gradle
+/.settings

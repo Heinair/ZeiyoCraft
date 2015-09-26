@@ -1,13 +1,13 @@
 [
 {
-  "modid": "zeiyo",
-  "name": "Zeiyo",
+  "modid": "zeiyocraft",
+  "name": "ZeiyoCraft",
   "description": "Zeiyo mod.",
   "version": "${version}",
   "mcversion": "1.8.x",
   "url": "",
   "updateUrl": "",
-  "authorList": ["Heinair","Mawadinger"],
+  "authorList": ["Heinair","Mawadinger","Wascar"],
   "credits": "Forge",
   "logoFile": "",
   "screenshots": [],
