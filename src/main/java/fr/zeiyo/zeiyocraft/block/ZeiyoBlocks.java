@@ -9,7 +9,8 @@ public class ZeiyoBlocks
 {
 
 	public static Block blockChocolateCake;
-	public static Block steelBlock;
+    public static Block barley;
+    public static Block steelBlock;
 	public static Block onyxOre;
 	public static Block onyxBlock;
 	public static Block rubyOre;
@@ -28,6 +29,7 @@ public class ZeiyoBlocks
     public static void createBlocks() 
     {
         GameRegistry.registerBlock(blockChocolateCake = new ZBlockCake("blockChocolateCake"), "blockChocolateCake");
+        GameRegistry.registerBlock(barley = new ZBlockCrops("barley"), "barley");
         GameRegistry.registerBlock(steelBlock = new ZBlock("steelBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2), "steelBlock");
         GameRegistry.registerBlock(onyxBlock = new ZBlock("onyxBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2), "onyxBlock");
         GameRegistry.registerBlock(onyxOre = new ZBlockOre("onyxOre", Material.rock, 3, ZeiyoItems.onyx), "onyxOre");

@@ -11,7 +11,15 @@ public class ItemRenderRegister
 	public static void registerItemRenderer()
 	
 	{
-		
+
+		ZeiyoUtils.reg(ZeiyoItems.copperCoin);
+		ZeiyoUtils.reg(ZeiyoItems.silverCoin);
+		ZeiyoUtils.reg(ZeiyoItems.goldCoin);
+		ZeiyoUtils.reg(ZeiyoItems.malt);
+		ZeiyoUtils.reg(ZeiyoItems.iBarley);
+		ZeiyoUtils.reg(ZeiyoItems.barleySeeds);
+		ZeiyoUtils.reg(ZeiyoItems.tankard);
+		ZeiyoUtils.reg(ZeiyoItems.beerTankard);
 		ZeiyoUtils.reg(ZeiyoItems.steelIngot);
 		ZeiyoUtils.reg(ZeiyoItems.bronzeIngot);
 		ZeiyoUtils.reg(ZeiyoItems.silverIngot);

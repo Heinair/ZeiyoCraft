@@ -6,14 +6,19 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.MathHelper;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 public class ZBlockOre extends Block
 {
 	
 	private Item drop;
 	private int meta;
-	private int minDropeed;
+	private int minDroped;
 	private int maxDropped;
 	
 	protected ZBlockOre(String unlocalizedName, Material blockMaterial,int harvestLevel, Item drop, int meta, int[] quantity) 
@@ -25,7 +30,7 @@ public class ZBlockOre extends Block
         this.setHarvestLevel("pickaxe", harvestLevel);
         this.setCreativeTab(CreativeTabs.tabBlock);
         this.drop = drop;
-        this.minDropeed = quantity[0];
+        this.minDroped = quantity[0];
         this.maxDropped = quantity[1];
         this.setHardness(5.0F);
         this.setResistance(3.0F);
@@ -68,9 +73,33 @@ public class ZBlockOre extends Block
 	@Override
 	public int quantityDropped(IBlockState blockstate, int fortune, Random random) 
 	{
-	    if (this.minDropeed >= this.maxDropped)
-	        return this.minDropeed;
-	    return this.minDropeed + random.nextInt(this.maxDropped - this.minDropeed + fortune + 1);
+	    if (this.minDroped >= this.maxDropped)
+	        return this.minDroped;
+	    return this.minDroped + random.nextInt(this.maxDropped - this.minDroped + fortune + 1);
+	}
+
+	@Override
+	public int getExpDrop(IBlockAccess world, BlockPos pos, int fortune)
+	{
+		IBlockState state = world.getBlockState(pos);
+		Random rand = world instanceof World ? ((World)world).rand : new Random();
+		if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this))
+		{
+			int j = 0;
+
+            if (this == ZeiyoBlocks.rubyOre)
+			{
+				j = MathHelper.getRandomIntegerInRange(rand, 3, 7);
+			}
+			else if (this == ZeiyoBlocks.sapphireOre)
+			{
+				j = MathHelper.getRandomIntegerInRange(rand, 3, 7);
+			}
+
+
+			return j;
+		}
+		return 0;
 	}
 
 }

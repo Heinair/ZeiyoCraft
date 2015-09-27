@@ -2,6 +2,7 @@ package fr.zeiyo.zeiyocraft.item;
 
 import fr.zeiyo.zeiyocraft.block.ZeiyoBlocks;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
@@ -34,9 +35,19 @@ public final class ZeiyoItems
 	public static Item hardboiledEgg;
 	public static Item applePie;
 	public static Item puriFlesh;
+	public static Item barleySeeds;
+    public static Item iBarley;
+    public static Item malt;
+    public static Item tankard;
+    public static Item beerTankard;
 
-	
-	// Steel
+    // Coins
+
+    public static Item copperCoin;
+    public static Item silverCoin;
+    public static Item goldCoin;
+
+    // Steel
 	
 	public static Item steelIngot;
 	public static Item steelPickaxe;
@@ -139,9 +150,21 @@ public final class ZeiyoItems
 		GameRegistry.registerItem(hardboiledEgg = new ZItemFood("hardboiledEgg", 4, 0.4F, false), "hardboiledEgg");
 		GameRegistry.registerItem(chocolateCake = new ZItemBlock("chocolateCake", ZeiyoBlocks.blockChocolateCake, CreativeTabs.tabFood), "chocolateCake");
 		GameRegistry.registerItem(applePie = new ZItemFood("applePie", 8, 0.5F, false),"applePie");
-		GameRegistry.registerItem(puriFlesh = new ZItemFood("puriFlesh", 4, 0.3F, false),"puriFlesh");
-		
-		// Steel
+		GameRegistry.registerItem(puriFlesh = new ZItemFood("puriFlesh", 4, 0.3F, true),"puriFlesh");
+		GameRegistry.registerItem(barleySeeds = new ZItemSeeds("barleySeeds", ZeiyoBlocks.barley, Blocks.farmland), "barleySeeds");
+        GameRegistry.registerItem(iBarley = new ZItem("iBarley"), "iBarley");
+        GameRegistry.registerItem(malt = new ZItem("malt"), "malt");
+        GameRegistry.registerItem(tankard = new ZItem("tankard"), "tankard");
+        GameRegistry.registerItem(beerTankard = new ZItemDrink("beerTankard", 4).setAlwaysEdible().setPotionEffect(9, 30, 2 , 1.0F), "beerTankard");
+
+        // Coins
+
+        GameRegistry.registerItem(copperCoin = new ZItem("copperCoin").setMaxStackSize(100), "copperCoin");
+        GameRegistry.registerItem(silverCoin = new ZItem("silverCoin").setMaxStackSize(100), "silverCoin");
+        GameRegistry.registerItem(goldCoin = new ZItem("goldCoin").setMaxStackSize(100), "goldCoin");
+
+
+        // Steel
 		
 		GameRegistry.registerItem(steelIngot = new ZItem("steelIngot"), "steelIngot");
 		GameRegistry.registerItem(steelPickaxe = new ZItemPickaxe("steelPickaxe", STEEL), "steelPickaxe");

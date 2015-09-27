@@ -10,15 +10,13 @@ import net.minecraft.world.World;
 
 public class ZItemArmor extends ItemArmor
 
-
 {
 
-	public ZItemArmor(String unlocalizedName, ArmorMaterial material, int renderIndex, int armorType) 
+	public ZItemArmor(String unlocalizedName, ArmorMaterial material, int renderIndex, int armorType)
 	{
         super(material, renderIndex, armorType);
         this.setUnlocalizedName(unlocalizedName);
 	}
-	
 	
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
@@ -26,19 +24,19 @@ public class ZItemArmor extends ItemArmor
 		
 		if (this.isWearingFullSet(player, ZeiyoItems.onyxHelmet, ZeiyoItems.onyxChestplate, ZeiyoItems.onyxLeggings, ZeiyoItems.onyxBoots)) 
 		{
-			this.effectPlayer(player, Potion.absorption, 1);
+			this.effectPlayer(player, Potion.absorption, 0);
 		}
 		if (this.isWearingFullSet(player, ZeiyoItems.rubyHelmet, ZeiyoItems.rubyChestplate, ZeiyoItems.rubyLeggings, ZeiyoItems.rubyBoots)) 
 		{
-			this.effectPlayer(player, Potion.damageBoost, 1);
+			this.effectPlayer(player, Potion.damageBoost, 0);
 		}
 		if (this.isWearingFullSet(player, ZeiyoItems.sapphireHelmet, ZeiyoItems.sapphireChestplate, ZeiyoItems.sapphireLeggings, ZeiyoItems.sapphireBoots)) 
 		{
-			this.effectPlayer(player, Potion.waterBreathing, 1);
+			this.effectPlayer(player, Potion.waterBreathing, 0);
 		}
 		if (this.isWearingFullSet(player, ZeiyoItems.emeraldHelmet, ZeiyoItems.emeraldChestplate, ZeiyoItems.emeraldLeggings, ZeiyoItems.emeraldBoots)) 
 		{
-			this.effectPlayer(player, Potion.resistance, 1);
+			this.effectPlayer(player, Potion.resistance, 0);
 		}
 		
 	}
@@ -57,6 +55,7 @@ public class ZItemArmor extends ItemArmor
 				&& player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == leggings
 				&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == boots;
 	}
+
 }
 	
 

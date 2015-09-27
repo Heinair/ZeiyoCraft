@@ -9,7 +9,8 @@ public class BlockRenderRegister
 	
 	 public static void registerBlockRenderer() 
 	 {
-		 
+
+		 ZeiyoUtils.reg(ZeiyoBlocks.barley);
 		 ZeiyoUtils.reg(ZeiyoBlocks.blockChocolateCake);
 		 ZeiyoUtils.reg(ZeiyoBlocks.steelBlock);
 		 ZeiyoUtils.reg(ZeiyoBlocks.onyxOre);
