@@ -36,7 +36,7 @@ public class ZeiyoCrafting
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.tankard), new Object[] {"# #", "# #", "###", '#', Items.stick});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.beerTankard), new Object[] {"###", "#P#", " O ",'P', Items.water_bucket, '#', ZeiyoItems.malt, 'O', ZeiyoItems.tankard});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.applePie), new Object[] {"PE ", "#  ",'P', Items.apple, '#', Items.sugar,'E', Items.egg});
-        GameRegistry.addRecipe(new ItemStack(Items.saddle), new Object[] {"PPP ", "# #",'P', Items.leather, '#', Items.string});
+        GameRegistry.addRecipe(new ItemStack(Items.saddle), new Object[] {"PPP", "# #" ,'P', Items.leather, '#', Items.string});
 
 
 

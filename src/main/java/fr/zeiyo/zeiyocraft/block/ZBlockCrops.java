@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.block;
 
+import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
@@ -21,9 +22,14 @@ public class ZBlockCrops extends BlockCrops
         this.disableStats();
     }
 
+    protected Item getCrop()
+    {
+        return ZeiyoItems.iBarley;
+    }
+
     protected Item getSeed()
     {
-        return Items.wheat_seeds;
+        return ZeiyoItems.barleySeeds;
     }
 
 }

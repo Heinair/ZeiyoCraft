@@ -15,11 +15,12 @@ public class ZItemDrink extends ItemFood
         this.setMaxStackSize(1);
     }
 
-
+    @Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityPlayer playerIn)
     {
-        super.onItemUseFinish(stack, worldIn, playerIn);
+
         worldIn.playSoundAtEntity(playerIn, "random.drink", 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
+        super.onItemUseFinish(stack, worldIn, playerIn);
         return new ItemStack(ZeiyoItems.tankard);
     }
 
