@@ -3,6 +3,8 @@ package fr.zeiyo.zeiyocraft.world;
 import java.util.Random;
 
 import fr.zeiyo.zeiyocraft.block.ZeiyoBlocks;
+import net.minecraft.block.state.pattern.BlockHelper;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -18,44 +20,43 @@ public class ZeiyoWorldGen implements IWorldGenerator
 	private WorldGenerator gen_copper;
 	private WorldGenerator gen_tin;
 	private WorldGenerator gen_silver;
+    private WorldGenerator gen_onyx;
 
-
-
-	
-	
-	public ZeiyoWorldGen() 
+    public ZeiyoWorldGen()
 	{
 	    this.gen_ruby = new WorldGenMinable(ZeiyoBlocks.rubyOre.getDefaultState(), 5);
 	    this.gen_sapphire = new WorldGenMinable(ZeiyoBlocks.sapphireOre.getDefaultState(), 5);
 	    this.gen_copper = new WorldGenMinable(ZeiyoBlocks.copperOre.getDefaultState(), 9);
 	    this.gen_tin = new WorldGenMinable(ZeiyoBlocks.tinOre.getDefaultState(), 9);
 	    this.gen_silver = new WorldGenMinable(ZeiyoBlocks.silverOre.getDefaultState(), 8);
+        this.gen_onyx = new WorldGenMinable(ZeiyoBlocks.onyxOre.getDefaultState(), 6, BlockHelper.forBlock(Blocks.netherrack));
+    }
 
-
-
-	}
-    
-	
-	
-
-	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 		switch (world.provider.getDimensionId()) {
-		
-		case 0: // Overworld
-			this.runGenerator(this.gen_ruby, world, random, chunkX, chunkZ, 1, 2, 9);
-	    	this.runGenerator(this.gen_sapphire, world, random, chunkX, chunkZ, 1, 4, 14);
-	    	this.runGenerator(this.gen_copper, world, random, chunkX, chunkZ, 25, 0, 72);
-	    	this.runGenerator(this.gen_tin, world, random, chunkX, chunkZ, 20, 0, 72);
-	    	this.runGenerator(this.gen_silver, world, random, chunkX, chunkZ, 18, 0, 42);
 
-			break;
-		case -1: // Nether
 
-			break;
-		case 1: // End
-			break;
+
+            case -1: // Nether
+
+                this.runGenerator(this.gen_onyx, world, random, chunkX, chunkZ, 4, 0, 80);
+
+                break;
+
+            case 0: // Overworld
+
+                this.runGenerator(this.gen_ruby, world, random, chunkX, chunkZ, 1, 2, 9);
+				this.runGenerator(this.gen_sapphire, world, random, chunkX, chunkZ, 1, 4, 14);
+                this.runGenerator(this.gen_copper, world, random, chunkX, chunkZ, 30, 0, 72);
+	    	    this.runGenerator(this.gen_tin, world, random, chunkX, chunkZ, 10, 0, 72);
+	    	    this.runGenerator(this.gen_silver, world, random, chunkX, chunkZ, 18, 0, 42);
+
+			    break;
+
+			case 1: // End
+
+                break;
 			
 		}
 	}
@@ -74,8 +75,5 @@ public class ZeiyoWorldGen implements IWorldGenerator
 	        generator.generate(world, rand, new BlockPos(x, y, z));
 	    }
 	}
-	
-
-    
 
 }

@@ -13,7 +13,5 @@ public class ZItemBlock extends ItemReed
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(tab);
 	}
-	
-	
 
 }

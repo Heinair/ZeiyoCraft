@@ -1,6 +1,6 @@
 {
     "parent": "block/crop",
     "textures": {
-        "crop": "zeiyocraft:blocks/barley_stage_0"
+        "crop": "zeiyocraft:blocks/barleyCrops_stage_6"
     }
 }

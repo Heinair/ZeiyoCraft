@@ -1,6 +1,6 @@
 {
     "parent":"zeiyocraft:item/standard_item",
     "textures": {
-        "layer0":"zeiyocraft:items/iBarley"
+        "layer0":"zeiyocraft:items/barley"
     }
 }

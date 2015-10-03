@@ -2,34 +2,58 @@ package fr.zeiyo.zeiyocraft.block;
 
 import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.BlockCrops;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.util.BlockPos;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ZBlockCrops extends BlockCrops
 {
+    protected int id;
 
-    protected ZBlockCrops(String unlocalizedName)
+    public ZBlockCrops(String unlocalizedName, int nmb)
     {
         this.setUnlocalizedName(unlocalizedName);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(AGE, Integer.valueOf(0)));
-        this.setTickRandomly(true);
-        float f = 0.5F;
-        this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.25F, 0.5F + f);
-        this.setCreativeTab((CreativeTabs)null);
-        this.setHardness(0.0F);
-        this.setStepSound(soundTypeGrass);
-        this.disableStats();
+        id = nmb;
     }
 
-    protected Item getCrop()
+    @Override
+    public Item getCrop()
     {
-        return ZeiyoItems.iBarley;
+
+        if (this.id == 0)
+        {
+
+            return ZeiyoItems.barley;
+
+        }
+
+        else
+        {
+            return ZeiyoItems.grape;
+        }
+
     }
 
-    protected Item getSeed()
+    @Override
+    public Item getSeed()
     {
-        return ZeiyoItems.barleySeeds;
+        if (this.id == 0)
+        {
+            return ZeiyoItems.barleySeeds;
+        }
+
+        else
+        {
+            return ZeiyoItems.grapeSeeds;
+        }
+    }
+
+    @SideOnly(Side.CLIENT)
+    public Item getItem(World worldIn, BlockPos pos)
+    {
+        return this.getSeed();
     }
 
 }

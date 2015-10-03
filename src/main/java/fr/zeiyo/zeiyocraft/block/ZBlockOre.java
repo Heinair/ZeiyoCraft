@@ -6,7 +6,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
@@ -20,8 +19,8 @@ public class ZBlockOre extends Block
 	private int meta;
 	private int minDroped;
 	private int maxDropped;
-	
-	protected ZBlockOre(String unlocalizedName, Material blockMaterial,int harvestLevel, Item drop, int meta, int[] quantity) 
+
+	public ZBlockOre(String unlocalizedName, Material blockMaterial,int harvestLevel, Item drop, int meta, int[] quantity)
 	{
         super(blockMaterial);
         this.setUnlocalizedName(unlocalizedName);
@@ -36,23 +35,23 @@ public class ZBlockOre extends Block
         this.setResistance(3.0F);
         this.setStepSound(soundTypePiston);
     }
-	
-	
-	protected ZBlockOre(String unlocalizedName, Material blockMaterial, int harvestLevel, Item drop, int[] quantity) 
+
+
+	public ZBlockOre(String unlocalizedName, Material blockMaterial, int harvestLevel, Item drop, int[] quantity)
 	{
         
 		this(unlocalizedName, blockMaterial, harvestLevel, drop, 0, quantity);
         
   
     }
-	
-	protected ZBlockOre(String unlocalizedName, Material blockMaterial, int harvestLevel, Item dropped) 
+
+	public ZBlockOre(String unlocalizedName, Material blockMaterial, int harvestLevel, Item dropped)
 	{
         this(unlocalizedName, blockMaterial, harvestLevel, dropped, new int[]{1,1});
 
     }
-	
-	protected ZBlockOre(String unlocalizedName, Material blockMaterial) 
+
+	public ZBlockOre(String unlocalizedName, Material blockMaterial)
 	{
         this(unlocalizedName, blockMaterial, 1 , null);
 
