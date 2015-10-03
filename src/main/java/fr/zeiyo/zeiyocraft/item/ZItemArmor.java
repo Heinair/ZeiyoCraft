@@ -1,6 +1,7 @@
 package fr.zeiyo.zeiyocraft.item;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -12,11 +13,14 @@ public class ZItemArmor extends ItemArmor
 
 {
 
-    public ZItemArmor(String unlocalizedName, ArmorMaterial material, int renderIndex, int armorType)
+	protected int id;
+
+    public ZItemArmor(String unlocalizedName, ArmorMaterial material, int renderIndex, int armorType, int nmb)
 	{
         super(material, renderIndex, armorType);
         this.setUnlocalizedName(unlocalizedName);
         this.isRepairable();
+		id = nmb;
     }
 	
 	@Override
@@ -64,7 +68,21 @@ public class ZItemArmor extends ItemArmor
 
     public Item getRepairItem()
     {
-        return ZeiyoItems.steelIngot;
+
+		switch(id)
+		{
+			case 0 : return ZeiyoItems.steelIngot;
+            case 1 : return ZeiyoItems.bronzeIngot;
+            case 2 : return ZeiyoItems.electrumIngot;
+            case 3 : return ZeiyoItems.onyx;
+            case 4 : return ZeiyoItems.ruby;
+            case 5 : return  ZeiyoItems.sapphire;
+            case 6 : return Items.emerald;
+
+            default : return null;
+
+		}
+
 	}
 
 
