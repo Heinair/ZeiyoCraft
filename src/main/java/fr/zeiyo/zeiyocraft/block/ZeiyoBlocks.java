@@ -17,8 +17,8 @@ public class ZeiyoBlocks
     {
 
         GameRegistry.registerBlock(blockChocolateCake = new ZBlockCake("blockChocolateCake", 4, 0.5F), "blockChocolateCake");
-        GameRegistry.registerBlock(barleyCrops = new ZBlockCrops("barleyCrops", 0), "barleyCrops");
-        GameRegistry.registerBlock(grapeCrops = new ZBlockCrops("grapeCrops", 1), "grapeCrops");
+        GameRegistry.registerBlock(barleyCrops = new ZBlockCrops("barleyCrops", ZeiyoItems.barleySeeds, ZeiyoItems.barley), "barleyCrops");
+        GameRegistry.registerBlock(grapeCrops = new ZBlockCrops("grapeCrops", ZeiyoItems.grapeSeeds, ZeiyoItems.grape), "grapeCrops");
 
         // Compressed Blocks
 

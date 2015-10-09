@@ -1,59 +1,49 @@
 package fr.zeiyo.zeiyocraft.block;
 
-import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.BlockCrops;
+import net.minecraft.block.IGrowable;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ZBlockCrops extends BlockCrops
+public class ZBlockCrops extends BlockCrops implements IGrowable
 {
-    protected int id;
 
-    public ZBlockCrops(String unlocalizedName, int nmb)
+    public static Item cropItem;
+    public static Item seedItem;
+
+    protected ZBlockCrops(String unlocalizedName, Item crop, Item seed)
     {
         this.setUnlocalizedName(unlocalizedName);
-        id = nmb;
-    }
-
-    @Override
-    public Item getCrop()
-    {
-
-        if (this.id == 0)
-        {
-
-            return ZeiyoItems.barley;
-
-        }
-
-        else
-        {
-            return ZeiyoItems.grape;
-        }
+        cropItem = crop;
+        seedItem = seed;
 
     }
 
-    @Override
-    public Item getSeed()
+    protected Item getCrop()
     {
-        if (this.id == 0)
-        {
-            return ZeiyoItems.barleySeeds;
-        }
+        return this.cropItem;
+    }
 
-        else
-        {
-            return ZeiyoItems.grapeSeeds;
-        }
+    protected Item getSeed()
+    {
+        return this.seedItem;
     }
 
     @SideOnly(Side.CLIENT)
     public Item getItem(World worldIn, BlockPos pos)
     {
         return this.getSeed();
+    }
+
+    @Override
+    public EnumPlantType getPlantType (IBlockAccess world, BlockPos pos)
+    {
+        return EnumPlantType.Crop;
     }
 
 }
