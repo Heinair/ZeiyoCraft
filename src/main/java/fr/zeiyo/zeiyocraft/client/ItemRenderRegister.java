@@ -20,17 +20,18 @@ public class ItemRenderRegister
 
 		// Food-related Items
 
-		reg(ZeiyoItems.malt);
-		reg(ZeiyoItems.barley);
-		reg(ZeiyoItems.barleySeeds);
-		reg(ZeiyoItems.tankard);
-		reg(ZeiyoItems.beerTankard);
 		reg(ZeiyoItems.chocolateCake);
 		reg(ZeiyoItems.hardboiledEgg);
 		reg(ZeiyoItems.applePie);
+        reg(ZeiyoItems.vegetableStew);
 		reg(ZeiyoItems.puriFlesh);
-    	reg(ZeiyoItems.grape);
+        reg(ZeiyoItems.malt);
+        reg(ZeiyoItems.grape);
 		reg(ZeiyoItems.grapeSeeds);
+        reg(ZeiyoItems.barley);
+        reg(ZeiyoItems.barleySeeds);
+        reg(ZeiyoItems.tankard);
+        reg(ZeiyoItems.beerTankard);
         reg(ZeiyoItems.wineTankard);
         reg(ZeiyoItems.ciderTankard);
 

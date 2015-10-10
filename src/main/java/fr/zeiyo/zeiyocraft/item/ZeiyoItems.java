@@ -15,9 +15,7 @@ public final class ZeiyoItems
 	// Food-related Items
 	
 	public static Item chocolateCake;
-	public static Item hardboiledEgg;
-	public static Item applePie;
-	public static Item puriFlesh;
+	public static Item hardboiledEgg, applePie, puriFlesh, vegetableStew, pumpkinStew;
 	public static Item barleySeeds, barley, malt, grapeSeeds, grape;
     public static Item tankard, beerTankard, wineTankard, ciderTankard;
 
@@ -82,9 +80,10 @@ public final class ZeiyoItems
 		GameRegistry.registerItem(grape = new ZItemFood("grape", 4, 0.3F, false), "grape");
         GameRegistry.registerItem(malt = new ZItem("malt"), "malt");
         GameRegistry.registerItem(tankard = new ZItem("tankard"), "tankard");
-        GameRegistry.registerItem(beerTankard = new ZItemDrink("beerTankard", 2).setAlwaysEdible().setPotionEffect(9, 30, 2 , 1.0F), "beerTankard");
-        GameRegistry.registerItem(ciderTankard = new ZItemDrink("ciderTankard", 2).setAlwaysEdible().setPotionEffect(9, 30, 2 , 1.0F), "ciderTankard");
-        GameRegistry.registerItem(wineTankard = new ZItemDrink("wineTankard", 2).setAlwaysEdible().setPotionEffect(9, 40, 2 , 1.0F), "wineTankard");
+        GameRegistry.registerItem(vegetableStew = new ZItemSoup("vegetableStew", 8), "vegetableStew");
+        GameRegistry.registerItem(beerTankard = new ZItemAlcohol("beerTankard", 2, 30, 2), "beerTankard");
+        GameRegistry.registerItem(ciderTankard = new ZItemAlcohol("ciderTankard", 2, 30, 2), "ciderTankard");
+        GameRegistry.registerItem(wineTankard = new ZItemAlcohol("wineTankard", 2, 45, 2), "wineTankard");
 
         // Coins
 

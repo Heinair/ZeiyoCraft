@@ -24,7 +24,8 @@ public class ZeiyoCrafting
 
 		GameRegistry.addRecipe(new ItemStack(ZeiyoItems.chocolateCake), new Object[] {"XCX", "SOS", "CBC",'X', Items.milk_bucket, 'C', new ItemStack(Items.dye, 1, 12), 'S', Items.sugar, 'O', Items.egg, 'B', Items.wheat});
 		GameRegistry.addRecipe(new ItemStack(ZeiyoItems.steelIngot), new Object[] {"###", "#P#", "###",'P', Items.iron_ingot, '#', Items.coal});
-		GameRegistry.addRecipe(new ItemStack(ZeiyoItems.bronzeIngot), new Object[] {"## ", "P# ",'P', ZeiyoItems.tinIngot, '#', ZeiyoItems.copperIngot});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.vegetableStew), new Object[] {"CPR", " B ", 'R', new ItemStack(Blocks.pumpkin), 'C', Items.carrot, 'P', Items.baked_potato, 'B', Items.bowl});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.bronzeIngot), new Object[] {"## ", "P# ",'P', ZeiyoItems.tinIngot, '#', ZeiyoItems.copperIngot});
 		GameRegistry.addRecipe(new ItemStack(ZeiyoItems.electrumIngot), new Object[] {"#P#",'P', Items.gold_ingot, '#', ZeiyoItems.silverIngot});
 		GameRegistry.addRecipe(new ItemStack(ZeiyoBlocks.steelBlock), new Object[] {"###", "#P#", "###",'P', Blocks.iron_block, '#', Blocks.coal_block});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.tankard), new Object[] {"# #", "# #", "###", '#', Items.stick});
@@ -32,9 +33,7 @@ public class ZeiyoCrafting
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.wineTankard), new Object[] {"###", "#P#", " O ",'P', Items.water_bucket, '#', ZeiyoItems.grape, 'O', ZeiyoItems.tankard});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.ciderTankard), new Object[] {"#P#", " O ",'P', Items.water_bucket, '#', Items.apple, 'O', ZeiyoItems.tankard});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.applePie), new Object[] {"PE ", "#  ",'P', Items.apple, '#', Items.sugar,'E', Items.egg});
-        GameRegistry.addRecipe(new ItemStack(Items.saddle), new Object[] {"PPP", "# #" ,'P', Items.leather, '#', Items.string});
-
-
+        GameRegistry.addRecipe(new ItemStack(Items.saddle), new Object[] {"PPP", "# #", "F F", 'F', Items.iron_ingot ,'P', Items.leather, '#', Items.string});
 
 		// Ore, armors, tools, and compressed blocks-related Crafts
 
