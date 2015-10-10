@@ -17,7 +17,7 @@ public class ZBlockOre extends Block
 	
 	private Item drop;
 	private int meta;
-	private int minDroped;
+	private int minDropped;
 	private int maxDropped;
 
 	public ZBlockOre(String unlocalizedName, Material blockMaterial,int harvestLevel, Item drop, int meta, int[] quantity)
@@ -29,7 +29,7 @@ public class ZBlockOre extends Block
         this.setHarvestLevel("pickaxe", harvestLevel);
         this.setCreativeTab(CreativeTabs.tabBlock);
         this.drop = drop;
-        this.minDroped = quantity[0];
+        this.minDropped = quantity[0];
         this.maxDropped = quantity[1];
         this.setHardness(5.0F);
         this.setResistance(3.0F);
@@ -41,8 +41,7 @@ public class ZBlockOre extends Block
 	{
         
 		this(unlocalizedName, blockMaterial, harvestLevel, drop, 0, quantity);
-        
-  
+
     }
 
 	public ZBlockOre(String unlocalizedName, Material blockMaterial, int harvestLevel, Item dropped)
@@ -72,9 +71,9 @@ public class ZBlockOre extends Block
 	@Override
 	public int quantityDropped(IBlockState blockstate, int fortune, Random random) 
 	{
-	    if (this.minDroped >= this.maxDropped)
-	        return this.minDroped;
-	    return this.minDroped + random.nextInt(this.maxDropped - this.minDroped + fortune + 1);
+	    if (this.minDropped >= this.maxDropped)
+	        return this.minDropped;
+	    return this.minDropped + random.nextInt(this.maxDropped - this.minDropped + fortune + 1);
 	}
 
 	@Override

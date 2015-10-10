@@ -19,7 +19,7 @@ public class ZBlockCake extends BlockCake
 
 	public ZBlockCake(String unlocalizedName, int food, float saturation)
     {
-        
+        super();
 		this.setUnlocalizedName(unlocalizedName);
 		this.setHardness(0.5F);
 		this.setStepSound(soundTypeCloth);

@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.block;
 
+import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.IGrowable;
 import net.minecraft.item.Item;
@@ -12,38 +13,55 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ZBlockCrops extends BlockCrops implements IGrowable
 {
+    public int id;
 
-    public static Item cropItem;
-    public static Item seedItem;
-
-    protected ZBlockCrops(String unlocalizedName, Item crop, Item seed)
+    protected ZBlockCrops(String unlocalizedName, int nmb)
     {
+        super();
         this.setUnlocalizedName(unlocalizedName);
-        cropItem = crop;
-        seedItem = seed;
-
+        id = nmb;
     }
 
+    @Override
     protected Item getCrop()
     {
-        return this.cropItem;
+
+        switch(id)
+        {
+
+            case 0 : return ZeiyoItems.barley;
+            case 1 : return ZeiyoItems.grape;
+
+            default : return null;
+
+        }
+
     }
 
+    @Override
     protected Item getSeed()
     {
-        return this.seedItem;
-    }
+        switch(id)
+        {
 
-    @SideOnly(Side.CLIENT)
-    public Item getItem(World worldIn, BlockPos pos)
-    {
-        return this.getSeed();
+            case 0 : return ZeiyoItems.barleySeeds;
+            case 1 : return ZeiyoItems.grapeSeeds;
+
+            default : return null;
+
+        }
     }
 
     @Override
     public EnumPlantType getPlantType (IBlockAccess world, BlockPos pos)
     {
         return EnumPlantType.Crop;
+    }
+
+    @SideOnly(Side.CLIENT)
+    public Item getItem(World worldIn, BlockPos pos)
+    {
+        return this.getSeed();
     }
 
 }

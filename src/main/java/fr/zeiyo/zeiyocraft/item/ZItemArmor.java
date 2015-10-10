@@ -1,7 +1,7 @@
 package fr.zeiyo.zeiyocraft.item;
 
+import fr.zeiyo.zeiyocraft.crafting.ZCraftingUtils;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -63,28 +63,8 @@ public class ZItemArmor extends ItemArmor
     @Override
     public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
     {
-        return this.getRepairItem() == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
+        return ZCraftingUtils.getRepairItem(id) == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
     }
-
-    public Item getRepairItem()
-    {
-
-		switch(id)
-		{
-			case 0 : return ZeiyoItems.steelIngot;
-            case 1 : return ZeiyoItems.bronzeIngot;
-            case 2 : return ZeiyoItems.electrumIngot;
-            case 3 : return ZeiyoItems.onyx;
-            case 4 : return ZeiyoItems.ruby;
-            case 5 : return  ZeiyoItems.sapphire;
-            case 6 : return Items.emerald;
-
-            default : return null;
-
-		}
-
-	}
-
 
 }
 	

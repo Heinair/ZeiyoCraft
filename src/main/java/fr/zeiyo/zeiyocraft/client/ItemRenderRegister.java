@@ -1,131 +1,138 @@
 package fr.zeiyo.zeiyocraft.client;
 
-import fr.zeiyo.zeiyocraft.ZeiyoUtils;
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.item.Item;
 
 public class ItemRenderRegister
 
 {
-	
+
+	public static void reg(Item item)
+	{
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(ZeiyoMain.MODID+ ":" + item.getUnlocalizedName().substring(5), "inventory"));
+	}
+
 	public static void registerItemRenderer()
 	{
 
 		// Food-related Items
 
-		ZeiyoUtils.reg(ZeiyoItems.malt);
-		ZeiyoUtils.reg(ZeiyoItems.barley);
-		ZeiyoUtils.reg(ZeiyoItems.barleySeeds);
-		ZeiyoUtils.reg(ZeiyoItems.tankard);
-		ZeiyoUtils.reg(ZeiyoItems.beerTankard);
-		ZeiyoUtils.reg(ZeiyoItems.chocolateCake);
-		ZeiyoUtils.reg(ZeiyoItems.hardboiledEgg);
-		ZeiyoUtils.reg(ZeiyoItems.applePie);
-		ZeiyoUtils.reg(ZeiyoItems.puriFlesh);
-		ZeiyoUtils.reg(ZeiyoItems.grape);
-		ZeiyoUtils.reg(ZeiyoItems.grapeSeeds);
-        ZeiyoUtils.reg(ZeiyoItems.wineTankard);
-        ZeiyoUtils.reg(ZeiyoItems.ciderTankard);
-
+		reg(ZeiyoItems.malt);
+		reg(ZeiyoItems.barley);
+		reg(ZeiyoItems.barleySeeds);
+		reg(ZeiyoItems.tankard);
+		reg(ZeiyoItems.beerTankard);
+		reg(ZeiyoItems.chocolateCake);
+		reg(ZeiyoItems.hardboiledEgg);
+		reg(ZeiyoItems.applePie);
+		reg(ZeiyoItems.puriFlesh);
+    	reg(ZeiyoItems.grape);
+		reg(ZeiyoItems.grapeSeeds);
+        reg(ZeiyoItems.wineTankard);
+        reg(ZeiyoItems.ciderTankard);
 
         // Coin
 
-        ZeiyoUtils.reg(ZeiyoItems.copperCoin);
-        ZeiyoUtils.reg(ZeiyoItems.silverCoin);
-        ZeiyoUtils.reg(ZeiyoItems.goldCoin);
+        reg(ZeiyoItems.copperCoin);
+        reg(ZeiyoItems.silverCoin);
+        reg(ZeiyoItems.goldCoin);
 
 		// Steel
 
-		ZeiyoUtils.reg(ZeiyoItems.steelIngot);
-		ZeiyoUtils.reg(ZeiyoItems.steelPickaxe);
-		ZeiyoUtils.reg(ZeiyoItems.steelAxe);
-		ZeiyoUtils.reg(ZeiyoItems.steelSpade);
-		ZeiyoUtils.reg(ZeiyoItems.steelHoe);
-		ZeiyoUtils.reg(ZeiyoItems.steelSword);
-		ZeiyoUtils.reg(ZeiyoItems.steelHelmet);
-		ZeiyoUtils.reg(ZeiyoItems.steelChestplate);
-		ZeiyoUtils.reg(ZeiyoItems.steelLeggings);
-		ZeiyoUtils.reg(ZeiyoItems.steelBoots);
+		reg(ZeiyoItems.steelIngot);
+		reg(ZeiyoItems.steelPickaxe);
+		reg(ZeiyoItems.steelAxe);
+		reg(ZeiyoItems.steelSpade);
+		reg(ZeiyoItems.steelHoe);
+		reg(ZeiyoItems.steelSword);
+		reg(ZeiyoItems.steelHelmet);
+		reg(ZeiyoItems.steelChestplate);
+		reg(ZeiyoItems.steelLeggings);
+		reg(ZeiyoItems.steelBoots);
 
 		// Bronze-related Items
 
-		ZeiyoUtils.reg(ZeiyoItems.tinIngot);
-		ZeiyoUtils.reg(ZeiyoItems.copperIngot);
-		ZeiyoUtils.reg(ZeiyoItems.bronzeIngot);
-		ZeiyoUtils.reg(ZeiyoItems.bronzePickaxe);
-		ZeiyoUtils.reg(ZeiyoItems.bronzeAxe);
-		ZeiyoUtils.reg(ZeiyoItems.bronzeSpade);
-		ZeiyoUtils.reg(ZeiyoItems.bronzeHoe);
-		ZeiyoUtils.reg(ZeiyoItems.bronzeSword);
-		ZeiyoUtils.reg(ZeiyoItems.bronzeHelmet);
-		ZeiyoUtils.reg(ZeiyoItems.bronzeChestplate);
-		ZeiyoUtils.reg(ZeiyoItems.bronzeLeggings);
-		ZeiyoUtils.reg(ZeiyoItems.bronzeBoots);
+		reg(ZeiyoItems.tinIngot);
+		reg(ZeiyoItems.copperIngot);
+		reg(ZeiyoItems.bronzeIngot);
+		reg(ZeiyoItems.bronzePickaxe);
+		reg(ZeiyoItems.bronzeAxe);
+		reg(ZeiyoItems.bronzeSpade);
+		reg(ZeiyoItems.bronzeHoe);
+		reg(ZeiyoItems.bronzeSword);
+		reg(ZeiyoItems.bronzeHelmet);
+		reg(ZeiyoItems.bronzeChestplate);
+		reg(ZeiyoItems.bronzeLeggings);
+		reg(ZeiyoItems.bronzeBoots);
 
 		// Electrum-related Items
 
-		ZeiyoUtils.reg(ZeiyoItems.silverIngot);
-		ZeiyoUtils.reg(ZeiyoItems.electrumIngot);
-        ZeiyoUtils.reg(ZeiyoItems.electrumPickaxe);
-        ZeiyoUtils.reg(ZeiyoItems.electrumAxe);
-        ZeiyoUtils.reg(ZeiyoItems.electrumSpade);
-        ZeiyoUtils.reg(ZeiyoItems.electrumHoe);
-        ZeiyoUtils.reg(ZeiyoItems.electrumSword);
-        ZeiyoUtils.reg(ZeiyoItems.electrumHelmet);
-        ZeiyoUtils.reg(ZeiyoItems.electrumChestplate);
-        ZeiyoUtils.reg(ZeiyoItems.electrumLeggings);
-        ZeiyoUtils.reg(ZeiyoItems.electrumBoots);
+		reg(ZeiyoItems.silverIngot);
+		reg(ZeiyoItems.electrumIngot);
+        reg(ZeiyoItems.electrumPickaxe);
+        reg(ZeiyoItems.electrumAxe);
+        reg(ZeiyoItems.electrumSpade);
+        reg(ZeiyoItems.electrumHoe);
+        reg(ZeiyoItems.electrumSword);
+        reg(ZeiyoItems.electrumHelmet);
+        reg(ZeiyoItems.electrumChestplate);
+        reg(ZeiyoItems.electrumLeggings);
+        reg(ZeiyoItems.electrumBoots);
 
         // Onyx
 
-		ZeiyoUtils.reg(ZeiyoItems.onyx);
-		ZeiyoUtils.reg(ZeiyoItems.onyxPickaxe);
-		ZeiyoUtils.reg(ZeiyoItems.onyxAxe);
-		ZeiyoUtils.reg(ZeiyoItems.onyxSpade);
-		ZeiyoUtils.reg(ZeiyoItems.onyxHoe);
-		ZeiyoUtils.reg(ZeiyoItems.onyxSword);
-		ZeiyoUtils.reg(ZeiyoItems.onyxHelmet);
-		ZeiyoUtils.reg(ZeiyoItems.onyxChestplate);
-		ZeiyoUtils.reg(ZeiyoItems.onyxLeggings);
-		ZeiyoUtils.reg(ZeiyoItems.onyxBoots);
+		reg(ZeiyoItems.onyx);
+		reg(ZeiyoItems.onyxPickaxe);
+		reg(ZeiyoItems.onyxAxe);
+		reg(ZeiyoItems.onyxSpade);
+		reg(ZeiyoItems.onyxHoe);
+		reg(ZeiyoItems.onyxSword);
+		reg(ZeiyoItems.onyxHelmet);
+		reg(ZeiyoItems.onyxChestplate);
+		reg(ZeiyoItems.onyxLeggings);
+		reg(ZeiyoItems.onyxBoots);
 
         // Ruby
 
-		ZeiyoUtils.reg(ZeiyoItems.ruby);
-		ZeiyoUtils.reg(ZeiyoItems.rubyPickaxe);
-		ZeiyoUtils.reg(ZeiyoItems.rubyAxe);
-		ZeiyoUtils.reg(ZeiyoItems.rubySpade);
-		ZeiyoUtils.reg(ZeiyoItems.rubyHoe);
-		ZeiyoUtils.reg(ZeiyoItems.rubySword);
-		ZeiyoUtils.reg(ZeiyoItems.rubyHelmet);
-		ZeiyoUtils.reg(ZeiyoItems.rubyChestplate);
-		ZeiyoUtils.reg(ZeiyoItems.rubyLeggings);
-		ZeiyoUtils.reg(ZeiyoItems.rubyBoots);
+		reg(ZeiyoItems.ruby);
+		reg(ZeiyoItems.rubyPickaxe);
+		reg(ZeiyoItems.rubyAxe);
+		reg(ZeiyoItems.rubySpade);
+		reg(ZeiyoItems.rubyHoe);
+		reg(ZeiyoItems.rubySword);
+		reg(ZeiyoItems.rubyHelmet);
+		reg(ZeiyoItems.rubyChestplate);
+		reg(ZeiyoItems.rubyLeggings);
+		reg(ZeiyoItems.rubyBoots);
 
         // Sapphire
 
-		ZeiyoUtils.reg(ZeiyoItems.sapphire);
-		ZeiyoUtils.reg(ZeiyoItems.sapphirePickaxe);
-		ZeiyoUtils.reg(ZeiyoItems.sapphireAxe);
-		ZeiyoUtils.reg(ZeiyoItems.sapphireSpade);
-		ZeiyoUtils.reg(ZeiyoItems.sapphireHoe);
-		ZeiyoUtils.reg(ZeiyoItems.sapphireSword);
-		ZeiyoUtils.reg(ZeiyoItems.sapphireHelmet);
-		ZeiyoUtils.reg(ZeiyoItems.sapphireChestplate);
-		ZeiyoUtils.reg(ZeiyoItems.sapphireLeggings);
-		ZeiyoUtils.reg(ZeiyoItems.sapphireBoots);
+		reg(ZeiyoItems.sapphire);
+		reg(ZeiyoItems.sapphirePickaxe);
+		reg(ZeiyoItems.sapphireAxe);
+		reg(ZeiyoItems.sapphireSpade);
+		reg(ZeiyoItems.sapphireHoe);
+		reg(ZeiyoItems.sapphireSword);
+		reg(ZeiyoItems.sapphireHelmet);
+		reg(ZeiyoItems.sapphireChestplate);
+		reg(ZeiyoItems.sapphireLeggings);
+		reg(ZeiyoItems.sapphireBoots);
 
         // Emerald
 
-		ZeiyoUtils.reg(ZeiyoItems.emeraldPickaxe);
-		ZeiyoUtils.reg(ZeiyoItems.emeraldAxe);
-		ZeiyoUtils.reg(ZeiyoItems.emeraldSpade);
-		ZeiyoUtils.reg(ZeiyoItems.emeraldHoe);
-		ZeiyoUtils.reg(ZeiyoItems.emeraldSword);
-		ZeiyoUtils.reg(ZeiyoItems.emeraldHelmet);
-		ZeiyoUtils.reg(ZeiyoItems.emeraldChestplate);
-		ZeiyoUtils.reg(ZeiyoItems.emeraldLeggings);
-		ZeiyoUtils.reg(ZeiyoItems.emeraldBoots);
-		
+		reg(ZeiyoItems.emeraldPickaxe);
+		reg(ZeiyoItems.emeraldAxe);
+		reg(ZeiyoItems.emeraldSpade);
+		reg(ZeiyoItems.emeraldHoe);
+		reg(ZeiyoItems.emeraldSword);
+		reg(ZeiyoItems.emeraldHelmet);
+		reg(ZeiyoItems.emeraldChestplate);
+		reg(ZeiyoItems.emeraldLeggings);
+		reg(ZeiyoItems.emeraldBoots);
+
 	}
 
 }
