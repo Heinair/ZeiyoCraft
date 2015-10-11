@@ -13,7 +13,7 @@ public class ZItemSpade extends ItemSpade
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
-		id = nmb;
+		this.id = nmb;
 	}
 
 	@Override

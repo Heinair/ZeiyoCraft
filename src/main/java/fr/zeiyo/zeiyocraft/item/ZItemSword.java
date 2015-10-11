@@ -13,7 +13,7 @@ public class ZItemSword extends ItemSword
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
-		id = nmb;
+		this.id = nmb;
 	}
 
 	@Override

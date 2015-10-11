@@ -12,6 +12,5 @@ public class ZArmorMaterial
     public static ItemArmor.ArmorMaterial ONYXA = EnumHelper.addArmorMaterial("ONYX", "zeiyocraft:onyx", 40, new int[] {3, 8, 6, 3}, 14);
     public static ItemArmor.ArmorMaterial RUBYA = EnumHelper.addArmorMaterial("RUBY", "zeiyocraft:ruby", 33, new int[] {3, 8, 6, 3}, 10);
     public static ItemArmor.ArmorMaterial SAPPHIREA = EnumHelper.addArmorMaterial("SAPPHIRE", "zeiyocraft:sapphire", 33, new int[] {3, 8, 6, 3}, 10);
-    public static ItemArmor.ArmorMaterial EMERALDA = EnumHelper.addArmorMaterial("EMERALD", "zeiyocraft:emerald", 33, new int[] {3, 8, 6, 3}, 18);
 
 }

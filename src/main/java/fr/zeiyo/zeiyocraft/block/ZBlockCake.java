@@ -14,6 +14,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ZBlockCake extends BlockCake
 
 {
+
 	public int foodPoints;
     public float saturationPoints;
 
@@ -59,7 +60,5 @@ public class ZBlockCake extends BlockCake
 	{
 	        return ZeiyoItems.chocolateCake;
 	}
-	
-
 
 }

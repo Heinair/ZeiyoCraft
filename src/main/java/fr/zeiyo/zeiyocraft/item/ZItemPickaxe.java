@@ -13,7 +13,7 @@ public class ZItemPickaxe extends ItemPickaxe
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
-		id = nmb;
+		this.id = nmb;
 	}
 
 	@Override

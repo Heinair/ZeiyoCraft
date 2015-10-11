@@ -12,6 +12,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ZBlockCrops extends BlockCrops implements IGrowable
+
 {
     public int id;
 
@@ -19,7 +20,7 @@ public class ZBlockCrops extends BlockCrops implements IGrowable
     {
         super();
         this.setUnlocalizedName(unlocalizedName);
-        id = nmb;
+        this.id = nmb;
     }
 
     @Override

@@ -79,6 +79,7 @@ public class ZBlockOre extends Block
 	@Override
 	public int getExpDrop(IBlockAccess world, BlockPos pos, int fortune)
 	{
+
 		IBlockState state = world.getBlockState(pos);
 		Random rand = world instanceof World ? ((World)world).rand : new Random();
 		if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this))
@@ -93,7 +94,10 @@ public class ZBlockOre extends Block
 			{
 				j = MathHelper.getRandomIntegerInRange(rand, 3, 7);
 			}
-
+			else if (this == ZeiyoBlocks.onyxOre)
+			{
+				j = MathHelper.getRandomIntegerInRange(rand, 3, 7);
+			}
 
 			return j;
 		}

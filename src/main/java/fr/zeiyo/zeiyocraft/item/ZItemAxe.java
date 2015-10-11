@@ -13,7 +13,7 @@ public class ZItemAxe extends ItemAxe
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
-		id = nmb;
+		this.id = nmb;
 	}
 
 	@Override

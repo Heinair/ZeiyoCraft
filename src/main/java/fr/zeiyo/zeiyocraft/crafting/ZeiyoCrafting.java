@@ -63,9 +63,6 @@ public class ZeiyoCrafting
 		ZCraftingUtils.armorCraft(ZeiyoItems.sapphire, ZeiyoItems.sapphireHelmet, ZeiyoItems.sapphireChestplate, ZeiyoItems.sapphireLeggings, ZeiyoItems.sapphireBoots);
 		ZCraftingUtils.toolsCraft(ZeiyoItems.sapphire, ZeiyoItems.sapphirePickaxe, ZeiyoItems.sapphireAxe, ZeiyoItems.sapphireSpade, ZeiyoItems.sapphireHoe, ZeiyoItems.sapphireSword);
 		ZCraftingUtils.oreCompressedCraft(ZeiyoItems.sapphire, ZeiyoBlocks.sapphireBlock, ZeiyoBlocks.sapphireOre, 1.15F);
-		
-		ZCraftingUtils.armorCraft(Items.emerald, ZeiyoItems.emeraldHelmet, ZeiyoItems.emeraldChestplate, ZeiyoItems.emeraldLeggings, ZeiyoItems.emeraldBoots);
-		ZCraftingUtils.toolsCraft(Items.emerald, ZeiyoItems.emeraldPickaxe, ZeiyoItems.emeraldAxe, ZeiyoItems.emeraldSpade, ZeiyoItems.emeraldHoe, ZeiyoItems.emeraldSword);
 
 	}
 	

@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class ZItemAlcohol extends ItemFood
+
 {
 
     public ZItemAlcohol(String unlocalizedName, int healAmount, int duration, int amplifier)

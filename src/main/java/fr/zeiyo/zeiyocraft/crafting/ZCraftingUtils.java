@@ -87,7 +87,6 @@ public class ZCraftingUtils
             case 3 : return ZeiyoItems.onyx;
             case 4 : return ZeiyoItems.ruby;
             case 5 : return ZeiyoItems.sapphire;
-            case 6 : return Items.emerald;
 
             default : return null;
 

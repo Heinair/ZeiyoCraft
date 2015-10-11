@@ -19,9 +19,20 @@ public class BlockRenderRegister
 	 public static void registerBlockRenderer() 
 	 {
 
+         // Food
+
 		 reg(ZeiyoBlocks.barleyCrops);
          reg(ZeiyoBlocks.grapeCrops);
 		 reg(ZeiyoBlocks.blockChocolateCake);
+
+         // Ore Blocks
+
+         reg(ZeiyoBlocks.copperOre);
+         reg(ZeiyoBlocks.tinOre);
+         reg(ZeiyoBlocks.silverOre);
+         reg(ZeiyoBlocks.onyxOre);
+         reg(ZeiyoBlocks.rubyOre);
+         reg(ZeiyoBlocks.sapphireOre);
 
 		 // Compressed Blocks
 
@@ -34,15 +45,6 @@ public class BlockRenderRegister
 		 reg(ZeiyoBlocks.onyxBlock);
 		 reg(ZeiyoBlocks.rubyBlock);
 		 reg(ZeiyoBlocks.sapphireBlock);
-
-         // Ore Blocks
-
-         reg(ZeiyoBlocks.copperOre);
-         reg(ZeiyoBlocks.tinOre);
-         reg(ZeiyoBlocks.silverOre);
-         reg(ZeiyoBlocks.onyxOre);
-         reg(ZeiyoBlocks.rubyOre);
-         reg(ZeiyoBlocks.sapphireOre);
 
      }
 	 

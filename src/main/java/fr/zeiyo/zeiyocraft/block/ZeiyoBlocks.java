@@ -13,33 +13,66 @@ public class ZeiyoBlocks
 	public static Block onyxOre, rubyOre, sapphireOre, copperOre, tinOre, silverOre;
 	public static Block onyxBlock, steelBlock, rubyBlock, sapphireBlock, copperBlock, tinBlock, bronzeBlock, silverBlock, electrumBlock;
 
-    public static void createBlocks() 
+    public static void initBlocks()
     {
 
-        GameRegistry.registerBlock(blockChocolateCake = new ZBlockCake("blockChocolateCake", 4, 0.5F), "blockChocolateCake");
-        GameRegistry.registerBlock(barleyCrops = new ZBlockCrops("barleyCrops", 0), "barleyCrops");
-        GameRegistry.registerBlock(grapeCrops = new ZBlockCrops("grapeCrops", 1), "grapeCrops");
+        // Food
+
+        blockChocolateCake = new ZBlockCake("blockChocolateCake", 4, 0.5F);
+        barleyCrops = new ZBlockCrops("barleyCrops", 0);
+        grapeCrops = new ZBlockCrops("grapeCrops", 1);
+
+        // Ore Blocks
+
+        copperOre = new ZBlock("copperOre", Material.rock, 5.0F, 3.0F, Block.soundTypePiston);
+        tinOre = new ZBlock("tinOre", Material.rock, 5.0F, 3.0F, Block.soundTypePiston);
+        silverOre = new ZBlock("silverOre", Material.rock, 5.0F, 3.0F, Block.soundTypePiston);
+        onyxOre = new ZBlockOre("onyxOre", Material.rock, 3, ZeiyoItems.onyx);
+        rubyOre = new ZBlockOre("rubyOre", Material.rock, 3, ZeiyoItems.ruby);
+        sapphireOre = new ZBlockOre("sapphireOre", Material.rock, 3, ZeiyoItems.sapphire);
 
         // Compressed Blocks
 
-        GameRegistry.registerBlock(steelBlock = new ZBlock("steelBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2), "steelBlock");
-        GameRegistry.registerBlock(copperBlock = new ZBlock("copperBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2), "copperBlock");
-        GameRegistry.registerBlock(tinBlock = new ZBlock("tinBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2), "tinBlock");
-        GameRegistry.registerBlock(bronzeBlock = new ZBlock("bronzeBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2), "bronzeBlock");
-        GameRegistry.registerBlock(silverBlock = new ZBlock("silverBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2), "silverBlock");
-        GameRegistry.registerBlock(electrumBlock = new ZBlock("electrumBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2), "electrumBlock");
-        GameRegistry.registerBlock(onyxBlock = new ZBlock("onyxBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2), "onyxBlock");
-        GameRegistry.registerBlock(rubyBlock = new ZBlock("rubyBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2), "rubyBlock");
-        GameRegistry.registerBlock(sapphireBlock = new ZBlock("sapphireBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2), "sapphireBlock");
+        steelBlock = new ZBlock("steelBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2);
+        copperBlock = new ZBlock("copperBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2);
+        tinBlock = new ZBlock("tinBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2);
+        bronzeBlock = new ZBlock("bronzeBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2);
+        silverBlock = new ZBlock("silverBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2);
+        electrumBlock = new ZBlock("electrumBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2);
+        onyxBlock = new ZBlock("onyxBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2);
+        rubyBlock = new ZBlock("rubyBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2);
+        sapphireBlock = new ZBlock("sapphireBlock", Material.iron , 5.0F, 10.0F, Block.soundTypeMetal,2);
 
-        // Ore blocks
+    }
+    
+    public static void registerBlocks()
+    {
 
-        GameRegistry.registerBlock(copperOre = new ZBlock("copperOre", Material.rock, 5.0F, 3.0F, Block.soundTypePiston), "copperOre");
-        GameRegistry.registerBlock(tinOre = new ZBlock("tinOre", Material.rock, 5.0F, 3.0F, Block.soundTypePiston), "tinOre");
-        GameRegistry.registerBlock(silverOre = new ZBlock("silverOre", Material.rock, 5.0F, 3.0F, Block.soundTypePiston), "silverOre");
-        GameRegistry.registerBlock(onyxOre = new ZBlockOre("onyxOre", Material.rock, 3, ZeiyoItems.onyx), "onyxOre");
-        GameRegistry.registerBlock(rubyOre = new ZBlockOre("rubyOre", Material.rock, 3, ZeiyoItems.ruby), "rubyOre");
-        GameRegistry.registerBlock(sapphireOre = new ZBlockOre("sapphireOre", Material.rock, 3, ZeiyoItems.sapphire), "sapphireOre");
+        // Food
+
+        GameRegistry.registerBlock(blockChocolateCake, blockChocolateCake.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(barleyCrops, grapeCrops.getUnlocalizedName().substring(5));
+
+        // Ore Blocks
+
+        GameRegistry.registerBlock(copperOre, copperOre.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(tinOre, tinOre.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(silverOre, silverOre.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(onyxOre, onyxOre.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(rubyOre, rubyOre.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(sapphireOre, sapphireOre.getUnlocalizedName().substring(5));
+
+        // Compressed Blocks
+
+        GameRegistry.registerBlock(steelBlock, steelBlock.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(copperBlock, copperBlock.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(tinBlock, tinBlock.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(bronzeBlock, bronzeBlock.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(silverBlock, silverBlock.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(electrumBlock, electrumBlock.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(onyxBlock, onyxBlock.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(rubyBlock, rubyBlock.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(sapphireBlock, sapphireBlock.getUnlocalizedName().substring(5));
 
     }
     

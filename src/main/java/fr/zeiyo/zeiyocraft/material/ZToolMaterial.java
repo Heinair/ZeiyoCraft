@@ -12,6 +12,5 @@ public class ZToolMaterial
     public static Item.ToolMaterial ONYX = EnumHelper.addToolMaterial("ONYX", 3, 2556, 8.0F, 3.0F, 14);
     public static Item.ToolMaterial RUBY = EnumHelper.addToolMaterial("RUBY", 3, 1561, 8.0F, 4.0F, 10);
     public static Item.ToolMaterial SAPPHIRE = EnumHelper.addToolMaterial("SAPPHIRE", 3, 1561, 10.0F, 3.0F, 10);
-    public static Item.ToolMaterial EMERALD = EnumHelper.addToolMaterial("EMERALD", 3, 1761, 8.5F, 3.5F, 18);
 
 }

@@ -122,18 +122,6 @@ public class ItemRenderRegister
 		reg(ZeiyoItems.sapphireLeggings);
 		reg(ZeiyoItems.sapphireBoots);
 
-        // Emerald
-
-		reg(ZeiyoItems.emeraldPickaxe);
-		reg(ZeiyoItems.emeraldAxe);
-		reg(ZeiyoItems.emeraldSpade);
-		reg(ZeiyoItems.emeraldHoe);
-		reg(ZeiyoItems.emeraldSword);
-		reg(ZeiyoItems.emeraldHelmet);
-		reg(ZeiyoItems.emeraldChestplate);
-		reg(ZeiyoItems.emeraldLeggings);
-		reg(ZeiyoItems.emeraldBoots);
-
 	}
 
 }

@@ -20,7 +20,7 @@ public class ZItemArmor extends ItemArmor
         super(material, renderIndex, armorType);
         this.setUnlocalizedName(unlocalizedName);
         this.isRepairable();
-		id = nmb;
+		this.id = nmb;
     }
 	
 	@Override
@@ -29,7 +29,7 @@ public class ZItemArmor extends ItemArmor
 		
 		if (this.isWearingFullSet(player, ZeiyoItems.onyxHelmet, ZeiyoItems.onyxChestplate, ZeiyoItems.onyxLeggings, ZeiyoItems.onyxBoots)) 
 		{
-			this.effectPlayer(player, Potion.fireResistance, 0);
+			this.effectPlayer(player, Potion.fireResistance, 1);
 		}
 		if (this.isWearingFullSet(player, ZeiyoItems.rubyHelmet, ZeiyoItems.rubyChestplate, ZeiyoItems.rubyLeggings, ZeiyoItems.rubyBoots)) 
 		{
@@ -39,10 +39,7 @@ public class ZItemArmor extends ItemArmor
 		{
 			this.effectPlayer(player, Potion.waterBreathing, 0);
 		}
-		if (this.isWearingFullSet(player, ZeiyoItems.emeraldHelmet, ZeiyoItems.emeraldChestplate, ZeiyoItems.emeraldLeggings, ZeiyoItems.emeraldBoots)) 
-		{
-			this.effectPlayer(player, Potion.resistance, 0);
-		}
+
 		
 	}
 	

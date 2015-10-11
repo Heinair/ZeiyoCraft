@@ -13,7 +13,7 @@ public class ZItemHoe extends ItemHoe
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
-		id = nmb;
+		this.id = nmb;
 	}
 
 	@Override

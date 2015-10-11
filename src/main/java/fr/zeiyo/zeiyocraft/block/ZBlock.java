@@ -33,4 +33,5 @@ public class ZBlock extends Block
     {
         this(unlocalizedName, 2.0f, 10.0f);
     }
+
 }

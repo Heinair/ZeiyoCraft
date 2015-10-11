@@ -31,6 +31,8 @@ Caractéristiques :
 
 CREDITS : 
 
-Heinair : Initiator of the project, main contributor 
+Heinair : Initiator of the project, main contributor
+
 Wascar : Programming helper
+
 Mawadinger : Textures and models
