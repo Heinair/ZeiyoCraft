@@ -8,12 +8,9 @@ import net.minecraft.network.play.server.S02PacketChat;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityLockable;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.StatCollector;
-import net.minecraft.world.ILockableContainer;
 import net.minecraft.world.LockCode;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -50,14 +47,15 @@ public class ZKeyEvent
                         if(!tileEntityLockable.getLockCode().getLock().equals(current.getDisplayName()))
                         {
                             world.playSoundAtEntity(player, "fire.ignite", 1.0F, 1.0F);
-                            player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentText(EnumChatFormatting.YELLOW + "This key does not fit the lock.")), (byte)2));
+                            player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentTranslation("text.key.errorOnKey")), (byte)2));
                             event.setCanceled(true);
                         }
                     }
                     else
                     {
                         world.playSoundAtEntity(player, "random.wood_click", 1.0F, 1.0F);
-                        player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentText(EnumChatFormatting.YELLOW + "This block is locked with a key.")), (byte)2));
+                        player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentTranslation("text.key.errorOnBlock")), (byte)2));
+
                         event.setCanceled(true);
                     }
                 }
@@ -69,11 +67,12 @@ public class ZKeyEvent
                         {
                             tileEntityLockable.setLockCode(new LockCode(current.getDisplayName()));
                             world.playSoundAtEntity(player, "random.click", 1.0F, 1.0F);
-                            player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentText(EnumChatFormatting.GREEN + "Successfully locked the block with the key: " + EnumChatFormatting.RESET + current.getDisplayName())), (byte)2));
+                            player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentTranslation("text.key.successOnLock" + " " + EnumChatFormatting.RESET + current.getDisplayName())), (byte)2));
+
                         }
                         else
                         {
-                            player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentText(EnumChatFormatting.YELLOW + "The key needs to be renamed before you can lock this block.")), (byte)2));
+                            player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentTranslation("text.key.errorOnKeyName")), (byte)2));
                         }
                         event.setCanceled(true);
                     }
@@ -98,7 +97,7 @@ public class ZKeyEvent
             {
                 if(!hasRequiredKey(event.getPlayer(), tileEntityLockable))
                 {
-                    player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentText(EnumChatFormatting.YELLOW + "You need to have correct key in your inventory to destroy this block.")), (byte)2));
+                    player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentTranslation("text.key.errorOnDestroyBlock")), (byte)2));
                     event.setCanceled(true);
                 }
             }
@@ -116,6 +115,7 @@ public class ZKeyEvent
                     return true;
                 }
             }
+
         }
         return false;
     }

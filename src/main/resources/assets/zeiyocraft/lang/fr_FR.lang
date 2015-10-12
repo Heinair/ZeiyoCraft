@@ -1,8 +1,15 @@
+text.key.errorOnKey=La clé ne rentre pas dans la serrure.
+text.key.errorOnBlock=Ce bloc est verouillé.
+text.key.successOnLock=Le bloc a été verouillé avec succès à l'aide de : 
+text.key.errorOnKeyName=La clé a besoin d'être renommé avant de verouiller ce bloc.
+test.key.errorOnDestroyBlock=Vous avez besoin d'avoir la bonne clé dans votre inventaire pour pouvoir détruire ce bloc.
+
 item.chocolateCake.name=Gâteau au chocolat
 item.puriFlesh.name= Chair purifiée
 item.hardboiledEgg.name=Oeuf dur
 item.vegetableStew.name=Ragoût aux légumes
 item.applePie.name =Tarte aux pommes
+
 item.steelIngot.name=Lingot d'acier
 tile.steelBlock.name=Bloc d'acier
 item.steelSword.name=Epée en acier
@@ -14,6 +21,7 @@ item.steelHelmet.name=Casque en acier
 item.steelChestplate.name=Plastron en acier
 item.steelLeggings.name=Jambières en acier
 item.steelBoots.name=Bottes en acier
+
 item.bronzeIngot.name=Lingot en bronze
 tile.bronzeBlock.name=Bloc de bronze
 item.bronzeSword.name=Epée en bronze
@@ -31,6 +39,7 @@ tile.copperBlock.name=Bloc de cuivre
 tile.tinBlock.name=Bloc d'étain
 item.tinIngot.name=Lingot d'étain
 item.copperIngot.name=Lingot de cuivre
+
 tile.silverOre.name=Minerai d'argent
 tile.silverBlock.name=Bloc d'argent
 item.silverIngot.name=Lingot d'argent
@@ -46,6 +55,7 @@ item.electrumChestplate.name=Plastron en electrum
 item.electrumLeggings.name=Jambières en electrum
 item.electrumBoots.name=Bottes en electrum
 item.electrumIngot.name=Lingot d'electrum
+
 item.onyx.name=Onyx
 tile.onyxBlock.name=Bloc d'onyx
 item.onyxSword.name=Epée en onyx
@@ -58,6 +68,7 @@ item.onyxChestplate.name=Plastron en onyx
 item.onyxLeggings.name=Jambières en onyx
 item.onyxBoots.name=Bottes en onyx
 tile.onyxOre.name=Minerai d'onyx
+
 item.ruby.name=Rubis
 tile.rubyBlock.name=Bloc de rubis
 item.rubySword.name=Epée en rubis
@@ -70,6 +81,7 @@ item.rubyChestplate.name=Plastron en rubis
 item.rubyLeggings.name=Jambières en rubis
 item.rubyBoots.name=Bottes en rubis
 tile.rubyOre.name=Minerai de rubis
+
 item.sapphire.name=Saphir
 tile.sapphireBlock.name=Bloc de saphir
 item.sapphireSword.name=Epée en saphir
@@ -82,6 +94,7 @@ item.sapphireChestplate.name=Plastron en saphir
 item.sapphireLeggings.name=Jambières en saphir
 item.sapphireBoots.name=Bottes en saphir
 tile.sapphireOre.name=Minerai de saphir
+
 item.malt.name=Graine de malt
 item.barleySeeds.name=Graines d'orge
 item.barley.name=Orge
@@ -95,4 +108,3 @@ item.copperCoin.name=Pièce en cuivre
 item.silverCoin.name=Pièce en argent
 item.goldCoin.name=Pièce en or
 item.key.name=Clé
-test.name.error=Erreur
