@@ -1,6 +1,6 @@
 text.key.errorOnKey=This key does not fit the lock.
 text.key.errorOnBlock=This block is locked with a key.
-text.key.successOnLock=Successfully locked the block with the key : 
+text.key.successOnLock=Successfully locked the block
 text.key.errorOnKeyName=The key needs to be renamed before you can lock this block.
 test.key.errorOnDestroyBlock=You need to have correct key in your inventory to destroy this block.
 

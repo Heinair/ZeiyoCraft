@@ -10,6 +10,7 @@ public class ZeiyoBlocks
 
 	public static Block blockChocolateCake;
     public static Block barleyCrops, grapeCrops;
+    public static Block chair;
 	public static Block onyxOre, rubyOre, sapphireOre, copperOre, tinOre, silverOre;
 	public static Block onyxBlock, steelBlock, rubyBlock, sapphireBlock, copperBlock, tinBlock, bronzeBlock, silverBlock, electrumBlock;
 
@@ -21,6 +22,10 @@ public class ZeiyoBlocks
         blockChocolateCake = new ZBlockCake("blockChocolateCake", 4, 0.5F);
         barleyCrops = new ZBlockCrops("barleyCrops", 0);
         grapeCrops = new ZBlockCrops("grapeCrops", 1);
+
+        // Miscellaneous
+
+        chair =  new ZBlockSittable("chair", Material.wood);
 
         // Ore Blocks
 
@@ -61,6 +66,10 @@ public class ZeiyoBlocks
         GameRegistry.registerBlock(onyxOre, onyxOre.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(rubyOre, rubyOre.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(sapphireOre, sapphireOre.getUnlocalizedName().substring(5));
+
+        // Miscellaneous
+
+        GameRegistry.registerBlock(chair, chair.getUnlocalizedName().substring(5));
 
         // Compressed Blocks
 

@@ -35,11 +35,13 @@ public class ItemRenderRegister
         reg(ZeiyoItems.wineTankard);
         reg(ZeiyoItems.ciderTankard);
 
-        // Coin
+        // Miscellaneous
 
         reg(ZeiyoItems.copperCoin);
         reg(ZeiyoItems.silverCoin);
         reg(ZeiyoItems.goldCoin);
+		reg(ZeiyoItems.key);
+		reg(ZeiyoItems.itemChair);
 
 		// Steel
 

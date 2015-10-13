@@ -7,10 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.server.S02PacketChat;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityLockable;
-import net.minecraft.util.BlockPos;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.StatCollector;
+import net.minecraft.util.*;
 import net.minecraft.world.LockCode;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -21,6 +18,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class ZKeyEvent
 {
+
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void onPlayerInteract(PlayerInteractEvent event)
     {
@@ -47,14 +45,14 @@ public class ZKeyEvent
                         if(!tileEntityLockable.getLockCode().getLock().equals(current.getDisplayName()))
                         {
                             world.playSoundAtEntity(player, "fire.ignite", 1.0F, 1.0F);
-                            player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentTranslation("text.key.errorOnKey")), (byte)2));
+                            player.playerNetServerHandler.sendPacket(new S02PacketChat(new ChatComponentTranslation("text.key.errorOnKey"), (byte)2));
                             event.setCanceled(true);
                         }
                     }
                     else
                     {
                         world.playSoundAtEntity(player, "random.wood_click", 1.0F, 1.0F);
-                        player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentTranslation("text.key.errorOnBlock")), (byte)2));
+                        player.playerNetServerHandler.sendPacket(new S02PacketChat(new ChatComponentTranslation("text.key.errorOnBlock"), (byte)2));
 
                         event.setCanceled(true);
                     }
@@ -67,7 +65,7 @@ public class ZKeyEvent
                         {
                             tileEntityLockable.setLockCode(new LockCode(current.getDisplayName()));
                             world.playSoundAtEntity(player, "random.click", 1.0F, 1.0F);
-                            player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentTranslation("text.key.successOnLock" + " " + EnumChatFormatting.RESET + current.getDisplayName())), (byte)2));
+                            player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentTranslation("text.key.successOnLock")), (byte)2));
 
                         }
                         else
@@ -97,7 +95,7 @@ public class ZKeyEvent
             {
                 if(!hasRequiredKey(event.getPlayer(), tileEntityLockable))
                 {
-                    player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentTranslation("text.key.errorOnDestroyBlock")), (byte)2));
+                    player.playerNetServerHandler.sendPacket(new S02PacketChat(new ChatComponentTranslation("text.key.errorOnDestroyBlock"), (byte)2));
                     event.setCanceled(true);
                 }
             }
@@ -119,4 +117,5 @@ public class ZKeyEvent
         }
         return false;
     }
+
 }

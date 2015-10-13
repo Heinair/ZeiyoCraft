@@ -23,6 +23,7 @@ public final class ZeiyoItems
 
     public static Item copperCoin, silverCoin, goldCoin;
 	public static Item key;
+    public static Item itemChair;
 
     // Steel
 
@@ -87,6 +88,7 @@ public final class ZeiyoItems
         silverCoin = new ZItem("silverCoin").setCreativeTab(CreativeTabs.tabAllSearch).setMaxStackSize(100);
         goldCoin = new ZItem("goldCoin").setCreativeTab(CreativeTabs.tabAllSearch).setMaxStackSize(100);
         key = new ZItem("key").setCreativeTab(CreativeTabs.tabMisc).setMaxStackSize(1);
+        itemChair = new ZItemBlock("itemChair", ZeiyoBlocks.chair, CreativeTabs.tabDecorations).setMaxStackSize(16);
 
         // Steel
 
@@ -132,7 +134,6 @@ public final class ZeiyoItems
 
         // Onyx
 
-        onyx = new ZItem("onyx").setCreativeTab(CreativeTabs.tabMaterials);
         onyxPickaxe = new ZItemPickaxe("onyxPickaxe", ZToolMaterial.ONYX, 3);
         onyxAxe = new ZItemAxe("onyxAxe", ZToolMaterial.ONYX, 3);
         onyxSpade = new ZItemSpade("onyxSpade", ZToolMaterial.ONYX, 3);
@@ -145,7 +146,6 @@ public final class ZeiyoItems
 
         // Ruby
 
-        ruby = new ZItem("ruby").setCreativeTab(CreativeTabs.tabMaterials);
         rubyPickaxe = new ZItemPickaxe("rubyPickaxe", ZToolMaterial.RUBY, 4);
         rubyAxe = new ZItemAxe("rubyAxe", ZToolMaterial.RUBY, 4);
         rubySpade = new ZItemSpade("rubySpade", ZToolMaterial.RUBY, 4);
@@ -158,7 +158,6 @@ public final class ZeiyoItems
 
         // Sapphire
 
-        sapphire = new ZItem("sapphire").setCreativeTab(CreativeTabs.tabMaterials);
         sapphirePickaxe = new ZItemPickaxe("sapphirePickaxe", ZToolMaterial.SAPPHIRE, 5);
         sapphireAxe = new ZItemAxe("sapphireAxe", ZToolMaterial.SAPPHIRE, 5);
         sapphireSpade = new ZItemSpade("sapphireSpade", ZToolMaterial.SAPPHIRE, 5);
@@ -198,7 +197,8 @@ public final class ZeiyoItems
         GameRegistry.registerItem(silverCoin, silverCoin.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(goldCoin, goldCoin.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(key, key.getUnlocalizedName().substring(5));
-        
+        GameRegistry.registerItem(itemChair, itemChair.getUnlocalizedName().substring(5));
+
         // Steel
 
         GameRegistry.registerItem(steelIngot, steelIngot.getUnlocalizedName().substring(5));
@@ -243,7 +243,6 @@ public final class ZeiyoItems
         
         // Onyx
 
-        GameRegistry.registerItem(onyx, onyx.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(onyxPickaxe, onyxPickaxe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(onyxAxe, onyxAxe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(onyxSpade, onyxSpade.getUnlocalizedName().substring(5));
@@ -256,7 +255,6 @@ public final class ZeiyoItems
         
         // Ruby 
 
-        GameRegistry.registerItem(ruby, ruby.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(rubyPickaxe, rubyPickaxe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(rubyAxe, rubyAxe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(rubySpade, rubySpade.getUnlocalizedName().substring(5));
@@ -269,7 +267,6 @@ public final class ZeiyoItems
         
         // Sapphire
 
-        GameRegistry.registerItem(sapphire, sapphire.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(sapphirePickaxe, sapphirePickaxe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(sapphireAxe, sapphireAxe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(sapphireSpade, sapphireSpade.getUnlocalizedName().substring(5));
@@ -284,13 +281,13 @@ public final class ZeiyoItems
 
     }
 	
-	public static void createLootsItems()
+	public static void loots()
 
 	{
 
-		//GameRegistry.registerItem(onyx = new ZItem("onyx"), "onyx");
-		//GameRegistry.registerItem(ruby = new ZItem("ruby"), "ruby");
-		//GameRegistry.registerItem(sapphire = new ZItem("sapphire"), "sapphire");
+		GameRegistry.registerItem(onyx = new ZItem("onyx").setCreativeTab(CreativeTabs.tabMaterials), "onyx");
+		GameRegistry.registerItem(ruby = new ZItem("ruby").setCreativeTab(CreativeTabs.tabMaterials), "ruby");
+		GameRegistry.registerItem(sapphire = new ZItem("sapphire").setCreativeTab(CreativeTabs.tabMaterials), "sapphire");
 
 	}
 

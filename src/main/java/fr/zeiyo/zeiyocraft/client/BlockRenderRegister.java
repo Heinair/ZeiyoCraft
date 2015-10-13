@@ -25,6 +25,10 @@ public class BlockRenderRegister
          reg(ZeiyoBlocks.grapeCrops);
 		 reg(ZeiyoBlocks.blockChocolateCake);
 
+         // Miscellaneous
+
+         reg(ZeiyoBlocks.chair);
+
          // Ore Blocks
 
          reg(ZeiyoBlocks.copperOre);

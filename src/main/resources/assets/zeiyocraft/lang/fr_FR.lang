@@ -1,6 +1,6 @@
 text.key.errorOnKey=La clé ne rentre pas dans la serrure.
 text.key.errorOnBlock=Ce bloc est verouillé.
-text.key.successOnLock=Le bloc a été verouillé avec succès à l'aide de : 
+text.key.successOnLock=Le bloc a été verouillé avec succès
 text.key.errorOnKeyName=La clé a besoin d'être renommé avant de verouiller ce bloc.
 test.key.errorOnDestroyBlock=Vous avez besoin d'avoir la bonne clé dans votre inventaire pour pouvoir détruire ce bloc.
 
