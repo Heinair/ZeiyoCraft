@@ -33,7 +33,8 @@ public class ZeiyoCrafting
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.wineTankard), new Object[] {"###", "#P#", " O ",'P', Items.water_bucket, '#', ZeiyoItems.grape, 'O', ZeiyoItems.tankard});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.ciderTankard), new Object[] {"#P#", " O ",'P', Items.water_bucket, '#', Items.apple, 'O', ZeiyoItems.tankard});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.applePie), new Object[] {"PE ", "#  ",'P', Items.apple, '#', Items.sugar,'E', Items.egg});
-        GameRegistry.addRecipe(new ItemStack(Items.saddle), new Object[] {"PPP", "# #", "F F", 'F', Items.iron_ingot ,'P', Items.leather, '#', Items.string});
+		GameRegistry.addRecipe(new ItemStack(ZeiyoItems.key), new Object[] {"EP", "EP "," P ",'P', Items.gold_ingot, 'E', Items.gold_nugget});
+		GameRegistry.addRecipe(new ItemStack(Items.saddle), new Object[] {"PPP", "# #", "F F", 'F', Items.iron_ingot ,'P', Items.leather, '#', Items.string});
 
 		// Ore, armors, tools, and compressed blocks-related Crafts
 
