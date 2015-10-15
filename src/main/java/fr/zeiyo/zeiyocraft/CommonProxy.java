@@ -39,7 +39,7 @@ public class CommonProxy
 			ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(new WeightedRandomChestContent(new ItemStack(ZeiyoItems.grapeSeeds), 3, 9, 85));
 			ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(ZeiyoItems.grapeSeeds), 3, 9, 85));
 			MinecraftForge.EVENT_BUS.register(new ZKeyEvent());
-			EntityRegistry.registerModEntity(ZEntitySittable.class, "MountableBlock", 4200, ZeiyoMain.instance, 80, 1, false);
+			EntityRegistry.registerModEntity(ZEntitySittable.class, "Chair", 4200, ZeiyoMain.instance, 80, 1, false);
 
 		}
 
