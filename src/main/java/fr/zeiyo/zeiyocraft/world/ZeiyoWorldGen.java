@@ -7,6 +7,7 @@ import net.minecraft.block.state.pattern.BlockHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -35,6 +36,9 @@ public class ZeiyoWorldGen implements IWorldGenerator
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
 	{
+
+		BlockPos forBiome = new BlockPos(chunkX, 62, chunkZ);
+
 		switch (world.provider.getDimensionId())
 		{
 
@@ -48,8 +52,16 @@ public class ZeiyoWorldGen implements IWorldGenerator
 
             case 0: // Overworld
 
-                this.runGenerator(this.gen_ruby, world, random, chunkX, chunkZ, 1, 2, 9);
-				this.runGenerator(this.gen_sapphire, world, random, chunkX, chunkZ, 1, 4, 14);
+				if(world.provider.getBiomeGenForCoords(forBiome) == BiomeGenBase.desert || world.provider.getBiomeGenForCoords(forBiome) == BiomeGenBase.desertHills)
+				{
+					this.runGenerator(this.gen_ruby, world, random, chunkX, chunkZ, 1, 2, 9);
+				}
+
+				if(world.provider.getBiomeGenForCoords(forBiome) == BiomeGenBase.ocean || world.provider.getBiomeGenForCoords(forBiome) == BiomeGenBase.deepOcean)
+				{
+					this.runGenerator(this.gen_sapphire, world, random, chunkX, chunkZ, 1, 4, 14);
+				}
+
                 this.runGenerator(this.gen_copper, world, random, chunkX, chunkZ, 30, 0, 72);
 	    	    this.runGenerator(this.gen_tin, world, random, chunkX, chunkZ, 10, 0, 72);
 	    	    this.runGenerator(this.gen_silver, world, random, chunkX, chunkZ, 18, 0, 42);

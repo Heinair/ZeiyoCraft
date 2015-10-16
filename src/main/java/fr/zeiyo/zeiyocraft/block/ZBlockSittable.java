@@ -96,7 +96,7 @@ public class ZBlockSittable extends Block
     @SideOnly(Side.CLIENT)
     public Item getItem(World worldIn, BlockPos pos)
     {
-        return ZeiyoItems.chocolateCake;
+        return ZeiyoItems.itemChair;
     }
     
    /* @Override
@@ -152,7 +152,7 @@ public class ZBlockSittable extends Block
         return true;
     }
 
-  /*  public static boolean sitOnBlockWithRotationOffset(World par1World, double x, double y, double z, EntityPlayer par5EntityPlayer, double par6, int metadata, double offset)
+    public static boolean sitOnBlockWithRotationOffset(World par1World, double x, double y, double z, EntityPlayer par5EntityPlayer, double par6, int metadata, double offset)
     {
         if (!checkForExistingEntity(par1World, x, y, z, par5EntityPlayer))
         {
@@ -161,7 +161,7 @@ public class ZBlockSittable extends Block
             par5EntityPlayer.mountEntity(nemb);
         }
         return true;
-    }*/
+    }
 
     public static boolean checkForExistingEntity(World par1World, double x, double y, double z, EntityPlayer par5EntityPlayer)
     {

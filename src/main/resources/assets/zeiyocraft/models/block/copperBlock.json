@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "zeiyocraft:blocks/copperBlock"
+        "all": "blocks/log_oak"
     }
 }
