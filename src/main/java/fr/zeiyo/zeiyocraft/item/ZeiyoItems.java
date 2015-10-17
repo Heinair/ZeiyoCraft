@@ -23,42 +23,45 @@ public final class ZeiyoItems
 
     public static Item copperCoin, silverCoin, goldCoin;
 	public static Item key;
-    public static Item itemChair;
+
+    // Vanilla
+
+    public static Item woodenWarAxe, stoneWarAxe, goldWarAxe, ironWarAxe, diamondWarAxe;
 
     // Steel
 
 	public static Item steelIngot;
-	public static Item steelPickaxe, steelAxe, steelSpade, steelHoe, steelSword;
+	public static Item steelPickaxe, steelAxe, steelSpade, steelHoe, steelSword, steelWarAxe;
 	public static Item steelHelmet, steelChestplate, steelLeggings, steelBoots;
 	
 	// Bronze-related Items
 	
 	public static Item copperIngot,tinIngot, bronzeIngot;
-	public static Item bronzePickaxe, bronzeAxe, bronzeSpade, bronzeHoe, bronzeSword;
+	public static Item bronzePickaxe, bronzeAxe, bronzeSpade, bronzeHoe, bronzeSword, bronzeWarAxe;
 	public static Item bronzeHelmet, bronzeChestplate, bronzeLeggings, bronzeBoots;
 
 	// Electrum-related Items
 
 	public static Item silverIngot, electrumIngot;
-    public static Item electrumPickaxe, electrumAxe, electrumSpade, electrumHoe, electrumSword;
+    public static Item electrumPickaxe, electrumAxe, electrumSpade, electrumHoe, electrumSword, electrumWarAxe;
     public static Item electrumHelmet, electrumChestplate, electrumLeggings, electrumBoots;
 	
 	// Onyx
 	
 	public static Item onyx;
-	public static Item onyxPickaxe, onyxAxe, onyxSpade, onyxHoe, onyxSword;
+	public static Item onyxPickaxe, onyxAxe, onyxSpade, onyxHoe, onyxSword, onyxWarAxe;
     public static Item onyxHelmet, onyxChestplate, onyxLeggings, onyxBoots;
 
     // Ruby
 	
 	public static Item ruby;
-    public static Item rubyPickaxe, rubyAxe, rubySpade, rubyHoe, rubySword;
+    public static Item rubyPickaxe, rubyAxe, rubySpade, rubyHoe, rubySword, rubyWarAxe;
     public static Item rubyHelmet, rubyChestplate, rubyLeggings, rubyBoots;
 
     // Sapphire
 	
 	public static Item sapphire;
-    public static Item sapphirePickaxe, sapphireAxe, sapphireSpade, sapphireHoe, sapphireSword;
+    public static Item sapphirePickaxe, sapphireAxe, sapphireSpade, sapphireHoe, sapphireSword, sapphireWarAxe;
     public static Item sapphireHelmet, sapphireChestplate, sapphireLeggings, sapphireBoots;
 	
     public static void initItems()
@@ -88,7 +91,15 @@ public final class ZeiyoItems
         silverCoin = new ZItem("silverCoin").setCreativeTab(CreativeTabs.tabAllSearch).setMaxStackSize(100);
         goldCoin = new ZItem("goldCoin").setCreativeTab(CreativeTabs.tabAllSearch).setMaxStackSize(100);
         key = new ZItem("key").setCreativeTab(CreativeTabs.tabMisc).setMaxStackSize(1);
-        itemChair = new ZItemBlock("itemChair", ZeiyoBlocks.chair, CreativeTabs.tabDecorations).setMaxStackSize(16);
+
+        // Vanilla
+
+        woodenWarAxe = new ZItemWarAxe("woodenWarAxe", Item.ToolMaterial.WOOD);
+        stoneWarAxe = new ZItemWarAxe("stoneWarAxe", Item.ToolMaterial.STONE);
+        goldWarAxe = new ZItemWarAxe("goldWarAxe", Item.ToolMaterial.GOLD, 100);
+        ironWarAxe = new ZItemWarAxe("ironWarAxe", Item.ToolMaterial.IRON, 101);
+        diamondWarAxe = new ZItemWarAxe("diamondWarAxe", Item.ToolMaterial.EMERALD, 102);
+
 
         // Steel
 
@@ -98,6 +109,7 @@ public final class ZeiyoItems
         steelSpade = new ZItemSpade("steelSpade", ZToolMaterial.STEEL, 0);
         steelHoe = new ZItemHoe("steelHoe", ZToolMaterial.STEEL, 0);
         steelSword = new ZItemSword("steelSword", ZToolMaterial.STEEL, 0);
+        steelWarAxe = new ZItemWarAxe("steelWarAxe", ZToolMaterial.STEEL, 0);
         steelHelmet = new ZItemArmor("steelHelmet", ZArmorMaterial.STEELA, 1, 0, 0);
         steelChestplate = new ZItemArmor("steelChestplate", ZArmorMaterial.STEELA, 1, 1, 0);
         steelLeggings = new ZItemArmor("steelLeggings", ZArmorMaterial.STEELA, 2, 2, 0);
@@ -113,6 +125,7 @@ public final class ZeiyoItems
         bronzeSpade = new ZItemSpade("bronzeSpade", ZToolMaterial.BRONZE, 1);
         bronzeHoe = new ZItemHoe("bronzeHoe", ZToolMaterial.BRONZE, 1);
         bronzeSword = new ZItemSword("bronzeSword", ZToolMaterial.BRONZE, 1);
+        bronzeWarAxe = new ZItemWarAxe("bronzeWarAxe", ZToolMaterial.BRONZE, 1);
         bronzeHelmet = new ZItemArmor("bronzeHelmet", ZArmorMaterial.BRONZEA, 1, 0, 1);
         bronzeChestplate = new ZItemArmor("bronzeChestplate", ZArmorMaterial.BRONZEA, 1, 1, 1);
         bronzeLeggings = new ZItemArmor("bronzeLeggings", ZArmorMaterial.BRONZEA, 2, 2, 1);
@@ -126,7 +139,8 @@ public final class ZeiyoItems
         electrumAxe = new ZItemAxe("electrumAxe", ZToolMaterial.ELECTRUM, 2);
         electrumSpade = new ZItemSpade("electrumSpade", ZToolMaterial.ELECTRUM, 2);
         electrumHoe = new ZItemHoe("electrumHoe", ZToolMaterial.ELECTRUM, 2);
-        electrumSword = new ZItemSword("electrumSword", ZToolMaterial.ELECTRUM, 2);
+        electrumSword = new ZItemSword("electrumSword", ZToolMaterial.ELECTRUM, 2);        
+        electrumWarAxe = new ZItemWarAxe("electrumWarAxe", ZToolMaterial.ELECTRUM, 1);
         electrumHelmet = new ZItemArmor("electrumHelmet", ZArmorMaterial.ELECTRUMA, 1, 0, 2);
         electrumChestplate = new ZItemArmor("electrumChestplate", ZArmorMaterial.ELECTRUMA, 1, 1, 2);
         electrumLeggings = new ZItemArmor("electrumLeggings", ZArmorMaterial.ELECTRUMA, 2, 2, 2);
@@ -139,6 +153,7 @@ public final class ZeiyoItems
         onyxSpade = new ZItemSpade("onyxSpade", ZToolMaterial.ONYX, 3);
         onyxHoe = new ZItemHoe("onyxHoe", ZToolMaterial.ONYX, 3);
         onyxSword = new ZItemSword("onyxSword", ZToolMaterial.ONYX, 3);
+        onyxWarAxe = new ZItemWarAxe("onyxWarAxe", ZToolMaterial.ONYX, 1);
         onyxHelmet = new ZItemArmor("onyxHelmet", ZArmorMaterial.ONYXA, 1, 0, 3);
         onyxChestplate = new ZItemArmor("onyxChestplate", ZArmorMaterial.ONYXA, 1, 1, 3);
         onyxLeggings = new ZItemArmor("onyxLeggings", ZArmorMaterial.ONYXA, 2, 2, 3);
@@ -151,6 +166,7 @@ public final class ZeiyoItems
         rubySpade = new ZItemSpade("rubySpade", ZToolMaterial.RUBY, 4);
         rubyHoe = new ZItemHoe("rubyHoe", ZToolMaterial.RUBY, 4);
         rubySword = new ZItemSword("rubySword", ZToolMaterial.RUBY, 4);
+        rubyWarAxe = new ZItemWarAxe("rubyWarAxe", ZToolMaterial.RUBY, 4);
         rubyHelmet = new ZItemArmor("rubyHelmet", ZArmorMaterial.RUBYA, 1, 0, 4);
         rubyChestplate = new ZItemArmor("rubyChestplate", ZArmorMaterial.RUBYA, 1, 1, 4);
         rubyLeggings = new ZItemArmor("rubyLeggings", ZArmorMaterial.RUBYA, 2, 2, 4);
@@ -163,6 +179,7 @@ public final class ZeiyoItems
         sapphireSpade = new ZItemSpade("sapphireSpade", ZToolMaterial.SAPPHIRE, 5);
         sapphireHoe = new ZItemHoe("sapphireHoe", ZToolMaterial.SAPPHIRE, 5);
         sapphireSword = new ZItemSword("sapphireSword", ZToolMaterial.SAPPHIRE, 5);
+        sapphireWarAxe = new ZItemWarAxe("sapphireWarAxe", ZToolMaterial.SAPPHIRE, 5);
         sapphireHelmet = new ZItemArmor("sapphireHelmet", ZArmorMaterial.SAPPHIREA, 1, 0, 5);
         sapphireChestplate = new ZItemArmor("sapphireChestplate", ZArmorMaterial.SAPPHIREA, 1, 1, 5);
         sapphireLeggings = new ZItemArmor("sapphireLeggings", ZArmorMaterial.SAPPHIREA, 2, 2, 5);
@@ -197,7 +214,14 @@ public final class ZeiyoItems
         GameRegistry.registerItem(silverCoin, silverCoin.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(goldCoin, goldCoin.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(key, key.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(itemChair, itemChair.getUnlocalizedName().substring(5));
+
+        // Vanilla
+
+        GameRegistry.registerItem(woodenWarAxe, woodenWarAxe.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(stoneWarAxe, stoneWarAxe.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(goldWarAxe, goldWarAxe.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(ironWarAxe, ironWarAxe.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(diamondWarAxe, diamondWarAxe.getUnlocalizedName().substring(5));
 
         // Steel
 
@@ -207,6 +231,7 @@ public final class ZeiyoItems
         GameRegistry.registerItem(steelSpade, steelSpade.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(steelHoe, steelHoe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(steelSword, steelSword.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(steelWarAxe, steelWarAxe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(steelHelmet, steelHelmet.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(steelChestplate, steelChestplate.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(steelLeggings, steelLeggings.getUnlocalizedName().substring(5));
@@ -222,6 +247,7 @@ public final class ZeiyoItems
         GameRegistry.registerItem(bronzeSpade, bronzeSpade.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(bronzeHoe, bronzeHoe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(bronzeSword, bronzeSword.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(bronzeWarAxe, bronzeWarAxe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(bronzeHelmet, bronzeHelmet.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(bronzeChestplate, bronzeChestplate.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(bronzeLeggings, bronzeLeggings.getUnlocalizedName().substring(5));
@@ -236,6 +262,7 @@ public final class ZeiyoItems
         GameRegistry.registerItem(electrumSpade, electrumSpade.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(electrumHoe, electrumHoe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(electrumSword, electrumSword.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(electrumWarAxe, electrumWarAxe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(electrumHelmet, electrumHelmet.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(electrumChestplate, electrumChestplate.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(electrumLeggings, electrumLeggings.getUnlocalizedName().substring(5));
@@ -248,6 +275,7 @@ public final class ZeiyoItems
         GameRegistry.registerItem(onyxSpade, onyxSpade.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(onyxHoe, onyxHoe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(onyxSword, onyxSword.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(onyxWarAxe, onyxWarAxe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(onyxHelmet, onyxHelmet.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(onyxChestplate, onyxChestplate.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(onyxLeggings, onyxLeggings.getUnlocalizedName().substring(5));
@@ -260,6 +288,7 @@ public final class ZeiyoItems
         GameRegistry.registerItem(rubySpade, rubySpade.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(rubyHoe, rubyHoe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(rubySword, rubySword.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(rubyWarAxe, rubyWarAxe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(rubyHelmet, rubyHelmet.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(rubyChestplate, rubyChestplate.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(rubyLeggings, rubyLeggings.getUnlocalizedName().substring(5));
@@ -276,8 +305,6 @@ public final class ZeiyoItems
         GameRegistry.registerItem(sapphireChestplate, sapphireChestplate.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(sapphireLeggings, sapphireLeggings.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(sapphireBoots, sapphireBoots.getUnlocalizedName().substring(5));
-
-
 
     }
 	

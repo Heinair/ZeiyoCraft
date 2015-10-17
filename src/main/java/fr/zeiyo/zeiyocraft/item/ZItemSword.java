@@ -13,6 +13,7 @@ public class ZItemSword extends ItemSword
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
+		this.isRepairable();
 		this.id = nmb;
 	}
 

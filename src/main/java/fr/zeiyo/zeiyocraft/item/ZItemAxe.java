@@ -13,6 +13,7 @@ public class ZItemAxe extends ItemAxe
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
+		this.isRepairable();
 		this.id = nmb;
 	}
 

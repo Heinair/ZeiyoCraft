@@ -9,6 +9,7 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,6 +17,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -34,6 +36,7 @@ public class ZBlockSittable extends Block
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         this.setUnlocalizedName(unlocalizedName);
         this.setHardness(1.0F);
+        this.setCreativeTab(CreativeTabs.tabDecorations);
         this.setHarvestLevel("axe", 0);
     }
 
@@ -61,6 +64,20 @@ public class ZBlockSittable extends Block
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
+    public boolean addHitEffects(World worldObj, MovingObjectPosition target, net.minecraft.client.particle.EffectRenderer effectRenderer)
+    {
+        return true;
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public boolean addDestroyEffects(World world, BlockPos pos, net.minecraft.client.particle.EffectRenderer effectRenderer)
+    {
+        return true;
+    }
+
+    @Override
     public void setBlockBoundsBasedOnState(IBlockAccess blockAccess, BlockPos pos)
     {
         setBlockBounds(0.1F, 0.0F, 0.1F, 0.9F, 1.2F, 0.9F);
@@ -84,30 +101,6 @@ public class ZBlockSittable extends Block
             super.addCollisionBoxesToList(world, pos, state, mask, list, collidingEntity);
         }
     }
-
-    @Override
-    public Item getItemDropped(IBlockState state, Random rand, int fortune)
-    {
-
-        return null;
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public Item getItem(World worldIn, BlockPos pos)
-    {
-        return ZeiyoItems.itemChair;
-    }
-    
-   /* @Override
-    public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos)
-    {
-        if (this == FurnitureBlocks.chair_wood)
-            return new ItemStack(FurnitureItems.itemChairWood);
-        if (this == FurnitureBlocks.chair_stone)
-            return new ItemStack(FurnitureItems.itemChairStone);
-        return null;
-    }*/
 
     @Override
     public IBlockState onBlockPlaced(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)

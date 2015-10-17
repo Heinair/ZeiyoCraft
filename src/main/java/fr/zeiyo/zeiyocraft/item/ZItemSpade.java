@@ -13,6 +13,7 @@ public class ZItemSpade extends ItemSpade
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
+		this.isRepairable();
 		this.id = nmb;
 	}
 

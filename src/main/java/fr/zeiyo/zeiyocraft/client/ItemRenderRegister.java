@@ -41,7 +41,14 @@ public class ItemRenderRegister
         reg(ZeiyoItems.silverCoin);
         reg(ZeiyoItems.goldCoin);
 		reg(ZeiyoItems.key);
-		reg(ZeiyoItems.itemChair);
+
+		// Vanilla
+
+		reg(ZeiyoItems.woodenWarAxe);
+		reg(ZeiyoItems.stoneWarAxe);
+		reg(ZeiyoItems.goldWarAxe);
+		reg(ZeiyoItems.ironWarAxe);
+		reg(ZeiyoItems.diamondWarAxe);
 
 		// Steel
 
@@ -51,7 +58,8 @@ public class ItemRenderRegister
 		reg(ZeiyoItems.steelSpade);
 		reg(ZeiyoItems.steelHoe);
 		reg(ZeiyoItems.steelSword);
-		reg(ZeiyoItems.steelHelmet);
+        reg(ZeiyoItems.steelWarAxe);
+        reg(ZeiyoItems.steelHelmet);
 		reg(ZeiyoItems.steelChestplate);
 		reg(ZeiyoItems.steelLeggings);
 		reg(ZeiyoItems.steelBoots);
@@ -66,7 +74,8 @@ public class ItemRenderRegister
 		reg(ZeiyoItems.bronzeSpade);
 		reg(ZeiyoItems.bronzeHoe);
 		reg(ZeiyoItems.bronzeSword);
-		reg(ZeiyoItems.bronzeHelmet);
+        reg(ZeiyoItems.bronzeWarAxe);
+        reg(ZeiyoItems.bronzeHelmet);
 		reg(ZeiyoItems.bronzeChestplate);
 		reg(ZeiyoItems.bronzeLeggings);
 		reg(ZeiyoItems.bronzeBoots);
@@ -80,6 +89,7 @@ public class ItemRenderRegister
         reg(ZeiyoItems.electrumSpade);
         reg(ZeiyoItems.electrumHoe);
         reg(ZeiyoItems.electrumSword);
+        reg(ZeiyoItems.electrumWarAxe);
         reg(ZeiyoItems.electrumHelmet);
         reg(ZeiyoItems.electrumChestplate);
         reg(ZeiyoItems.electrumLeggings);
@@ -93,7 +103,8 @@ public class ItemRenderRegister
 		reg(ZeiyoItems.onyxSpade);
 		reg(ZeiyoItems.onyxHoe);
 		reg(ZeiyoItems.onyxSword);
-		reg(ZeiyoItems.onyxHelmet);
+        reg(ZeiyoItems.onyxWarAxe);
+        reg(ZeiyoItems.onyxHelmet);
 		reg(ZeiyoItems.onyxChestplate);
 		reg(ZeiyoItems.onyxLeggings);
 		reg(ZeiyoItems.onyxBoots);
@@ -106,7 +117,8 @@ public class ItemRenderRegister
 		reg(ZeiyoItems.rubySpade);
 		reg(ZeiyoItems.rubyHoe);
 		reg(ZeiyoItems.rubySword);
-		reg(ZeiyoItems.rubyHelmet);
+        reg(ZeiyoItems.rubyWarAxe);
+        reg(ZeiyoItems.rubyHelmet);
 		reg(ZeiyoItems.rubyChestplate);
 		reg(ZeiyoItems.rubyLeggings);
 		reg(ZeiyoItems.rubyBoots);
@@ -119,7 +131,8 @@ public class ItemRenderRegister
 		reg(ZeiyoItems.sapphireSpade);
 		reg(ZeiyoItems.sapphireHoe);
 		reg(ZeiyoItems.sapphireSword);
-		reg(ZeiyoItems.sapphireHelmet);
+        reg(ZeiyoItems.steelWarAxe);
+        reg(ZeiyoItems.sapphireHelmet);
 		reg(ZeiyoItems.sapphireChestplate);
 		reg(ZeiyoItems.sapphireLeggings);
 		reg(ZeiyoItems.sapphireBoots);

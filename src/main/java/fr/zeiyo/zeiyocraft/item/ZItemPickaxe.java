@@ -13,6 +13,7 @@ public class ZItemPickaxe extends ItemPickaxe
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
+		this.isRepairable();
 		this.id = nmb;
 	}
 

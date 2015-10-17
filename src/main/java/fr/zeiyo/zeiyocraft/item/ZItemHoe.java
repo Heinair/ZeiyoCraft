@@ -13,6 +13,7 @@ public class ZItemHoe extends ItemHoe
 	{
 		super(material);
 		this.setUnlocalizedName(unlocalizedName);
+		this.isRepairable();
 		this.id = nmb;
 	}
 

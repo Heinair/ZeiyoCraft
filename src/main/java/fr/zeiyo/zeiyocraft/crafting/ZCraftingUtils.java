@@ -2,6 +2,7 @@ package fr.zeiyo.zeiyocraft.crafting;
 
 import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -40,7 +41,7 @@ public class ZCraftingUtils
 
     }
 
-    public static void toolsCraft (Item item , Item pickaxe, Item axe, Item spade, Item hoe, Item sword)
+    public static void toolsCraft (Item item , Item pickaxe, Item axe, Item spade, Item hoe, Item sword, Item warAxe)
     {
 
         pickaxeCraft(item, pickaxe);
@@ -48,6 +49,7 @@ public class ZCraftingUtils
         spadeCraft(item, spade);
         hoeCraft(item, hoe);
         swordCraft(item, sword);
+        warAxeCraft(item, warAxe);
 
     }
 
@@ -76,6 +78,11 @@ public class ZCraftingUtils
         GameRegistry.addRecipe(new ItemStack(sword), new Object[] {" # ", " # ", " P ",'P', Items.stick, '#', item});
     }
 
+    public static void warAxeCraft(Item item, Item warAxe)
+    {
+        GameRegistry.addRecipe(new ItemStack(warAxe), new Object[] {"###", "#P#", " P ", 'P', Items.stick, '#', item});
+    }
+
     public static Item getRepairItem(int id)
     {
 
@@ -87,6 +94,9 @@ public class ZCraftingUtils
             case 3 : return ZeiyoItems.onyx;
             case 4 : return ZeiyoItems.ruby;
             case 5 : return ZeiyoItems.sapphire;
+            case 100 : return Items.gold_ingot;
+            case 101 : return Items.iron_ingot;
+            case 102 : return Items.diamond;
 
             default : return null;
 

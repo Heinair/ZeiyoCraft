@@ -29,24 +29,24 @@ public class ZItemArmor extends ItemArmor
 		
 		if (this.isWearingFullSet(player, ZeiyoItems.onyxHelmet, ZeiyoItems.onyxChestplate, ZeiyoItems.onyxLeggings, ZeiyoItems.onyxBoots)) 
 		{
-			this.effectPlayer(player, Potion.fireResistance, 1);
+			this.effectPlayer(player, Potion.absorption, 0, 600);
 		}
 		if (this.isWearingFullSet(player, ZeiyoItems.rubyHelmet, ZeiyoItems.rubyChestplate, ZeiyoItems.rubyLeggings, ZeiyoItems.rubyBoots)) 
 		{
-			this.effectPlayer(player, Potion.damageBoost, 0);
+			this.effectPlayer(player, Potion.fireResistance, 0, 50);
 		}
 		if (this.isWearingFullSet(player, ZeiyoItems.sapphireHelmet, ZeiyoItems.sapphireChestplate, ZeiyoItems.sapphireLeggings, ZeiyoItems.sapphireBoots)) 
 		{
-			this.effectPlayer(player, Potion.waterBreathing, 0);
+			this.effectPlayer(player, Potion.waterBreathing, 0, 50);
 		}
 
 		
 	}
 	
-	private void effectPlayer(EntityPlayer player, Potion potion, int amplifier) 
+	private void effectPlayer(EntityPlayer player, Potion potion, int amplifier, int duration)
 	{
 		if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 1)
-			player.addPotionEffect(new PotionEffect(potion.id, 159, amplifier, true, true));
+			player.addPotionEffect(new PotionEffect(potion.id, duration, amplifier, false, false));
 	}
 	
 	private boolean isWearingFullSet(EntityPlayer player, Item helmet, Item chestplate, Item leggings, Item boots) 
