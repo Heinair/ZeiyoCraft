@@ -301,6 +301,7 @@ public final class ZeiyoItems
         GameRegistry.registerItem(sapphireSpade, sapphireSpade.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(sapphireHoe, sapphireHoe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(sapphireSword, sapphireSword.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(sapphireWarAxe, sapphireWarAxe.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(sapphireHelmet, sapphireHelmet.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(sapphireChestplate, sapphireChestplate.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(sapphireLeggings, sapphireLeggings.getUnlocalizedName().substring(5));

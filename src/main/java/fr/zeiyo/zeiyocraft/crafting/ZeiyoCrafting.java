@@ -17,12 +17,11 @@ public class ZeiyoCrafting
 
 		GameRegistry.addSmelting(Items.egg, new ItemStack(ZeiyoItems.hardboiledEgg), 0.15F);
 		GameRegistry.addSmelting(ZeiyoItems.barley, new ItemStack(ZeiyoItems.malt), 0.15F);
-        GameRegistry.addSmelting(Items.wheat_seeds, new ItemStack(ZeiyoItems.barleySeeds), 0.15F);
 		GameRegistry.addSmelting(Items.rotten_flesh, new ItemStack(ZeiyoItems.puriFlesh), 0.05F);
 
         // Crafts
 
-		GameRegistry.addRecipe(new ItemStack(ZeiyoItems.chocolateCake), new Object[] {"XCX", "SOS", "CBC",'X', Items.milk_bucket, 'C', new ItemStack(Items.dye, 1, 12), 'S', Items.sugar, 'O', Items.egg, 'B', Items.wheat});
+		GameRegistry.addRecipe(new ItemStack(ZeiyoItems.chocolateCake), new Object[] {"XCX", "SOS", "CBC",'X', Items.milk_bucket, 'C', new ItemStack(Items.dye, 1, 3), 'S', Items.sugar, 'O', Items.egg, 'B', Items.wheat});
 		GameRegistry.addRecipe(new ItemStack(ZeiyoItems.steelIngot), new Object[] {"###", "#P#", "###",'P', Items.iron_ingot, '#', Items.coal});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.vegetableStew), new Object[] {"CPR", " B ", 'R', new ItemStack(Blocks.pumpkin), 'C', Items.carrot, 'P', Items.baked_potato, 'B', Items.bowl});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.bronzeIngot), new Object[] {"## ", "P# ",'P', ZeiyoItems.tinIngot, '#', ZeiyoItems.copperIngot});
