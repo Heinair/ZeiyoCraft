@@ -23,7 +23,7 @@ public class ZItemWarAxe extends ItemAxe
         super(tool);
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(CreativeTabs.tabCombat);
-        this.attackDamage = 4.0F + tool.getDamageVsEntity();
+        this.attackDamage = 5.0F + tool.getDamageVsEntity();
         this.isRepairable();
         this.id = nmb;
     }

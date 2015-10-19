@@ -29,12 +29,10 @@ public class ZBlockCrops extends BlockCrops implements IGrowable
 
         switch(id)
         {
-
             case 0 : return ZeiyoItems.barley;
             case 1 : return ZeiyoItems.grape;
 
             default : return null;
-
         }
 
     }
@@ -44,12 +42,10 @@ public class ZBlockCrops extends BlockCrops implements IGrowable
     {
         switch(id)
         {
-
             case 0 : return ZeiyoItems.barleySeeds;
             case 1 : return ZeiyoItems.grapeSeeds;
 
             default : return null;
-
         }
     }
 

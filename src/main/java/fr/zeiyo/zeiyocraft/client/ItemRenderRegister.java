@@ -26,10 +26,10 @@ public class ItemRenderRegister
         reg(ZeiyoItems.vegetableStew);
 		reg(ZeiyoItems.puriFlesh);
         reg(ZeiyoItems.malt);
+		reg(ZeiyoItems.barley);
+		reg(ZeiyoItems.barleySeeds);
         reg(ZeiyoItems.grape);
 		reg(ZeiyoItems.grapeSeeds);
-        reg(ZeiyoItems.barley);
-        reg(ZeiyoItems.barleySeeds);
         reg(ZeiyoItems.tankard);
         reg(ZeiyoItems.beerTankard);
         reg(ZeiyoItems.wineTankard);

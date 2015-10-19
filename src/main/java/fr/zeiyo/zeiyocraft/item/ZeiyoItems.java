@@ -70,7 +70,7 @@ public final class ZeiyoItems
 
         // Food
 
-        chocolateCake = new ZItemBlock("chocolateCake", ZeiyoBlocks.blockChocolateCake, CreativeTabs.tabFood);
+        chocolateCake = new ZItemBlock("chocolateCake", ZeiyoBlocks.blockChocolateCake, CreativeTabs.tabFood).setMaxStackSize(1);
         hardboiledEgg = new ZItemFood("hardboiledEgg", 3, 0.1F, false);
         applePie = new ZItemFood("applePie", 8, 0.3F, false);
         puriFlesh = new ZItemFood("puriFlesh", 4, 0.1F, true);
@@ -80,7 +80,7 @@ public final class ZeiyoItems
         barley = new ZItem("barley").setCreativeTab(CreativeTabs.tabMaterials);
         grapeSeeds = new ZItemSeeds("grapeSeeds", ZeiyoBlocks.grapeCrops, Blocks.farmland);
         grape = new ZItemFood("grape", 4, 0.3F, false);
-        tankard = new ZItem("tankard").setCreativeTab(CreativeTabs.tabAllSearch);
+        tankard = new ZItem("tankard").setCreativeTab(CreativeTabs.tabAllSearch).setMaxStackSize(16);
         beerTankard = new ZItemAlcohol("beerTankard", 2, 30, 2);
         ciderTankard = new ZItemAlcohol("ciderTankard", 2, 30, 2);
         wineTankard = new ZItemAlcohol("wineTankard", 2, 45, 2);

@@ -56,7 +56,8 @@ public class ZeiyoBlocks
         // Food
 
         GameRegistry.registerBlock(blockChocolateCake, blockChocolateCake.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(barleyCrops, grapeCrops.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(barleyCrops, barleyCrops.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(grapeCrops, grapeCrops.getUnlocalizedName().substring(5));
 
         // Ore Blocks
 

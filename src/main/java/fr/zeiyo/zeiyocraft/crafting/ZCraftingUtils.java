@@ -82,6 +82,11 @@ public class ZCraftingUtils
     {
         GameRegistry.addRecipe(new ItemStack(warAxe), new Object[] {"###", "#P#", " P ", 'P', Items.stick, '#', item});
     }
+    public static void warAxeCraft(Block block, Item warAxe)
+    {
+        GameRegistry.addRecipe(new ItemStack(warAxe), new Object[] {"###", "#P#", " P ", 'P', Items.stick, '#', block});
+    }
+
 
     public static Item getRepairItem(int id)
     {
