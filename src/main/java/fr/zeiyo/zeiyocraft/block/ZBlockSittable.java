@@ -145,17 +145,6 @@ public class ZBlockSittable extends Block
         return true;
     }
 
-    public static boolean sitOnBlockWithRotationOffset(World par1World, double x, double y, double z, EntityPlayer par5EntityPlayer, double par6, int metadata, double offset)
-    {
-        if (!checkForExistingEntity(par1World, x, y, z, par5EntityPlayer))
-        {
-            ZEntitySittable nemb = new ZEntitySittable(par1World, x, y, z, par6, metadata, offset);
-            par1World.spawnEntityInWorld(nemb);
-            par5EntityPlayer.mountEntity(nemb);
-        }
-        return true;
-    }
-
     public static boolean checkForExistingEntity(World par1World, double x, double y, double z, EntityPlayer par5EntityPlayer)
     {
         List<ZEntitySittable> listEMB = par1World.getEntitiesWithinAABB(ZEntitySittable.class, new AxisAlignedBB(x, y, z, x + 1.0D, y + 1.0D, z + 1.0D).expand(1D, 1D, 1D));

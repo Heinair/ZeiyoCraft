@@ -95,7 +95,7 @@ public class ZKeyEvent
             {
                 if(!hasRequiredKey(event.getPlayer(), tileEntityLockable))
                 {
-                    player.playerNetServerHandler.sendPacket(new S02PacketChat(new ChatComponentTranslation("text.key.errorOnDestroyBlock"), (byte)2));
+                    player.playerNetServerHandler.sendPacket(new S02PacketChat((new ChatComponentTranslation("text.key.errorOnDestroyBlock")), (byte)2));
                     event.setCanceled(true);
                 }
             }

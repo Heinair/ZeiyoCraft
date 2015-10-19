@@ -131,7 +131,7 @@ public class ItemRenderRegister
 		reg(ZeiyoItems.sapphireSpade);
 		reg(ZeiyoItems.sapphireHoe);
 		reg(ZeiyoItems.sapphireSword);
-        reg(ZeiyoItems.steelWarAxe);
+        reg(ZeiyoItems.sapphireWarAxe);
         reg(ZeiyoItems.sapphireHelmet);
 		reg(ZeiyoItems.sapphireChestplate);
 		reg(ZeiyoItems.sapphireLeggings);
