@@ -1,29 +1,30 @@
 package fr.zeiyo.zeiyocraft.item;
 
 import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Multimap;
+import com.google.common.collect.Sets;
 import fr.zeiyo.zeiyocraft.crafting.ZCraftingUtils;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.item.ItemAxe;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemTool;
 
 import java.util.Set;
 
-public class ZItemWarAxe extends ItemAxe
+public class ZItemWarAxe extends ItemTool
 {
 
-    private float attackDamage;
     public int id;
+    private static final Set EFFECTIVE_ON = Sets.newHashSet(new Block[]{Blocks.planks, Blocks.bookshelf, Blocks.log, Blocks.log2, Blocks.chest, Blocks.pumpkin, Blocks.lit_pumpkin, Blocks.melon_block, Blocks.ladder});
+
 
     public ZItemWarAxe(String unlocalizedName, ToolMaterial tool, int nmb)
     {
-        super(tool);
+        super(4.5F, tool, EFFECTIVE_ON);
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(CreativeTabs.tabCombat);
-        this.attackDamage = 5.0F + tool.getDamageVsEntity();
         this.isRepairable();
         this.id = nmb;
     }
@@ -55,12 +56,9 @@ public class ZItemWarAxe extends ItemAxe
         return ZCraftingUtils.getRepairItem(id) == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
     }
 
-    @Override
-    public Multimap getItemAttributeModifiers()
+    public float getStrVsBlock(ItemStack stack, Block block)
     {
-        Multimap multimap = super.getItemAttributeModifiers();
-        multimap.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(itemModifierUUID, "Weapon modifier", (double)this.attackDamage, 0));
-        return multimap;
+        return block.getMaterial() != Material.wood && block.getMaterial() != Material.plants && block.getMaterial() != Material.vine ? super.getStrVsBlock(stack, block) : this.efficiencyOnProperMaterial;
     }
 
 }

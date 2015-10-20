@@ -12,6 +12,8 @@ Features :
 - Weapons, armors and tools are included !
 - New crops : Grape and Barley
 - New food (chocolate cake, apple pie, beer, wine and many others...)
+- A security system (with keys)
+- Chairs
 - Added some crafts (saddle, etc...)
 - Added uncraftables coins (for servers)
 
@@ -35,4 +37,4 @@ Heinair : Initiator of the project, main contributor
 
 Wascar : Programming helper
 
-Mawadinger : Textures and models
+Mawadinger : Some textures
