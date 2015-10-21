@@ -37,7 +37,7 @@ public class ZeiyoWorldGen implements IWorldGenerator
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
 	{
 
-		BlockPos forBiome = new BlockPos(chunkX, 62, chunkZ);
+		BlockPos forBiome = new BlockPos(chunkX * 16, 62, chunkZ * 16);
 
 		switch (world.provider.getDimensionId())
 		{
@@ -64,7 +64,7 @@ public class ZeiyoWorldGen implements IWorldGenerator
 
                 this.runGenerator(this.gen_copper, world, random, chunkX, chunkZ, 30, 0, 72);
 	    	    this.runGenerator(this.gen_tin, world, random, chunkX, chunkZ, 10, 0, 72);
-	    	    this.runGenerator(this.gen_silver, world, random, chunkX, chunkZ, 18, 0, 42);
+	    	    this.runGenerator(this.gen_silver, world, random, chunkX, chunkZ, 12, 0, 42);
 
 			    break;
 

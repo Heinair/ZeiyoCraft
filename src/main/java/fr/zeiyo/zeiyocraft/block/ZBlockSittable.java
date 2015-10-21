@@ -55,11 +55,19 @@ public class ZBlockSittable extends Block
     @Override
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ)
     {
-        if(this.sitOnBlock(world, pos.getX(), pos.getY(), pos.getZ(), player, 7 * 0.0625))
+
+        if(!(checkForExistingEntity(world, pos.getX(), pos.getY(), pos.getZ(), player)))
         {
-            world.updateComparatorOutputLevel(pos, this);
-            return true;
+
+            if(this.sitOnBlock(world, pos.getX(), pos.getY(), pos.getZ(), player, 7 * 0.0625))
+            {
+                world.updateComparatorOutputLevel(pos, this);
+                return true;
+            }
+
         }
+
+
         return false;
     }
 
@@ -142,6 +150,7 @@ public class ZBlockSittable extends Block
             par1World.spawnEntityInWorld(nemb);
             par5EntityPlayer.mountEntity(nemb);
         }
+
         return true;
     }
 

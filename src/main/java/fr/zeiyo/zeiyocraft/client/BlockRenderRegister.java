@@ -28,6 +28,7 @@ public class BlockRenderRegister
          // Miscellaneous
 
          reg(ZeiyoBlocks.chair);
+         reg(ZeiyoBlocks.campfire);
 
          // Ore Blocks
 

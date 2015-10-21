@@ -19,7 +19,6 @@ public class ZItemWarAxe extends ItemTool
     public int id;
     private static final Set EFFECTIVE_ON = Sets.newHashSet(new Block[]{Blocks.planks, Blocks.bookshelf, Blocks.log, Blocks.log2, Blocks.chest, Blocks.pumpkin, Blocks.lit_pumpkin, Blocks.melon_block, Blocks.ladder});
 
-
     public ZItemWarAxe(String unlocalizedName, ToolMaterial tool, int nmb)
     {
         super(4.5F, tool, EFFECTIVE_ON);
@@ -34,7 +33,6 @@ public class ZItemWarAxe extends ItemTool
         this(unlocalizedName, tool, 404);
 
     }
-
 
     @Override
     public Set<String> getToolClasses(ItemStack stack)
