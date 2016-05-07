@@ -1,0 +1,42 @@
+{
+    "pools": [
+        {
+            "rolls": {
+                "min": 1,
+                "max": 3
+            },
+            "entries": [           
+            ]
+        },
+        {
+            "rolls": {
+                "min": 1,
+                "max": 4
+            },
+            "entries": [            
+                {
+                    "type": "item",
+                    "name": "zeiyocraft:grape_seeds",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 4
+                            }
+                        }
+                    ],
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "rolls": 3,
+            "entries": [
+                
+                    ]
+                }
+            ]
+        }
+    ]
+}

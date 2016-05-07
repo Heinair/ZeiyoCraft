@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "zeiyocraft:blocks/grapeCrops_stage_1"
+    }
+}
