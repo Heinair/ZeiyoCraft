@@ -16,8 +16,7 @@ public class ZBlockCrops extends BlockCrops implements IGrowable
 {
     public int id;
 
-    protected ZBlockCrops(String unlocalizedName, int nmb)
-    {
+    protected ZBlockCrops(String unlocalizedName, int nmb) {
         super();
         this.setUnlocalizedName(unlocalizedName);
         this.setRegistryName(unlocalizedName);
@@ -25,40 +24,40 @@ public class ZBlockCrops extends BlockCrops implements IGrowable
     }
 
     @Override
-    protected Item getCrop()
-    {
+    protected Item getCrop() {
 
-        switch(id)
-        {
-            case 0 : return ZeiyoItems.barley;
-            case 1 : return ZeiyoItems.grape;
+        switch (id) {
+            case 0:
+                return ZeiyoItems.barley;
+            case 1:
+                return ZeiyoItems.grape;
 
-            default : return null;
+            default:
+                return null;
         }
 
     }
 
     @Override
-    protected Item getSeed()
-    {
-        switch(id)
-        {
-            case 0 : return ZeiyoItems.barleySeeds;
-            case 1 : return ZeiyoItems.grapeSeeds;
+    protected Item getSeed() {
+        switch (id) {
+            case 0:
+                return ZeiyoItems.barleySeeds;
+            case 1:
+                return ZeiyoItems.grapeSeeds;
 
-            default : return null;
+            default:
+                return null;
         }
     }
 
     @Override
-    public EnumPlantType getPlantType (IBlockAccess world, BlockPos pos)
-    {
+    public EnumPlantType getPlantType(IBlockAccess world, BlockPos pos) {
         return EnumPlantType.Crop;
     }
 
     @SideOnly(Side.CLIENT)
-    public Item getItem(World worldIn, BlockPos pos)
-    {
+    public Item getItem(World worldIn, BlockPos pos) {
         return this.getSeed();
     }
 

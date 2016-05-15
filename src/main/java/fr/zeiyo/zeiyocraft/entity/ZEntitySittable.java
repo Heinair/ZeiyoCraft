@@ -5,22 +5,19 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class ZEntitySittable extends Entity
-{
+public class ZEntitySittable extends Entity {
     public int blockPosX;
     public int blockPosY;
     public int blockPosZ;
 
-    public ZEntitySittable(World world)
-    {
+    public ZEntitySittable(World world) {
         super(world);
         this.noClip = true;
         this.height = 0.01F;
         this.width = 0.01F;
     }
 
-    public ZEntitySittable(World world, double x, double y, double z, double y0ffset)
-    {
+    public ZEntitySittable(World world, double x, double y, double z, double y0ffset) {
         this(world);
         this.blockPosX = (int) x;
         this.blockPosY = (int) y;
@@ -28,8 +25,7 @@ public class ZEntitySittable extends Entity
         setPosition(x + 0.5D, y + y0ffset, z + 0.5D);
     }
 
-    public ZEntitySittable(World world, double x, double y, double z, double y0ffset, int rotation, double rotationOffset)
-    {
+    public ZEntitySittable(World world, double x, double y, double z, double y0ffset, int rotation, double rotationOffset) {
         this(world);
         this.blockPosX = (int) x;
         this.blockPosY = (int) y;
@@ -37,10 +33,8 @@ public class ZEntitySittable extends Entity
         setPostionConsideringRotation(x + 0.5D, y + y0ffset, z + 0.5D, rotation, rotationOffset);
     }
 
-    public void setPostionConsideringRotation(double x, double y, double z, int rotation, double rotationOffset)
-    {
-        switch (rotation)
-        {
+    public void setPostionConsideringRotation(double x, double y, double z, int rotation, double rotationOffset) {
+        switch (rotation) {
             case 2:
                 z += rotationOffset;
                 break;
@@ -58,24 +52,19 @@ public class ZEntitySittable extends Entity
     }
 
     @Override
-    public double getMountedYOffset()
-    {
+    public double getMountedYOffset() {
         return this.height * 0.0D;
     }
 
     @Override
-    protected boolean shouldSetPosAfterLoading()
-    {
+    protected boolean shouldSetPosAfterLoading() {
         return false;
     }
 
     @Override
-    public void onEntityUpdate()
-    {
-        if (!this.worldObj.isRemote)
-        {
-            if (this.isBeingRidden() == false | this.worldObj.isAirBlock(new BlockPos(blockPosX, blockPosY, blockPosZ)))
-            {
+    public void onEntityUpdate() {
+        if (!this.worldObj.isRemote) {
+            if (this.isBeingRidden() == false | this.worldObj.isAirBlock(new BlockPos(blockPosX, blockPosY, blockPosZ))) {
                 this.setDead();
                 worldObj.updateComparatorOutputLevel(getPosition(), worldObj.getBlockState(getPosition()).getBlock());
             }
@@ -83,18 +72,15 @@ public class ZEntitySittable extends Entity
     }
 
     @Override
-    protected void entityInit()
-    {
+    protected void entityInit() {
     }
 
     @Override
-    public void readEntityFromNBT(NBTTagCompound nbttagcompound)
-    {
+    public void readEntityFromNBT(NBTTagCompound nbttagcompound) {
     }
 
     @Override
-    public void writeEntityToNBT(NBTTagCompound nbttagcompound)
-    {
+    public void writeEntityToNBT(NBTTagCompound nbttagcompound) {
     }
 
 }

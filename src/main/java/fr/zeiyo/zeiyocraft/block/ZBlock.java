@@ -9,8 +9,7 @@ public class ZBlock extends Block
 
 {
 
-    public ZBlock(String unlocalizedName, Material material, float hardness, float resistance, SoundType soundType, int harvestLevel) 
-    {
+    public ZBlock(String unlocalizedName, Material material, float hardness, float resistance, SoundType soundType, int harvestLevel) {
         super(material);
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(CreativeTabs.tabBlock);
@@ -20,19 +19,16 @@ public class ZBlock extends Block
         this.setHarvestLevel("pickaxe", harvestLevel);
         this.setRegistryName(unlocalizedName);
     }
-    
-    public ZBlock(String unlocalizedName, Material material, float hardness, float resistance, SoundType soundType) 
-    {
+
+    public ZBlock(String unlocalizedName, Material material, float hardness, float resistance, SoundType soundType) {
         this(unlocalizedName, material, hardness, resistance, soundType, 1);
     }
 
-    public ZBlock(String unlocalizedName, float hardness, float resistance) 
-    {
+    public ZBlock(String unlocalizedName, float hardness, float resistance) {
         this(unlocalizedName, Material.rock, hardness, resistance, null);
     }
 
-    public ZBlock(String unlocalizedName) 
-    {
+    public ZBlock(String unlocalizedName) {
         this(unlocalizedName, 2.0f, 10.0f);
     }
 

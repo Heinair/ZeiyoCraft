@@ -1,6 +1,5 @@
 package fr.zeiyo.zeiyocraft.item;
 
-import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import fr.zeiyo.zeiyocraft.crafting.ZCraftingUtils;
 import net.minecraft.block.Block;
@@ -11,32 +10,27 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.Set;
 
-public class ZItemWarAxe extends ItemTool
-{
+public class ZItemWarAxe extends ItemTool {
 
     private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[]{Blocks.planks, Blocks.bookshelf, Blocks.log, Blocks.log2, Blocks.chest, Blocks.pumpkin, Blocks.lit_pumpkin, Blocks.melon_block, Blocks.ladder});
     public int id;
 
-    
-    public ZItemWarAxe(String unlocalizedName, ToolMaterial material, int nmb)
-    {
+
+    public ZItemWarAxe(String unlocalizedName, ToolMaterial material, int nmb) {
         super(material, EFFECTIVE_ON);
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(CreativeTabs.tabCombat);
         this.isRepairable();
         this.damageVsEntity = 6.0F + material.getDamageVsEntity();
-        this.attackSpeed = - 2.9F;
+        this.attackSpeed = -2.9F;
         this.id = nmb;
         this.setRegistryName(unlocalizedName);
     }
 
-    public ZItemWarAxe(String unlocalizedName, ToolMaterial material)
-    {
+    public ZItemWarAxe(String unlocalizedName, ToolMaterial material) {
         this(unlocalizedName, material, -1);
     }
 
@@ -49,21 +43,18 @@ public class ZItemWarAxe extends ItemTool
 	*/
 
     @Override
-    public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
-    {
+    public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
         stack.damageItem(1, attacker);
         return true;
     }
 
     @Override
-    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
-    {
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
         return ZCraftingUtils.getRepairItem(id) == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
     }
 
-    public float getStrVsBlock(ItemStack stack, IBlockState state)
-    {
-        return state.getMaterial() != Material.wood &&  state.getMaterial() != Material.plants &&  state.getMaterial() != Material.vine ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
+    public float getStrVsBlock(ItemStack stack, IBlockState state) {
+        return state.getMaterial() != Material.wood && state.getMaterial() != Material.plants && state.getMaterial() != Material.vine ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
     }
 
 }

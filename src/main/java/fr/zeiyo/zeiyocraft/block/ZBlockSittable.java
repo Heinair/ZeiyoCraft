@@ -1,7 +1,6 @@
 package fr.zeiyo.zeiyocraft.block;
 
 import fr.zeiyo.zeiyocraft.entity.ZEntitySittable;
-import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -12,7 +11,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -25,16 +23,13 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
-import java.util.Random;
 
-public class ZBlockSittable extends Block
-{
+public class ZBlockSittable extends Block {
     public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
     protected static final AxisAlignedBB SITTABLE_AABB = new AxisAlignedBB(0.1F, 0.0F, 0.1F, 0.9F, 1.2F, 0.9F);
 
-    
-    public ZBlockSittable(String unlocalizedName, Material material)
-    {
+
+    public ZBlockSittable(String unlocalizedName, Material material) {
         super(material);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         this.setUnlocalizedName(unlocalizedName);
@@ -43,107 +38,90 @@ public class ZBlockSittable extends Block
         this.setRegistryName(unlocalizedName);
         this.setHarvestLevel("axe", 0);
     }
-    
+
     @Override
-    public boolean isOpaqueCube(IBlockState state)
-    {
-        return false;
-    }
-    
-    @Override
-    public boolean isFullCube(IBlockState state)
-    {
+    public boolean isOpaqueCube(IBlockState state) {
         return false;
     }
 
     @Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
-    {
-    	
-    	if(!(checkForExistingEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), playerIn)))
-        {
+    public boolean isFullCube(IBlockState state) {
+        return false;
+    }
 
-            if(this.sitOnBlock(worldIn, pos.getX(), pos.getY(), pos.getZ(), playerIn, 7 * 0.0625))
-            {
-            	worldIn.updateComparatorOutputLevel(pos, this);
+    @Override
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+
+        if (!(checkForExistingEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), playerIn))) {
+
+            if (this.sitOnBlock(worldIn, pos.getX(), pos.getY(), pos.getZ(), playerIn, 7 * 0.0625)) {
+                worldIn.updateComparatorOutputLevel(pos, this);
                 return true;
             }
 
         }
 
 
-        return false;    
+        return false;
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public boolean addHitEffects(IBlockState state, World worldObj, RayTraceResult target, net.minecraft.client.particle.EffectRenderer effectRenderer)
-    {
+    public boolean addHitEffects(IBlockState state, World worldObj, RayTraceResult target, net.minecraft.client.particle.EffectRenderer effectRenderer) {
         return true;
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public boolean addDestroyEffects(World world, BlockPos pos, net.minecraft.client.particle.EffectRenderer effectRenderer)
-    {
+    public boolean addDestroyEffects(World world, BlockPos pos, net.minecraft.client.particle.EffectRenderer effectRenderer) {
         return true;
     }
 
     @Override
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
-    {
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
         return SITTABLE_AABB;
     }
-    
+
     @SideOnly(Side.CLIENT)
-    public AxisAlignedBB getCollisionBoundingBox(IBlockState worldIn, World pos, BlockPos state)
-    {
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState worldIn, World pos, BlockPos state) {
         return worldIn.getSelectedBoundingBox(pos, state);
     }
 
     @Override
-    public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB p_185477_4_, List<AxisAlignedBB> p_185477_5_, Entity p_185477_6_)
-    {
+    public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB p_185477_4_, List<AxisAlignedBB> p_185477_5_, Entity p_185477_6_) {
         addCollisionBoxToList(pos, this.SITTABLE_AABB, p_185477_5_, state.getSelectedBoundingBox(worldIn, pos));
     }
 
     @Override
-    public IBlockState onBlockPlaced(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
-    {
+    public IBlockState onBlockPlaced(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
         IBlockState state = super.onBlockPlaced(world, pos, facing, hitX, hitY, hitZ, meta, placer);
         state = state.withProperty(FACING, placer.getHorizontalFacing());
         return state;
     }
 
     @Override
-    public int getMetaFromState(IBlockState state)
-    {
+    public int getMetaFromState(IBlockState state) {
         return ((EnumFacing) state.getValue(FACING)).getHorizontalIndex();
     }
 
     @Override
-    protected BlockStateContainer createBlockState()
-    {
-        return new BlockStateContainer(this, new IProperty[] { FACING });
+    protected BlockStateContainer createBlockState() {
+        return new BlockStateContainer(this, new IProperty[]{FACING});
     }
 
     @Override
-    public boolean hasComparatorInputOverride(IBlockState state)
-    {
+    public boolean hasComparatorInputOverride(IBlockState state) {
         return true;
     }
 
     @Override
-    public int getComparatorInputOverride(IBlockState blockState, World worldIn, BlockPos pos)
-    {
+    public int getComparatorInputOverride(IBlockState blockState, World worldIn, BlockPos pos) {
         return this.isSomeoneSitting(worldIn, pos.getX(), pos.getY(), pos.getZ()) ? 1 : 0;
     }
-    
 
-    public static boolean sitOnBlock(World par1World, double x, double y, double z, EntityPlayer par5EntityPlayer, double par6)
-    {
-        if (!checkForExistingEntity(par1World, x, y, z, par5EntityPlayer))
-        {
+
+    public static boolean sitOnBlock(World par1World, double x, double y, double z, EntityPlayer par5EntityPlayer, double par6) {
+        if (!checkForExistingEntity(par1World, x, y, z, par5EntityPlayer)) {
             ZEntitySittable nemb = new ZEntitySittable(par1World, x, y, z, par6);
             par1World.spawnEntityInWorld(nemb);
             par5EntityPlayer.startRiding(nemb);
@@ -152,15 +130,11 @@ public class ZBlockSittable extends Block
         return true;
     }
 
-    public static boolean checkForExistingEntity(World par1World, double x, double y, double z, EntityPlayer par5EntityPlayer)
-    {
+    public static boolean checkForExistingEntity(World par1World, double x, double y, double z, EntityPlayer par5EntityPlayer) {
         List<ZEntitySittable> listEMB = par1World.getEntitiesWithinAABB(ZEntitySittable.class, new AxisAlignedBB(x, y, z, x + 1.0D, y + 1.0D, z + 1.0D).expand(1D, 1D, 1D));
-        for (ZEntitySittable mount : listEMB)
-        {
-            if (mount.blockPosX == x && mount.blockPosY == y && mount.blockPosZ == z)
-            {
-                if (mount.isBeingRidden() == false)
-                {
+        for (ZEntitySittable mount : listEMB) {
+            if (mount.blockPosX == x && mount.blockPosY == y && mount.blockPosZ == z) {
+                if (mount.isBeingRidden() == false) {
                     par5EntityPlayer.startRiding(mount);
                 }
                 return true;
@@ -169,13 +143,10 @@ public class ZBlockSittable extends Block
         return false;
     }
 
-    public static boolean isSomeoneSitting(World world, double x, double y, double z)
-    {
+    public static boolean isSomeoneSitting(World world, double x, double y, double z) {
         List<ZEntitySittable> listEMB = world.getEntitiesWithinAABB(ZEntitySittable.class, new AxisAlignedBB(x, y, z, x + 1.0D, y + 1.0D, z + 1.0D).expand(1D, 1D, 1D));
-        for (ZEntitySittable mount : listEMB)
-        {
-            if (mount.blockPosX == x && mount.blockPosY == y && mount.blockPosZ == z)
-            {
+        for (ZEntitySittable mount : listEMB) {
+            if (mount.blockPosX == x && mount.blockPosY == y && mount.blockPosZ == z) {
                 return mount.isBeingRidden() != false;
             }
         }

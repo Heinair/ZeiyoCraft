@@ -5,12 +5,11 @@ import net.minecraft.item.Item;
 public class ZItem extends Item
 
 {
-	
-	public ZItem(String unlocalizedName)
-	{
-	    super();
-	    this.setUnlocalizedName(unlocalizedName);
-		this.setRegistryName(unlocalizedName);
-	}
+
+    public ZItem(String unlocalizedName) {
+        super();
+        this.setUnlocalizedName(unlocalizedName);
+        this.setRegistryName(unlocalizedName);
+    }
 
 }

@@ -7,24 +7,23 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.client.config.GuiEditArrayEntries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public final class ZeiyoItems
 
 {
-	
-	// Food-related Items
-	
-	public static Item chocolateCake;
-	public static Item hardboiledEgg, applePie, puriFlesh, vegetableStew;
-	public static Item barleySeeds, barley, malt, grapeSeeds, grape;
+
+    // Food-related Items
+
+    public static Item chocolateCake;
+    public static Item hardboiledEgg, applePie, puriFlesh, vegetableStew;
+    public static Item barleySeeds, barley, malt, grapeSeeds, grape;
     public static Item tankard, beerTankard, wineTankard, ciderTankard;
 
     // Miscellaneous
 
     public static Item copperCoin, silverCoin, goldCoin;
-	public static Item key;
+    public static Item key;
 
     // Vanilla
 
@@ -32,42 +31,42 @@ public final class ZeiyoItems
 
     // Steel
 
-	public static Item steelIngot;
-	public static Item steelPickaxe, steelAxe, steelSpade, steelHoe, steelSword, steelWarAxe;
-	public static Item steelHelmet, steelChestplate, steelLeggings, steelBoots;
-	
-	// Bronze-related Items
-	
-	public static Item copperIngot,tinIngot, bronzeIngot;
-	public static Item bronzePickaxe, bronzeAxe, bronzeSpade, bronzeHoe, bronzeSword, bronzeWarAxe;
-	public static Item bronzeHelmet, bronzeChestplate, bronzeLeggings, bronzeBoots;
+    public static Item steelIngot;
+    public static Item steelPickaxe, steelAxe, steelSpade, steelHoe, steelSword, steelWarAxe;
+    public static Item steelHelmet, steelChestplate, steelLeggings, steelBoots;
 
-	// Electrum-related Items
+    // Bronze-related Items
 
-	public static Item silverIngot, electrumIngot;
+    public static Item copperIngot, tinIngot, bronzeIngot;
+    public static Item bronzePickaxe, bronzeAxe, bronzeSpade, bronzeHoe, bronzeSword, bronzeWarAxe;
+    public static Item bronzeHelmet, bronzeChestplate, bronzeLeggings, bronzeBoots;
+
+    // Electrum-related Items
+
+    public static Item silverIngot, electrumIngot;
     public static Item electrumPickaxe, electrumAxe, electrumSpade, electrumHoe, electrumSword, electrumWarAxe;
     public static Item electrumHelmet, electrumChestplate, electrumLeggings, electrumBoots;
-	
-	// Onyx
-	
-	public static Item onyx;
-	public static Item onyxPickaxe, onyxAxe, onyxSpade, onyxHoe, onyxSword, onyxWarAxe;
+
+    // Onyx
+
+    public static Item onyx;
+    public static Item onyxPickaxe, onyxAxe, onyxSpade, onyxHoe, onyxSword, onyxWarAxe;
     public static Item onyxHelmet, onyxChestplate, onyxLeggings, onyxBoots;
 
     // Ruby
-	
-	public static Item ruby;
+
+    public static Item ruby;
     public static Item rubyPickaxe, rubyAxe, rubySpade, rubyHoe, rubySword, rubyWarAxe;
     public static Item rubyHelmet, rubyChestplate, rubyLeggings, rubyBoots;
 
     // Sapphire
-	
-	public static Item sapphire;
+
+    public static Item sapphire;
     public static Item sapphirePickaxe, sapphireAxe, sapphireSpade, sapphireHoe, sapphireSword, sapphireWarAxe;
     public static Item sapphireHelmet, sapphireChestplate, sapphireLeggings, sapphireBoots;
-	
+
     public static void initItems()
-        
+
     {
 
         // Food
@@ -141,7 +140,7 @@ public final class ZeiyoItems
         electrumAxe = new ZItemAxe("electrumAxe", ZToolMaterial.ELECTRUM, 2);
         electrumSpade = new ZItemSpade("electrumSpade", ZToolMaterial.ELECTRUM, 2);
         electrumHoe = new ZItemHoe("electrumHoe", ZToolMaterial.ELECTRUM, 2);
-        electrumSword = new ZItemSword("electrumSword", ZToolMaterial.ELECTRUM, 2);        
+        electrumSword = new ZItemSword("electrumSword", ZToolMaterial.ELECTRUM, 2);
         electrumWarAxe = new ZItemWarAxe("electrumWarAxe", ZToolMaterial.ELECTRUM, 2);
         electrumHelmet = new ZItemArmor("electrumHelmet", ZArmorMaterial.ELECTRUMA, 1, EntityEquipmentSlot.HEAD, 2);
         electrumChestplate = new ZItemArmor("electrumChestplate", ZArmorMaterial.ELECTRUMA, 1, EntityEquipmentSlot.CHEST, 2);
@@ -186,12 +185,12 @@ public final class ZeiyoItems
         sapphireChestplate = new ZItemArmor("sapphireChestplate", ZArmorMaterial.SAPPHIREA, 1, EntityEquipmentSlot.CHEST, 5);
         sapphireLeggings = new ZItemArmor("sapphireLeggings", ZArmorMaterial.SAPPHIREA, 2, EntityEquipmentSlot.LEGS, 5);
         sapphireBoots = new ZItemArmor("sapphireBoots", ZArmorMaterial.SAPPHIREA, 1, EntityEquipmentSlot.FEET, 5);
-        
-    }
-    
-	public static void registerItems()
 
-	{
+    }
+
+    public static void registerItems()
+
+    {
 
         // Food
 
@@ -240,7 +239,7 @@ public final class ZeiyoItems
         GameRegistry.register(steelBoots);
 
         // Bronze-related Items
-        
+
         GameRegistry.register(copperIngot);
         GameRegistry.register(tinIngot);
         GameRegistry.register(bronzeIngot);
@@ -254,7 +253,7 @@ public final class ZeiyoItems
         GameRegistry.register(bronzeChestplate);
         GameRegistry.register(bronzeLeggings);
         GameRegistry.register(bronzeBoots);
-        
+
         // Electrum-related Items
 
         GameRegistry.register(silverIngot);
@@ -269,7 +268,7 @@ public final class ZeiyoItems
         GameRegistry.register(electrumChestplate);
         GameRegistry.register(electrumLeggings);
         GameRegistry.register(electrumBoots);
-        
+
         // Onyx
 
         GameRegistry.register(onyxPickaxe);
@@ -282,7 +281,7 @@ public final class ZeiyoItems
         GameRegistry.register(onyxChestplate);
         GameRegistry.register(onyxLeggings);
         GameRegistry.register(onyxBoots);
-        
+
         // Ruby 
 
         GameRegistry.register(rubyPickaxe);
@@ -295,7 +294,7 @@ public final class ZeiyoItems
         GameRegistry.register(rubyChestplate);
         GameRegistry.register(rubyLeggings);
         GameRegistry.register(rubyBoots);
-        
+
         // Sapphire
 
         GameRegistry.register(sapphirePickaxe);
@@ -310,15 +309,15 @@ public final class ZeiyoItems
         GameRegistry.register(sapphireBoots);
 
     }
-	
-	public static void loots()
 
-	{
+    public static void loots()
 
-		GameRegistry.register(onyx = new ZItem("onyx").setCreativeTab(CreativeTabs.tabMaterials));
-		GameRegistry.register(ruby = new ZItem("ruby").setCreativeTab(CreativeTabs.tabMaterials));
-		GameRegistry.register(sapphire = new ZItem("sapphire").setCreativeTab(CreativeTabs.tabMaterials));
+    {
 
-	}
+        GameRegistry.register(onyx = new ZItem("onyx").setCreativeTab(CreativeTabs.tabMaterials));
+        GameRegistry.register(ruby = new ZItem("ruby").setCreativeTab(CreativeTabs.tabMaterials));
+        GameRegistry.register(sapphire = new ZItem("sapphire").setCreativeTab(CreativeTabs.tabMaterials));
+
+    }
 
 }

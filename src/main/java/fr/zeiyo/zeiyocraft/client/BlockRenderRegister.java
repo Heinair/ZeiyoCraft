@@ -11,46 +11,44 @@ public class BlockRenderRegister
 
 {
 
-    public static void reg(Block block)
-    {
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher() .register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(ZeiyoMain.MODID + ":" + block.getUnlocalizedName().substring(5), "inventory"));
+    public static void reg(Block block) {
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(ZeiyoMain.MODID + ":" + block.getUnlocalizedName().substring(5), "inventory"));
     }
 
-	 public static void registerBlockRenderer() 
-	 {
+    public static void registerBlockRenderer() {
 
-         // Food
+        // Food
 
-		 reg(ZeiyoBlocks.barleyCrops);
-         reg(ZeiyoBlocks.grapeCrops);
-		 reg(ZeiyoBlocks.blockChocolateCake);
+        reg(ZeiyoBlocks.barleyCrops);
+        reg(ZeiyoBlocks.grapeCrops);
+        reg(ZeiyoBlocks.blockChocolateCake);
 
-         // Miscellaneous
+        // Miscellaneous
 
-         reg(ZeiyoBlocks.chair);
-         //reg(ZeiyoBlocks.campfire);
+        reg(ZeiyoBlocks.chair);
+        //reg(ZeiyoBlocks.campfire);
 
-         // Ore Blocks
+        // Ore Blocks
 
-         reg(ZeiyoBlocks.copperOre);
-         reg(ZeiyoBlocks.tinOre);
-         reg(ZeiyoBlocks.silverOre);
-         reg(ZeiyoBlocks.onyxOre);
-         reg(ZeiyoBlocks.rubyOre);
-         reg(ZeiyoBlocks.sapphireOre);
+        reg(ZeiyoBlocks.copperOre);
+        reg(ZeiyoBlocks.tinOre);
+        reg(ZeiyoBlocks.silverOre);
+        reg(ZeiyoBlocks.onyxOre);
+        reg(ZeiyoBlocks.rubyOre);
+        reg(ZeiyoBlocks.sapphireOre);
 
-		 // Compressed Blocks
+        // Compressed Blocks
 
-		 reg(ZeiyoBlocks.steelBlock);
-         reg(ZeiyoBlocks.tinBlock);
-         reg(ZeiyoBlocks.copperBlock);
-         reg(ZeiyoBlocks.bronzeBlock);
-         reg(ZeiyoBlocks.silverBlock);
-         reg(ZeiyoBlocks.electrumBlock);
-		 reg(ZeiyoBlocks.onyxBlock);
-		 reg(ZeiyoBlocks.rubyBlock);
-		 reg(ZeiyoBlocks.sapphireBlock);
+        reg(ZeiyoBlocks.steelBlock);
+        reg(ZeiyoBlocks.tinBlock);
+        reg(ZeiyoBlocks.copperBlock);
+        reg(ZeiyoBlocks.bronzeBlock);
+        reg(ZeiyoBlocks.silverBlock);
+        reg(ZeiyoBlocks.electrumBlock);
+        reg(ZeiyoBlocks.onyxBlock);
+        reg(ZeiyoBlocks.rubyBlock);
+        reg(ZeiyoBlocks.sapphireBlock);
 
-     }
-	 
+    }
+
 }

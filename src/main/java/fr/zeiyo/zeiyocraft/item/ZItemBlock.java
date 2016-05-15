@@ -8,12 +8,11 @@ public class ZItemBlock extends ItemBlockSpecial
 
 {
 
-	public ZItemBlock(String unlocalizedName, Block block, CreativeTabs tab)
-	{
-		super(block);
-		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(tab);
-		this.setRegistryName(unlocalizedName);
-	}
+    public ZItemBlock(String unlocalizedName, Block block, CreativeTabs tab) {
+        super(block);
+        this.setUnlocalizedName(unlocalizedName);
+        this.setCreativeTab(tab);
+        this.setRegistryName(unlocalizedName);
+    }
 
 }

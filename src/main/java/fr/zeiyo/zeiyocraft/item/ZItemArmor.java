@@ -1,28 +1,22 @@
 package fr.zeiyo.zeiyocraft.item;
 
 import fr.zeiyo.zeiyocraft.crafting.ZCraftingUtils;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.world.World;
 
 public class ZItemArmor extends ItemArmor
 
 {
 
-	protected int id;
+    protected int id;
 
-    public ZItemArmor(String unlocalizedName, ArmorMaterial material, int renderIndex, EntityEquipmentSlot armorType, int nmb)
-	{
+    public ZItemArmor(String unlocalizedName, ArmorMaterial material, int renderIndex, EntityEquipmentSlot armorType, int nmb) {
         super(material, renderIndex, armorType);
         this.setUnlocalizedName(unlocalizedName);
         this.setRegistryName(unlocalizedName);
         this.isRepairable();
-		this.id = nmb;
+        this.id = nmb;
     }
     
    /* 
@@ -59,11 +53,10 @@ public class ZItemArmor extends ItemArmor
 	*/
 
     @Override
-    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
-    {
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
         return ZCraftingUtils.getRepairItem(id) == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
     }
 
 }
-	
+
 

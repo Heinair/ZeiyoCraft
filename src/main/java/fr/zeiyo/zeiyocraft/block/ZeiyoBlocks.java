@@ -7,17 +7,15 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class ZeiyoBlocks
-{
+public class ZeiyoBlocks {
 
-	public static Block blockChocolateCake;
+    public static Block blockChocolateCake;
     public static Block barleyCrops, grapeCrops;
     public static Block chair, campfire;
-	public static Block onyxOre, rubyOre, sapphireOre, copperOre, tinOre, silverOre;
-	public static Block onyxBlock, steelBlock, rubyBlock, sapphireBlock, copperBlock, tinBlock, bronzeBlock, silverBlock, electrumBlock, charcoalBlock;
+    public static Block onyxOre, rubyOre, sapphireOre, copperOre, tinOre, silverOre;
+    public static Block onyxBlock, steelBlock, rubyBlock, sapphireBlock, copperBlock, tinBlock, bronzeBlock, silverBlock, electrumBlock, charcoalBlock;
 
-    public static void initBlocks()
-    {
+    public static void initBlocks() {
 
         // Food
 
@@ -27,7 +25,7 @@ public class ZeiyoBlocks
 
         // Miscellaneous
 
-        chair =  new ZBlockSittable("chair", Material.wood);
+        chair = new ZBlockSittable("chair", Material.wood);
         //campfire = new ZBlockCampfire("campfire", false);
 
         // Ore Blocks
@@ -41,20 +39,19 @@ public class ZeiyoBlocks
 
         // Compressed Blocks
 
-        steelBlock = new ZBlock("steelBlock", Material.iron , 5.0F, 10.0F, SoundType.METAL,2);
-        copperBlock = new ZBlock("copperBlock", Material.iron , 5.0F, 10.0F, SoundType.METAL,2);
-        tinBlock = new ZBlock("tinBlock", Material.iron , 5.0F, 10.0F, SoundType.METAL,2);
-        bronzeBlock = new ZBlock("bronzeBlock", Material.iron , 5.0F, 10.0F, SoundType.METAL,2);
-        silverBlock = new ZBlock("silverBlock", Material.iron , 5.0F, 10.0F, SoundType.METAL,2);
-        electrumBlock = new ZBlock("electrumBlock", Material.iron , 5.0F, 10.0F, SoundType.METAL,2);
-        onyxBlock = new ZBlock("onyxBlock", Material.iron , 5.0F, 10.0F, SoundType.METAL,2);
-        rubyBlock = new ZBlock("rubyBlock", Material.iron , 5.0F, 10.0F, SoundType.METAL,2);
-        sapphireBlock = new ZBlock("sapphireBlock", Material.iron , 5.0F, 10.0F, SoundType.METAL,2);
+        steelBlock = new ZBlock("steelBlock", Material.iron, 5.0F, 10.0F, SoundType.METAL, 2);
+        copperBlock = new ZBlock("copperBlock", Material.iron, 5.0F, 10.0F, SoundType.METAL, 2);
+        tinBlock = new ZBlock("tinBlock", Material.iron, 5.0F, 10.0F, SoundType.METAL, 2);
+        bronzeBlock = new ZBlock("bronzeBlock", Material.iron, 5.0F, 10.0F, SoundType.METAL, 2);
+        silverBlock = new ZBlock("silverBlock", Material.iron, 5.0F, 10.0F, SoundType.METAL, 2);
+        electrumBlock = new ZBlock("electrumBlock", Material.iron, 5.0F, 10.0F, SoundType.METAL, 2);
+        onyxBlock = new ZBlock("onyxBlock", Material.iron, 5.0F, 10.0F, SoundType.METAL, 2);
+        rubyBlock = new ZBlock("rubyBlock", Material.iron, 5.0F, 10.0F, SoundType.METAL, 2);
+        sapphireBlock = new ZBlock("sapphireBlock", Material.iron, 5.0F, 10.0F, SoundType.METAL, 2);
 
     }
-    
-    public static void registerBlocks()
-    {
+
+    public static void registerBlocks() {
         // Food
         registerBlock(blockChocolateCake);
         registerBlock(barleyCrops);
@@ -88,10 +85,9 @@ public class ZeiyoBlocks
 
     }
 
-    private static void registerBlock(Block block)
-    {
+    private static void registerBlock(Block block) {
         GameRegistry.register(block);
         GameRegistry.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
     }
-    
+
 }
