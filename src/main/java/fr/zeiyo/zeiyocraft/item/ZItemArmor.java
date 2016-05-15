@@ -23,12 +23,12 @@ public class ZItemArmor extends ItemArmor
         this.isRepairable();
 		this.id = nmb;
     }
-	
-	@Override
-	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
-	{
-		
-		if (this.isWearingFullSet(player, ZeiyoItems.onyxHelmet, ZeiyoItems.onyxChestplate, ZeiyoItems.onyxLeggings, ZeiyoItems.onyxBoots)) 
+    
+   /* 
+    @Override
+    public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack){
+    	
+    	if (this.isWearingFullSet(player, ZeiyoItems.onyxHelmet, ZeiyoItems.onyxChestplate, ZeiyoItems.onyxLeggings, ZeiyoItems.onyxBoots)) 
 		{
 			this.effectPlayer(player, Potion.getPotionById(22), 0, 600);
 		}
@@ -40,9 +40,7 @@ public class ZItemArmor extends ItemArmor
 		{
 			this.effectPlayer(player, Potion.getPotionById(13), 0, 50);
 		}
-
-		
-	}
+    }
 	
 	private void effectPlayer(EntityPlayer player, Potion potion, int amplifier, int duration)
 	{
@@ -57,6 +55,7 @@ public class ZItemArmor extends ItemArmor
 				&& player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == leggings
 				&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == boots;
 	}
+	*/
 
     @Override
     public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)

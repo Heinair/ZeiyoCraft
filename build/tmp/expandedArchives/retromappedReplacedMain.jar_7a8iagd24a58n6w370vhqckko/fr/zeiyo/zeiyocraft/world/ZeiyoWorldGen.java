@@ -39,6 +39,7 @@ public class ZeiyoWorldGen implements IWorldGenerator
 
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
+    	
     BlockPos forBiome = new BlockPos(chunkX * 16, 62, chunkZ * 16);
 
 	switch (world.field_73011_w.getDimension())

@@ -107,9 +107,11 @@ item.sapphireLeggings.name=Sapphire Leggings
 item.sapphireBoots.name=Sapphire Boots
 
 item.malt.name=Malt Seeds
+tile.barleyCrops.name=Barley
 item.barleySeeds.name=Barley Seeds
 item.barley.name=Barley
 item.grapeSeeds.name=Grape Seeds
+tile.grapeCrops.name=Grapes
 item.grape.name=Grape
 item.tankard.name=Tankard
 item.beerTankard.name=Beer Tankard

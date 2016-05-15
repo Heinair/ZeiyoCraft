@@ -5,7 +5,9 @@ import net.minecraft.block.BlockCake;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -53,12 +55,12 @@ public class ZBlockCake extends BlockCake
 				worldIn.func_175698_g(pos);
 			}
 		}
-	}
+	}		
 	
-	@SideOnly(Side.CLIENT)
-	public Item getItem(World worldIn, BlockPos pos)
-	{
-	        return ZeiyoItems.chocolateCake;
-	}
+	@Override
+	public ItemStack func_185473_a(World worldIn, BlockPos pos, IBlockState state)
+    {
+        return new ItemStack(ZeiyoItems.chocolateCake);
+    }
 
 }

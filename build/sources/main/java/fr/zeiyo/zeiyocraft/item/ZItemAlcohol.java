@@ -20,10 +20,11 @@ public class ZItemAlcohol extends ItemFood
         this.setPotionEffect(new PotionEffect(MobEffects.confusion, duration, amplifier, false, false), 1.0F);
     }
 
+    
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityPlayer playerIn)
     {
         super.onItemUseFinish(stack, worldIn, playerIn);
-        return new ItemStack(ZeiyoItems.tankard);
+        return new ItemStack(ZeiyoItems.tankard);               
     }
 
 }

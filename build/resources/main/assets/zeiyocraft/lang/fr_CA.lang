@@ -108,8 +108,10 @@ item.sapphireBoots.name=Bottes en saphir
 tile.sapphireOre.name=Minerai de saphir
 
 item.malt.name=Graine de malt
+tile.barleyCrops.name=Orge
 item.barleySeeds.name=Graines d'orge
 item.barley.name=Orge
+tile.grapeCrops.name=Raisins
 item.grapeSeeds.name=Graines de raisin
 item.grape.name=Raisin
 item.tankard.name=Chope
