@@ -1,8 +1,0 @@
-{
-"variants": {
-"facing=north": {"model": "zeiyocraft:chair", "y":180},
-"facing=south": { "model": "zeiyocraft:chair"},
-"facing=east": { "model": "zeiyocraft:chair", "y": 270},
-"facing=west": { "model": "zeiyocraft:chair", "y": 90}
-}
-}
