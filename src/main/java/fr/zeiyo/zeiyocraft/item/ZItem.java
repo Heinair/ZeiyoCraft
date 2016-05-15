@@ -10,6 +10,7 @@ public class ZItem extends Item
 	{
 	    super();
 	    this.setUnlocalizedName(unlocalizedName);
+		this.setRegistryName(unlocalizedName);
 	}
 
 }

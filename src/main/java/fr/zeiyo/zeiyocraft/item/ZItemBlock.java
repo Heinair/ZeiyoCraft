@@ -13,6 +13,7 @@ public class ZItemBlock extends ItemBlockSpecial
 		super(block);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(tab);
+		this.setRegistryName(unlocalizedName);
 	}
 
 }

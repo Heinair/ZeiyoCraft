@@ -31,6 +31,7 @@ public class ZBlockOre extends Block
         this.meta = meta;
         this.setHarvestLevel("pickaxe", harvestLevel);
         this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setRegistryName(unlocalizedName);
         this.drop = drop;
         this.minDropped = quantity[0];
         this.maxDropped = quantity[1];

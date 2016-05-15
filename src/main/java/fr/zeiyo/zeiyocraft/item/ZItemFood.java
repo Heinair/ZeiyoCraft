@@ -11,6 +11,7 @@ public class ZItemFood extends ItemFood
         super(amount, saturation, isWolfFood);
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(CreativeTabs.tabFood);
+        this.setRegistryName(unlocalizedName);
     }
 
 }

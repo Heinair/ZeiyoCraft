@@ -25,6 +25,7 @@ public class ZItemAxe extends ItemTool
 		this.setUnlocalizedName(unlocalizedName);
 		this.isRepairable();
 		this.damageVsEntity = 4.0F + material.getDamageVsEntity();
+		this.setRegistryName(unlocalizedName);
 		this.attackSpeed = -3.1F;
 		this.id = nmb;
 	}

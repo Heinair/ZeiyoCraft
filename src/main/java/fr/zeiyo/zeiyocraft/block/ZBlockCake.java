@@ -28,6 +28,7 @@ public class ZBlockCake extends BlockCake
 		this.setHardness(0.5F);
 		this.setStepSound(SoundType.CLOTH);
 		this.disableStats();
+		this.setRegistryName(unlocalizedName);
         this.foodPoints = food;
         this.saturationPoints = saturation;
 		

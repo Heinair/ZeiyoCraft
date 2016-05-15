@@ -40,6 +40,7 @@ public class ZBlockSittable extends Block
         this.setUnlocalizedName(unlocalizedName);
         this.setHardness(1.0F);
         this.setCreativeTab(CreativeTabs.tabDecorations);
+        this.setRegistryName(unlocalizedName);
         this.setHarvestLevel("axe", 0);
     }
     

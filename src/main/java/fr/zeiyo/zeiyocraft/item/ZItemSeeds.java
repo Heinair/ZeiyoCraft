@@ -12,6 +12,7 @@ public class ZItemSeeds extends ItemSeeds
         super(crops, soil);
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(CreativeTabs.tabMaterials);
+        this.setRegistryName(unlocalizedName);
     }
 
 }

@@ -194,119 +194,119 @@ public final class ZeiyoItems
 
         // Food
 
-        GameRegistry.registerItem(chocolateCake, chocolateCake.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(hardboiledEgg, hardboiledEgg.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(applePie, applePie.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(puriFlesh, puriFlesh.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(vegetableStew, vegetableStew.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(malt, malt.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(barleySeeds, barleySeeds.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(barley, barley.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(grapeSeeds, grapeSeeds.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(grape, grape.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(tankard, tankard.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(beerTankard, beerTankard.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(ciderTankard, ciderTankard.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(wineTankard, wineTankard.getUnlocalizedName().substring(5));
+        GameRegistry.register(chocolateCake);
+        GameRegistry.register(hardboiledEgg);
+        GameRegistry.register(applePie);
+        GameRegistry.register(puriFlesh);
+        GameRegistry.register(vegetableStew);
+        GameRegistry.register(malt);
+        GameRegistry.register(barleySeeds);
+        GameRegistry.register(barley);
+        GameRegistry.register(grapeSeeds);
+        GameRegistry.register(grape);
+        GameRegistry.register(tankard);
+        GameRegistry.register(beerTankard);
+        GameRegistry.register(ciderTankard);
+        GameRegistry.register(wineTankard);
 
         // Miscellaneous
 
-        GameRegistry.registerItem(copperCoin, copperCoin.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(silverCoin, silverCoin.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(goldCoin, goldCoin.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(key, key.getUnlocalizedName().substring(5));
+        GameRegistry.register(copperCoin);
+        GameRegistry.register(silverCoin);
+        GameRegistry.register(goldCoin);
+        GameRegistry.register(key);
 
         // Vanilla
 
-        GameRegistry.registerItem(woodenWarAxe, woodenWarAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(stoneWarAxe, stoneWarAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(goldWarAxe, goldWarAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(ironWarAxe, ironWarAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(diamondWarAxe, diamondWarAxe.getUnlocalizedName().substring(5));
+        GameRegistry.register(woodenWarAxe);
+        GameRegistry.register(stoneWarAxe);
+        GameRegistry.register(goldWarAxe);
+        GameRegistry.register(ironWarAxe);
+        GameRegistry.register(diamondWarAxe);
 
         // Steel
 
-        GameRegistry.registerItem(steelIngot, steelIngot.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(steelPickaxe, steelPickaxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(steelAxe, steelAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(steelSpade, steelSpade.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(steelHoe, steelHoe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(steelSword, steelSword.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(steelWarAxe, steelWarAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(steelHelmet, steelHelmet.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(steelChestplate, steelChestplate.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(steelLeggings, steelLeggings.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(steelBoots, steelBoots.getUnlocalizedName().substring(5));
+        GameRegistry.register(steelIngot);
+        GameRegistry.register(steelPickaxe);
+        GameRegistry.register(steelAxe);
+        GameRegistry.register(steelSpade);
+        GameRegistry.register(steelHoe);
+        GameRegistry.register(steelSword);
+        GameRegistry.register(steelWarAxe);
+        GameRegistry.register(steelHelmet);
+        GameRegistry.register(steelChestplate);
+        GameRegistry.register(steelLeggings);
+        GameRegistry.register(steelBoots);
 
         // Bronze-related Items
         
-        GameRegistry.registerItem(copperIngot, copperIngot.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(tinIngot, tinIngot.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(bronzeIngot, bronzeIngot.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(bronzePickaxe, bronzePickaxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(bronzeAxe, bronzeAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(bronzeSpade, bronzeSpade.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(bronzeHoe, bronzeHoe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(bronzeSword, bronzeSword.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(bronzeWarAxe, bronzeWarAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(bronzeHelmet, bronzeHelmet.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(bronzeChestplate, bronzeChestplate.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(bronzeLeggings, bronzeLeggings.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(bronzeBoots, bronzeBoots.getUnlocalizedName().substring(5));
+        GameRegistry.register(copperIngot);
+        GameRegistry.register(tinIngot);
+        GameRegistry.register(bronzeIngot);
+        GameRegistry.register(bronzePickaxe);
+        GameRegistry.register(bronzeAxe);
+        GameRegistry.register(bronzeSpade);
+        GameRegistry.register(bronzeHoe);
+        GameRegistry.register(bronzeSword);
+        GameRegistry.register(bronzeWarAxe);
+        GameRegistry.register(bronzeHelmet);
+        GameRegistry.register(bronzeChestplate);
+        GameRegistry.register(bronzeLeggings);
+        GameRegistry.register(bronzeBoots);
         
         // Electrum-related Items
 
-        GameRegistry.registerItem(silverIngot, silverIngot.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(electrumIngot, electrumIngot.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(electrumPickaxe, electrumPickaxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(electrumAxe, electrumAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(electrumSpade, electrumSpade.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(electrumHoe, electrumHoe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(electrumSword, electrumSword.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(electrumWarAxe, electrumWarAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(electrumHelmet, electrumHelmet.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(electrumChestplate, electrumChestplate.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(electrumLeggings, electrumLeggings.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(electrumBoots, electrumBoots.getUnlocalizedName().substring(5));
+        GameRegistry.register(silverIngot);
+        GameRegistry.register(electrumIngot);
+        GameRegistry.register(electrumPickaxe);
+        GameRegistry.register(electrumAxe);
+        GameRegistry.register(electrumSpade);
+        GameRegistry.register(electrumHoe);
+        GameRegistry.register(electrumSword);
+        GameRegistry.register(electrumWarAxe);
+        GameRegistry.register(electrumHelmet);
+        GameRegistry.register(electrumChestplate);
+        GameRegistry.register(electrumLeggings);
+        GameRegistry.register(electrumBoots);
         
         // Onyx
 
-        GameRegistry.registerItem(onyxPickaxe, onyxPickaxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(onyxAxe, onyxAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(onyxSpade, onyxSpade.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(onyxHoe, onyxHoe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(onyxSword, onyxSword.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(onyxWarAxe, onyxWarAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(onyxHelmet, onyxHelmet.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(onyxChestplate, onyxChestplate.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(onyxLeggings, onyxLeggings.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(onyxBoots, onyxBoots.getUnlocalizedName().substring(5));
+        GameRegistry.register(onyxPickaxe);
+        GameRegistry.register(onyxAxe);
+        GameRegistry.register(onyxSpade);
+        GameRegistry.register(onyxHoe);
+        GameRegistry.register(onyxSword);
+        GameRegistry.register(onyxWarAxe);
+        GameRegistry.register(onyxHelmet);
+        GameRegistry.register(onyxChestplate);
+        GameRegistry.register(onyxLeggings);
+        GameRegistry.register(onyxBoots);
         
         // Ruby 
 
-        GameRegistry.registerItem(rubyPickaxe, rubyPickaxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(rubyAxe, rubyAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(rubySpade, rubySpade.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(rubyHoe, rubyHoe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(rubySword, rubySword.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(rubyWarAxe, rubyWarAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(rubyHelmet, rubyHelmet.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(rubyChestplate, rubyChestplate.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(rubyLeggings, rubyLeggings.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(rubyBoots, rubyBoots.getUnlocalizedName().substring(5));
+        GameRegistry.register(rubyPickaxe);
+        GameRegistry.register(rubyAxe);
+        GameRegistry.register(rubySpade);
+        GameRegistry.register(rubyHoe);
+        GameRegistry.register(rubySword);
+        GameRegistry.register(rubyWarAxe);
+        GameRegistry.register(rubyHelmet);
+        GameRegistry.register(rubyChestplate);
+        GameRegistry.register(rubyLeggings);
+        GameRegistry.register(rubyBoots);
         
         // Sapphire
 
-        GameRegistry.registerItem(sapphirePickaxe, sapphirePickaxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(sapphireAxe, sapphireAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(sapphireSpade, sapphireSpade.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(sapphireHoe, sapphireHoe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(sapphireSword, sapphireSword.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(sapphireWarAxe, sapphireWarAxe.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(sapphireHelmet, sapphireHelmet.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(sapphireChestplate, sapphireChestplate.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(sapphireLeggings, sapphireLeggings.getUnlocalizedName().substring(5));
-        GameRegistry.registerItem(sapphireBoots, sapphireBoots.getUnlocalizedName().substring(5));
+        GameRegistry.register(sapphirePickaxe);
+        GameRegistry.register(sapphireAxe);
+        GameRegistry.register(sapphireSpade);
+        GameRegistry.register(sapphireHoe);
+        GameRegistry.register(sapphireSword);
+        GameRegistry.register(sapphireWarAxe);
+        GameRegistry.register(sapphireHelmet);
+        GameRegistry.register(sapphireChestplate);
+        GameRegistry.register(sapphireLeggings);
+        GameRegistry.register(sapphireBoots);
 
     }
 	
@@ -314,9 +314,9 @@ public final class ZeiyoItems
 
 	{
 
-		GameRegistry.registerItem(onyx = new ZItem("onyx").setCreativeTab(CreativeTabs.tabMaterials), "onyx");
-		GameRegistry.registerItem(ruby = new ZItem("ruby").setCreativeTab(CreativeTabs.tabMaterials), "ruby");
-		GameRegistry.registerItem(sapphire = new ZItem("sapphire").setCreativeTab(CreativeTabs.tabMaterials), "sapphire");
+		GameRegistry.register(onyx = new ZItem("onyx").setCreativeTab(CreativeTabs.tabMaterials));
+		GameRegistry.register(ruby = new ZItem("ruby").setCreativeTab(CreativeTabs.tabMaterials));
+		GameRegistry.register(sapphire = new ZItem("sapphire").setCreativeTab(CreativeTabs.tabMaterials));
 
 	}
 

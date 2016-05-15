@@ -20,6 +20,7 @@ public class ZItemArmor extends ItemArmor
 	{
         super(material, renderIndex, armorType);
         this.setUnlocalizedName(unlocalizedName);
+        this.setRegistryName(unlocalizedName);
         this.isRepairable();
 		this.id = nmb;
     }

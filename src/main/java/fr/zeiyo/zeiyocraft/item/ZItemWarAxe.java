@@ -32,6 +32,7 @@ public class ZItemWarAxe extends ItemTool
         this.damageVsEntity = 6.0F + material.getDamageVsEntity();
         this.attackSpeed = - 2.9F;
         this.id = nmb;
+        this.setRegistryName(unlocalizedName);
     }
 
     public ZItemWarAxe(String unlocalizedName, ToolMaterial material)

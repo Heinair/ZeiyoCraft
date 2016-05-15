@@ -15,6 +15,7 @@ public class ZItemSpade extends ItemSpade
 		this.setUnlocalizedName(unlocalizedName);
 		this.isRepairable();
 		this.id = nmb;
+		this.setRegistryName(unlocalizedName);
 	}
 
 	@Override

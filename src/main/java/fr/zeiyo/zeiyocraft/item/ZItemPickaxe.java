@@ -15,6 +15,7 @@ public class ZItemPickaxe extends ItemPickaxe
 		this.setUnlocalizedName(unlocalizedName);
 		this.isRepairable();
 		this.id = nmb;
+		this.setRegistryName(unlocalizedName);
 	}
 
 	@Override

@@ -17,6 +17,7 @@ public class ZItemAlcohol extends ItemFood
         this.setUnlocalizedName(unlocalizedName);
         this.setMaxStackSize(1);
         this.setAlwaysEdible();
+        this.setRegistryName(unlocalizedName);
         this.setPotionEffect(new PotionEffect(MobEffects.confusion, duration, amplifier, false, false), 1.0F);
     }
 

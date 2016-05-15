@@ -54,38 +54,36 @@ public class ZeiyoBlocks
     
     public static void registerBlocks()
     {
-
         // Food
-
-        GameRegistry.registerBlock(blockChocolateCake, blockChocolateCake.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(barleyCrops, barleyCrops.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(grapeCrops, grapeCrops.getUnlocalizedName().substring(5));
+        GameRegistry.register(blockChocolateCake);
+        GameRegistry.register(barleyCrops);
+        GameRegistry.register(grapeCrops);
 
         // Ore Blocks
 
-        GameRegistry.registerBlock(copperOre, copperOre.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(tinOre, tinOre.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(silverOre, silverOre.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(onyxOre, onyxOre.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(rubyOre, rubyOre.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(sapphireOre, sapphireOre.getUnlocalizedName().substring(5));
+        GameRegistry.register(copperOre);
+        GameRegistry.register(tinOre);
+        GameRegistry.register(silverOre);
+        GameRegistry.register(onyxOre);
+        GameRegistry.register(rubyOre);
+        GameRegistry.register(sapphireOre);
 
         // Miscellaneous
 
-        GameRegistry.registerBlock(chair, chair.getUnlocalizedName().substring(5));
-        //GameRegistry.registerBlock(campfire, campfire.getUnlocalizedName().substring(5));
+        GameRegistry.register(chair);
+        //GameRegistry.register(campfire, campfire.getUnlocalizedName().substring(5));
 
         // Compressed Blocks
 
-        GameRegistry.registerBlock(steelBlock, steelBlock.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(copperBlock, copperBlock.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(tinBlock, tinBlock.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(bronzeBlock, bronzeBlock.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(silverBlock, silverBlock.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(electrumBlock, electrumBlock.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(onyxBlock, onyxBlock.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(rubyBlock, rubyBlock.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(sapphireBlock, sapphireBlock.getUnlocalizedName().substring(5));
+        GameRegistry.register(steelBlock);
+        GameRegistry.register(copperBlock);
+        GameRegistry.register(tinBlock);
+        GameRegistry.register(bronzeBlock);
+        GameRegistry.register(silverBlock);
+        GameRegistry.register(electrumBlock);
+        GameRegistry.register(onyxBlock);
+        GameRegistry.register(rubyBlock);
+        GameRegistry.register(sapphireBlock);
 
     }
     

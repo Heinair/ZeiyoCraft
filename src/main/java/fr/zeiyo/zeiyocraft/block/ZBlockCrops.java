@@ -20,6 +20,7 @@ public class ZBlockCrops extends BlockCrops implements IGrowable
     {
         super();
         this.setUnlocalizedName(unlocalizedName);
+        this.setRegistryName(unlocalizedName);
         this.id = nmb;
     }
 

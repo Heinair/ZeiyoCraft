@@ -18,6 +18,7 @@ public class ZBlock extends Block
         this.setResistance(resistance);
         this.setStepSound(soundType);
         this.setHarvestLevel("pickaxe", harvestLevel);
+        this.setRegistryName(unlocalizedName);
     }
     
     public ZBlock(String unlocalizedName, Material material, float hardness, float resistance, SoundType soundType) 
