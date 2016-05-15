@@ -7,6 +7,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import org.lwjgl.Sys;
 
 public class ZCraftingUtils
 {
@@ -15,9 +16,7 @@ public class ZCraftingUtils
     {
 
         if (ore != null)
-        {
             GameRegistry.addSmelting(ore, new ItemStack(item), exp);
-        }
 
         GameRegistry.addRecipe(new ItemStack(block), new Object[] {"###","###", "###", '#', item});
         GameRegistry.addShapelessRecipe(new ItemStack(item, 9), new Object[] {block});

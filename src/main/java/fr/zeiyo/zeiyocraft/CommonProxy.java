@@ -31,9 +31,9 @@ public class CommonProxy
 
 	    public void init(FMLInitializationEvent e) 	    
 	    {
-	    	
+
 	        GameRegistry.registerWorldGenerator(new ZeiyoWorldGen(), 0);
-	    	//ZeiyoCrafting.createCrafts();
+	    	ZeiyoCrafting.createCrafts();
 			MinecraftForge.addGrassSeed(new ItemStack(ZeiyoItems.barleySeeds), 5);
 			MinecraftForge.addGrassSeed(new ItemStack(ZeiyoItems.grapeSeeds), 2);
 			//ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(new WeightedRandomChestContent(new ItemStack(ZeiyoItems.grapeSeeds), 3, 9, 55));

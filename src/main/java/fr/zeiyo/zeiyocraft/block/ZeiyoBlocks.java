@@ -4,6 +4,7 @@ import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ZeiyoBlocks
@@ -55,36 +56,42 @@ public class ZeiyoBlocks
     public static void registerBlocks()
     {
         // Food
-        GameRegistry.register(blockChocolateCake);
-        GameRegistry.register(barleyCrops);
-        GameRegistry.register(grapeCrops);
+        registerBlock(blockChocolateCake);
+        registerBlock(barleyCrops);
+        registerBlock(grapeCrops);
 
         // Ore Blocks
 
-        GameRegistry.register(copperOre);
-        GameRegistry.register(tinOre);
-        GameRegistry.register(silverOre);
-        GameRegistry.register(onyxOre);
-        GameRegistry.register(rubyOre);
-        GameRegistry.register(sapphireOre);
+        registerBlock(copperOre);
+        registerBlock(tinOre);
+        registerBlock(silverOre);
+        registerBlock(onyxOre);
+        registerBlock(rubyOre);
+        registerBlock(sapphireOre);
 
         // Miscellaneous
 
-        GameRegistry.register(chair);
-        //GameRegistry.register(campfire, campfire.getUnlocalizedName().substring(5));
+        registerBlock(chair);
+        //registerBlock(campfire, campfire.getUnlocalizedName().substring(5));
 
         // Compressed Blocks
 
-        GameRegistry.register(steelBlock);
-        GameRegistry.register(copperBlock);
-        GameRegistry.register(tinBlock);
-        GameRegistry.register(bronzeBlock);
-        GameRegistry.register(silverBlock);
-        GameRegistry.register(electrumBlock);
-        GameRegistry.register(onyxBlock);
-        GameRegistry.register(rubyBlock);
-        GameRegistry.register(sapphireBlock);
+        registerBlock(steelBlock);
+        registerBlock(copperBlock);
+        registerBlock(tinBlock);
+        registerBlock(bronzeBlock);
+        registerBlock(silverBlock);
+        registerBlock(electrumBlock);
+        registerBlock(onyxBlock);
+        registerBlock(rubyBlock);
+        registerBlock(sapphireBlock);
 
+    }
+
+    private static void registerBlock(Block block)
+    {
+        GameRegistry.register(block);
+        GameRegistry.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
     }
     
 }

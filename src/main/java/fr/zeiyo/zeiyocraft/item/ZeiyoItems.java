@@ -7,6 +7,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.client.config.GuiEditArrayEntries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public final class ZeiyoItems
