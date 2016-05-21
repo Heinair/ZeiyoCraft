@@ -3,7 +3,7 @@ Zeiyo's minecraft mod
 
 ENGLISH :
 
-This mod is fully compatible with Minecraft Forge 1.8 11.14.3.1450 and newer versions
+This mod is fully compatible with Minecraft Forge 1.9 12.16.1.1887 and newer versions
 
 Features :
 
@@ -19,7 +19,7 @@ Features :
 
 FRANCAIS : 
 
-Ce mod est entièrement compatible avec Minecraft Forge 1.8 11.14.3.1450 et les versions plus récentes
+Ce mod est entièrement compatible avec Minecraft Forge 1.9 12.16.1.1887 et les versions plus récentes
 
 Caractéristiques :
 
