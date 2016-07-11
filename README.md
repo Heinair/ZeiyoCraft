@@ -33,8 +33,8 @@ Caractéristiques :
 
 CREDITS : 
 
-Heinair : Initiator of the project, main contributor
+Heinair : Programmation
 
-Wascar : Programming helper
+Wascar : Some help
 
 Mawadinger : Some textures
