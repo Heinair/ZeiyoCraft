@@ -5,7 +5,7 @@ import net.minecraft.block.state.pattern.BlockMatcher;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
@@ -47,11 +47,11 @@ public class ZeiyoWorldGen implements IWorldGenerator {
 
             case 0: // Overworld
 
-                if (world.provider.getBiomeGenForCoords(forBiome) == BiomeGenBase.getBiome(2) || world.provider.getBiomeGenForCoords(forBiome) == BiomeGenBase.getBiome(17)) {
+                if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(2) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(17)) {
                     this.runGenerator(this.gen_ruby, world, random, chunkX, chunkZ, 1, 2, 9);
                 }
 
-                if (world.provider.getBiomeGenForCoords(forBiome) == BiomeGenBase.getBiome(0) || world.provider.getBiomeGenForCoords(forBiome) == BiomeGenBase.getBiome(24)) {
+                if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(0) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(24)) {
                     this.runGenerator(this.gen_sapphire, world, random, chunkX, chunkZ, 1, 4, 14);
                 }
 

@@ -10,10 +10,11 @@ Features :
 - New ores : Ruby, Sapphire, Onyx, Copper, Tin, Silver
 - Added alloys : Steel, Bronze, Electrum
 - Weapons, armors and tools are included !
-- New crops : Grape and Barley
-- New food (chocolate cake, apple pie, beer, wine and many others...)
+- New crops : Grape, Barley and Hemp
+- New food (chocolate cake, apple pie, and many others...)
+- Added alcohols and drugs (hemp, beer, wine, cider and vodka)
 - A security system (with keys)
-- Chairs
+- Sittable chairs
 - Added some crafts (saddle, etc...)
 - Added uncraftables coins (for servers)
 
@@ -26,15 +27,18 @@ Caractéristiques :
 - Nouveaux minerais : Rubis, Saphir, Onyx, Cuivre, Etain, Argent
 - Ajout d'alliages : Acier, Bronze, Electrum
 - Armures, armes, et outils sont inclus !
-- Nouveaux végétaux : Orge, Raisin
-- Nouveaux mets (gâteau au chocolat, tarte aux pommes, bière, vin et bien plus encore...)
+- Nouveaux végétaux : Orge, Raisin et Chanvre
+- Nouveaux mets (gâteau au chocolat, tarte aux pommes et bien plus encore...)
+- Ajout d'alcool et de drogues (chanvre, bière, vin, cidre et vodka)
+- Un système de securité (avec des clés)
+- Des chaises
 - Ajouts de quelques crafts (selle, etc...)
 - Ajout de pièces incraftables (pour serveurs)
 
 CREDITS : 
 
-Heinair : Programmation
+Heinair : Ideas and programming
 
-Wascar : Some help
+Mawadinger : Graphic artist
 
-Mawadinger : Some textures
+MyZoom : Graphic artist

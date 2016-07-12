@@ -18,7 +18,7 @@ public class ZeiyoMain
     public static ZeiyoMain instance;
     public static final String MODID = "zeiyocraft";
     public static final String NAME = "ZeiyoCraft";
-    public static final String VERSION = "0.5.1";
+    public static final String VERSION = "0.5.2";
 
     @SidedProxy(clientSide = "fr.zeiyo.zeiyocraft.client.ClientProxy", serverSide = "fr.zeiyo.zeiyocraft.server.ServerProxy")
     public static CommonProxy proxy;
