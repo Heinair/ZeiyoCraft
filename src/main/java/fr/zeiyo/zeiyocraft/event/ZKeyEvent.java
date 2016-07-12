@@ -39,12 +39,13 @@ public class ZKeyEvent {
             ItemStack current = player.getHeldItemMainhand();
             if (tileEntityLockable.isLocked()) {
                 if (hasRequiredKey(event.getEntityPlayer(), tileEntityLockable)) {
-                    if (!tileEntityLockable.getLockCode().getLock().equals(current.getDisplayName())) {
+                	
                         //world.playSound(player, pos, SoundEvents.item_flintandsteel_use, SoundCategory.BLOCKS, 1.0F, 1.0F);
                         //player.player.sendPacket(new SPacketChat(new TextComponentTranslation("text.key.errorOnKey"), (byte) 2));
                         event.setCanceled(true);
-                    }
-                } else {
+                    
+                } 
+                else {
                     //world.playSound(player, pos, SoundEvents.ui_button_click, SoundCategory.BLOCKS, 1.0F, 1.0F); // random.wood.click
                     //player.playerNetServerHandler.sendPacket(new SPacketChat(new TextComponentTranslation("text.key.errorOnBlock"), (byte) 2));
 

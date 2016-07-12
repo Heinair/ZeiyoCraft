@@ -49,7 +49,7 @@ public class ZItemDrug extends Item
         if (entityLiving instanceof EntityPlayer)
         {
             EntityPlayer entityplayer = (EntityPlayer)entityLiving;
-            //worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
+            worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
             this.onFoodEaten(stack, worldIn, entityplayer);
         }
 
@@ -77,7 +77,7 @@ public class ZItemDrug extends Item
      */
     public EnumAction getItemUseAction(ItemStack stack)
     {
-        return EnumAction.DRINK;
+        return EnumAction.NONE;
     }
 
     public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand)
@@ -112,7 +112,7 @@ public class ZItemDrug extends Item
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
     {
         this.onItemUseFinish1(stack, worldIn, entityLiving);
-        return new ItemStack(Items.BOWL);
+        return new ItemStack(ZeiyoItems.pipe);
     }
     
 }
