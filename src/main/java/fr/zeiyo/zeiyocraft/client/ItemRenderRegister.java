@@ -22,17 +22,23 @@ public class ItemRenderRegister
         reg(ZeiyoItems.hardboiledEgg);
         reg(ZeiyoItems.applePie);
         reg(ZeiyoItems.vegetableStew);
+        reg(ZeiyoItems.vodkaExtract);
         reg(ZeiyoItems.puriFlesh);
         reg(ZeiyoItems.malt);
         reg(ZeiyoItems.barley);
         reg(ZeiyoItems.barleySeeds);
         reg(ZeiyoItems.grape);
         reg(ZeiyoItems.grapeSeeds);
+        reg(ZeiyoItems.hemp);
+        reg(ZeiyoItems.hempSeeds);
         reg(ZeiyoItems.tankard);
         reg(ZeiyoItems.beerTankard);
         reg(ZeiyoItems.wineTankard);
         reg(ZeiyoItems.ciderTankard);
-
+        reg(ZeiyoItems.vodkaTankard);
+        reg(ZeiyoItems.pipe);
+        reg(ZeiyoItems.hempPipe);
+        
         // Miscellaneous
 
         reg(ZeiyoItems.copperCoin);

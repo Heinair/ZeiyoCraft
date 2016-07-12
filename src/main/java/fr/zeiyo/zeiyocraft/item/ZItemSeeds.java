@@ -9,7 +9,7 @@ public class ZItemSeeds extends ItemSeeds {
     public ZItemSeeds(String unlocalizedName, Block crops, Block soil) {
         super(crops, soil);
         this.setUnlocalizedName(unlocalizedName);
-        this.setCreativeTab(CreativeTabs.tabMaterials);
+        this.setCreativeTab(CreativeTabs.MATERIALS);
         this.setRegistryName(unlocalizedName);
     }
 

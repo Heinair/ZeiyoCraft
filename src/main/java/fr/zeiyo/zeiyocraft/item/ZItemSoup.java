@@ -9,7 +9,7 @@ public class ZItemSoup extends ItemSoup {
 
         super(healAmount);
         this.setUnlocalizedName(unlocalizedName);
-        this.setCreativeTab(CreativeTabs.tabFood);
+        this.setCreativeTab(CreativeTabs.FOOD);
         this.setRegistryName(unlocalizedName);
 
     }

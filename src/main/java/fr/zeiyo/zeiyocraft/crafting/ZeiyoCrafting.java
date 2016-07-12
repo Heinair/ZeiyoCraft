@@ -15,34 +15,40 @@ public class ZeiyoCrafting {
 
         // Smelts
 
-        GameRegistry.addSmelting(Items.egg, new ItemStack(ZeiyoItems.hardboiledEgg), 0.15F);
+        GameRegistry.addSmelting(Items.EGG, new ItemStack(ZeiyoItems.hardboiledEgg), 0.15F);
         GameRegistry.addSmelting(ZeiyoItems.barley, new ItemStack(ZeiyoItems.malt), 0.15F);
-        GameRegistry.addSmelting(Items.rotten_flesh, new ItemStack(ZeiyoItems.puriFlesh), 0.05F);
+        GameRegistry.addSmelting(Items.ROTTEN_FLESH, new ItemStack(ZeiyoItems.puriFlesh), 0.05F);
+        GameRegistry.addSmelting(Items.POISONOUS_POTATO, new ItemStack(ZeiyoItems.vodkaExtract), 0.05F);
 
         // Crafts
 
-        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.chocolateCake), new Object[]{"XCX", "SOS", "CBC", 'X', Items.milk_bucket, 'C', new ItemStack(Items.dye, 1, 3), 'S', Items.sugar, 'O', Items.egg, 'B', Items.wheat});
-        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.steelIngot), new Object[]{"###", "#P#", "###", 'P', Items.iron_ingot, '#', Items.coal});
-        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.vegetableStew), new Object[]{"CPR", " B ", 'R', new ItemStack(Blocks.pumpkin), 'C', Items.carrot, 'P', Items.baked_potato, 'B', Items.bowl});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.chocolateCake), new Object[]{"XCX", "SOS", "CBC", 'X', Items.MILK_BUCKET, 'C', new ItemStack(Items.DYE, 1, 3), 'S', Items.SUGAR, 'O', Items.EGG, 'B', Items.WHEAT});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.steelIngot), new Object[]{"###", "#P#", "###", 'P', Items.IRON_INGOT, '#', Items.COAL});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.vegetableStew), new Object[]{"CPR", " B ", 'R', new ItemStack(Blocks.PUMPKIN), 'C', Items.CARROT, 'P', Items.BAKED_POTATO, 'B', Items.BOWL});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.bronzeIngot), new Object[]{"## ", "P# ", 'P', ZeiyoItems.tinIngot, '#', ZeiyoItems.copperIngot});
-        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.electrumIngot), new Object[]{"#P#", 'P', Items.gold_ingot, '#', ZeiyoItems.silverIngot});
-        GameRegistry.addRecipe(new ItemStack(ZeiyoBlocks.steelBlock), new Object[]{"###", "#P#", "###", 'P', Blocks.iron_block, '#', Blocks.coal_block});
-        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.tankard), new Object[]{"# #", "# #", "###", '#', Items.stick});
-        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.beerTankard), new Object[]{"###", "#P#", " O ", 'P', Items.water_bucket, '#', ZeiyoItems.malt, 'O', ZeiyoItems.tankard});
-        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.wineTankard), new Object[]{"###", "#P#", " O ", 'P', Items.water_bucket, '#', ZeiyoItems.grape, 'O', ZeiyoItems.tankard});
-        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.ciderTankard), new Object[]{"#P#", " O ", 'P', Items.water_bucket, '#', Items.apple, 'O', ZeiyoItems.tankard});
-        GameRegistry.addRecipe(new ItemStack(ZeiyoBlocks.chair), new Object[]{"#  ", "#P#", "B B", 'P', Blocks.wool, '#', Blocks.planks, 'B', Blocks.log});
-        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.applePie), new Object[]{"PE ", "#  ", 'P', Items.apple, '#', Items.sugar, 'E', Items.egg});
-        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.key), new Object[]{" EP", " EP", " P ", 'P', Items.gold_ingot, 'E', Items.gold_nugget});
-        GameRegistry.addRecipe(new ItemStack(Items.saddle), new Object[]{"PPP", "# #", "F F", 'F', Items.iron_ingot, 'P', Items.leather, '#', Items.string});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.electrumIngot), new Object[]{"#P#", 'P', Items.GOLD_INGOT, '#', ZeiyoItems.silverIngot});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoBlocks.steelBlock), new Object[]{"###", "#P#", "###", 'P', Blocks.IRON_BLOCK, '#', Blocks.COAL_BLOCK});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.tankard), new Object[]{"# #", "# #", "###", '#', Items.STICK});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.beerTankard), new Object[]{"###", "#P#", " O ", 'P', Items.WATER_BUCKET, '#', ZeiyoItems.malt, 'O', ZeiyoItems.tankard});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.wineTankard), new Object[]{"###", "#P#", " O ", 'P', Items.WATER_BUCKET, '#', ZeiyoItems.grape, 'O', ZeiyoItems.tankard});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.ciderTankard), new Object[]{"#P#", " O ", 'P', Items.WATER_BUCKET, '#', Items.APPLE, 'O', ZeiyoItems.tankard});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.vodkaTankard), new Object[]{"#P#", " O ", 'P', Items.WATER_BUCKET, '#', ZeiyoItems.vodkaExtract, 'O', ZeiyoItems.tankard});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoBlocks.chair), new Object[]{"#  ", "#P#", "B B", 'P', Blocks.WOOL, '#', Blocks.PLANKS, 'B', Blocks.LOG});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.applePie), new Object[]{"PE ", "#  ", 'P', Items.APPLE, '#', Items.SUGAR, 'E', Items.EGG});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.key), new Object[]{" EP", " EP", " P ", 'P', Items.GOLD_INGOT, 'E', Items.GOLD_NUGGET});
+        GameRegistry.addRecipe(new ItemStack(Items.SADDLE), new Object[]{"PPP", "# #", "F F", 'F', Items.IRON_INGOT, 'P', Items.LEATHER, '#', Items.STRING});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.pipe), new Object[]{"P  ", " PP", 'P', Items.STICK});
+        GameRegistry.addRecipe(new ItemStack(ZeiyoItems.hempPipe), new Object[]{"PPP", "PFP", 'F', ZeiyoItems.pipe  , 'P', ZeiyoItems.hemp});
+        GameRegistry.addRecipe(new ItemStack(Blocks.WOOL), new Object[]{"PP", "PP",'P', Items.STRING});
+
 
         // Ore, armors, tools, and compressed blocks-related Crafts
 
-        warAxeCraft(Blocks.planks, ZeiyoItems.woodenWarAxe);
-        warAxeCraft(Blocks.cobblestone, ZeiyoItems.stoneWarAxe);
-        warAxeCraft(Items.gold_ingot, ZeiyoItems.goldWarAxe);
-        warAxeCraft(Items.iron_ingot, ZeiyoItems.ironWarAxe);
-        warAxeCraft(Items.diamond, ZeiyoItems.diamondWarAxe);
+        warAxeCraft(Blocks.PLANKS, ZeiyoItems.woodenWarAxe);
+        warAxeCraft(Blocks.COBBLESTONE, ZeiyoItems.stoneWarAxe);
+        warAxeCraft(Items.GOLD_INGOT, ZeiyoItems.goldWarAxe);
+        warAxeCraft(Items.IRON_INGOT, ZeiyoItems.ironWarAxe);
+        warAxeCraft(Items.DIAMOND, ZeiyoItems.diamondWarAxe);
 
         armorCraft(ZeiyoItems.steelIngot, ZeiyoItems.steelHelmet, ZeiyoItems.steelChestplate, ZeiyoItems.steelLeggings, ZeiyoItems.steelBoots);
         toolsCraft(ZeiyoItems.steelIngot, ZeiyoItems.steelPickaxe, ZeiyoItems.steelAxe, ZeiyoItems.steelSpade, ZeiyoItems.steelHoe, ZeiyoItems.steelSword, ZeiyoItems.steelWarAxe);

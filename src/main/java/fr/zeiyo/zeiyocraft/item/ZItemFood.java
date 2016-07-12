@@ -10,7 +10,7 @@ public class ZItemFood extends ItemFood
     public ZItemFood(String unlocalizedName, int amount, float saturation, boolean isWolfFood) {
         super(amount, saturation, isWolfFood);
         this.setUnlocalizedName(unlocalizedName);
-        this.setCreativeTab(CreativeTabs.tabFood);
+        this.setCreativeTab(CreativeTabs.FOOD);
         this.setRegistryName(unlocalizedName);
     }
 

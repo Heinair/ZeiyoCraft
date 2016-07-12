@@ -29,7 +29,7 @@ public class ZeiyoWorldGen implements IWorldGenerator {
         this.gen_copper = new WorldGenMinable(ZeiyoBlocks.copperOre.getDefaultState(), 9);
         this.gen_tin = new WorldGenMinable(ZeiyoBlocks.tinOre.getDefaultState(), 9);
         this.gen_silver = new WorldGenMinable(ZeiyoBlocks.silverOre.getDefaultState(), 8);
-        this.gen_onyx = new WorldGenMinable(ZeiyoBlocks.onyxOre.getDefaultState(), 6, BlockMatcher.forBlock(Blocks.netherrack));
+        this.gen_onyx = new WorldGenMinable(ZeiyoBlocks.onyxOre.getDefaultState(), 6, BlockMatcher.forBlock(Blocks.NETHERRACK));
     }
 
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {

@@ -23,13 +23,13 @@ public class ZKeyEvent {
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void onPlayerInteract(PlayerInteractEvent.RightClickBlock event) {
-
+    	
         World world = event.getWorld();
         BlockPos pos = event.getPos();
-
+        
         if (world.isRemote)
             return;
-
+        
         TileEntity tileEntity = world.getTileEntity(pos);
         if (tileEntity instanceof TileEntityLockable) {
             TileEntityLockable tileEntityLockable = (TileEntityLockable) tileEntity;
@@ -38,15 +38,15 @@ public class ZKeyEvent {
 
             ItemStack current = player.getHeldItemMainhand();
             if (tileEntityLockable.isLocked()) {
-                if (current != null && current.getItem() == ZeiyoItems.key) {
+                if (hasRequiredKey(event.getEntityPlayer(), tileEntityLockable)) {
                     if (!tileEntityLockable.getLockCode().getLock().equals(current.getDisplayName())) {
                         //world.playSound(player, pos, SoundEvents.item_flintandsteel_use, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                        player.playerNetServerHandler.sendPacket(new SPacketChat(new TextComponentTranslation("text.key.errorOnKey"), (byte) 2));
+                        //player.player.sendPacket(new SPacketChat(new TextComponentTranslation("text.key.errorOnKey"), (byte) 2));
                         event.setCanceled(true);
                     }
                 } else {
                     //world.playSound(player, pos, SoundEvents.ui_button_click, SoundCategory.BLOCKS, 1.0F, 1.0F); // random.wood.click
-                    player.playerNetServerHandler.sendPacket(new SPacketChat(new TextComponentTranslation("text.key.errorOnBlock"), (byte) 2));
+                    //player.playerNetServerHandler.sendPacket(new SPacketChat(new TextComponentTranslation("text.key.errorOnBlock"), (byte) 2));
 
                     event.setCanceled(true);
                 }
@@ -55,10 +55,10 @@ public class ZKeyEvent {
                     if (!current.getDisplayName().equals(I18n.translateToLocal(current.getItem().getUnlocalizedName() + ".name"))) {
                         tileEntityLockable.setLockCode(new LockCode(current.getDisplayName()));
                         //world.playSound(player, pos, SoundEvents.ui_button_click, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                        player.playerNetServerHandler.sendPacket(new SPacketChat((new TextComponentTranslation("text.key.successOnLock")), (byte) 2));
+                        //player.playerNetServerHandler.sendPacket(new SPacketChat((new TextComponentTranslation("text.key.successOnLock")), (byte) 2));
 
                     } else {
-                        player.playerNetServerHandler.sendPacket(new SPacketChat((new TextComponentTranslation("text.key.errorOnKeyName")), (byte) 2));
+                        //player.playerNetServerHandler.sendPacket(new SPacketChat((new TextComponentTranslation("text.key.errorOnKeyName")), (byte) 2));
                     }
                     event.setCanceled(true);
                 }
@@ -66,7 +66,7 @@ public class ZKeyEvent {
         }
 
     }
-
+    
     @SubscribeEvent
     public void onBreakBlock(BreakEvent event) {
         if (event.getWorld().isRemote)
@@ -79,7 +79,7 @@ public class ZKeyEvent {
             TileEntityLockable tileEntityLockable = (TileEntityLockable) tileEntity;
             if (tileEntityLockable.isLocked()) {
                 if (!hasRequiredKey(event.getPlayer(), tileEntityLockable)) {
-                    player.playerNetServerHandler.sendPacket(new SPacketChat((new TextComponentTranslation("text.key.errorOnDestroyBlock")), (byte) 2));
+                    //player.playerNetServerHandler.sendPacket(new SPacketChat((new TextComponentTranslation("text.key.errorOnDestroyBlock")), (byte) 2));
                     event.setCanceled(true);
                 }
             }

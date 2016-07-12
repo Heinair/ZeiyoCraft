@@ -25,14 +25,14 @@ public class ZBlockOre extends Block {
         this.drop = drop;
         this.meta = meta;
         this.setHarvestLevel("pickaxe", harvestLevel);
-        this.setCreativeTab(CreativeTabs.tabBlock);
+        this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
         this.setRegistryName(unlocalizedName);
         this.drop = drop;
         this.minDropped = quantity[0];
         this.maxDropped = quantity[1];
         this.setHardness(5.0F);
         this.setResistance(3.0F);
-        this.setStepSound(SoundType.STONE);
+        this.setSoundType(SoundType.STONE);
     }
 
 

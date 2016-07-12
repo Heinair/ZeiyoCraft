@@ -21,6 +21,7 @@ public class BlockRenderRegister
 
         reg(ZeiyoBlocks.barleyCrops);
         reg(ZeiyoBlocks.grapeCrops);
+        reg(ZeiyoBlocks.hempCrops);
         reg(ZeiyoBlocks.blockChocolateCake);
 
         // Miscellaneous

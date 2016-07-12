@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "zeiyocraft:hempCrops_stage0" },
+        "age=1": { "model": "zeiyocraft:hempCrops_stage1" },
+        "age=2": { "model": "zeiyocraft:hempCrops_stage2" },
+        "age=3": { "model": "zeiyocraft:hempCrops_stage3" },
+        "age=4": { "model": "zeiyocraft:hempCrops_stage4" },
+        "age=5": { "model": "zeiyocraft:hempCrops_stage5" },
+        "age=6": { "model": "zeiyocraft:hempCrops_stage6" },
+        "age=7": { "model": "zeiyocraft:hempCrops_stage7" }
+    }
+}

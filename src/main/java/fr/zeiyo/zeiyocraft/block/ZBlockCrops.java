@@ -31,6 +31,9 @@ public class ZBlockCrops extends BlockCrops implements IGrowable
                 return ZeiyoItems.barley;
             case 1:
                 return ZeiyoItems.grape;
+                
+            case 2 : 
+            	return ZeiyoItems.hemp;
 
             default:
                 return null;
@@ -45,6 +48,8 @@ public class ZBlockCrops extends BlockCrops implements IGrowable
                 return ZeiyoItems.barleySeeds;
             case 1:
                 return ZeiyoItems.grapeSeeds;
+            case 2 :
+            	return ZeiyoItems.hempSeeds;
 
             default:
                 return null;

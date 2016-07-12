@@ -1,12 +1,16 @@
 package fr.zeiyo.zeiyocraft.item;
 
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.block.ZeiyoBlocks;
 import fr.zeiyo.zeiyocraft.material.ZArmorMaterial;
 import fr.zeiyo.zeiyocraft.material.ZToolMaterial;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public final class ZeiyoItems
@@ -16,9 +20,10 @@ public final class ZeiyoItems
     // Food-related Items
 
     public static Item chocolateCake;
-    public static Item hardboiledEgg, applePie, puriFlesh, vegetableStew;
-    public static Item barleySeeds, barley, malt, grapeSeeds, grape;
-    public static Item tankard, beerTankard, wineTankard, ciderTankard;
+    public static Item hardboiledEgg, applePie, puriFlesh, vegetableStew, vodkaExtract;
+    public static Item barleySeeds, barley, malt, grapeSeeds, grape, hempSeeds, hemp;
+    public static Item tankard, beerTankard, wineTankard, ciderTankard, vodkaTankard;
+    public static Item pipe, hempPipe;
 
     // Miscellaneous
 
@@ -71,27 +76,33 @@ public final class ZeiyoItems
 
         // Food
 
-        chocolateCake = new ZItemBlock("chocolateCake", ZeiyoBlocks.blockChocolateCake, CreativeTabs.tabFood).setMaxStackSize(1);
+        chocolateCake = new ZItemBlock("chocolateCake", ZeiyoBlocks.blockChocolateCake, CreativeTabs.FOOD).setMaxStackSize(1);
         hardboiledEgg = new ZItemFood("hardboiledEgg", 3, 0.1F, false);
         applePie = new ZItemFood("applePie", 8, 0.3F, false);
         puriFlesh = new ZItemFood("puriFlesh", 4, 0.1F, true);
         vegetableStew = new ZItemSoup("vegetableStew", 8);
-        malt = new ZItem("malt").setCreativeTab(CreativeTabs.tabMaterials);
-        barleySeeds = new ZItemSeeds("barleySeeds", ZeiyoBlocks.barleyCrops, Blocks.farmland);
-        barley = new ZItem("barley").setCreativeTab(CreativeTabs.tabMaterials);
-        grapeSeeds = new ZItemSeeds("grapeSeeds", ZeiyoBlocks.grapeCrops, Blocks.farmland);
+        vodkaExtract = new ZItem("vodkaExtract").setCreativeTab(CreativeTabs.MATERIALS);
+        malt = new ZItem("malt").setCreativeTab(CreativeTabs.MATERIALS);
+        barleySeeds = new ZItemSeeds("barleySeeds", ZeiyoBlocks.barleyCrops, Blocks.FARMLAND);
+        barley = new ZItem("barley").setCreativeTab(CreativeTabs.MATERIALS);
+        grapeSeeds = new ZItemSeeds("grapeSeeds", ZeiyoBlocks.grapeCrops, Blocks.FARMLAND);
         grape = new ZItemFood("grape", 4, 0.3F, false);
-        tankard = new ZItem("tankard").setCreativeTab(CreativeTabs.tabAllSearch).setMaxStackSize(16);
-        beerTankard = new ZItemAlcohol("beerTankard", 2, 600, 2);
-        ciderTankard = new ZItemAlcohol("ciderTankard", 2, 700, 2);
-        wineTankard = new ZItemAlcohol("wineTankard", 2, 800, 2);
+        hempSeeds = new ZItemSeeds("hempSeeds", ZeiyoBlocks.hempCrops, Blocks.FARMLAND);
+        hemp = new ZItem("hemp").setCreativeTab(CreativeTabs.MATERIALS);
+        tankard = new ZItem("tankard").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(16);
+        beerTankard = new ZItemAlcohol("beerTankard", 2, 0.1F, 600, 2);
+        ciderTankard = new ZItemAlcohol("ciderTankard", 2, 0.1F, 700, 2);
+        wineTankard = new ZItemAlcohol("wineTankard", 2, 0.1F, 800, 2);
+        vodkaTankard = new ZItemAlcohol("vodkaTankard", 2, 0.1F, 900, 2);
+        pipe = new ZItem("pipe").setCreativeTab(CreativeTabs.MISC);
+        hempPipe = new ZItemDrug ("hempPipe").setCreativeTab(CreativeTabs.FOOD);
 
         // Miscellaneous
 
-        copperCoin = new ZItem("copperCoin").setCreativeTab(CreativeTabs.tabAllSearch).setMaxStackSize(100);
-        silverCoin = new ZItem("silverCoin").setCreativeTab(CreativeTabs.tabAllSearch).setMaxStackSize(100);
-        goldCoin = new ZItem("goldCoin").setCreativeTab(CreativeTabs.tabAllSearch).setMaxStackSize(100);
-        key = new ZItem("key").setCreativeTab(CreativeTabs.tabMisc).setMaxStackSize(1);
+        copperCoin = new ZItem("copperCoin").setCreativeTab(CreativeTabs.SEARCH).setMaxStackSize(100);
+        silverCoin = new ZItem("silverCoin").setCreativeTab(CreativeTabs.SEARCH).setMaxStackSize(100);
+        goldCoin = new ZItem("goldCoin").setCreativeTab(CreativeTabs.SEARCH).setMaxStackSize(100);
+        key = new ZItem("key").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
 
         // Vanilla
 
@@ -104,7 +115,7 @@ public final class ZeiyoItems
 
         // Steel
 
-        steelIngot = new ZItem("steelIngot").setCreativeTab(CreativeTabs.tabMaterials);
+        steelIngot = new ZItem("steelIngot").setCreativeTab(CreativeTabs.MATERIALS);
         steelPickaxe = new ZItemPickaxe("steelPickaxe", ZToolMaterial.STEEL, 0);
         steelAxe = new ZItemAxe("steelAxe", ZToolMaterial.STEEL, 0);
         steelSpade = new ZItemSpade("steelSpade", ZToolMaterial.STEEL, 0);
@@ -118,9 +129,9 @@ public final class ZeiyoItems
 
         // Bronze-related Items
 
-        copperIngot = new ZItem("copperIngot").setCreativeTab(CreativeTabs.tabMaterials);
-        tinIngot = new ZItem("tinIngot").setCreativeTab(CreativeTabs.tabMaterials);
-        bronzeIngot = new ZItem("bronzeIngot").setCreativeTab(CreativeTabs.tabMaterials);
+        copperIngot = new ZItem("copperIngot").setCreativeTab(CreativeTabs.MATERIALS);
+        tinIngot = new ZItem("tinIngot").setCreativeTab(CreativeTabs.MATERIALS);
+        bronzeIngot = new ZItem("bronzeIngot").setCreativeTab(CreativeTabs.MATERIALS);
         bronzePickaxe = new ZItemPickaxe("bronzePickaxe", ZToolMaterial.BRONZE, 1);
         bronzeAxe = new ZItemAxe("bronzeAxe", ZToolMaterial.BRONZE, 1);
         bronzeSpade = new ZItemSpade("bronzeSpade", ZToolMaterial.BRONZE, 1);
@@ -134,8 +145,8 @@ public final class ZeiyoItems
 
         // Electrum-related Items
 
-        silverIngot = new ZItem("silverIngot").setCreativeTab(CreativeTabs.tabMaterials);
-        electrumIngot = new ZItem("electrumIngot").setCreativeTab(CreativeTabs.tabMaterials);
+        silverIngot = new ZItem("silverIngot").setCreativeTab(CreativeTabs.MATERIALS);
+        electrumIngot = new ZItem("electrumIngot").setCreativeTab(CreativeTabs.MATERIALS);
         electrumPickaxe = new ZItemPickaxe("electrumPickaxe", ZToolMaterial.ELECTRUM, 2);
         electrumAxe = new ZItemAxe("electrumAxe", ZToolMaterial.ELECTRUM, 2);
         electrumSpade = new ZItemSpade("electrumSpade", ZToolMaterial.ELECTRUM, 2);
@@ -194,119 +205,127 @@ public final class ZeiyoItems
 
         // Food
 
-        GameRegistry.register(chocolateCake);
-        GameRegistry.register(hardboiledEgg);
-        GameRegistry.register(applePie);
-        GameRegistry.register(puriFlesh);
-        GameRegistry.register(vegetableStew);
-        GameRegistry.register(malt);
-        GameRegistry.register(barleySeeds);
-        GameRegistry.register(barley);
-        GameRegistry.register(grapeSeeds);
-        GameRegistry.register(grape);
-        GameRegistry.register(tankard);
-        GameRegistry.register(beerTankard);
-        GameRegistry.register(ciderTankard);
-        GameRegistry.register(wineTankard);
+        registerItem(chocolateCake);
+        registerItem(hardboiledEgg);
+        registerItem(applePie);
+        registerItem(puriFlesh);
+        registerItem(vegetableStew);
+        registerItem(vodkaExtract);
+        registerItem(malt);
+        registerItem(barleySeeds);
+        registerItem(barley);
+        registerItem(grapeSeeds);
+        registerItem(grape);
+        registerItem(hempSeeds);
+        registerItem(hemp);
+        registerItem(tankard);
+        registerItem(beerTankard);
+        registerItem(ciderTankard);
+        registerItem(wineTankard);
+        registerItem(vodkaTankard);
+        registerItem(pipe);
+        registerItem(hempPipe);
+
+
 
         // Miscellaneous
 
-        GameRegistry.register(copperCoin);
-        GameRegistry.register(silverCoin);
-        GameRegistry.register(goldCoin);
-        GameRegistry.register(key);
+        registerItem(copperCoin);
+        registerItem(silverCoin);
+        registerItem(goldCoin);
+        registerItem(key);
 
         // Vanilla
 
-        GameRegistry.register(woodenWarAxe);
-        GameRegistry.register(stoneWarAxe);
-        GameRegistry.register(goldWarAxe);
-        GameRegistry.register(ironWarAxe);
-        GameRegistry.register(diamondWarAxe);
+        registerItem(woodenWarAxe);
+        registerItem(stoneWarAxe);
+        registerItem(goldWarAxe);
+        registerItem(ironWarAxe);
+        registerItem(diamondWarAxe);
 
         // Steel
 
-        GameRegistry.register(steelIngot);
-        GameRegistry.register(steelPickaxe);
-        GameRegistry.register(steelAxe);
-        GameRegistry.register(steelSpade);
-        GameRegistry.register(steelHoe);
-        GameRegistry.register(steelSword);
-        GameRegistry.register(steelWarAxe);
-        GameRegistry.register(steelHelmet);
-        GameRegistry.register(steelChestplate);
-        GameRegistry.register(steelLeggings);
-        GameRegistry.register(steelBoots);
+        registerItem(steelIngot);
+        registerItem(steelPickaxe);
+        registerItem(steelAxe);
+        registerItem(steelSpade);
+        registerItem(steelHoe);
+        registerItem(steelSword);
+        registerItem(steelWarAxe);
+        registerItem(steelHelmet);
+        registerItem(steelChestplate);
+        registerItem(steelLeggings);
+        registerItem(steelBoots);
 
         // Bronze-related Items
 
-        GameRegistry.register(copperIngot);
-        GameRegistry.register(tinIngot);
-        GameRegistry.register(bronzeIngot);
-        GameRegistry.register(bronzePickaxe);
-        GameRegistry.register(bronzeAxe);
-        GameRegistry.register(bronzeSpade);
-        GameRegistry.register(bronzeHoe);
-        GameRegistry.register(bronzeSword);
-        GameRegistry.register(bronzeWarAxe);
-        GameRegistry.register(bronzeHelmet);
-        GameRegistry.register(bronzeChestplate);
-        GameRegistry.register(bronzeLeggings);
-        GameRegistry.register(bronzeBoots);
+        registerItem(copperIngot);
+        registerItem(tinIngot);
+        registerItem(bronzeIngot);
+        registerItem(bronzePickaxe);
+        registerItem(bronzeAxe);
+        registerItem(bronzeSpade);
+        registerItem(bronzeHoe);
+        registerItem(bronzeSword);
+        registerItem(bronzeWarAxe);
+        registerItem(bronzeHelmet);
+        registerItem(bronzeChestplate);
+        registerItem(bronzeLeggings);
+        registerItem(bronzeBoots);
 
         // Electrum-related Items
 
-        GameRegistry.register(silverIngot);
-        GameRegistry.register(electrumIngot);
-        GameRegistry.register(electrumPickaxe);
-        GameRegistry.register(electrumAxe);
-        GameRegistry.register(electrumSpade);
-        GameRegistry.register(electrumHoe);
-        GameRegistry.register(electrumSword);
-        GameRegistry.register(electrumWarAxe);
-        GameRegistry.register(electrumHelmet);
-        GameRegistry.register(electrumChestplate);
-        GameRegistry.register(electrumLeggings);
-        GameRegistry.register(electrumBoots);
+        registerItem(silverIngot);
+        registerItem(electrumIngot);
+        registerItem(electrumPickaxe);
+        registerItem(electrumAxe);
+        registerItem(electrumSpade);
+        registerItem(electrumHoe);
+        registerItem(electrumSword);
+        registerItem(electrumWarAxe);
+        registerItem(electrumHelmet);
+        registerItem(electrumChestplate);
+        registerItem(electrumLeggings);
+        registerItem(electrumBoots);
 
         // Onyx
 
-        GameRegistry.register(onyxPickaxe);
-        GameRegistry.register(onyxAxe);
-        GameRegistry.register(onyxSpade);
-        GameRegistry.register(onyxHoe);
-        GameRegistry.register(onyxSword);
-        GameRegistry.register(onyxWarAxe);
-        GameRegistry.register(onyxHelmet);
-        GameRegistry.register(onyxChestplate);
-        GameRegistry.register(onyxLeggings);
-        GameRegistry.register(onyxBoots);
+        registerItem(onyxPickaxe);
+        registerItem(onyxAxe);
+        registerItem(onyxSpade);
+        registerItem(onyxHoe);
+        registerItem(onyxSword);
+        registerItem(onyxWarAxe);
+        registerItem(onyxHelmet);
+        registerItem(onyxChestplate);
+        registerItem(onyxLeggings);
+        registerItem(onyxBoots);
 
         // Ruby 
 
-        GameRegistry.register(rubyPickaxe);
-        GameRegistry.register(rubyAxe);
-        GameRegistry.register(rubySpade);
-        GameRegistry.register(rubyHoe);
-        GameRegistry.register(rubySword);
-        GameRegistry.register(rubyWarAxe);
-        GameRegistry.register(rubyHelmet);
-        GameRegistry.register(rubyChestplate);
-        GameRegistry.register(rubyLeggings);
-        GameRegistry.register(rubyBoots);
+        registerItem(rubyPickaxe);
+        registerItem(rubyAxe);
+        registerItem(rubySpade);
+        registerItem(rubyHoe);
+        registerItem(rubySword);
+        registerItem(rubyWarAxe);
+        registerItem(rubyHelmet);
+        registerItem(rubyChestplate);
+        registerItem(rubyLeggings);
+        registerItem(rubyBoots);
 
         // Sapphire
 
-        GameRegistry.register(sapphirePickaxe);
-        GameRegistry.register(sapphireAxe);
-        GameRegistry.register(sapphireSpade);
-        GameRegistry.register(sapphireHoe);
-        GameRegistry.register(sapphireSword);
-        GameRegistry.register(sapphireWarAxe);
-        GameRegistry.register(sapphireHelmet);
-        GameRegistry.register(sapphireChestplate);
-        GameRegistry.register(sapphireLeggings);
-        GameRegistry.register(sapphireBoots);
+        registerItem(sapphirePickaxe);
+        registerItem(sapphireAxe);
+        registerItem(sapphireSpade);
+        registerItem(sapphireHoe);
+        registerItem(sapphireSword);
+        registerItem(sapphireWarAxe);
+        registerItem(sapphireHelmet);
+        registerItem(sapphireChestplate);
+        registerItem(sapphireLeggings);
+        registerItem(sapphireBoots);
 
     }
 
@@ -314,10 +333,14 @@ public final class ZeiyoItems
 
     {
 
-        GameRegistry.register(onyx = new ZItem("onyx").setCreativeTab(CreativeTabs.tabMaterials));
-        GameRegistry.register(ruby = new ZItem("ruby").setCreativeTab(CreativeTabs.tabMaterials));
-        GameRegistry.register(sapphire = new ZItem("sapphire").setCreativeTab(CreativeTabs.tabMaterials));
+        registerItem(onyx = new ZItem("onyx").setCreativeTab(CreativeTabs.MATERIALS));
+        registerItem(ruby = new ZItem("ruby").setCreativeTab(CreativeTabs.MATERIALS));
+        registerItem(sapphire = new ZItem("sapphire").setCreativeTab(CreativeTabs.MATERIALS));
 
     }
+    
+    private static void registerItem(Item item) {
+    	GameRegistry.registerItem(item, ZeiyoMain.MODID + ":" + item.getUnlocalizedName().substring(5));
+        }
 
 }

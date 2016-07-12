@@ -34,7 +34,7 @@ public class ZBlockSittable extends Block {
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         this.setUnlocalizedName(unlocalizedName);
         this.setHardness(1.0F);
-        this.setCreativeTab(CreativeTabs.tabDecorations);
+        this.setCreativeTab(CreativeTabs.DECORATIONS);
         this.setRegistryName(unlocalizedName);
         this.setHarvestLevel("axe", 0);
     }

@@ -46,31 +46,31 @@ public class ZCraftingUtils {
     }
 
     public static void pickaxeCraft(Item item, Item pickaxe) {
-        GameRegistry.addRecipe(new ItemStack(pickaxe), new Object[]{"###", " P ", " P ", 'P', Items.stick, '#', item});
+        GameRegistry.addRecipe(new ItemStack(pickaxe), new Object[]{"###", " P ", " P ", 'P', Items.STICK, '#', item});
     }
 
     public static void axeCraft(Item item, Item axe) {
-        GameRegistry.addRecipe(new ItemStack(axe), new Object[]{"## ", "#P ", " P ", 'P', Items.stick, '#', item});
+        GameRegistry.addRecipe(new ItemStack(axe), new Object[]{"## ", "#P ", " P ", 'P', Items.STICK, '#', item});
     }
 
     public static void spadeCraft(Item item, Item spade) {
-        GameRegistry.addRecipe(new ItemStack(spade), new Object[]{" # ", " P ", " P ", 'P', Items.stick, '#', item});
+        GameRegistry.addRecipe(new ItemStack(spade), new Object[]{" # ", " P ", " P ", 'P', Items.STICK, '#', item});
     }
 
     public static void hoeCraft(Item item, Item hoe) {
-        GameRegistry.addRecipe(new ItemStack(hoe), new Object[]{"## ", " P ", " P ", 'P', Items.stick, '#', item});
+        GameRegistry.addRecipe(new ItemStack(hoe), new Object[]{"## ", " P ", " P ", 'P', Items.STICK, '#', item});
     }
 
     public static void swordCraft(Item item, Item sword) {
-        GameRegistry.addRecipe(new ItemStack(sword), new Object[]{" # ", " # ", " P ", 'P', Items.stick, '#', item});
+        GameRegistry.addRecipe(new ItemStack(sword), new Object[]{" # ", " # ", " P ", 'P', Items.STICK, '#', item});
     }
 
     public static void warAxeCraft(Item item, Item warAxe) {
-        GameRegistry.addRecipe(new ItemStack(warAxe), new Object[]{"###", "#P#", " P ", 'P', Items.stick, '#', item});
+        GameRegistry.addRecipe(new ItemStack(warAxe), new Object[]{"###", "#P#", " P ", 'P', Items.STICK, '#', item});
     }
 
     public static void warAxeCraft(Block block, Item warAxe) {
-        GameRegistry.addRecipe(new ItemStack(warAxe), new Object[]{"###", "#P#", " P ", 'P', Items.stick, '#', block});
+        GameRegistry.addRecipe(new ItemStack(warAxe), new Object[]{"###", "#P#", " P ", 'P', Items.STICK, '#', block});
     }
 
 
@@ -90,11 +90,11 @@ public class ZCraftingUtils {
             case 5:
                 return ZeiyoItems.sapphire;
             case 100:
-                return Items.gold_ingot;
+                return Items.GOLD_INGOT;
             case 101:
-                return Items.iron_ingot;
+                return Items.IRON_INGOT;
             case 102:
-                return Items.diamond;
+                return Items.DIAMOND;
 
             default:
                 return null;

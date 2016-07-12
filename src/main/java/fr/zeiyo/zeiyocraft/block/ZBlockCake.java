@@ -21,7 +21,7 @@ public class ZBlockCake extends BlockCake
         super();
         this.setUnlocalizedName(unlocalizedName);
         this.setHardness(0.5F);
-        this.setStepSound(SoundType.CLOTH);
+        this.setSoundType(SoundType.CLOTH);
         this.disableStats();
         this.setRegistryName(unlocalizedName);
         this.foodPoints = food;

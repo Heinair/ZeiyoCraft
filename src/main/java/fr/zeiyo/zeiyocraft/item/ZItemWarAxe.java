@@ -15,14 +15,14 @@ import java.util.Set;
 
 public class ZItemWarAxe extends ItemTool {
 
-    private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[]{Blocks.planks, Blocks.bookshelf, Blocks.log, Blocks.log2, Blocks.chest, Blocks.pumpkin, Blocks.lit_pumpkin, Blocks.melon_block, Blocks.ladder});
+    private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[]{Blocks.PLANKS, Blocks.BOOKSHELF, Blocks.LOG, Blocks.LOG2, Blocks.CHEST, Blocks.PUMPKIN, Blocks.LIT_PUMPKIN, Blocks.MELON_BLOCK, Blocks.LADDER});
     public int id;
 
 
     public ZItemWarAxe(String unlocalizedName, ToolMaterial material, int nmb) {
         super(material, EFFECTIVE_ON);
         this.setUnlocalizedName(unlocalizedName);
-        this.setCreativeTab(CreativeTabs.tabCombat);
+        this.setCreativeTab(CreativeTabs.COMBAT);
         this.isRepairable();
         this.damageVsEntity = 6.0F + material.getDamageVsEntity();
         this.attackSpeed = -2.9F;
@@ -54,7 +54,7 @@ public class ZItemWarAxe extends ItemTool {
     }
 
     public float getStrVsBlock(ItemStack stack, IBlockState state) {
-        return state.getMaterial() != Material.wood && state.getMaterial() != Material.plants && state.getMaterial() != Material.vine ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
+        return state.getMaterial() != Material.WOOD && state.getMaterial() != Material.PLANTS && state.getMaterial() != Material.VINE ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
     }
 
 }
