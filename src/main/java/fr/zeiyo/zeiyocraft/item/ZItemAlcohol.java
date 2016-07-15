@@ -25,7 +25,6 @@ public class ZItemAlcohol extends Item
     /** The amount this food item heals the player. */
     private final int healAmount;
     private final float saturationModifier;
-    /** Whether wolves like this food (true for raw and cooked porkchop). */
     /** If this field is true, the food can be consumed even if the player don't need to eat. */
     private boolean alwaysEdible;
     /** represents the potion effect that will occurr upon eating this food. Set by setPotionEffect */
@@ -42,6 +41,7 @@ public class ZItemAlcohol extends Item
         this.setCreativeTab(CreativeTabs.FOOD);
         this.setAlwaysEdible();
         this.setPotionEffect(new PotionEffect(MobEffects.NAUSEA, duration, amplifier, false, false), 1.0F);
+        this.setMaxStackSize(1);
     }
 
     /**
@@ -110,11 +110,6 @@ public class ZItemAlcohol extends Item
     {
         return this.saturationModifier;
     }
-
-    /**
-     * Whether wolves like this food (true for raw and cooked porkchop).
-     */
-
 
     public ZItemAlcohol setPotionEffect(PotionEffect p_185070_1_, float p_185070_2_)
     {

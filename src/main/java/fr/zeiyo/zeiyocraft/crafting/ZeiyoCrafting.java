@@ -33,7 +33,7 @@ public class ZeiyoCrafting {
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.wineTankard), new Object[]{"###", "#P#", " O ", 'P', Items.WATER_BUCKET, '#', ZeiyoItems.grape, 'O', ZeiyoItems.tankard});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.ciderTankard), new Object[]{"#P#", " O ", 'P', Items.WATER_BUCKET, '#', Items.APPLE, 'O', ZeiyoItems.tankard});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.vodkaTankard), new Object[]{"#P#", " O ", 'P', Items.WATER_BUCKET, '#', ZeiyoItems.vodkaExtract, 'O', ZeiyoItems.tankard});
-        GameRegistry.addRecipe(new ItemStack(ZeiyoBlocks.chair), new Object[]{"#  ", "#P#", "B B", 'P', Blocks.WOOL, '#', Blocks.PLANKS, 'B', Blocks.LOG});
+        //GameRegistry.addRecipe(new ItemStack(ZeiyoBlocks.chair), new Object[]{"#  ", "#P#", "B B", 'P', Blocks.WOOL, '#', Blocks.PLANKS, 'B', Blocks.LOG});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.applePie), new Object[]{"PE ", "#  ", 'P', Items.APPLE, '#', Items.SUGAR, 'E', Items.EGG});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.key), new Object[]{" EP", " EP", " P ", 'P', Items.GOLD_INGOT, 'E', Items.GOLD_NUGGET});
         GameRegistry.addRecipe(new ItemStack(Items.SADDLE), new Object[]{"PPP", "# #", "F F", 'F', Items.IRON_INGOT, 'P', Items.LEATHER, '#', Items.STRING});

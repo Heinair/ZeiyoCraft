@@ -24,11 +24,6 @@ public class BlockRenderRegister
         reg(ZeiyoBlocks.hempCrops);
         reg(ZeiyoBlocks.blockChocolateCake);
 
-        // Miscellaneous
-
-        reg(ZeiyoBlocks.chair);
-        //reg(ZeiyoBlocks.campfire);
-
         // Ore Blocks
 
         reg(ZeiyoBlocks.copperOre);

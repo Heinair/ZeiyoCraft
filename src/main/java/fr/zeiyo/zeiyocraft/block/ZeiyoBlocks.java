@@ -14,7 +14,6 @@ public class ZeiyoBlocks {
 
     public static Block blockChocolateCake;
     public static Block barleyCrops, grapeCrops, hempCrops;
-    public static Block chair, campfire;
     public static Block onyxOre, rubyOre, sapphireOre, copperOre, tinOre, silverOre;
     public static Block onyxBlock, steelBlock, rubyBlock, sapphireBlock, copperBlock, tinBlock, bronzeBlock, silverBlock, electrumBlock, charcoalBlock;
 
@@ -27,11 +26,6 @@ public class ZeiyoBlocks {
         grapeCrops = new ZBlockCrops("grapeCrops", 1);
         hempCrops = new ZBlockCrops("hempCrops", 2);
         
-        // Miscellaneous
-
-        chair = new ZBlockSittable("chair", Material.WOOD);
-        //campfire = new ZBlockCampfire("campfire", false);
-
         // Ore Blocks
 
         copperOre = new ZBlock("copperOre", Material.ROCK, 5.0F, 3.0F, SoundType.STONE);
@@ -71,11 +65,6 @@ public class ZeiyoBlocks {
         registerBlock(onyxOre);
         registerBlock(rubyOre);
         registerBlock(sapphireOre);
-
-        // Miscellaneous
-
-        registerBlock(chair);
-        //registerBlock(campfire, campfire.getUnlocalizedName().substring(5));
 
         // Compressed Blocks
 

@@ -7,9 +7,11 @@ import fr.zeiyo.zeiyocraft.material.ZToolMaterial;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -94,8 +96,8 @@ public final class ZeiyoItems
         ciderTankard = new ZItemAlcohol("ciderTankard", 2, 0.1F, 700, 2);
         wineTankard = new ZItemAlcohol("wineTankard", 2, 0.1F, 800, 2);
         vodkaTankard = new ZItemAlcohol("vodkaTankard", 2, 0.1F, 900, 2);
-        pipe = new ZItem("pipe").setCreativeTab(CreativeTabs.MISC);
-        hempPipe = new ZItemDrug ("hempPipe").setCreativeTab(CreativeTabs.FOOD);
+        pipe = new ZItem("pipe").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(16);
+        hempPipe = new ZItemDrug("hempPipe", 1500, 2).setPotionEffect(new PotionEffect(MobEffects.REGENERATION, 250, 1, false, false), 1.0F);
 
         // Miscellaneous
 

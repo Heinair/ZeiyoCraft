@@ -22,6 +22,10 @@ public class ZItemDrug extends Item
 {
     /** Number of ticks to run while 'EnumAction'ing until result. */
     public final int itemUseDuration;
+    /** The amount this food item heals the player. */
+    private final int healAmount;
+    private final float saturationModifier;
+    /** Whether wolves like this food (true for raw and cooked porkchop). */
     /** If this field is true, the food can be consumed even if the player don't need to eat. */
     private boolean alwaysEdible;
     /** represents the potion effect that will occurr upon eating this food. Set by setPotionEffect */
@@ -29,13 +33,15 @@ public class ZItemDrug extends Item
     /** probably of the set potion effect occurring */
     private float potionEffectProbability;
 
-    public ZItemDrug(String unlocalizedName)
+    public ZItemDrug(String unlocalizedName, int amount, float saturation)
     {
     	this.setUnlocalizedName(unlocalizedName);
         this.itemUseDuration = 32;
+        this.healAmount = amount;
+        this.saturationModifier = saturation;
         this.setCreativeTab(CreativeTabs.FOOD);
         this.setAlwaysEdible();
-        this.setPotionEffect(new PotionEffect(MobEffects.NAUSEA, 1500, 5, false, false), 1.0F);
+        this.setMaxStackSize(16);
     }
 
     /**
@@ -49,8 +55,10 @@ public class ZItemDrug extends Item
         if (entityLiving instanceof EntityPlayer)
         {
             EntityPlayer entityplayer = (EntityPlayer)entityLiving;
-            worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
+            entityplayer.getFoodStats().addStats(healAmount, saturationModifier);
+            worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ENTITY_PLAYER_BREATH, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
             this.onFoodEaten(stack, worldIn, entityplayer);
+            entityplayer.addStat(StatList.getObjectUseStats(this));
         }
 
         return stack;
@@ -61,6 +69,7 @@ public class ZItemDrug extends Item
         if (!worldIn.isRemote && this.potionId != null && worldIn.rand.nextFloat() < this.potionEffectProbability)
         {
             player.addPotionEffect(new PotionEffect(this.potionId));
+            player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 800, 2, false, false));
         }
     }
 
@@ -91,6 +100,16 @@ public class ZItemDrug extends Item
         {
             return new ActionResult(EnumActionResult.FAIL, itemStackIn);
         }
+    }
+
+    public int getHealAmount(ItemStack stack)
+    {
+        return this.healAmount;
+    }
+
+    public float getSaturationModifier(ItemStack stack)
+    {
+        return this.saturationModifier;
     }
 
     public ZItemDrug setPotionEffect(PotionEffect p_185070_1_, float p_185070_2_)
