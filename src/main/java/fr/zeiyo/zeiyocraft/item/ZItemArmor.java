@@ -33,11 +33,23 @@ public class ZItemArmor extends ItemArmor
 		}
 		if (this.isWearingFullSet(player, ZeiyoItems.rubyHelmet, ZeiyoItems.rubyChestplate, ZeiyoItems.rubyLeggings, ZeiyoItems.rubyBoots)) 
 		{
-			this.effectPlayer(player, Potion.getPotionById(12), 0, 50);
+			this.effectPlayer(player, Potion.getPotionById(5), 0, 50);
 		}
 		if (this.isWearingFullSet(player, ZeiyoItems.sapphireHelmet, ZeiyoItems.sapphireChestplate, ZeiyoItems.sapphireLeggings, ZeiyoItems.sapphireBoots)) 
 		{
+			this.effectPlayer(player, Potion.getPotionById(3), 0, 50);
+		}
+		if (this.isWearingFullSet(player, ZeiyoItems.nacreHelmet, ZeiyoItems.nacreChestplate, ZeiyoItems.nacreLeggings, ZeiyoItems.nacreBoots)) 
+		{
 			this.effectPlayer(player, Potion.getPotionById(13), 0, 50);
+		}
+		if (this.isWearingFullSet(player, ZeiyoItems.jadeHelmet, ZeiyoItems.jadeChestplate, ZeiyoItems.jadeLeggings, ZeiyoItems.jadeBoots)) 
+		{
+			this.effectPlayer(player, Potion.getPotionById(3), 0, 50);
+		}
+		if (this.isWearingFullSet(player, ZeiyoItems.amethystHelmet, ZeiyoItems.amethystChestplate, ZeiyoItems.amethystLeggings, ZeiyoItems.amethystBoots)) 
+		{
+			this.effectPlayer(player, Potion.getPotionById(6), 0, 650);
 		}
     }
 	

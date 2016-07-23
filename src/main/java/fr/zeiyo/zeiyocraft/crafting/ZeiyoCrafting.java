@@ -19,6 +19,7 @@ public class ZeiyoCrafting {
         GameRegistry.addSmelting(ZeiyoItems.barley, new ItemStack(ZeiyoItems.malt), 0.15F);
         GameRegistry.addSmelting(Items.ROTTEN_FLESH, new ItemStack(ZeiyoItems.puriFlesh), 0.05F);
         GameRegistry.addSmelting(Items.POISONOUS_POTATO, new ItemStack(ZeiyoItems.vodkaExtract), 0.05F);
+        GameRegistry.addSmelting(Items.WHEAT_SEEDS, new ItemStack(ZeiyoItems.barleySeeds), 0.05F);
 
         // Crafts
 

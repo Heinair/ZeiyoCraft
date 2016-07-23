@@ -14,7 +14,7 @@ public class ZArmorMaterial {
     public static ItemArmor.ArmorMaterial SAPPHIREA = EnumHelper.addArmorMaterial("SAPPHIREA", "zeiyocraft:sapphire", 37, new int[]{3, 8, 6, 3}, 11, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2);
     public static ItemArmor.ArmorMaterial JADEA = EnumHelper.addArmorMaterial("JADEA", "zeiyocraft:jade", 37, new int[]{3, 8, 6, 3}, 11, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2);
     public static ItemArmor.ArmorMaterial NACREA = EnumHelper.addArmorMaterial("NACREA", "zeiyocraft:nacre", 37, new int[]{3, 8, 6, 3}, 11, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2);
-    public static ItemArmor.ArmorMaterial AMETHYSTA = EnumHelper.addArmorMaterial("AMETHYSTA", "zeiyocraft:sapphire", 37, new int[]{3, 8, 6, 3}, 11, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2);
+    public static ItemArmor.ArmorMaterial AMETHYSTA = EnumHelper.addArmorMaterial("AMETHYSTA", "zeiyocraft:amethyst", 37, new int[]{3, 8, 6, 3}, 11, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2);
 
     
 }
