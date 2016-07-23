@@ -71,6 +71,26 @@ public final class ZeiyoItems
     public static Item sapphire;
     public static Item sapphirePickaxe, sapphireAxe, sapphireSpade, sapphireHoe, sapphireSword, sapphireWarAxe;
     public static Item sapphireHelmet, sapphireChestplate, sapphireLeggings, sapphireBoots;
+    
+    // Jade
+    
+    public static Item jade;
+    public static Item jadePickaxe, jadeAxe, jadeSpade, jadeHoe, jadeSword, jadeWarAxe;
+    public static Item jadeHelmet, jadeChestplate, jadeLeggings, jadeBoots;
+    
+    // Amethyst
+    
+    public static Item amethyst;
+    public static Item amethystPickaxe, amethystAxe, amethystSpade, amethystHoe, amethystSword, amethystWarAxe;
+    public static Item amethystHelmet, amethystChestplate, amethystLeggings, amethystBoots;
+    
+    // Nacre
+    
+    public static Item nacre;
+    public static Item nacrePickaxe, nacreAxe, nacreSpade, nacreHoe, nacreSword, nacreWarAxe;
+    public static Item nacreHelmet, nacreChestplate, nacreLeggings, nacreBoots;
+    
+    
 
     public static void initItems()
 
@@ -92,18 +112,18 @@ public final class ZeiyoItems
         hempSeeds = new ZItemSeeds("hempSeeds", ZeiyoBlocks.hempCrops, Blocks.FARMLAND);
         hemp = new ZItem("hemp").setCreativeTab(CreativeTabs.MATERIALS);
         tankard = new ZItem("tankard").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(16);
-        beerTankard = new ZItemAlcohol("beerTankard", 2, 0.1F, 600, 2);
-        ciderTankard = new ZItemAlcohol("ciderTankard", 2, 0.1F, 700, 2);
-        wineTankard = new ZItemAlcohol("wineTankard", 2, 0.1F, 800, 2);
-        vodkaTankard = new ZItemAlcohol("vodkaTankard", 2, 0.1F, 900, 2);
+        beerTankard = new ZItemAlcohol("beerTankard", 2, 0.1F, 900, 0);
+        ciderTankard = new ZItemAlcohol("ciderTankard", 2, 0.1F, 900, 0);
+        wineTankard = new ZItemAlcohol("wineTankard", 2, 0.1F, 1000, 0);
+        vodkaTankard = new ZItemAlcohol("vodkaTankard", 2, 0.1F, 1000, 0);
         pipe = new ZItem("pipe").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(16);
-        hempPipe = new ZItemDrug("hempPipe", 1500, 2).setPotionEffect(new PotionEffect(MobEffects.REGENERATION, 250, 1, false, false), 1.0F);
+        hempPipe = new ZItemDrug("hempPipe", 1500, 2).setPotionEffect(new PotionEffect(MobEffects.REGENERATION, 350, 1, false, false), 1.0F);
 
         // Miscellaneous
 
-        copperCoin = new ZItem("copperCoin").setCreativeTab(CreativeTabs.SEARCH).setMaxStackSize(100);
-        silverCoin = new ZItem("silverCoin").setCreativeTab(CreativeTabs.SEARCH).setMaxStackSize(100);
-        goldCoin = new ZItem("goldCoin").setCreativeTab(CreativeTabs.SEARCH).setMaxStackSize(100);
+        copperCoin = new ZItem("copperCoin").setCreativeTab(CreativeTabs.SEARCH);
+        silverCoin = new ZItem("silverCoin").setCreativeTab(CreativeTabs.SEARCH);
+        goldCoin = new ZItem("goldCoin").setCreativeTab(CreativeTabs.SEARCH);
         key = new ZItem("key").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
 
         // Vanilla
@@ -198,7 +218,46 @@ public final class ZeiyoItems
         sapphireChestplate = new ZItemArmor("sapphireChestplate", ZArmorMaterial.SAPPHIREA, 1, EntityEquipmentSlot.CHEST, 5);
         sapphireLeggings = new ZItemArmor("sapphireLeggings", ZArmorMaterial.SAPPHIREA, 2, EntityEquipmentSlot.LEGS, 5);
         sapphireBoots = new ZItemArmor("sapphireBoots", ZArmorMaterial.SAPPHIREA, 1, EntityEquipmentSlot.FEET, 5);
+        
+        // Jade
 
+        jadePickaxe = new ZItemPickaxe("jadePickaxe", ZToolMaterial.JADE, 5);
+        jadeAxe = new ZItemAxe("jadeAxe", ZToolMaterial.JADE, 5);
+        jadeSpade = new ZItemSpade("jadeSpade", ZToolMaterial.JADE, 5);
+        jadeHoe = new ZItemHoe("jadeHoe", ZToolMaterial.JADE, 5);
+        jadeSword = new ZItemSword("jadeSword", ZToolMaterial.JADE, 5);
+        jadeWarAxe = new ZItemWarAxe("jadeWarAxe", ZToolMaterial.JADE, 5);
+        jadeHelmet = new ZItemArmor("jadeHelmet", ZArmorMaterial.JADEA, 1, EntityEquipmentSlot.HEAD, 5);
+        jadeChestplate = new ZItemArmor("jadeChestplate", ZArmorMaterial.JADEA, 1, EntityEquipmentSlot.CHEST, 5);
+        jadeLeggings = new ZItemArmor("jadeLeggings", ZArmorMaterial.JADEA, 2, EntityEquipmentSlot.LEGS, 5);
+        jadeBoots = new ZItemArmor("jadeBoots", ZArmorMaterial.JADEA, 1, EntityEquipmentSlot.FEET, 5);
+        
+        // Nacre
+
+        nacrePickaxe = new ZItemPickaxe("nacrePickaxe", ZToolMaterial.NACRE, 5);
+        nacreAxe = new ZItemAxe("nacreAxe", ZToolMaterial.NACRE, 5);
+        nacreSpade = new ZItemSpade("nacreSpade", ZToolMaterial.NACRE, 5);
+        nacreHoe = new ZItemHoe("nacreHoe", ZToolMaterial.NACRE, 5);
+        nacreSword = new ZItemSword("nacreSword", ZToolMaterial.NACRE, 5);
+        nacreWarAxe = new ZItemWarAxe("nacreWarAxe", ZToolMaterial.NACRE, 5);
+        nacreHelmet = new ZItemArmor("nacreHelmet", ZArmorMaterial.NACREA, 1, EntityEquipmentSlot.HEAD, 5);
+        nacreChestplate = new ZItemArmor("nacreChestplate", ZArmorMaterial.NACREA, 1, EntityEquipmentSlot.CHEST, 5);
+        nacreLeggings = new ZItemArmor("nacreLeggings", ZArmorMaterial.NACREA, 2, EntityEquipmentSlot.LEGS, 5);
+        nacreBoots = new ZItemArmor("nacreBoots", ZArmorMaterial.NACREA, 1, EntityEquipmentSlot.FEET, 5);
+        
+        // Amethyst
+
+        amethystPickaxe = new ZItemPickaxe("amethystPickaxe", ZToolMaterial.AMETHYST, 5);
+        amethystAxe = new ZItemAxe("amethystAxe", ZToolMaterial.AMETHYST, 5);
+        amethystSpade = new ZItemSpade("amethystSpade", ZToolMaterial.AMETHYST, 5);
+        amethystHoe = new ZItemHoe("amethystHoe", ZToolMaterial.AMETHYST, 5);
+        amethystSword = new ZItemSword("amethystSword", ZToolMaterial.AMETHYST, 5);
+        amethystWarAxe = new ZItemWarAxe("amethystWarAxe", ZToolMaterial.AMETHYST, 5);
+        amethystHelmet = new ZItemArmor("amethystHelmet", ZArmorMaterial.AMETHYSTA, 1, EntityEquipmentSlot.HEAD, 5);
+        amethystChestplate = new ZItemArmor("amethystChestplate", ZArmorMaterial.AMETHYSTA, 1, EntityEquipmentSlot.CHEST, 5);
+        amethystLeggings = new ZItemArmor("amethystLeggings", ZArmorMaterial.AMETHYSTA, 2, EntityEquipmentSlot.LEGS, 5);
+        amethystBoots = new ZItemArmor("amethystBoots", ZArmorMaterial.AMETHYSTA, 1, EntityEquipmentSlot.FEET, 5);
+       
     }
 
     public static void registerItems()
@@ -227,8 +286,6 @@ public final class ZeiyoItems
         registerItem(vodkaTankard);
         registerItem(pipe);
         registerItem(hempPipe);
-
-
 
         // Miscellaneous
 
@@ -328,7 +385,45 @@ public final class ZeiyoItems
         registerItem(sapphireChestplate);
         registerItem(sapphireLeggings);
         registerItem(sapphireBoots);
+        
+        // Jade
 
+        registerItem(jadePickaxe);
+        registerItem(jadeAxe);
+        registerItem(jadeSpade);
+        registerItem(jadeHoe);
+        registerItem(jadeSword);
+        registerItem(jadeWarAxe);
+        registerItem(jadeHelmet);
+        registerItem(jadeChestplate);
+        registerItem(jadeLeggings);
+        registerItem(jadeBoots);
+        
+        // Nacre
+
+        registerItem(nacrePickaxe);
+        registerItem(nacreAxe);
+        registerItem(nacreSpade);
+        registerItem(nacreHoe);
+        registerItem(nacreSword);
+        registerItem(nacreWarAxe);
+        registerItem(nacreHelmet);
+        registerItem(nacreChestplate);
+        registerItem(nacreLeggings);
+        registerItem(nacreBoots);
+        
+        // Amethyst
+
+        registerItem(amethystPickaxe);
+        registerItem(amethystAxe);
+        registerItem(amethystSpade);
+        registerItem(amethystHoe);
+        registerItem(amethystSword);
+        registerItem(amethystWarAxe);
+        registerItem(amethystHelmet);
+        registerItem(amethystChestplate);
+        registerItem(amethystLeggings);
+        registerItem(amethystBoots);
     }
 
     public static void loots()
@@ -338,6 +433,11 @@ public final class ZeiyoItems
         registerItem(onyx = new ZItem("onyx").setCreativeTab(CreativeTabs.MATERIALS));
         registerItem(ruby = new ZItem("ruby").setCreativeTab(CreativeTabs.MATERIALS));
         registerItem(sapphire = new ZItem("sapphire").setCreativeTab(CreativeTabs.MATERIALS));
+        registerItem(jade = new ZItem("jade").setCreativeTab(CreativeTabs.MATERIALS));
+        registerItem(nacre = new ZItem("nacre").setCreativeTab(CreativeTabs.MATERIALS));
+        registerItem(amethyst = new ZItem("amethyst").setCreativeTab(CreativeTabs.MATERIALS));
+
+     
 
     }
     

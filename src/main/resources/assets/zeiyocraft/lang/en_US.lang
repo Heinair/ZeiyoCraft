@@ -106,6 +106,48 @@ item.sapphireChestplate.name=Sapphire Chestplate
 item.sapphireLeggings.name=Sapphire Leggings
 item.sapphireBoots.name=Sapphire Boots
 
+item.jade.name=Jade
+tile.jadeBlock.name=Block of Jade
+tile.jadeOre.name=Jade Ore
+item.jadeSword.name=Jade Sword
+item.jadeHoe.name=Jade Hoe
+item.jadePickaxe.name=Jade Pickaxe
+item.jadeSpade.name=Jade Shovel
+item.jadeAxe.name=Jade Axe
+item.jadeWarAxe.name=Jade War Axe
+item.jadeHelmet.name=Jade Helmet
+item.jadeChestplate.name=Jade Chestplate
+item.jadeLeggings.name=Jade Leggings
+item.jadeBoots.name=Jade Boots
+
+item.nacre.name=Nacre
+tile.nacreBlock.name=Block of Nacre
+tile.nacreOre.name=Nacre Ore
+item.nacreSword.name=Nacre Sword
+item.nacreHoe.name=Nacre Hoe
+item.nacrePickaxe.name=Nacre Pickaxe
+item.nacreSpade.name=Nacre Shovel
+item.nacreAxe.name=Nacre Axe
+item.nacreWarAxe.name=Nacre War Axe
+item.nacreHelmet.name=Nacre Helmet
+item.nacreChestplate.name=Nacre Chestplate
+item.nacreLeggings.name=Nacre Leggings
+item.nacreBoots.name=Nacre Boots
+
+item.amethyst.name=Amethyst
+tile.amethystBlock.name=Block of Amethyst
+tile.amethystOre.name=Amethyst Ore
+item.amethystSword.name=Amethyst Sword
+item.amethystHoe.name=Amethyst Hoe
+item.amethystPickaxe.name=Amethyst Pickaxe
+item.amethystSpade.name=Amethyst Shovel
+item.amethystAxe.name=Amethyst Axe
+item.amethystWarAxe.name=Amethyst War Axe
+item.amethystHelmet.name=Amethyst Helmet
+item.amethystChestplate.name=Amethyst Chestplate
+item.amethystLeggings.name=Amethyst Leggings
+item.amethystBoots.name=Amethyst Boots
+
 item.vodkaExtract.name=Vodka Extract
 item.malt.name=Malt Seeds
 tile.barleyCrops.name=Barley
@@ -129,4 +171,3 @@ item.key.name=Key
 tile.chair.name=Chair
 item.pipe.name=Smoking Pipe
 item.hempPipe.name=Pipe with Hemp
-

@@ -140,6 +140,48 @@ public class ItemRenderRegister
         reg(ZeiyoItems.sapphireChestplate);
         reg(ZeiyoItems.sapphireLeggings);
         reg(ZeiyoItems.sapphireBoots);
+        
+        // Nacre
+        
+        reg(ZeiyoItems.nacre);
+        reg(ZeiyoItems.nacrePickaxe);
+        reg(ZeiyoItems.nacreAxe);
+        reg(ZeiyoItems.nacreSpade);
+        reg(ZeiyoItems.nacreHoe);
+        reg(ZeiyoItems.nacreSword);
+        reg(ZeiyoItems.nacreWarAxe);
+        reg(ZeiyoItems.nacreHelmet);
+        reg(ZeiyoItems.nacreChestplate);
+        reg(ZeiyoItems.nacreLeggings);
+        reg(ZeiyoItems.nacreBoots);
+        
+        // Jade
+        
+        reg(ZeiyoItems.jade);
+        reg(ZeiyoItems.jadePickaxe);
+        reg(ZeiyoItems.jadeAxe);
+        reg(ZeiyoItems.jadeSpade);
+        reg(ZeiyoItems.jadeHoe);
+        reg(ZeiyoItems.jadeSword);
+        reg(ZeiyoItems.jadeWarAxe);
+        reg(ZeiyoItems.jadeHelmet);
+        reg(ZeiyoItems.jadeChestplate);
+        reg(ZeiyoItems.jadeLeggings);
+        reg(ZeiyoItems.jadeBoots);
+        
+        // Amethyst
+        
+        reg(ZeiyoItems.amethyst);
+        reg(ZeiyoItems.amethystPickaxe);
+        reg(ZeiyoItems.amethystAxe);
+        reg(ZeiyoItems.amethystSpade);
+        reg(ZeiyoItems.amethystHoe);
+        reg(ZeiyoItems.amethystSword);
+        reg(ZeiyoItems.amethystWarAxe);
+        reg(ZeiyoItems.amethystHelmet);
+        reg(ZeiyoItems.amethystChestplate);
+        reg(ZeiyoItems.amethystLeggings);
+        reg(ZeiyoItems.amethystBoots);
 
     }
 

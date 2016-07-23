@@ -1,0 +1,6 @@
+{
+    "parent": "zeiyocraft:item/standard_tool",
+    "textures": {
+        "layer0": "zeiyocraft:items/nacreAxe"
+    }
+}

@@ -40,7 +40,7 @@ public class ZItemAlcohol extends Item
         this.saturationModifier = saturation;
         this.setCreativeTab(CreativeTabs.FOOD);
         this.setAlwaysEdible();
-        this.setPotionEffect(new PotionEffect(MobEffects.NAUSEA, duration, amplifier, false, false), 1.0F);
+        this.setPotionEffect(new PotionEffect(MobEffects.HASTE, duration, amplifier, false, false), 1.0F);
         this.setMaxStackSize(1);
     }
 
@@ -69,6 +69,7 @@ public class ZItemAlcohol extends Item
         if (!worldIn.isRemote && this.potionId != null && worldIn.rand.nextFloat() < this.potionEffectProbability)
         {
             player.addPotionEffect(new PotionEffect(this.potionId));
+            player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 300, 0, false, false));
         }
     }
 

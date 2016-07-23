@@ -41,7 +41,7 @@ public class ZItemDrug extends Item
         this.saturationModifier = saturation;
         this.setCreativeTab(CreativeTabs.FOOD);
         this.setAlwaysEdible();
-        this.setMaxStackSize(16);
+        this.setMaxStackSize(1);
     }
 
     /**
@@ -69,7 +69,7 @@ public class ZItemDrug extends Item
         if (!worldIn.isRemote && this.potionId != null && worldIn.rand.nextFloat() < this.potionEffectProbability)
         {
             player.addPotionEffect(new PotionEffect(this.potionId));
-            player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 800, 2, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 400, 0, false, false));
         }
     }
 

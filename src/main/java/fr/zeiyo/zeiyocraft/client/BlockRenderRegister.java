@@ -24,6 +24,10 @@ public class BlockRenderRegister
         reg(ZeiyoBlocks.hempCrops);
         reg(ZeiyoBlocks.blockChocolateCake);
 
+        // Miscellaneous
+        
+        reg(ZeiyoBlocks.chair);
+        
         // Ore Blocks
 
         reg(ZeiyoBlocks.copperOre);
@@ -32,6 +36,9 @@ public class BlockRenderRegister
         reg(ZeiyoBlocks.onyxOre);
         reg(ZeiyoBlocks.rubyOre);
         reg(ZeiyoBlocks.sapphireOre);
+        reg(ZeiyoBlocks.nacreOre);
+        reg(ZeiyoBlocks.jadeOre);
+        reg(ZeiyoBlocks.amethystOre);       
 
         // Compressed Blocks
 
@@ -44,6 +51,9 @@ public class BlockRenderRegister
         reg(ZeiyoBlocks.onyxBlock);
         reg(ZeiyoBlocks.rubyBlock);
         reg(ZeiyoBlocks.sapphireBlock);
+        reg(ZeiyoBlocks.nacreBlock);
+        reg(ZeiyoBlocks.jadeBlock);
+        reg(ZeiyoBlocks.amethystBlock);
 
     }
 

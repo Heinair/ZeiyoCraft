@@ -2,6 +2,7 @@ package fr.zeiyo.zeiyocraft;
 
 import fr.zeiyo.zeiyocraft.block.ZeiyoBlocks;
 import fr.zeiyo.zeiyocraft.crafting.ZeiyoCrafting;
+import fr.zeiyo.zeiyocraft.entity.ZEntitySittable;
 import fr.zeiyo.zeiyocraft.event.ZKeyEvent;
 import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import fr.zeiyo.zeiyocraft.world.ZeiyoWorldGen;
@@ -35,7 +36,7 @@ public class CommonProxy {
         //ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(new WeightedRandomChestContent(new ItemStack(ZeiyoItems.grapeSeeds), 3, 9, 55));
         //ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(ZeiyoItems.grapeSeeds), 3, 9, 55));
         MinecraftForge.EVENT_BUS.register(new ZKeyEvent());
-        //EntityRegistry.registerModEntity(ZEntitySittable.class, "Chair", 4200, ZeiyoMain.instance, 80, 1, false);
+        EntityRegistry.registerModEntity(ZEntitySittable.class, "Chair", 4200, ZeiyoMain.instance, 80, 1, false);
 
     }
 
