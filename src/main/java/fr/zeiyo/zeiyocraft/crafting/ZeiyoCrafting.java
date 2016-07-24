@@ -89,7 +89,7 @@ public class ZeiyoCrafting {
         armorCraft(ZeiyoItems.amethyst, ZeiyoItems.amethystHelmet, ZeiyoItems.amethystChestplate, ZeiyoItems.amethystLeggings, ZeiyoItems.amethystBoots);
         toolsCraft(ZeiyoItems.amethyst, ZeiyoItems.amethystPickaxe, ZeiyoItems.amethystAxe, ZeiyoItems.amethystSpade, ZeiyoItems.amethystHoe, ZeiyoItems.amethystSword, ZeiyoItems.amethystWarAxe);
         oreCompressedCraft(ZeiyoItems.amethyst, ZeiyoBlocks.amethystBlock, ZeiyoBlocks.amethystOre, 1.15F);
-
+        
     }
 
 

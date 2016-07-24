@@ -221,42 +221,42 @@ public final class ZeiyoItems
         
         // Jade
 
-        jadePickaxe = new ZItemPickaxe("jadePickaxe", ZToolMaterial.JADE, 5);
-        jadeAxe = new ZItemAxe("jadeAxe", ZToolMaterial.JADE, 5);
-        jadeSpade = new ZItemSpade("jadeSpade", ZToolMaterial.JADE, 5);
-        jadeHoe = new ZItemHoe("jadeHoe", ZToolMaterial.JADE, 5);
-        jadeSword = new ZItemSword("jadeSword", ZToolMaterial.JADE, 5);
-        jadeWarAxe = new ZItemWarAxe("jadeWarAxe", ZToolMaterial.JADE, 5);
-        jadeHelmet = new ZItemArmor("jadeHelmet", ZArmorMaterial.JADEA, 1, EntityEquipmentSlot.HEAD, 5);
-        jadeChestplate = new ZItemArmor("jadeChestplate", ZArmorMaterial.JADEA, 1, EntityEquipmentSlot.CHEST, 5);
-        jadeLeggings = new ZItemArmor("jadeLeggings", ZArmorMaterial.JADEA, 2, EntityEquipmentSlot.LEGS, 5);
-        jadeBoots = new ZItemArmor("jadeBoots", ZArmorMaterial.JADEA, 1, EntityEquipmentSlot.FEET, 5);
+        jadePickaxe = new ZItemPickaxe("jadePickaxe", ZToolMaterial.JADE, 6);
+        jadeAxe = new ZItemAxe("jadeAxe", ZToolMaterial.JADE, 6);
+        jadeSpade = new ZItemSpade("jadeSpade", ZToolMaterial.JADE, 6);
+        jadeHoe = new ZItemHoe("jadeHoe", ZToolMaterial.JADE, 6);
+        jadeSword = new ZItemSword("jadeSword", ZToolMaterial.JADE, 6);
+        jadeWarAxe = new ZItemWarAxe("jadeWarAxe", ZToolMaterial.JADE, 6);
+        jadeHelmet = new ZItemArmor("jadeHelmet", ZArmorMaterial.JADEA, 1, EntityEquipmentSlot.HEAD, 6);
+        jadeChestplate = new ZItemArmor("jadeChestplate", ZArmorMaterial.JADEA, 1, EntityEquipmentSlot.CHEST, 6);
+        jadeLeggings = new ZItemArmor("jadeLeggings", ZArmorMaterial.JADEA, 2, EntityEquipmentSlot.LEGS, 6);
+        jadeBoots = new ZItemArmor("jadeBoots", ZArmorMaterial.JADEA, 1, EntityEquipmentSlot.FEET, 6);
         
         // Nacre
 
-        nacrePickaxe = new ZItemPickaxe("nacrePickaxe", ZToolMaterial.NACRE, 5);
-        nacreAxe = new ZItemAxe("nacreAxe", ZToolMaterial.NACRE, 5);
-        nacreSpade = new ZItemSpade("nacreSpade", ZToolMaterial.NACRE, 5);
-        nacreHoe = new ZItemHoe("nacreHoe", ZToolMaterial.NACRE, 5);
-        nacreSword = new ZItemSword("nacreSword", ZToolMaterial.NACRE, 5);
-        nacreWarAxe = new ZItemWarAxe("nacreWarAxe", ZToolMaterial.NACRE, 5);
-        nacreHelmet = new ZItemArmor("nacreHelmet", ZArmorMaterial.NACREA, 1, EntityEquipmentSlot.HEAD, 5);
-        nacreChestplate = new ZItemArmor("nacreChestplate", ZArmorMaterial.NACREA, 1, EntityEquipmentSlot.CHEST, 5);
-        nacreLeggings = new ZItemArmor("nacreLeggings", ZArmorMaterial.NACREA, 2, EntityEquipmentSlot.LEGS, 5);
-        nacreBoots = new ZItemArmor("nacreBoots", ZArmorMaterial.NACREA, 1, EntityEquipmentSlot.FEET, 5);
+        nacrePickaxe = new ZItemPickaxe("nacrePickaxe", ZToolMaterial.NACRE, 7);
+        nacreAxe = new ZItemAxe("nacreAxe", ZToolMaterial.NACRE, 7);
+        nacreSpade = new ZItemSpade("nacreSpade", ZToolMaterial.NACRE, 7);
+        nacreHoe = new ZItemHoe("nacreHoe", ZToolMaterial.NACRE, 7);
+        nacreSword = new ZItemSword("nacreSword", ZToolMaterial.NACRE, 7);
+        nacreWarAxe = new ZItemWarAxe("nacreWarAxe", ZToolMaterial.NACRE, 7);
+        nacreHelmet = new ZItemArmor("nacreHelmet", ZArmorMaterial.NACREA, 1, EntityEquipmentSlot.HEAD, 7);
+        nacreChestplate = new ZItemArmor("nacreChestplate", ZArmorMaterial.NACREA, 1, EntityEquipmentSlot.CHEST, 7);
+        nacreLeggings = new ZItemArmor("nacreLeggings", ZArmorMaterial.NACREA, 2, EntityEquipmentSlot.LEGS, 7);
+        nacreBoots = new ZItemArmor("nacreBoots", ZArmorMaterial.NACREA, 1, EntityEquipmentSlot.FEET, 7);
         
         // Amethyst
 
-        amethystPickaxe = new ZItemPickaxe("amethystPickaxe", ZToolMaterial.AMETHYST, 5);
-        amethystAxe = new ZItemAxe("amethystAxe", ZToolMaterial.AMETHYST, 5);
-        amethystSpade = new ZItemSpade("amethystSpade", ZToolMaterial.AMETHYST, 5);
-        amethystHoe = new ZItemHoe("amethystHoe", ZToolMaterial.AMETHYST, 5);
-        amethystSword = new ZItemSword("amethystSword", ZToolMaterial.AMETHYST, 5);
-        amethystWarAxe = new ZItemWarAxe("amethystWarAxe", ZToolMaterial.AMETHYST, 5);
-        amethystHelmet = new ZItemArmor("amethystHelmet", ZArmorMaterial.AMETHYSTA, 1, EntityEquipmentSlot.HEAD, 5);
-        amethystChestplate = new ZItemArmor("amethystChestplate", ZArmorMaterial.AMETHYSTA, 1, EntityEquipmentSlot.CHEST, 5);
-        amethystLeggings = new ZItemArmor("amethystLeggings", ZArmorMaterial.AMETHYSTA, 2, EntityEquipmentSlot.LEGS, 5);
-        amethystBoots = new ZItemArmor("amethystBoots", ZArmorMaterial.AMETHYSTA, 1, EntityEquipmentSlot.FEET, 5);
+        amethystPickaxe = new ZItemPickaxe("amethystPickaxe", ZToolMaterial.AMETHYST, 8);
+        amethystAxe = new ZItemAxe("amethystAxe", ZToolMaterial.AMETHYST, 8);
+        amethystSpade = new ZItemSpade("amethystSpade", ZToolMaterial.AMETHYST, 8);
+        amethystHoe = new ZItemHoe("amethystHoe", ZToolMaterial.AMETHYST, 8);
+        amethystSword = new ZItemSword("amethystSword", ZToolMaterial.AMETHYST, 8);
+        amethystWarAxe = new ZItemWarAxe("amethystWarAxe", ZToolMaterial.AMETHYST, 8);
+        amethystHelmet = new ZItemArmor("amethystHelmet", ZArmorMaterial.AMETHYSTA, 1, EntityEquipmentSlot.HEAD, 8);
+        amethystChestplate = new ZItemArmor("amethystChestplate", ZArmorMaterial.AMETHYSTA, 1, EntityEquipmentSlot.CHEST, 8);
+        amethystLeggings = new ZItemArmor("amethystLeggings", ZArmorMaterial.AMETHYSTA, 2, EntityEquipmentSlot.LEGS, 8);
+        amethystBoots = new ZItemArmor("amethystBoots", ZArmorMaterial.AMETHYSTA, 1, EntityEquipmentSlot.FEET, 8);
        
     }
 

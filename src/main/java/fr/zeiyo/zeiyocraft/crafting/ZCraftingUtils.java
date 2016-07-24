@@ -73,7 +73,6 @@ public class ZCraftingUtils {
         GameRegistry.addRecipe(new ItemStack(warAxe), new Object[]{"###", "#P#", " P ", 'P', Items.STICK, '#', block});
     }
 
-
     public static Item getRepairItem(int id) {
 
         switch (id) {
@@ -89,6 +88,13 @@ public class ZCraftingUtils {
                 return ZeiyoItems.ruby;
             case 5:
                 return ZeiyoItems.sapphire;
+            case 6:
+            	return ZeiyoItems.jade;
+            case 7 : 
+            	return ZeiyoItems.nacre;           	
+            case 8 : 
+            	return ZeiyoItems.amethyst;
+                
             case 100:
                 return Items.GOLD_INGOT;
             case 101:
