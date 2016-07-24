@@ -58,7 +58,7 @@ public class ZeiyoWorldGen implements IWorldGenerator {
                 }
 
                 if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(0) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(24)) {
-                    this.runGenerator(this.gen_nacre, world, random, chunkX, chunkZ, 1, 0, 52);
+                    this.runGenerator(this.gen_nacre, world, random, chunkX, chunkZ, 4, 0, 46);
                 }
                 
                 if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(5) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(19) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(12) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(13) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(30) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(31)) {

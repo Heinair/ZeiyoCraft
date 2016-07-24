@@ -15,7 +15,7 @@ public class ZBlock extends Block
         this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
         this.setHardness(hardness);
         this.setResistance(resistance);
-        this.setSoundType(SoundType.STONE);
+        this.setSoundType(soundType);
         this.setHarvestLevel(tool, harvestLevel);
         this.setRegistryName(unlocalizedName);
     }

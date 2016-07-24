@@ -2,6 +2,7 @@ package fr.zeiyo.zeiyocraft.block;
 
 import fr.zeiyo.zeiyocraft.entity.ZEntitySittable;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
@@ -39,7 +40,9 @@ public class ZBlockSittable extends Block {
         this.setCreativeTab(CreativeTabs.DECORATIONS);
         this.setRegistryName(unlocalizedName);
         this.setHarvestLevel("axe", 0);
+        this.setSoundType(SoundType.WOOD);
     }
+    
 
     @Override
     public boolean isFullCube(IBlockState state)
@@ -69,6 +72,7 @@ public class ZBlockSittable extends Block {
 
         return false;
     }
+    /*
 
     @Override
     @SideOnly(Side.CLIENT)
@@ -82,38 +86,24 @@ public class ZBlockSittable extends Block {
         return true;
     }
     
-    @SideOnly(Side.CLIENT)
+    */
+    @Override
     public AxisAlignedBB getCollisionBoundingBox(IBlockState worldIn, World pos, BlockPos state) {
         return null;
     } 
     
-    /*
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
         return SITTABLE_AABB;
     }
-
-  
-    
-    @Override
+   
+   /* @Override
     public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB p_185477_4_, List<AxisAlignedBB> p_185477_5_, Entity p_185477_6_) {
         addCollisionBoxToList(pos, this.SITTABLE_AABB, p_185477_5_, state.getSelectedBoundingBox(worldIn, pos));
            }
-    
-    protected static void addCollisionBoxToList(BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable AxisAlignedBB blockBox)
-    {
-        if (blockBox != NULL_AABB)
-        {
-            AxisAlignedBB axisalignedbb = blockBox.offset(pos);
-
-            if (entityBox.intersectsWith(axisalignedbb))
-            {
-                collidingBoxes.add(axisalignedbb);
-            }
-        }
-    }*/
-
+   
+*/
     @Override
     public IBlockState onBlockPlaced(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
         IBlockState state = super.onBlockPlaced(world, pos, facing, hitX, hitY, hitZ, meta, placer);
