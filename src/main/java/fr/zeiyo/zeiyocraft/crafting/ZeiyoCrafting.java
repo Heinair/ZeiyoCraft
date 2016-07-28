@@ -2,8 +2,10 @@ package fr.zeiyo.zeiyocraft.crafting;
 
 import fr.zeiyo.zeiyocraft.block.ZeiyoBlocks;
 import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -86,9 +88,26 @@ public class ZeiyoCrafting {
         toolsCraft(ZeiyoItems.nacre, ZeiyoItems.nacrePickaxe, ZeiyoItems.nacreAxe, ZeiyoItems.nacreSpade, ZeiyoItems.nacreHoe, ZeiyoItems.nacreSword, ZeiyoItems.nacreWarAxe);
         oreCompressedCraft(ZeiyoItems.nacre, ZeiyoBlocks.nacreBlock, ZeiyoBlocks.nacreOre, 1.15F);
         
-        armorCraft(ZeiyoItems.amethyst, ZeiyoItems.amethystHelmet, ZeiyoItems.amethystChestplate, ZeiyoItems.amethystLeggings, ZeiyoItems.amethystBoots);
-        toolsCraft(ZeiyoItems.amethyst, ZeiyoItems.amethystPickaxe, ZeiyoItems.amethystAxe, ZeiyoItems.amethystSpade, ZeiyoItems.amethystHoe, ZeiyoItems.amethystSword, ZeiyoItems.amethystWarAxe);
-        oreCompressedCraft(ZeiyoItems.amethyst, ZeiyoBlocks.amethystBlock, ZeiyoBlocks.amethystOre, 1.15F);
+        armorCraft(ZeiyoItems.nacre, ZeiyoItems.nacreHelmet, ZeiyoItems.nacreChestplate, ZeiyoItems.nacreLeggings, ZeiyoItems.nacreBoots);
+        toolsCraft(ZeiyoItems.nacre, ZeiyoItems.nacrePickaxe, ZeiyoItems.nacreAxe, ZeiyoItems.nacreSpade, ZeiyoItems.nacreHoe, ZeiyoItems.nacreSword, ZeiyoItems.nacreWarAxe);
+        oreCompressedCraft(ZeiyoItems.nacre, ZeiyoBlocks.nacreBlock, ZeiyoBlocks.nacreOre, 1.15F);
+        
+        uncraftIntoPiece(Items.LEATHER, Items.LEATHER_HELMET, Items.LEATHER_CHESTPLATE, Items.LEATHER_LEGGINGS, Items.LEATHER_BOOTS);
+        uncraftIntoBlock(Blocks.PLANKS, Items.WOODEN_PICKAXE, Items.WOODEN_SWORD, Items.WOODEN_SHOVEL, Items.WOODEN_AXE, Items.WOODEN_HOE, ZeiyoItems.woodenWarAxe);
+        uncraftIntoBlock(Blocks.COBBLESTONE, Items.STONE_PICKAXE, Items.STONE_SWORD, Items.STONE_SHOVEL, Items.STONE_AXE, Items.STONE_HOE, ZeiyoItems.stoneWarAxe);
+        
+        smeltIntoGems(Items.IRON_INGOT, Items.IRON_HELMET, Items.IRON_CHESTPLATE, Items.IRON_LEGGINGS, Items.IRON_BOOTS, Items.IRON_PICKAXE, Items.IRON_SWORD, Items.IRON_SHOVEL, Items.IRON_AXE, Items.IRON_HOE, ZeiyoItems.ironWarAxe);
+        smeltIntoGems(Items.GOLD_INGOT, Items.GOLDEN_HELMET, Items.GOLDEN_CHESTPLATE, Items.GOLDEN_LEGGINGS, Items.GOLDEN_BOOTS, Items.GOLDEN_PICKAXE, Items.GOLDEN_SWORD, Items.GOLDEN_SHOVEL, Items.GOLDEN_AXE, Items.GOLDEN_HOE, ZeiyoItems.goldWarAxe);
+        smeltIntoGems(Items.DIAMOND, Items.DIAMOND_HELMET, Items.DIAMOND_CHESTPLATE, Items.DIAMOND_LEGGINGS, Items.DIAMOND_BOOTS, Items.DIAMOND_PICKAXE, Items.DIAMOND_SWORD, Items.DIAMOND_SHOVEL, Items.DIAMOND_AXE, Items.DIAMOND_HOE, ZeiyoItems.diamondWarAxe);
+        smeltIntoGems(ZeiyoItems.electrumIngot, ZeiyoItems.electrumHelmet, ZeiyoItems.electrumChestplate, ZeiyoItems.electrumLeggings, ZeiyoItems.electrumBoots, ZeiyoItems.electrumPickaxe, ZeiyoItems.electrumSword, ZeiyoItems.electrumSpade, ZeiyoItems.electrumAxe, ZeiyoItems.electrumHoe, ZeiyoItems.electrumWarAxe);
+        smeltIntoGems(ZeiyoItems.bronzeIngot, ZeiyoItems.bronzeHelmet, ZeiyoItems.bronzeChestplate, ZeiyoItems.bronzeLeggings, ZeiyoItems.bronzeBoots, ZeiyoItems.bronzePickaxe, ZeiyoItems.bronzeSword, ZeiyoItems.bronzeSpade, ZeiyoItems.bronzeAxe, ZeiyoItems.bronzeHoe, ZeiyoItems.bronzeWarAxe);
+        smeltIntoGems(ZeiyoItems.steelIngot, ZeiyoItems.steelHelmet, ZeiyoItems.steelChestplate, ZeiyoItems.steelLeggings, ZeiyoItems.steelBoots, ZeiyoItems.steelPickaxe, ZeiyoItems.steelSword, ZeiyoItems.steelSpade, ZeiyoItems.steelAxe, ZeiyoItems.steelHoe, ZeiyoItems.steelWarAxe);
+        smeltIntoGems(ZeiyoItems.amethyst, ZeiyoItems.amethystHelmet, ZeiyoItems.amethystChestplate, ZeiyoItems.amethystLeggings, ZeiyoItems.amethystBoots, ZeiyoItems.amethystPickaxe, ZeiyoItems.amethystSword, ZeiyoItems.amethystSpade, ZeiyoItems.amethystAxe, ZeiyoItems.amethystHoe, ZeiyoItems.amethystWarAxe);
+        smeltIntoGems(ZeiyoItems.sapphire, ZeiyoItems.sapphireHelmet, ZeiyoItems.sapphireChestplate, ZeiyoItems.sapphireLeggings, ZeiyoItems.sapphireBoots, ZeiyoItems.sapphirePickaxe, ZeiyoItems.sapphireSword, ZeiyoItems.sapphireSpade, ZeiyoItems.sapphireAxe, ZeiyoItems.sapphireHoe, ZeiyoItems.sapphireWarAxe);
+        smeltIntoGems(ZeiyoItems.ruby, ZeiyoItems.rubyHelmet, ZeiyoItems.rubyChestplate, ZeiyoItems.rubyLeggings, ZeiyoItems.rubyBoots, ZeiyoItems.rubyPickaxe, ZeiyoItems.rubySword, ZeiyoItems.rubySpade, ZeiyoItems.rubyAxe, ZeiyoItems.rubyHoe, ZeiyoItems.rubyWarAxe);
+        smeltIntoGems(ZeiyoItems.jade, ZeiyoItems.jadeHelmet, ZeiyoItems.jadeChestplate, ZeiyoItems.jadeLeggings, ZeiyoItems.jadeBoots, ZeiyoItems.jadePickaxe, ZeiyoItems.jadeSword, ZeiyoItems.jadeSpade, ZeiyoItems.jadeAxe, ZeiyoItems.jadeHoe, ZeiyoItems.jadeWarAxe);
+        smeltIntoGems(ZeiyoItems.onyx, ZeiyoItems.onyxHelmet, ZeiyoItems.onyxChestplate, ZeiyoItems.onyxLeggings, ZeiyoItems.onyxBoots, ZeiyoItems.onyxPickaxe, ZeiyoItems.onyxSword, ZeiyoItems.onyxSpade, ZeiyoItems.onyxAxe, ZeiyoItems.onyxHoe, ZeiyoItems.onyxWarAxe);
+        smeltIntoGems(ZeiyoItems.nacre, ZeiyoItems.nacreHelmet, ZeiyoItems.nacreChestplate, ZeiyoItems.nacreLeggings, ZeiyoItems.nacreBoots, ZeiyoItems.nacrePickaxe, ZeiyoItems.nacreSword, ZeiyoItems.nacreSpade, ZeiyoItems.nacreAxe, ZeiyoItems.nacreHoe, ZeiyoItems.nacreWarAxe);
         
     }
 
