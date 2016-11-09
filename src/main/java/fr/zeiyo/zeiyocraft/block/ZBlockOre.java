@@ -82,6 +82,15 @@ public class ZBlockOre extends Block {
             } else if (this == ZeiyoBlocks.onyxOre) {
                 i = MathHelper.getRandomIntegerInRange(rand, 3, 7);
             }
+              else if (this == ZeiyoBlocks.amethystOre) {
+                i = MathHelper.getRandomIntegerInRange(rand, 3, 7);
+            }
+              else if (this == ZeiyoBlocks.nacreOre) {
+                i = MathHelper.getRandomIntegerInRange(rand, 3, 7);
+            }
+              else if (this == ZeiyoBlocks.jadeOre) {
+                i = MathHelper.getRandomIntegerInRange(rand, 3, 7);
+            }
 
             return i;
         }
