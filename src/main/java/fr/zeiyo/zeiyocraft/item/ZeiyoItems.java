@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.item;
 
+import fr.zeiyo.zeiyocraft.ZeiyoConfig;
 import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.block.ZeiyoBlocks;
 import fr.zeiyo.zeiyocraft.material.ZArmorMaterial;
@@ -258,173 +259,213 @@ public final class ZeiyoItems
     }
 
     public static void registerItems()
-
     {
 
         // Food
 
-        registerItem(chocolateCake);
-        registerItem(hardboiledEgg);
-        registerItem(applePie);
-        registerItem(puriFlesh);
-        registerItem(vegetableStew);
-        registerItem(vodkaExtract);
-        registerItem(malt);
-        registerItem(barleySeeds);
-        registerItem(barley);
-        registerItem(grapeSeeds);
-        registerItem(grape);
-        registerItem(hempSeeds);
-        registerItem(hemp);
-        registerItem(tankard);
-        registerItem(beerTankard);
-        registerItem(ciderTankard);
-        registerItem(wineTankard);
-        registerItem(vodkaTankard);
-        registerItem(pipe);
-        registerItem(hempPipe);
+        if(ZeiyoConfig.isNewFoodEnabled)
+        {
+
+            registerItem(chocolateCake);
+            registerItem(hardboiledEgg);
+            registerItem(applePie);
+            registerItem(puriFlesh);
+            registerItem(vegetableStew);
+
+        }
+
+        // Alcohols
+
+        if(ZeiyoConfig.isAlcoholEnabled)
+        {
+
+            registerItem(vodkaExtract);
+            registerItem(malt);
+            registerItem(barleySeeds);
+            registerItem(barley);
+            registerItem(grapeSeeds);
+            registerItem(grape);
+
+            registerItem(tankard);
+            registerItem(beerTankard);
+            registerItem(ciderTankard);
+            registerItem(wineTankard);
+            registerItem(vodkaTankard);
+
+        }
+
+
+        // Drugs
+
+        if(ZeiyoConfig.isDrugEnabled)
+        {
+
+            registerItem(hempSeeds);
+            registerItem(hemp);
+
+            registerItem(pipe);
+            registerItem(hempPipe);
+
+        }
+
 
         // Miscellaneous
 
         registerItem(copperCoin);
         registerItem(silverCoin);
         registerItem(goldCoin);
-        registerItem(key);
+        if(ZeiyoConfig.isKeyEnabled)registerItem(key);
 
-        // Vanilla
+        // War Axes
 
-        registerItem(woodenWarAxe);
-        registerItem(stoneWarAxe);
-        registerItem(goldWarAxe);
-        registerItem(ironWarAxe);
-        registerItem(diamondWarAxe);
+        if(ZeiyoConfig.areWarAxesEnabled)
+        {
 
-        // Steel
+            registerItem(woodenWarAxe);
+            registerItem(stoneWarAxe);
+            registerItem(goldWarAxe);
+            registerItem(ironWarAxe);
+            registerItem(diamondWarAxe);
 
-        registerItem(steelIngot);
-        registerItem(steelPickaxe);
-        registerItem(steelAxe);
-        registerItem(steelSpade);
-        registerItem(steelHoe);
-        registerItem(steelSword);
-        registerItem(steelWarAxe);
-        registerItem(steelHelmet);
-        registerItem(steelChestplate);
-        registerItem(steelLeggings);
-        registerItem(steelBoots);
+        }
 
-        // Bronze-related Items
 
-        registerItem(copperIngot);
-        registerItem(tinIngot);
-        registerItem(bronzeIngot);
-        registerItem(bronzePickaxe);
-        registerItem(bronzeAxe);
-        registerItem(bronzeSpade);
-        registerItem(bronzeHoe);
-        registerItem(bronzeSword);
-        registerItem(bronzeWarAxe);
-        registerItem(bronzeHelmet);
-        registerItem(bronzeChestplate);
-        registerItem(bronzeLeggings);
-        registerItem(bronzeBoots);
+        if(ZeiyoConfig.areAlloysEnabled)
+        {
 
-        // Electrum-related Items
+            // Steel
 
-        registerItem(silverIngot);
-        registerItem(electrumIngot);
-        registerItem(electrumPickaxe);
-        registerItem(electrumAxe);
-        registerItem(electrumSpade);
-        registerItem(electrumHoe);
-        registerItem(electrumSword);
-        registerItem(electrumWarAxe);
-        registerItem(electrumHelmet);
-        registerItem(electrumChestplate);
-        registerItem(electrumLeggings);
-        registerItem(electrumBoots);
+            registerItem(steelIngot);
+            registerItem(steelPickaxe);
+            registerItem(steelAxe);
+            registerItem(steelSpade);
+            registerItem(steelHoe);
+            registerItem(steelSword);
+            registerItem(steelWarAxe);
+            registerItem(steelHelmet);
+            registerItem(steelChestplate);
+            registerItem(steelLeggings);
+            registerItem(steelBoots);
 
-        // Onyx
+            // Bronze-related Items
 
-        registerItem(onyxPickaxe);
-        registerItem(onyxAxe);
-        registerItem(onyxSpade);
-        registerItem(onyxHoe);
-        registerItem(onyxSword);
-        registerItem(onyxWarAxe);
-        registerItem(onyxHelmet);
-        registerItem(onyxChestplate);
-        registerItem(onyxLeggings);
-        registerItem(onyxBoots);
+            registerItem(copperIngot);
+            registerItem(tinIngot);
+            registerItem(bronzeIngot);
+            registerItem(bronzePickaxe);
+            registerItem(bronzeAxe);
+            registerItem(bronzeSpade);
+            registerItem(bronzeHoe);
+            registerItem(bronzeSword);
+            registerItem(bronzeWarAxe);
+            registerItem(bronzeHelmet);
+            registerItem(bronzeChestplate);
+            registerItem(bronzeLeggings);
+            registerItem(bronzeBoots);
 
-        // Ruby 
+            // Electrum-related Items
 
-        registerItem(rubyPickaxe);
-        registerItem(rubyAxe);
-        registerItem(rubySpade);
-        registerItem(rubyHoe);
-        registerItem(rubySword);
-        registerItem(rubyWarAxe);
-        registerItem(rubyHelmet);
-        registerItem(rubyChestplate);
-        registerItem(rubyLeggings);
-        registerItem(rubyBoots);
+            registerItem(silverIngot);
+            registerItem(electrumIngot);
+            registerItem(electrumPickaxe);
+            registerItem(electrumAxe);
+            registerItem(electrumSpade);
+            registerItem(electrumHoe);
+            registerItem(electrumSword);
+            registerItem(electrumWarAxe);
+            registerItem(electrumHelmet);
+            registerItem(electrumChestplate);
+            registerItem(electrumLeggings);
+            registerItem(electrumBoots);
 
-        // Sapphire
+        }
 
-        registerItem(sapphirePickaxe);
-        registerItem(sapphireAxe);
-        registerItem(sapphireSpade);
-        registerItem(sapphireHoe);
-        registerItem(sapphireSword);
-        registerItem(sapphireWarAxe);
-        registerItem(sapphireHelmet);
-        registerItem(sapphireChestplate);
-        registerItem(sapphireLeggings);
-        registerItem(sapphireBoots);
-        
-        // Jade
+        if(ZeiyoConfig.areNewOresEnabled)
+        {
 
-        registerItem(jadePickaxe);
-        registerItem(jadeAxe);
-        registerItem(jadeSpade);
-        registerItem(jadeHoe);
-        registerItem(jadeSword);
-        registerItem(jadeWarAxe);
-        registerItem(jadeHelmet);
-        registerItem(jadeChestplate);
-        registerItem(jadeLeggings);
-        registerItem(jadeBoots);
-        
-        // Nacre
+            // Onyx
 
-        registerItem(nacrePickaxe);
-        registerItem(nacreAxe);
-        registerItem(nacreSpade);
-        registerItem(nacreHoe);
-        registerItem(nacreSword);
-        registerItem(nacreWarAxe);
-        registerItem(nacreHelmet);
-        registerItem(nacreChestplate);
-        registerItem(nacreLeggings);
-        registerItem(nacreBoots);
-        
-        // Amethyst
+            registerItem(onyxPickaxe);
+            registerItem(onyxAxe);
+            registerItem(onyxSpade);
+            registerItem(onyxHoe);
+            registerItem(onyxSword);
+            registerItem(onyxWarAxe);
+            registerItem(onyxHelmet);
+            registerItem(onyxChestplate);
+            registerItem(onyxLeggings);
+            registerItem(onyxBoots);
 
-        registerItem(amethystPickaxe);
-        registerItem(amethystAxe);
-        registerItem(amethystSpade);
-        registerItem(amethystHoe);
-        registerItem(amethystSword);
-        registerItem(amethystWarAxe);
-        registerItem(amethystHelmet);
-        registerItem(amethystChestplate);
-        registerItem(amethystLeggings);
-        registerItem(amethystBoots);
+            // Ruby
+
+            registerItem(rubyPickaxe);
+            registerItem(rubyAxe);
+            registerItem(rubySpade);
+            registerItem(rubyHoe);
+            registerItem(rubySword);
+            registerItem(rubyWarAxe);
+            registerItem(rubyHelmet);
+            registerItem(rubyChestplate);
+            registerItem(rubyLeggings);
+            registerItem(rubyBoots);
+
+            // Sapphire
+
+            registerItem(sapphirePickaxe);
+            registerItem(sapphireAxe);
+            registerItem(sapphireSpade);
+            registerItem(sapphireHoe);
+            registerItem(sapphireSword);
+            registerItem(sapphireWarAxe);
+            registerItem(sapphireHelmet);
+            registerItem(sapphireChestplate);
+            registerItem(sapphireLeggings);
+            registerItem(sapphireBoots);
+
+            // Jade
+
+            registerItem(jadePickaxe);
+            registerItem(jadeAxe);
+            registerItem(jadeSpade);
+            registerItem(jadeHoe);
+            registerItem(jadeSword);
+            registerItem(jadeWarAxe);
+            registerItem(jadeHelmet);
+            registerItem(jadeChestplate);
+            registerItem(jadeLeggings);
+            registerItem(jadeBoots);
+
+            // Nacre
+
+            registerItem(nacrePickaxe);
+            registerItem(nacreAxe);
+            registerItem(nacreSpade);
+            registerItem(nacreHoe);
+            registerItem(nacreSword);
+            registerItem(nacreWarAxe);
+            registerItem(nacreHelmet);
+            registerItem(nacreChestplate);
+            registerItem(nacreLeggings);
+            registerItem(nacreBoots);
+
+            // Amethyst
+
+            registerItem(amethystPickaxe);
+            registerItem(amethystAxe);
+            registerItem(amethystSpade);
+            registerItem(amethystHoe);
+            registerItem(amethystSword);
+            registerItem(amethystWarAxe);
+            registerItem(amethystHelmet);
+            registerItem(amethystChestplate);
+            registerItem(amethystLeggings);
+            registerItem(amethystBoots);
+
+        }
+
     }
 
     public static void loots()
-
     {
 
         registerItem(onyx = new ZItem("onyx").setCreativeTab(CreativeTabs.MATERIALS));
@@ -433,8 +474,6 @@ public final class ZeiyoItems
         registerItem(jade = new ZItem("jade").setCreativeTab(CreativeTabs.MATERIALS));
         registerItem(nacre = new ZItem("nacre").setCreativeTab(CreativeTabs.MATERIALS));
         registerItem(amethyst = new ZItem("amethyst").setCreativeTab(CreativeTabs.MATERIALS));
-
-     
 
     }
     

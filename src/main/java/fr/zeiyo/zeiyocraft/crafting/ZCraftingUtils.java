@@ -72,45 +72,6 @@ public class ZCraftingUtils {
     public static void warAxeCraft(Block block, Item warAxe) {
         GameRegistry.addRecipe(new ItemStack(warAxe), new Object[]{"###", "#P#", " P ", 'P', Items.STICK, '#', block});
     }
-
-    public static void smeltIntoGems(Item item, Item helmet, Item chestplate, Item leggings, Item boots, Item pickaxe, Item sword, Item spade, Item axe, Item hoe, Item warAxe)
-    {
-    	
-        GameRegistry.addSmelting(helmet, new ItemStack(item), 0.05F);
-        GameRegistry.addSmelting(chestplate, new ItemStack(item), 0.05F);
-        GameRegistry.addSmelting(leggings, new ItemStack(item), 0.05F);
-        GameRegistry.addSmelting(boots, new ItemStack(item), 0.05F);
-        GameRegistry.addSmelting(pickaxe, new ItemStack(item), 0.05F);
-        GameRegistry.addSmelting(sword, new ItemStack(item), 0.05F);
-        GameRegistry.addSmelting(spade, new ItemStack(item), 0.05F);
-        GameRegistry.addSmelting(axe, new ItemStack(item), 0.05F);
-        GameRegistry.addSmelting(hoe, new ItemStack(item), 0.05F);
-        GameRegistry.addSmelting(warAxe, new ItemStack(item), 0.05F);
-            		
-    }
-    
-    public static void uncraftIntoPiece(Item item, Item helmet, Item chestplate, Item leggings, Item boots)
-    {
-    	
-        GameRegistry.addRecipe(new ItemStack(item), new Object[]{"#", '#', helmet});
-        GameRegistry.addRecipe(new ItemStack(item), new Object[]{"#", '#', chestplate});
-        GameRegistry.addRecipe(new ItemStack(item), new Object[]{"#", '#', leggings});
-        GameRegistry.addRecipe(new ItemStack(item), new Object[]{"#", '#', boots});
-            		
-    }
-    
-    public static void uncraftIntoBlock(Block block, Item pickaxe, Item sword, Item spade, Item axe, Item hoe, Item warAxe)
-    {
-    	
-        GameRegistry.addRecipe(new ItemStack(block), new Object[]{"#", '#', pickaxe});
-        GameRegistry.addRecipe(new ItemStack(block), new Object[]{"#", '#', sword});
-        GameRegistry.addRecipe(new ItemStack(block), new Object[]{"#", '#', spade});
-        GameRegistry.addRecipe(new ItemStack(block), new Object[]{"#", '#', axe});
-        GameRegistry.addRecipe(new ItemStack(block), new Object[]{"#", '#', hoe});
-        GameRegistry.addRecipe(new ItemStack(block), new Object[]{"#", '#', warAxe});
-            		
-    }
-    
     
     public static Item getRepairItem(int id) {
 

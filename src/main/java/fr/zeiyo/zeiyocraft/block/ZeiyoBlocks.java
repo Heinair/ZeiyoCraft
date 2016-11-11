@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.block;
 
+import fr.zeiyo.zeiyocraft.ZeiyoConfig;
 import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.Block;
@@ -61,41 +62,54 @@ public class ZeiyoBlocks {
     	
         // Food
     	
-        registerBlock(blockChocolateCake);
-        registerBlock(barleyCrops);
-        registerBlock(grapeCrops);
-        registerBlock(hempCrops);
+        if(ZeiyoConfig.isNewFoodEnabled)registerBlock(blockChocolateCake);
+        if(ZeiyoConfig.isAlcoholEnabled) {registerBlock(barleyCrops);
+            registerBlock(grapeCrops);}
+        if(ZeiyoConfig.isDrugEnabled)registerBlock(hempCrops);
         
         // Miscellaneous
         
-        registerBlock(chair);
-        
-        // Ore Blocks
+        if(ZeiyoConfig.isChairEnabled)registerBlock(chair);
 
-        registerBlock(copperOre);
-        registerBlock(tinOre);
-        registerBlock(silverOre);
-        registerBlock(onyxOre);
-        registerBlock(rubyOre);
-        registerBlock(sapphireOre);
-        registerBlock(nacreOre);
-        registerBlock(jadeOre);
-        registerBlock(amethystOre);
 
-        // Compressed Blocks
+        // Alloy-Related Blocks
 
-        registerBlock(steelBlock);
-        registerBlock(copperBlock);
-        registerBlock(tinBlock);
-        registerBlock(bronzeBlock);
-        registerBlock(silverBlock);
-        registerBlock(electrumBlock);
-        registerBlock(onyxBlock);
-        registerBlock(rubyBlock);
-        registerBlock(sapphireBlock);
-        registerBlock(jadeBlock);
-        registerBlock(amethystBlock);
-        registerBlock(nacreBlock);
+        if(ZeiyoConfig.areAlloysEnabled)
+        {
+            registerBlock(copperOre);
+            registerBlock(tinOre);
+            registerBlock(silverOre);
+
+            registerBlock(steelBlock);
+            registerBlock(copperBlock);
+            registerBlock(tinBlock);
+            registerBlock(bronzeBlock);
+            registerBlock(silverBlock);
+            registerBlock(electrumBlock);
+        }
+
+        // New Ores Related Blocks
+
+        if(ZeiyoConfig.areNewOresEnabled)
+        {
+
+            registerBlock(onyxOre);
+            registerBlock(rubyOre);
+            registerBlock(sapphireOre);
+            registerBlock(nacreOre);
+            registerBlock(jadeOre);
+            registerBlock(amethystOre);
+
+            registerBlock(onyxBlock);
+            registerBlock(rubyBlock);
+            registerBlock(sapphireBlock);
+            registerBlock(jadeBlock);
+            registerBlock(amethystBlock);
+            registerBlock(nacreBlock);
+
+        }
+
+
         
     }
 

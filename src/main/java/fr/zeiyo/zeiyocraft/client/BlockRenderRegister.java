@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.client;
 
+import fr.zeiyo.zeiyocraft.ZeiyoConfig;
 import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.block.ZeiyoBlocks;
 import net.minecraft.block.Block;
@@ -19,41 +20,54 @@ public class BlockRenderRegister
 
         // Food
 
-        reg(ZeiyoBlocks.barleyCrops);
-        reg(ZeiyoBlocks.grapeCrops);
-        reg(ZeiyoBlocks.hempCrops);
-        reg(ZeiyoBlocks.blockChocolateCake);
+        if(ZeiyoConfig.isAlcoholEnabled)
+        {
+            reg(ZeiyoBlocks.barleyCrops);
+            reg(ZeiyoBlocks.grapeCrops);
+        }
+
+        if(ZeiyoConfig.isDrugEnabled)reg(ZeiyoBlocks.hempCrops);
+        if(ZeiyoConfig.isNewFoodEnabled)reg(ZeiyoBlocks.blockChocolateCake);
 
         // Miscellaneous
         
-        reg(ZeiyoBlocks.chair);
-        
-        // Ore Blocks
+        if(ZeiyoConfig.isChairEnabled)reg(ZeiyoBlocks.chair);
 
-        reg(ZeiyoBlocks.copperOre);
-        reg(ZeiyoBlocks.tinOre);
-        reg(ZeiyoBlocks.silverOre);
-        reg(ZeiyoBlocks.onyxOre);
-        reg(ZeiyoBlocks.rubyOre);
-        reg(ZeiyoBlocks.sapphireOre);
-        reg(ZeiyoBlocks.nacreOre);
-        reg(ZeiyoBlocks.jadeOre);
-        reg(ZeiyoBlocks.amethystOre);       
 
-        // Compressed Blocks
+        if(ZeiyoConfig.areAlloysEnabled)
+        {
 
-        reg(ZeiyoBlocks.steelBlock);
-        reg(ZeiyoBlocks.tinBlock);
-        reg(ZeiyoBlocks.copperBlock);
-        reg(ZeiyoBlocks.bronzeBlock);
-        reg(ZeiyoBlocks.silverBlock);
-        reg(ZeiyoBlocks.electrumBlock);
-        reg(ZeiyoBlocks.onyxBlock);
-        reg(ZeiyoBlocks.rubyBlock);
-        reg(ZeiyoBlocks.sapphireBlock);
-        reg(ZeiyoBlocks.nacreBlock);
-        reg(ZeiyoBlocks.jadeBlock);
-        reg(ZeiyoBlocks.amethystBlock);
+            reg(ZeiyoBlocks.copperOre);
+            reg(ZeiyoBlocks.tinOre);
+            reg(ZeiyoBlocks.silverOre);
+
+            reg(ZeiyoBlocks.steelBlock);
+            reg(ZeiyoBlocks.tinBlock);
+            reg(ZeiyoBlocks.copperBlock);
+            reg(ZeiyoBlocks.bronzeBlock);
+            reg(ZeiyoBlocks.silverBlock);
+            reg(ZeiyoBlocks.electrumBlock);
+
+        }
+
+        if(ZeiyoConfig.areAlloysEnabled)
+        {
+
+            reg(ZeiyoBlocks.onyxOre);
+            reg(ZeiyoBlocks.rubyOre);
+            reg(ZeiyoBlocks.sapphireOre);
+            reg(ZeiyoBlocks.nacreOre);
+            reg(ZeiyoBlocks.jadeOre);
+            reg(ZeiyoBlocks.amethystOre);
+
+            reg(ZeiyoBlocks.onyxBlock);
+            reg(ZeiyoBlocks.rubyBlock);
+            reg(ZeiyoBlocks.sapphireBlock);
+            reg(ZeiyoBlocks.nacreBlock);
+            reg(ZeiyoBlocks.jadeBlock);
+            reg(ZeiyoBlocks.amethystBlock);
+
+        }
 
     }
 
