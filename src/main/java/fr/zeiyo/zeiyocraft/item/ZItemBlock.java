@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.item;
 
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemBlockSpecial;
@@ -12,7 +13,7 @@ public class ZItemBlock extends ItemBlockSpecial
         super(block);
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(tab);
-        this.setRegistryName(unlocalizedName);
+        this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
     }
 
 }

@@ -1,6 +1,7 @@
 package fr.zeiyo.zeiyocraft.item;
 
 import com.google.common.collect.Sets;
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.crafting.ZCraftingUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -21,7 +22,7 @@ public class ZItemAxe extends ItemTool {
         this.setUnlocalizedName(unlocalizedName);
         this.isRepairable();
         this.damageVsEntity = 4.0F + material.getDamageVsEntity();
-        this.setRegistryName(unlocalizedName);
+        this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
         this.attackSpeed = -3.1F;
         this.id = nmb;
     }

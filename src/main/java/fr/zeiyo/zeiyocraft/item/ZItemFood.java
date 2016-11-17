@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.item;
 
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemFood;
 
@@ -11,7 +12,7 @@ public class ZItemFood extends ItemFood
         super(amount, saturation, isWolfFood);
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(CreativeTabs.FOOD);
-        this.setRegistryName(unlocalizedName);
+        this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
     }
 
 }

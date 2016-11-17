@@ -1,6 +1,7 @@
 package fr.zeiyo.zeiyocraft.item;
 
 
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -34,6 +35,7 @@ public class ZItemAlcohol extends Item
     public ZItemAlcohol(String unlocalizedName, int amount, float saturation, int duration, int amplifier)
     {
     	this.setUnlocalizedName(unlocalizedName);
+        this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
         this.itemUseDuration = 32;
         this.healAmount = amount;
         this.saturationModifier = saturation;
@@ -49,7 +51,7 @@ public class ZItemAlcohol extends Item
      */
     public ItemStack onItemUseFinish1(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
     {
-        --stack.stackSize;
+        stack.func_190918_g(1);
 
         if (entityLiving instanceof EntityPlayer)
         {

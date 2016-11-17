@@ -478,7 +478,7 @@ public final class ZeiyoItems
     }
     
     private static void registerItem(Item item) {
-    	GameRegistry.registerItem(item, ZeiyoMain.MODID + ":" + item.getUnlocalizedName().substring(5));
-        }
+        GameRegistry.register(item);
+    }
 
 }

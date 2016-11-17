@@ -6,6 +6,7 @@ import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ZeiyoBlocks {
@@ -108,14 +109,13 @@ public class ZeiyoBlocks {
             registerBlock(nacreBlock);
 
         }
-
-
         
     }
 
     private static void registerBlock(Block block) {
-    	
-    	GameRegistry.registerBlock(block, ZeiyoMain.MODID + ":" +block.getUnlocalizedName().substring(5));	
+
+        GameRegistry.register(block);
+        GameRegistry.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
         }
 
 }

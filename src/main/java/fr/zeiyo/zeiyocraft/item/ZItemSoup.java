@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.item;
 
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSoup;
 
@@ -10,7 +11,7 @@ public class ZItemSoup extends ItemSoup {
         super(healAmount);
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(CreativeTabs.FOOD);
-        this.setRegistryName(unlocalizedName);
+        this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
 
     }
 

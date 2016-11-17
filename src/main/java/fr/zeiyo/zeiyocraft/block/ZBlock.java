@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.block;
 
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -12,12 +13,12 @@ public class ZBlock extends Block
 	public ZBlock(String unlocalizedName, Material material, float hardness, float resistance, SoundType soundType,String tool ,int harvestLevel) {
         super(material);
         this.setUnlocalizedName(unlocalizedName);
+        this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
         this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
         this.setHardness(hardness);
         this.setResistance(resistance);
         this.setSoundType(soundType);
         this.setHarvestLevel(tool, harvestLevel);
-        this.setRegistryName(unlocalizedName);
     }
 
     public ZBlock(String unlocalizedName, Material material, float hardness, float resistance, SoundType soundType, int harvestLevel) {

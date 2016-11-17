@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.block;
 
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.BlockCake;
 import net.minecraft.block.SoundType;
@@ -20,10 +21,10 @@ public class ZBlockCake extends BlockCake
     public ZBlockCake(String unlocalizedName, int food, float saturation) {
         super();
         this.setUnlocalizedName(unlocalizedName);
+        this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
         this.setHardness(0.5F);
         this.setSoundType(SoundType.CLOTH);
         this.disableStats();
-        this.setRegistryName(unlocalizedName);
         this.foodPoints = food;
         this.saturationPoints = saturation;
 

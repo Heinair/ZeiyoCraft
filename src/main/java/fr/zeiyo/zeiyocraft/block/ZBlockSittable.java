@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.block;
 
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.entity.ZEntitySittable;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -30,9 +31,9 @@ public class ZBlockSittable extends Block {
         super(material);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         this.setUnlocalizedName(unlocalizedName);
+        this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
         this.setHardness(1.0F);
         this.setCreativeTab(CreativeTabs.DECORATIONS);
-        this.setRegistryName(unlocalizedName);
         this.setHarvestLevel("axe", 0);
         this.setSoundType(SoundType.WOOD);
     }
@@ -52,7 +53,7 @@ public class ZBlockSittable extends Block {
     }
 
     @Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing heldItem, float side, float hitX, float hitY) {
 
         if (!(checkForExistingEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), playerIn))) {
 
@@ -82,7 +83,7 @@ public class ZBlockSittable extends Block {
     
     */
     @Override
-    public AxisAlignedBB getCollisionBoundingBox(IBlockState worldIn, World pos, BlockPos state) {
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
         return null;
     } 
     

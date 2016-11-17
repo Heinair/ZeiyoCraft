@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.item;
 
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.crafting.ZCraftingUtils;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -19,7 +20,7 @@ public class ZItemArmor extends ItemArmor
     public ZItemArmor(String unlocalizedName, ArmorMaterial material, int renderIndex, EntityEquipmentSlot armorType, int nmb) {
         super(material, renderIndex, armorType);
         this.setUnlocalizedName(unlocalizedName);
-        this.setRegistryName(unlocalizedName);
+		this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
         this.isRepairable();
         this.id = nmb;
     }    
@@ -61,10 +62,11 @@ public class ZItemArmor extends ItemArmor
 	
 	private boolean isWearingFullSet(EntityPlayer player, Item helmet, Item chestplate, Item leggings, Item boots) 
 	{		
-		return player.inventory.armorInventory[3] != null && player.inventory.armorInventory[3].getItem() == helmet
-				&& player.inventory.armorInventory[2] != null && player.inventory.armorInventory[2].getItem() == chestplate
-				&& player.inventory.armorInventory[1] != null && player.inventory.armorInventory[1].getItem() == leggings
-				&& player.inventory.armorInventory[0] != null && player.inventory.armorInventory[0].getItem() == boots;
+		 return player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == helmet
+				&& player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == chestplate
+				&& player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == leggings
+				&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == boots;
+
 	}
 
 

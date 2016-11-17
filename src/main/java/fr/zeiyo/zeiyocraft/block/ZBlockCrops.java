@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.block;
 
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.IGrowable;
@@ -19,7 +20,7 @@ public class ZBlockCrops extends BlockCrops implements IGrowable
     protected ZBlockCrops(String unlocalizedName, int nmb) {
         super();
         this.setUnlocalizedName(unlocalizedName);
-        this.setRegistryName(unlocalizedName);
+        this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
         this.id = nmb;
     }
 

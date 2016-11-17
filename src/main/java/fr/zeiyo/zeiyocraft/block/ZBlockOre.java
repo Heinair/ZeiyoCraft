@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.block;
 
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -22,11 +23,11 @@ public class ZBlockOre extends Block {
     public ZBlockOre(String unlocalizedName, Material blockMaterial, int harvestLevel, Item drop, int meta, int[] quantity) {
         super(blockMaterial);
         this.setUnlocalizedName(unlocalizedName);
+        this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
         this.drop = drop;
         this.meta = meta;
         this.setHarvestLevel("pickaxe", harvestLevel);
         this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
-        this.setRegistryName(unlocalizedName);
         this.drop = drop;
         this.minDropped = quantity[0];
         this.maxDropped = quantity[1];
