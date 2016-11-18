@@ -7,6 +7,7 @@ import fr.zeiyo.zeiyocraft.event.ZKeyEvent;
 import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import fr.zeiyo.zeiyocraft.world.ZeiyoWorldGen;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -33,7 +34,7 @@ public class CommonProxy {
         MinecraftForge.addGrassSeed(new ItemStack(ZeiyoItems.grapeSeeds), 2);
         MinecraftForge.addGrassSeed(new ItemStack(ZeiyoItems.hempSeeds), 1);
         if(ZeiyoConfig.isKeyEnabled)MinecraftForge.EVENT_BUS.register(new ZKeyEvent());
-        EntityRegistry.registerModEntity(ZEntitySittable.class, "Chair", 4200, ZeiyoMain.instance, 80, 1, false);
+        EntityRegistry.registerModEntity(new ResourceLocation(ZeiyoMain.MODID + ":" + "chair") , ZEntitySittable.class, "Chair", 4200, ZeiyoMain.instance, 80, 1, false);
 
         //MinecraftForge.addGrassSeed(new ItemStack(ZeiyoItems.barleySeeds), 5);
         //ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(new WeightedRandomChestContent(new ItemStack(ZeiyoItems.grapeSeeds), 3, 9, 55));

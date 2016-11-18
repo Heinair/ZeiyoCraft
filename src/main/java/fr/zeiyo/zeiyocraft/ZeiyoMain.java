@@ -19,7 +19,7 @@ public class ZeiyoMain
     public static ZeiyoMain instance;
     public static final String MODID = "zeiyocraft";
     public static final String NAME = "ZeiyoCraft";
-    public static final String VERSION = "0.7.0";
+    public static final String VERSION = "0.7.1";
     public static final String GUI_FACTORY = "fr.zeiyo.zeiyocraft.gui.ZGuiFactory";
     public static Configuration CONFIG = new Configuration();
 
