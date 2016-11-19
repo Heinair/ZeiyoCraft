@@ -12,11 +12,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.StatList;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.SoundCategory;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class ZItemDrug extends Item
 {
@@ -57,7 +56,7 @@ public class ZItemDrug extends Item
         {
             EntityPlayer entityplayer = (EntityPlayer)entityLiving;
             entityplayer.getFoodStats().addStats(healAmount, saturationModifier);
-            worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ENTITY_PLAYER_BREATH, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
+            worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
             this.onFoodEaten(stack, worldIn, entityplayer);
             entityplayer.addStat(StatList.getObjectUseStats(this));
         }
@@ -79,7 +78,7 @@ public class ZItemDrug extends Item
      */
     public int getMaxItemUseDuration(ItemStack stack)
     {
-        return 32;
+        return 24;
     }
 
     /**
@@ -90,27 +89,19 @@ public class ZItemDrug extends Item
         return EnumAction.NONE;
     }
 
-    public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand)
+    public ActionResult<ItemStack> onItemRightClick(World itemStackIn, EntityPlayer worldIn, EnumHand playerIn)
     {
-        if (playerIn.canEat(this.alwaysEdible))
+        ItemStack itemstack = worldIn.getHeldItem(playerIn);
+
+        if (worldIn.canEat(this.alwaysEdible))
         {
-            playerIn.setActiveHand(hand);
-            return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);
+            worldIn.setActiveHand(playerIn);
+            return new ActionResult(EnumActionResult.SUCCESS, itemstack);
         }
         else
         {
-            return new ActionResult(EnumActionResult.FAIL, itemStackIn);
+            return new ActionResult(EnumActionResult.FAIL, itemstack);
         }
-    }
-
-    public int getHealAmount(ItemStack stack)
-    {
-        return this.healAmount;
-    }
-
-    public float getSaturationModifier(ItemStack stack)
-    {
-        return this.saturationModifier;
     }
 
     public ZItemDrug setPotionEffect(PotionEffect p_185070_1_, float p_185070_2_)
@@ -120,9 +111,7 @@ public class ZItemDrug extends Item
         return this;
     }
 
-    /**
-     * Set the field 'alwaysEdible' to true, and make the food edible even if the player don't need to eat.
-     */
+
     public ZItemDrug setAlwaysEdible()
     {
         this.alwaysEdible = true;
