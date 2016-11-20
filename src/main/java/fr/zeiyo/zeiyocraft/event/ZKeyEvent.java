@@ -44,13 +44,23 @@ public class ZKeyEvent
                 {
                     if(current != null && current.getItem() == ZeiyoItems.key)
                     {
-                        if(!tileEntityLockable.getLockCode().getLock().equals(current.getDisplayName()))
+                        String unlockPass = new StringBuilder(current.getDisplayName()).reverse().toString();
+
+                        if (tileEntityLockable.getLockCode().getLock().equals(unlockPass))
                         {
+                            tileEntityLockable.setLockCode(new LockCode(""));
                             world.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, SoundEvents.UI_BUTTON_CLICK, SoundCategory.BLOCKS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
-                        	player.addChatComponentMessage(new TextComponentTranslation("text.key.errorOnKey", new Object[0]), true);
-                        	event.setCanceled(true);
+                            player.addChatComponentMessage(new TextComponentTranslation("text.key.successOnUnlock", new Object[0]), true);
+
+                        }
+
+                        else if(!tileEntityLockable.getLockCode().getLock().equals(current.getDisplayName())) {
+                            world.playSound((EntityPlayer) null, player.posX, player.posY, player.posZ, SoundEvents.UI_BUTTON_CLICK, SoundCategory.BLOCKS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
+                            player.addChatComponentMessage(new TextComponentTranslation("text.key.errorOnKey", new Object[0]), true);
+                            event.setCanceled(true);
                         }
                     }
+
                     else
                     {
                         world.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, SoundEvents.UI_BUTTON_CLICK, SoundCategory.BLOCKS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
