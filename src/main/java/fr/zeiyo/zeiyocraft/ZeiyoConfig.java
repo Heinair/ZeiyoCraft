@@ -14,6 +14,7 @@ public class ZeiyoConfig
     public static boolean isDrugEnabled = true;
     public static boolean isNewFoodEnabled = true;
     public static boolean isChairEnabled = true;
+    public static boolean newEffects = false;
 
     public static void syncConfig(Configuration config) {
         try {
@@ -40,6 +41,12 @@ public class ZeiyoConfig
 
             areWarAxesEnabled = areVanillaWarAxesEnabled.getBoolean();
 
+            Property areArmorEffectsEnabled = config.get("Ores, Armors, Tools and Weapons",
+                    "areArmorEffectsEnabled",
+                    "false",
+                    "Whether wearing a full set of armor grants a potion effect (because it make player crash on servers)");
+
+            newEffects = areArmorEffectsEnabled.getBoolean();
 
             Property areAlcoholsEnabled = config.get("Food",
                     "areAlcoholsEnabled",

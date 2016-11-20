@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft;
 
+import fr.zeiyo.zeiyocraft.achievement.ZAchievement;
 import fr.zeiyo.zeiyocraft.block.ZeiyoBlocks;
 import fr.zeiyo.zeiyocraft.crafting.ZeiyoCrafting;
 import fr.zeiyo.zeiyocraft.entity.ZEntitySittable;
@@ -24,6 +25,8 @@ public class CommonProxy {
         ZeiyoItems.initItems();
         ZeiyoBlocks.registerBlocks();
         ZeiyoItems.registerItems();
+       //ZAchievement.initAchievement();
+       //ZAchievement.registerAchievements();
 
     }
 

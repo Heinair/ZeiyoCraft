@@ -1,5 +1,6 @@
 package fr.zeiyo.zeiyocraft.item;
 
+import fr.zeiyo.zeiyocraft.ZeiyoConfig;
 import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.crafting.ZCraftingUtils;
 import net.minecraft.entity.player.EntityPlayer;
@@ -27,31 +28,35 @@ public class ZItemArmor extends ItemArmor
     
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack){
-    	
-    	if (this.isWearingFullSet(player, ZeiyoItems.onyxHelmet, ZeiyoItems.onyxChestplate, ZeiyoItems.onyxLeggings, ZeiyoItems.onyxBoots)) 
+
+		if(ZeiyoConfig.newEffects)
 		{
-			this.effectPlayer(player, Potion.getPotionById(22), 0, 650);
+			if (this.isWearingFullSet(player, ZeiyoItems.onyxHelmet, ZeiyoItems.onyxChestplate, ZeiyoItems.onyxLeggings, ZeiyoItems.onyxBoots))
+			{
+				this.effectPlayer(player, Potion.getPotionById(22), 0, 650);
+			}
+			else if (this.isWearingFullSet(player, ZeiyoItems.rubyHelmet, ZeiyoItems.rubyChestplate, ZeiyoItems.rubyLeggings, ZeiyoItems.rubyBoots))
+			{
+				this.effectPlayer(player, Potion.getPotionById(12), 1, 50);
+			}
+			else if (this.isWearingFullSet(player, ZeiyoItems.sapphireHelmet, ZeiyoItems.sapphireChestplate, ZeiyoItems.sapphireLeggings, ZeiyoItems.sapphireBoots))
+			{
+				this.effectPlayer(player, Potion.getPotionById(3), 0, 50);
+			}
+			else if (this.isWearingFullSet(player, ZeiyoItems.nacreHelmet, ZeiyoItems.nacreChestplate, ZeiyoItems.nacreLeggings, ZeiyoItems.nacreBoots))
+			{
+				this.effectPlayer(player, Potion.getPotionById(13), 0, 50);
+			}
+			else if (this.isWearingFullSet(player, ZeiyoItems.jadeHelmet, ZeiyoItems.jadeChestplate, ZeiyoItems.jadeLeggings, ZeiyoItems.jadeBoots))
+			{
+				this.effectPlayer(player, Potion.getPotionById(8), 0, 50);
+			}
+			else if (this.isWearingFullSet(player, ZeiyoItems.amethystHelmet, ZeiyoItems.amethystChestplate, ZeiyoItems.amethystLeggings, ZeiyoItems.amethystBoots))
+			{
+				this.effectPlayer(player, Potion.getPotionById(5), 0, 50);
+			}
 		}
-		if (this.isWearingFullSet(player, ZeiyoItems.rubyHelmet, ZeiyoItems.rubyChestplate, ZeiyoItems.rubyLeggings, ZeiyoItems.rubyBoots)) 
-		{
-			this.effectPlayer(player, Potion.getPotionById(12), 1, 50);
-		}
-		if (this.isWearingFullSet(player, ZeiyoItems.sapphireHelmet, ZeiyoItems.sapphireChestplate, ZeiyoItems.sapphireLeggings, ZeiyoItems.sapphireBoots)) 
-		{
-			this.effectPlayer(player, Potion.getPotionById(3), 0, 50);
-		}
-		if (this.isWearingFullSet(player, ZeiyoItems.nacreHelmet, ZeiyoItems.nacreChestplate, ZeiyoItems.nacreLeggings, ZeiyoItems.nacreBoots)) 
-		{
-			this.effectPlayer(player, Potion.getPotionById(13), 0, 50);
-		}
-		if (this.isWearingFullSet(player, ZeiyoItems.jadeHelmet, ZeiyoItems.jadeChestplate, ZeiyoItems.jadeLeggings, ZeiyoItems.jadeBoots)) 
-		{
-			this.effectPlayer(player, Potion.getPotionById(8), 0, 50);
-		}
-		if (this.isWearingFullSet(player, ZeiyoItems.amethystHelmet, ZeiyoItems.amethystChestplate, ZeiyoItems.amethystLeggings, ZeiyoItems.amethystBoots)) 
-		{
-			this.effectPlayer(player, Potion.getPotionById(5), 0, 50);
-		}
+
     }
 	
 	private void effectPlayer(EntityPlayer player, Potion potion, int amplifier, int duration)
