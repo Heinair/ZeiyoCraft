@@ -19,8 +19,8 @@ public final class ZeiyoItems
 
     // Food-related Items
 
-    public static Item chocolateCake;
-    public static Item hardboiledEgg, applePie, puriFlesh, vegetableStew, vodkaExtract;
+    public static Item chocolateCake, weirdCake;
+    public static Item hardboiledEgg, applePie, puriFlesh, vegetableStew, vodkaExtract, cheese;
     public static Item barleySeeds, barley, malt, grapeSeeds, grape, hempSeeds, hemp;
     public static Item tankard, beerTankard, wineTankard, ciderTankard, vodkaTankard;
     public static Item pipe, hempPipe;
@@ -97,6 +97,7 @@ public final class ZeiyoItems
         // Food
 
         chocolateCake = new ZItemBlock("chocolateCake", ZeiyoBlocks.blockChocolateCake, CreativeTabs.FOOD).setMaxStackSize(1);
+        weirdCake = new ZItemBlock("weirdCake", ZeiyoBlocks.blockWeirdCake, CreativeTabs.FOOD).setMaxStackSize(1);
         hardboiledEgg = new ZItemFood("hardboiledEgg", 3, 0.1F, false);
         applePie = new ZItemFood("applePie", 8, 0.3F, false);
         puriFlesh = new ZItemFood("puriFlesh", 4, 0.1F, true);
@@ -110,12 +111,13 @@ public final class ZeiyoItems
         hempSeeds = new ZItemSeeds("hempSeeds", ZeiyoBlocks.hempCrops, Blocks.FARMLAND);
         hemp = new ZItem("hemp").setCreativeTab(CreativeTabs.MATERIALS);
         tankard = new ZItem("tankard").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(16);
-        beerTankard = new ZItemAlcohol("beerTankard", 2, 0.1F, 900, 0);
-        ciderTankard = new ZItemAlcohol("ciderTankard", 2, 0.1F, 900, 0);
-        wineTankard = new ZItemAlcohol("wineTankard", 2, 0.1F, 1000, 0);
-        vodkaTankard = new ZItemAlcohol("vodkaTankard", 2, 0.1F, 1000, 0);
+        beerTankard = new ZItemAlcohol("beerTankard", 2, 0.1F, MobEffects.HASTE, 900, 0);
+        ciderTankard = new ZItemAlcohol("ciderTankard", 2, 0.1F, MobEffects.HASTE, 900, 0);
+        wineTankard = new ZItemAlcohol("wineTankard", 2, 0.1F, MobEffects.STRENGTH, 1000, 0);
+        vodkaTankard = new ZItemAlcohol("vodkaTankard", 2, 0.1F, MobEffects.RESISTANCE,1000, 0);
         pipe = new ZItem("pipe").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(16);
-        hempPipe = new ZItemDrug("hempPipe", 1500, 2).setPotionEffect(new PotionEffect(MobEffects.REGENERATION, 350, 1, false, false), 1.0F);
+        hempPipe = new ZItemDrug("hempPipe", 1500, 2);
+        cheese = new ZItemFood("cheese", 5, 0.2F, false);
 
         // Miscellaneous
 
@@ -267,10 +269,12 @@ public final class ZeiyoItems
         {
 
             registerItem(chocolateCake);
+            registerItem(weirdCake);
             registerItem(hardboiledEgg);
             registerItem(applePie);
             registerItem(puriFlesh);
             registerItem(vegetableStew);
+            registerItem(cheese);
 
         }
 

@@ -11,6 +11,7 @@ import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.ActionResult;
@@ -27,11 +28,13 @@ public class ZItemAlcohol extends ItemFood
     /** If this field is true, the food can be consumed even if the player don't need to eat. */
     private boolean alwaysEdible;
     /** represents the potion effect that will occurr upon eating this food. Set by setPotionEffect */
-    private PotionEffect potionId;
+    private Potion potionId;
     /** probably of the set potion effect occurring */
     private float potionEffectProbability;
 
-    public ZItemAlcohol(String unlocalizedName, int amount, float saturation, int duration, int amplifier)
+    private int effectDuration, effectAmplifier;
+
+    public ZItemAlcohol(String unlocalizedName, int amount, float saturation, Potion potion, int duration, int amplifier)
     {
         super(amount, saturation, false);
     	this.setUnlocalizedName(unlocalizedName);
@@ -41,7 +44,9 @@ public class ZItemAlcohol extends ItemFood
         this.setCreativeTab(CreativeTabs.FOOD);
         this.setAlwaysEdible();
         this.alwaysEdible = true;
-        this.setPotionEffect(new PotionEffect(MobEffects.HASTE, duration, amplifier, false, false), 1.0F);
+        this.potionId = potion;
+        this.effectAmplifier = amplifier;
+        this.effectDuration = duration;
         this.setMaxStackSize(1);
     }
 
@@ -49,22 +54,6 @@ public class ZItemAlcohol extends ItemFood
      * Called when the player finishes using this Item (E.g. finishes eating.). Not called when the player stops using
      * the Item before the action is complete.
      */
-  /*  public ItemStack onItemUseFinish1(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
-    {
-        stack.func_190918_g(1);
-
-        if (entityLiving instanceof EntityPlayer)
-        {
-            EntityPlayer entityplayer = (EntityPlayer)entityLiving;
-            entityplayer.getFoodStats().addStats(healAmount, saturationModifier);
-            worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ENTITY_GENERIC_DRINK, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
-            this.onFoodEaten(stack, worldIn, entityplayer);
-            entityplayer.addStat(StatList.getObjectUseStats(this));
-        }
-
-        return stack;
-    }
-    */
 
     public ItemStack onItemUseFinish1(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
     {
@@ -107,7 +96,7 @@ public class ZItemAlcohol extends ItemFood
     {
         ItemStack itemstack = worldIn.getHeldItem(playerIn);
 
-        if (worldIn.canEat(this.alwaysEdible))
+        if (worldIn.canEat(true))
         {
             worldIn.setActiveHand(playerIn);
             return new ActionResult(EnumActionResult.SUCCESS, itemstack);
@@ -119,18 +108,10 @@ public class ZItemAlcohol extends ItemFood
     }
 
     @Override
-    public ZItemAlcohol setPotionEffect(PotionEffect p_185070_1_, float p_185070_2_)
-    {
-        this.potionId = p_185070_1_;
-        this.potionEffectProbability = p_185070_2_;
-        return this;
-    }
-
-    @Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
     {
         this.onItemUseFinish1(stack, worldIn, entityLiving);
         return new ItemStack(ZeiyoItems.tankard);
     }
-    
+
 }

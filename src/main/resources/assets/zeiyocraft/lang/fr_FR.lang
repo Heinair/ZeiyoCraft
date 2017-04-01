@@ -7,10 +7,12 @@ text.key.sucessOnUnlock=Le bloc a été dévérouillé avec succès
 
 
 item.chocolateCake.name=Gâteau au chocolat
+item.weirdCake.name=Gâteau louche
 item.puriFlesh.name= Chair purifiée
 item.hardboiledEgg.name=Oeuf dur
 item.vegetableStew.name=Ragoût aux légumes
 item.applePie.name =Tarte aux pommes
+item.cheese.name=Fromage
 
 item.woodenWarAxe.name=Hache de guerre en bois
 item.stoneWarAxe.name=Hache de guerre en pierre

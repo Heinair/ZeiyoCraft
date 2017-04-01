@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "bites=0": { "model": "zeiyocraft:blockWeirdCake_uneaten" },
+        "bites=1": { "model": "zeiyocraft:blockWeirdCake_slice1" },
+        "bites=2": { "model": "zeiyocraft:blockWeirdCake_slice2" },
+        "bites=3": { "model": "zeiyocraft:blockWeirdCake_slice3" },
+        "bites=4": { "model": "zeiyocraft:blockWeirdCake_slice4" },
+        "bites=5": { "model": "zeiyocraft:blockWeirdCake_slice5" },
+        "bites=6": { "model": "zeiyocraft:blockWeirdCake_slice6" }
+    }
+}

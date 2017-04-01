@@ -27,12 +27,16 @@ public class BlockRenderRegister
         }
 
         if(ZeiyoConfig.isDrugEnabled)reg(ZeiyoBlocks.hempCrops);
-        if(ZeiyoConfig.isNewFoodEnabled)reg(ZeiyoBlocks.blockChocolateCake);
+
+        if(ZeiyoConfig.isNewFoodEnabled)
+        {
+            reg(ZeiyoBlocks.blockChocolateCake);
+            reg(ZeiyoBlocks.blockWeirdCake);
+        }
 
         // Miscellaneous
         
         if(ZeiyoConfig.isChairEnabled)reg(ZeiyoBlocks.chair);
-
 
         if(ZeiyoConfig.areAlloysEnabled)
         {

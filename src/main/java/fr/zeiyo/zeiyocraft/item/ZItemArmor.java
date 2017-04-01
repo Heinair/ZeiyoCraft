@@ -49,7 +49,7 @@ public class ZItemArmor extends ItemArmor
 			}
 			else if (this.isWearingFullSet(player, ZeiyoItems.jadeHelmet, ZeiyoItems.jadeChestplate, ZeiyoItems.jadeLeggings, ZeiyoItems.jadeBoots))
 			{
-				this.effectPlayer(player, Potion.getPotionById(8), 0, 50);
+				this.effectPlayer(player, Potion.getPotionById(11), 0, 50);
 			}
 			else if (this.isWearingFullSet(player, ZeiyoItems.amethystHelmet, ZeiyoItems.amethystChestplate, ZeiyoItems.amethystLeggings, ZeiyoItems.amethystBoots))
 			{

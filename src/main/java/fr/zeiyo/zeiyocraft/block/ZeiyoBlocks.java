@@ -6,12 +6,14 @@ import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ZeiyoBlocks {
 
-    public static Block blockChocolateCake;
+    public static Block blockChocolateCake, blockWeirdCake;
     public static Block barleyCrops, grapeCrops, hempCrops;
     public static Block chair;
     public static Block amethystOre, jadeOre, nacreOre, onyxOre, rubyOre, sapphireOre, copperOre, tinOre, silverOre;
@@ -22,6 +24,7 @@ public class ZeiyoBlocks {
         // Food
 
         blockChocolateCake = new ZBlockCake("blockChocolateCake", 4, 0.5F);
+        blockWeirdCake = new ZBlockCake("blockChocolateCake", 2, 0.2F, new PotionEffect(MobEffects.REGENERATION, 350, 1, false, false));
         barleyCrops = new ZBlockCrops("barleyCrops", 0);
         grapeCrops = new ZBlockCrops("grapeCrops", 1);
         hempCrops = new ZBlockCrops("hempCrops", 2);
@@ -63,15 +66,22 @@ public class ZeiyoBlocks {
     	
         // Food
     	
-        if(ZeiyoConfig.isNewFoodEnabled)registerBlock(blockChocolateCake);
-        if(ZeiyoConfig.isAlcoholEnabled) {registerBlock(barleyCrops);
-            registerBlock(grapeCrops);}
+        if(ZeiyoConfig.isNewFoodEnabled)
+        {
+            registerBlock(blockChocolateCake);
+            registerBlock(blockWeirdCake);
+        }
+
+        if(ZeiyoConfig.isAlcoholEnabled)
+        {
+            registerBlock(barleyCrops);
+            registerBlock(grapeCrops);
+        }
         if(ZeiyoConfig.isDrugEnabled)registerBlock(hempCrops);
         
         // Miscellaneous
         
         if(ZeiyoConfig.isChairEnabled)registerBlock(chair);
-
 
         // Alloy-Related Blocks
 

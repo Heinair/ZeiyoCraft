@@ -20,10 +20,6 @@ public class ZConfigGui extends GuiConfig{
                 true,
                 false,
                 GuiConfig.getAbridgedConfigPath(ZeiyoMain.CONFIG.toString()));
-
-
-
-
     }
 
     /** Compiles a list of config elements */

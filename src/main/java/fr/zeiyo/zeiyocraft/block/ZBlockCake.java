@@ -6,7 +6,9 @@ import net.minecraft.block.BlockCake;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -16,8 +18,9 @@ public class ZBlockCake extends BlockCake
 
     public int foodPoints;
     public float saturationPoints;
+    public PotionEffect potionEffect;
 
-    public ZBlockCake(String unlocalizedName, int food, float saturation) {
+    public ZBlockCake(String unlocalizedName, int food, float saturation, PotionEffect effect) {
         super();
         this.setUnlocalizedName(unlocalizedName);
         this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
@@ -26,12 +29,22 @@ public class ZBlockCake extends BlockCake
         this.disableStats();
         this.foodPoints = food;
         this.saturationPoints = saturation;
+        this.potionEffect = effect;
 
+    }
+    public  ZBlockCake(String unlocalizedName, int food, float saturation) {
+        this(unlocalizedName, food, saturation, null);
     }
 
     private void eatCake(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
         if (player.canEat(false)) {
             player.getFoodStats().addStats(foodPoints, saturationPoints);
+
+            if(potionEffect!=null)
+            {
+                player.getActivePotionEffects().add(new PotionEffect(MobEffects.NAUSEA, 350, 1, false, false));
+                player.getActivePotionEffects().add(potionEffect);
+            }
             int i = ((Integer) state.getValue(BITES)).intValue();
 
             if (i < 6) {

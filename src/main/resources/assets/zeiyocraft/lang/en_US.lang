@@ -6,10 +6,12 @@ text.key.errorOnDestroyBlock=You need to have the correct key in your inventory 
 text.key.sucessOnUnlock=Successfully unlocked the block
 
 item.chocolateCake.name=Chocolate Cake
+item.weirdCake.name=Weird Cake
 item.hardboiledEgg.name=Hard-boiled Egg
 item.vegetableStew.name=Vegetable Stew
 item.applePie.name=Apple Pie
 item.puriFlesh.name=Purified Flesh
+item.cheese.name=Cheese
 
 item.woodenWarAxe.name=Wooden War Axe
 item.stoneWarAxe.name=Stone War Axe

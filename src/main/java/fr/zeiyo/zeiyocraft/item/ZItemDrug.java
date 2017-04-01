@@ -19,16 +19,10 @@ import java.util.Random;
 
 public class ZItemDrug extends Item
 {
-    /** Number of ticks to run while 'EnumAction'ing until result. */
-    public final int itemUseDuration;
+
     /** The amount this food item heals the player. */
     private final int healAmount;
     private final float saturationModifier;
-    /** Whether wolves like this food (true for raw and cooked porkchop). */
-    /** If this field is true, the food can be consumed even if the player don't need to eat. */
-    private boolean alwaysEdible;
-    /** represents the potion effect that will occurr upon eating this food. Set by setPotionEffect */
-    private PotionEffect potionId;
     /** probably of the set potion effect occurring */
     private float potionEffectProbability;
 
@@ -36,11 +30,9 @@ public class ZItemDrug extends Item
     {
     	this.setUnlocalizedName(unlocalizedName);
         this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
-        this.itemUseDuration = 32;
         this.healAmount = amount;
         this.saturationModifier = saturation;
         this.setCreativeTab(CreativeTabs.FOOD);
-        this.setAlwaysEdible();
         this.setMaxStackSize(1);
     }
 
@@ -66,9 +58,9 @@ public class ZItemDrug extends Item
 
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
     {
-        if (!worldIn.isRemote && this.potionId != null && worldIn.rand.nextFloat() < this.potionEffectProbability)
+        if (!worldIn.isRemote && worldIn.rand.nextFloat() < this.potionEffectProbability)
         {
-            player.addPotionEffect(new PotionEffect(this.potionId));
+            player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 400, 0, false, false));
             player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 400, 0, false, false));
         }
     }
@@ -76,6 +68,7 @@ public class ZItemDrug extends Item
     /**
      * How long it takes to use or consume an item
      */
+    @Override
     public int getMaxItemUseDuration(ItemStack stack)
     {
         return 24;
@@ -84,40 +77,20 @@ public class ZItemDrug extends Item
     /**
      * returns the action that specifies what animation to play when the items is being used
      */
+    @Override
     public EnumAction getItemUseAction(ItemStack stack)
     {
         return EnumAction.NONE;
     }
 
+    @Override
     public ActionResult<ItemStack> onItemRightClick(World itemStackIn, EntityPlayer worldIn, EnumHand playerIn)
     {
         ItemStack itemstack = worldIn.getHeldItem(playerIn);
-
-        if (worldIn.canEat(this.alwaysEdible))
-        {
-            worldIn.setActiveHand(playerIn);
-            return new ActionResult(EnumActionResult.SUCCESS, itemstack);
-        }
-        else
-        {
-            return new ActionResult(EnumActionResult.FAIL, itemstack);
-        }
+        worldIn.setActiveHand(playerIn);
+        return new ActionResult(EnumActionResult.SUCCESS, itemstack);
     }
 
-    public ZItemDrug setPotionEffect(PotionEffect p_185070_1_, float p_185070_2_)
-    {
-        this.potionId = p_185070_1_;
-        this.potionEffectProbability = p_185070_2_;
-        return this;
-    }
-
-
-    public ZItemDrug setAlwaysEdible()
-    {
-        this.alwaysEdible = true;
-        return this;
-    }
-    
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
     {
         this.onItemUseFinish1(stack, worldIn, entityLiving);

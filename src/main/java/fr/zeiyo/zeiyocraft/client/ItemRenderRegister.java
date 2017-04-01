@@ -23,11 +23,13 @@ public class ItemRenderRegister
         {
 
             reg(ZeiyoItems.chocolateCake);
+            reg(ZeiyoItems.weirdCake);
             reg(ZeiyoItems.hardboiledEgg);
             reg(ZeiyoItems.applePie);
             reg(ZeiyoItems.vegetableStew);
             reg(ZeiyoItems.vodkaExtract);
             reg(ZeiyoItems.puriFlesh);
+            reg(ZeiyoItems.cheese);
 
         }
 
