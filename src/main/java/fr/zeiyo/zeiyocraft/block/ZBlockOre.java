@@ -31,8 +31,8 @@ public class ZBlockOre extends Block {
         this.drop = drop;
         this.minDropped = quantity[0];
         this.maxDropped = quantity[1];
-        this.setHardness(5.0F);
-        this.setResistance(3.0F);
+        this.setHardness(3.0F);
+        this.setResistance(5.0F);
         this.setSoundType(SoundType.STONE);
     }
 

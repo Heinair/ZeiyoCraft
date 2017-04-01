@@ -15,7 +15,7 @@ public class ZeiyoBlocks {
     public static Block barleyCrops, grapeCrops, hempCrops;
     public static Block chair;
     public static Block amethystOre, jadeOre, nacreOre, onyxOre, rubyOre, sapphireOre, copperOre, tinOre, silverOre;
-    public static Block onyxBlock, steelBlock, rubyBlock, sapphireBlock, copperBlock, tinBlock,  bronzeBlock, silverBlock, electrumBlock, charcoalBlock, jadeBlock, nacreBlock, amethystBlock;
+    public static Block onyxBlock, steelBlock, rubyBlock, sapphireBlock, copperBlock, tinBlock,  bronzeBlock, silverBlock, electrumBlock, jadeBlock, nacreBlock, amethystBlock;
 
     public static void initBlocks() {
 
@@ -32,9 +32,9 @@ public class ZeiyoBlocks {
         
         // Ore Blocks
 
-        copperOre = new ZBlock("copperOre", Material.ROCK, 5.0F, 3.0F, SoundType.STONE);
-        tinOre = new ZBlock("tinOre", Material.ROCK, 5.0F, 3.0F, SoundType.STONE);
-        silverOre = new ZBlock("silverOre", Material.ROCK, 5.0F, 3.0F, SoundType.STONE);
+        copperOre = new ZBlock("copperOre", Material.ROCK, 3.0F, 5.0F, SoundType.STONE);
+        tinOre = new ZBlock("tinOre", Material.ROCK, 3.0F, 5.0F, SoundType.STONE);
+        silverOre = new ZBlock("silverOre", Material.ROCK, 3.0F, 5.0F, SoundType.STONE);
         onyxOre = new ZBlockOre("onyxOre", Material.ROCK, 3, ZeiyoItems.onyx);
         rubyOre = new ZBlockOre("rubyOre", Material.ROCK, 3, ZeiyoItems.ruby);
         sapphireOre = new ZBlockOre("sapphireOre", Material.ROCK, 3, ZeiyoItems.sapphire);

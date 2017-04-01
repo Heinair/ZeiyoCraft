@@ -47,8 +47,6 @@ public class ZeiyoCrafting {
         if(ZeiyoConfig.isKeyEnabled)GameRegistry.addRecipe(new ItemStack(ZeiyoItems.key), new Object[]{" EP", " EP", " P ", 'P', Items.GOLD_INGOT, 'E', Items.GOLD_NUGGET});
         GameRegistry.addRecipe(new ItemStack(Items.SADDLE), new Object[]{"PPP", "# #", "F F", 'F', Items.IRON_INGOT, 'P', Items.LEATHER, '#', Items.STRING});
 
-
-
         if(ZeiyoConfig.areWarAxesEnabled)
         {
 

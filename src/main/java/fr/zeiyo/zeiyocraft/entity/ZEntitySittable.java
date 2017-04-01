@@ -35,17 +35,17 @@ public class ZEntitySittable extends Entity {
 
     public void setPostionConsideringRotation(double x, double y, double z, int rotation, double rotationOffset) {
         switch (rotation) {
-            case 2:
-                z += rotationOffset;
-                break;
-            case 0:
-                z -= rotationOffset;
-                break;
             case 3:
                 x -= rotationOffset;
                 break;
+            case 2:
+                z += rotationOffset;
+                break;
             case 1:
                 x += rotationOffset;
+                break;
+            case 0:
+                z -= rotationOffset;
                 break;
         }
         setPosition(x, y, z);

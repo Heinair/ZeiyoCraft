@@ -12,7 +12,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class ZBlockCake extends BlockCake
-
 {
 
     public int foodPoints;
@@ -28,11 +27,6 @@ public class ZBlockCake extends BlockCake
         this.foodPoints = food;
         this.saturationPoints = saturation;
 
-    }
-
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
-        this.eatCake(worldIn, pos, state, playerIn);
-        return true;
     }
 
     private void eatCake(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {

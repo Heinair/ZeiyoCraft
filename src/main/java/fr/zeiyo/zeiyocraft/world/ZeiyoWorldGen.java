@@ -47,7 +47,7 @@ public class ZeiyoWorldGen implements IWorldGenerator {
 
             case -1: // Nether
 
-                this.runGenerator(this.gen_onyx, world, random, chunkX, chunkZ, 3, 0, 80);
+                this.runGenerator(this.gen_onyx, world, random, chunkX, chunkZ, 2, 0, 80);
 
                 break;
 
@@ -58,7 +58,7 @@ public class ZeiyoWorldGen implements IWorldGenerator {
                 }
 
                 if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(0) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(24)) {
-                    this.runGenerator(this.gen_nacre, world, random, chunkX, chunkZ, 4, 0, 46);
+                    this.runGenerator(this.gen_nacre, world, random, chunkX, chunkZ, 3, 0, 46);
                 }
                 
                 if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(5) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(19) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(12) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(13) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(30) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(31)) {
@@ -69,15 +69,15 @@ public class ZeiyoWorldGen implements IWorldGenerator {
                     this.runGenerator(this.gen_jade, world, random, chunkX, chunkZ, 1, 2, 14);
                 }                              
 
-                this.runGenerator(this.gen_copper, world, random, chunkX, chunkZ, 30, 0, 72);
-                this.runGenerator(this.gen_tin, world, random, chunkX, chunkZ, 10, 0, 72);
-                this.runGenerator(this.gen_silver, world, random, chunkX, chunkZ, 20, 0, 62);
+                this.runGenerator(this.gen_copper, world, random, chunkX, chunkZ, 27, 0, 72);
+                this.runGenerator(this.gen_tin, world, random, chunkX, chunkZ, 9, 0, 72);
+                this.runGenerator(this.gen_silver, world, random, chunkX, chunkZ, 16, 0, 62);
 
                 break;
 
             case 1: // End
             	
-            	this.runGenerator(this.gen_amethyst, world, random, chunkX, chunkZ, 3, 0, 52);
+            	this.runGenerator(this.gen_amethyst, world, random, chunkX, chunkZ, 2, 0, 100);
 
                 break;
 
