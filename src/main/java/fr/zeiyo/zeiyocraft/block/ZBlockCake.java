@@ -42,8 +42,8 @@ public class ZBlockCake extends BlockCake
 
             if(potionEffect!=null)
             {
-                player.getActivePotionEffects().add(new PotionEffect(MobEffects.NAUSEA, 350, 1, false, false));
-                player.getActivePotionEffects().add(potionEffect);
+                player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 350, 1, false, false));
+                player.addPotionEffect(potionEffect);
             }
             int i = ((Integer) state.getValue(BITES)).intValue();
 

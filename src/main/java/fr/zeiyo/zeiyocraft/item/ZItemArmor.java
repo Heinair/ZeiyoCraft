@@ -16,67 +16,78 @@ public class ZItemArmor extends ItemArmor
 
 {
 
-    protected int id;
+	protected int id;
 
-    public ZItemArmor(String unlocalizedName, ArmorMaterial material, int renderIndex, EntityEquipmentSlot armorType, int nmb) {
-        super(material, renderIndex, armorType);
-        this.setUnlocalizedName(unlocalizedName);
+	public ZItemArmor(String unlocalizedName, ArmorMaterial material, int renderIndex, EntityEquipmentSlot armorType, int nmb) {
+		super(material, renderIndex, armorType);
+		this.setUnlocalizedName(unlocalizedName);
 		this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);
-        this.isRepairable();
-        this.id = nmb;
-    }    
-    
-    @Override
-    public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack){
+		this.isRepairable();
+		this.id = nmb;
+	}
 
+	@Override
+	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack){
 		if(ZeiyoConfig.newEffects)
 		{
-			if (this.isWearingFullSet(player, ZeiyoItems.onyxHelmet, ZeiyoItems.onyxChestplate, ZeiyoItems.onyxLeggings, ZeiyoItems.onyxBoots))
+			if (this.isWearingFullSet(player, new ItemStack(ZeiyoItems.onyxHelmet), new ItemStack(ZeiyoItems.onyxChestplate), new ItemStack(ZeiyoItems.onyxLeggings), new ItemStack(ZeiyoItems.onyxBoots)))
 			{
 				this.effectPlayer(player, Potion.getPotionById(22), 0, 650);
 			}
-			else if (this.isWearingFullSet(player, ZeiyoItems.rubyHelmet, ZeiyoItems.rubyChestplate, ZeiyoItems.rubyLeggings, ZeiyoItems.rubyBoots))
+			else if (this.isWearingFullSet(player, new ItemStack(ZeiyoItems.rubyHelmet), new ItemStack(ZeiyoItems.rubyChestplate), new ItemStack(ZeiyoItems.rubyLeggings), new ItemStack(ZeiyoItems.rubyBoots)))
 			{
 				this.effectPlayer(player, Potion.getPotionById(12), 1, 50);
 			}
-			else if (this.isWearingFullSet(player, ZeiyoItems.sapphireHelmet, ZeiyoItems.sapphireChestplate, ZeiyoItems.sapphireLeggings, ZeiyoItems.sapphireBoots))
+			else if (this.isWearingFullSet(player, new ItemStack(ZeiyoItems.sapphireHelmet), new ItemStack(ZeiyoItems.sapphireChestplate), new ItemStack(ZeiyoItems.sapphireLeggings), new ItemStack(ZeiyoItems.sapphireBoots)))
 			{
 				this.effectPlayer(player, Potion.getPotionById(3), 0, 50);
 			}
-			else if (this.isWearingFullSet(player, ZeiyoItems.nacreHelmet, ZeiyoItems.nacreChestplate, ZeiyoItems.nacreLeggings, ZeiyoItems.nacreBoots))
+			else if (this.isWearingFullSet(player, new ItemStack(ZeiyoItems.nacreHelmet), new ItemStack(ZeiyoItems.nacreChestplate), new ItemStack(ZeiyoItems.nacreLeggings), new ItemStack(ZeiyoItems.nacreBoots)))
 			{
 				this.effectPlayer(player, Potion.getPotionById(13), 0, 50);
 			}
-			else if (this.isWearingFullSet(player, ZeiyoItems.jadeHelmet, ZeiyoItems.jadeChestplate, ZeiyoItems.jadeLeggings, ZeiyoItems.jadeBoots))
+			else if (this.isWearingFullSet(player, new ItemStack(ZeiyoItems.jadeHelmet), new ItemStack(ZeiyoItems.jadeChestplate), new ItemStack(ZeiyoItems.jadeLeggings), new ItemStack(ZeiyoItems.jadeBoots)))
 			{
-				this.effectPlayer(player, Potion.getPotionById(11), 0, 50);
+				this.effectPlayer(player, Potion.getPotionById(8), 0, 50);
 			}
-			else if (this.isWearingFullSet(player, ZeiyoItems.amethystHelmet, ZeiyoItems.amethystChestplate, ZeiyoItems.amethystLeggings, ZeiyoItems.amethystBoots))
+			else if (this.isWearingFullSet(player, new ItemStack(ZeiyoItems.amethystHelmet), new ItemStack(ZeiyoItems.amethystChestplate), new ItemStack(ZeiyoItems.amethystLeggings), new ItemStack(ZeiyoItems.amethystBoots)))
 			{
 				this.effectPlayer(player, Potion.getPotionById(5), 0, 50);
 			}
 		}
 
-    }
-	
+	}
+
 	private void effectPlayer(EntityPlayer player, Potion potion, int amplifier, int duration)
 	{
-		if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 1)
-			player.addPotionEffect(new PotionEffect(potion , duration, amplifier, false, false));
-	}
-	
-	private boolean isWearingFullSet(EntityPlayer player, Item helmet, Item chestplate, Item leggings, Item boots) 
-	{		
-		 return player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == helmet
-				&& player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == chestplate
-				&& player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == leggings
-				&& player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == boots;
-
+		if(!player.worldObj.isRemote)
+		{
+			if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 1)
+				player.addPotionEffect(new PotionEffect(potion , duration, amplifier, false, false));
+		}
 	}
 
+	private boolean isWearingFullSet(EntityPlayer player, ItemStack helmet, ItemStack chestplate, ItemStack leggings, ItemStack boots)
+	{
+		if(player.worldObj.isRemote) return false;
 
-    @Override
-    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-        return ZCraftingUtils.getRepairItem(id) == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
-    }
+		for(ItemStack is : player.getArmorInventoryList())
+		{
+			if(!(is.areItemsEqualIgnoreDurability(is, helmet) || is.areItemsEqualIgnoreDurability(is, chestplate)
+					|| is.areItemsEqualIgnoreDurability(is, leggings) || is.areItemsEqualIgnoreDurability(is, helmet)
+					|| is.areItemsEqualIgnoreDurability(is, boots)))
+			{
+				return false;
+			}
+		}
+
+		return true;
+
+	}
+
+
+	@Override
+	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+		return ZCraftingUtils.getRepairItem(id) == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
+	}
 }

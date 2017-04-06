@@ -38,6 +38,8 @@ public class BlockRenderRegister
         
         if(ZeiyoConfig.isChairEnabled)reg(ZeiyoBlocks.chair);
 
+        reg(ZeiyoBlocks.rottenFleshBlock);
+
         if(ZeiyoConfig.areAlloysEnabled)
         {
 

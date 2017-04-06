@@ -25,6 +25,8 @@ public class ZeiyoCrafting {
 
         // Crafts
 
+        GameRegistry.addRecipe(new ItemStack(ZeiyoBlocks.rottenFleshBlock), new Object[]{"XXX", "XXX", "XXX", 'X', Items.ROTTEN_FLESH});
+
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.chocolateCake), new Object[]{"XCX", "SOS", "CBC", 'X', Items.MILK_BUCKET, 'C', new ItemStack(Items.DYE, 1, 3), 'S', Items.SUGAR, 'O', Items.EGG, 'B', Items.WHEAT});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.weirdCake), new Object[]{"XCX", "SOS", "CBC", 'X', Items.MILK_BUCKET, 'C', new ItemStack(ZeiyoItems.hemp), 'S', Items.SUGAR, 'O', Items.EGG, 'B', Items.WHEAT});
         GameRegistry.addRecipe(new ItemStack(ZeiyoItems.applePie), new Object[]{"PE ", "#  ", 'P', Items.APPLE, '#', Items.SUGAR, 'E', Items.EGG});
@@ -48,6 +50,8 @@ public class ZeiyoCrafting {
         if(ZeiyoConfig.isChairEnabled)GameRegistry.addRecipe(new ItemStack(ZeiyoBlocks.chair, 3), new Object[]{"#  ", "#P#", "B B", 'P', Blocks.WOOL, '#', Blocks.PLANKS, 'B', Blocks.LOG});
         if(ZeiyoConfig.isKeyEnabled)GameRegistry.addRecipe(new ItemStack(ZeiyoItems.key), new Object[]{" EP", " EP", " P ", 'P', Items.GOLD_INGOT, 'E', Items.GOLD_NUGGET});
         GameRegistry.addRecipe(new ItemStack(Items.SADDLE), new Object[]{"PPP", "# #", "F F", 'F', Items.IRON_INGOT, 'P', Items.LEATHER, '#', Items.STRING});
+        GameRegistry.addRecipe(new ItemStack(Items.NAME_TAG), new Object[]{"PPP", "# #", "F F", 'F', Items.IRON_INGOT, 'P', Items.LEATHER});
+        GameRegistry.addShapelessRecipe(new ItemStack(Items.NAME_TAG), Items.LEATHER, Items.STRING);
 
         if(ZeiyoConfig.areWarAxesEnabled)
         {
