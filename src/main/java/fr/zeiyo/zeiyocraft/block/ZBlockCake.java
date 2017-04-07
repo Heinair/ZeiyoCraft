@@ -9,7 +9,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.stats.StatList;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -36,22 +38,47 @@ public class ZBlockCake extends BlockCake
         this(unlocalizedName, food, saturation, null);
     }
 
-    private void eatCake(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
-        if (player.canEat(false)) {
-            player.getFoodStats().addStats(foodPoints, saturationPoints);
+    @Override
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing heldItem, float side, float hitX, float hitY)
+    {
+        if (!worldIn.isRemote)
+        {
+            return this.eatCake(worldIn, pos, state, playerIn);
+        }
+        else
+        {
+            ItemStack itemstack = playerIn.getHeldItem(hand);
+            return this.eatCake(worldIn, pos, state, playerIn) || itemstack.func_190926_b();
+        }
+    }
 
+    private boolean eatCake(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player)
+    {
+        if (!player.canEat(false))
+        {
+            return false;
+        }
+        else
+        {
+            player.addStat(StatList.CAKE_SLICES_EATEN);
+            player.getFoodStats().addStats(foodPoints, saturationPoints);
             if(potionEffect!=null)
             {
                 player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 350, 1, false, false));
                 player.addPotionEffect(potionEffect);
             }
-            int i = ((Integer) state.getValue(BITES)).intValue();
+            int i = ((Integer)state.getValue(BITES)).intValue();
 
-            if (i < 6) {
+            if (i < 6)
+            {
                 worldIn.setBlockState(pos, state.withProperty(BITES, Integer.valueOf(i + 1)), 3);
-            } else {
+            }
+            else
+            {
                 worldIn.setBlockToAir(pos);
             }
+
+            return true;
         }
     }
 

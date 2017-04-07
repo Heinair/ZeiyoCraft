@@ -49,18 +49,18 @@ public class ZeiyoBlocks {
 
         // Compressed Blocks
 
-        steelBlock = new ZBlock("steelBlock", Material.IRON, 5.0F, 10.0F, SoundType.METAL, 2);
-        copperBlock = new ZBlock("copperBlock", Material.IRON, 5.0F, 10.0F, SoundType.METAL, 2);
-        tinBlock = new ZBlock("tinBlock", Material.IRON, 5.0F, 10.0F, SoundType.METAL, 2);
-        bronzeBlock = new ZBlock("bronzeBlock", Material.IRON, 5.0F, 10.0F, SoundType.METAL, 2);
-        silverBlock = new ZBlock("silverBlock", Material.IRON, 5.0F, 10.0F, SoundType.METAL, 2);
-        electrumBlock = new ZBlock("electrumBlock", Material.IRON, 5.0F, 10.0F, SoundType.METAL, 2);
-        onyxBlock = new ZBlock("onyxBlock", Material.IRON, 5.0F, 10.0F, SoundType.METAL, 2);
-        rubyBlock = new ZBlock("rubyBlock", Material.IRON, 5.0F, 10.0F, SoundType.METAL, 2);
-        sapphireBlock = new ZBlock("sapphireBlock", Material.IRON, 5.0F, 10.0F, SoundType.METAL, 2);
-        jadeBlock = new ZBlock("jadeBlock", Material.IRON, 5.0F, 10.0F, SoundType.METAL, 2);
-        nacreBlock = new ZBlock("nacreBlock", Material.IRON, 5.0F, 10.0F, SoundType.METAL, 2);
-        amethystBlock = new ZBlock("amethystBlock", Material.IRON, 5.0F, 10.0F, SoundType.METAL, 2);
+        steelBlock = new ZBlock("steelBlock");
+        copperBlock = new ZBlock("copperBlock");
+        tinBlock = new ZBlock("tinBlock");
+        bronzeBlock = new ZBlock("bronzeBlock");
+        silverBlock = new ZBlock("silverBlock");
+        electrumBlock = new ZBlock("electrumBlock");
+        onyxBlock = new ZBlock("onyxBlock");
+        rubyBlock = new ZBlock("rubyBlock");
+        sapphireBlock = new ZBlock("sapphireBlock");
+        jadeBlock = new ZBlock("jadeBlock");
+        nacreBlock = new ZBlock("nacreBlock");
+        amethystBlock = new ZBlock("amethystBlock");
 
     }
 

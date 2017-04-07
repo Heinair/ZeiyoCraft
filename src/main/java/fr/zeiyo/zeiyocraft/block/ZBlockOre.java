@@ -35,22 +35,11 @@ public class ZBlockOre extends BlockOre {
 
     }
 
-    public ZBlockOre(String unlocalizedName) {
-        this(unlocalizedName, 1, null);
-
-    }
-
     @Override
     public Item getItemDropped(IBlockState blockstate, Random random, int fortune) {
         return this.drop;
     }
 
-    /*
-    @Override
-    public int quantityDropped(IBlockState blockstate, int fortune, Random random) {
-        return this.minDropped + random.nextInt(this.maxDropped - this.minDropped + fortune + 1);
-    }
-*/
     @Override
     public int getExpDrop(IBlockState state, net.minecraft.world.IBlockAccess world, BlockPos pos, int fortune)
     {

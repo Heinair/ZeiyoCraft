@@ -51,7 +51,9 @@ public class ZeiyoCrafting {
         if(ZeiyoConfig.isKeyEnabled)GameRegistry.addRecipe(new ItemStack(ZeiyoItems.key), new Object[]{" EP", " EP", " P ", 'P', Items.GOLD_INGOT, 'E', Items.GOLD_NUGGET});
         GameRegistry.addRecipe(new ItemStack(Items.SADDLE), new Object[]{"PPP", "# #", "F F", 'F', Items.IRON_INGOT, 'P', Items.LEATHER, '#', Items.STRING});
         GameRegistry.addRecipe(new ItemStack(Items.NAME_TAG), new Object[]{"PPP", "# #", "F F", 'F', Items.IRON_INGOT, 'P', Items.LEATHER});
+
         GameRegistry.addShapelessRecipe(new ItemStack(Items.NAME_TAG), Items.LEATHER, Items.STRING);
+        GameRegistry.addShapelessRecipe(new ItemStack(Items.ROTTEN_FLESH, 9), ZeiyoBlocks.rottenFleshBlock);
 
         if(ZeiyoConfig.areWarAxesEnabled)
         {
