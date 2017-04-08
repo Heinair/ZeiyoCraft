@@ -54,7 +54,7 @@ public class ZeiyoWorldGen implements IWorldGenerator {
             case 0: // Overworld
 
                 if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(2) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(17) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(35) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(36) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(37) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(38) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(39)) {
-                    this.runGenerator(this.gen_ruby, world, random, chunkX, chunkZ, 3, 2, 11);
+                    this.runGenerator(this.gen_ruby, world, random, chunkX, chunkZ, 2, 2, 11);
                 }
 
                 if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(0) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(24)) {
@@ -62,11 +62,11 @@ public class ZeiyoWorldGen implements IWorldGenerator {
                 }
                 
                 if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(5) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(19) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(12) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(13) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(30) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(31)) {
-                    this.runGenerator(this.gen_sapphire, world, random, chunkX, chunkZ, 3, 2, 14);
+                    this.runGenerator(this.gen_sapphire, world, random, chunkX, chunkZ, 2, 2, 14);
                 }
                 
                 if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(6) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(21) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(22) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(23) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(29)) {
-                    this.runGenerator(this.gen_jade, world, random, chunkX, chunkZ, 3, 2, 14);
+                    this.runGenerator(this.gen_jade, world, random, chunkX, chunkZ, 2, 2, 14);
                 }                              
 
                 this.runGenerator(this.gen_copper, world, random, chunkX, chunkZ, 27, 0, 72);
@@ -77,7 +77,7 @@ public class ZeiyoWorldGen implements IWorldGenerator {
 
             case 1: // End
             	
-            	this.runGenerator(this.gen_amethyst, world, random, chunkX, chunkZ, 2, 0, 100);
+            	this.runGenerator(this.gen_amethyst, world, random, chunkX, chunkZ, 3, 0, 100);
 
                 break;
 

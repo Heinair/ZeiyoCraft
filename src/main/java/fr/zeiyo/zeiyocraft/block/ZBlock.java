@@ -9,8 +9,8 @@ import net.minecraft.creativetab.CreativeTabs;
 public class ZBlock extends Block
 
 {
-	
-	public ZBlock(String unlocalizedName, Material material, float hardness, float resistance, SoundType soundType,String tool ,int harvestLevel) {
+
+    public ZBlock(String unlocalizedName, Material material, float hardness, float resistance, SoundType soundType,String tool ,int harvestLevel) {
         super(material);
         this.setUnlocalizedName(unlocalizedName);
         this.setRegistryName(ZeiyoMain.MODID + ":" + unlocalizedName);

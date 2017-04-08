@@ -49,18 +49,18 @@ public class ZeiyoBlocks {
 
         // Compressed Blocks
 
-        steelBlock = new ZBlock("steelBlock");
-        copperBlock = new ZBlock("copperBlock");
-        tinBlock = new ZBlock("tinBlock");
-        bronzeBlock = new ZBlock("bronzeBlock");
-        silverBlock = new ZBlock("silverBlock");
-        electrumBlock = new ZBlock("electrumBlock");
-        onyxBlock = new ZBlock("onyxBlock");
-        rubyBlock = new ZBlock("rubyBlock");
-        sapphireBlock = new ZBlock("sapphireBlock");
-        jadeBlock = new ZBlock("jadeBlock");
-        nacreBlock = new ZBlock("nacreBlock");
-        amethystBlock = new ZBlock("amethystBlock");
+        steelBlock = new ZBlockCompressedOre("steelBlock");
+        copperBlock = new ZBlockCompressedOre("copperBlock");
+        tinBlock = new ZBlockCompressedOre("tinBlock");
+        bronzeBlock = new ZBlockCompressedOre("bronzeBlock");
+        silverBlock = new ZBlockCompressedOre("silverBlock");
+        electrumBlock = new ZBlockCompressedOre("electrumBlock");
+        onyxBlock = new ZBlockCompressedOre("onyxBlock");
+        rubyBlock = new ZBlockCompressedOre("rubyBlock");
+        sapphireBlock = new ZBlockCompressedOre("sapphireBlock");
+        jadeBlock = new ZBlockCompressedOre("jadeBlock");
+        nacreBlock = new ZBlockCompressedOre("nacreBlock");
+        amethystBlock = new ZBlockCompressedOre("amethystBlock");
 
     }
 
