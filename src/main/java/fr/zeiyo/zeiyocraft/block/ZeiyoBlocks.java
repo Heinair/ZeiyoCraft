@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ZeiyoBlocks {
 
     public static Block blockChocolateCake, blockWeirdCake;
-    public static Block barleyCrops, grapeCrops, hempCrops;
+    public static Block barleyCrops, grapeCrops, hempCrops, chiliPepperCrops;
     public static Block chair, rottenFleshBlock;
     public static Block amethystOre, jadeOre, nacreOre, onyxOre, rubyOre, sapphireOre, copperOre, tinOre, silverOre;
     public static Block onyxBlock, steelBlock, rubyBlock, sapphireBlock, copperBlock, tinBlock,  bronzeBlock, silverBlock, electrumBlock, jadeBlock, nacreBlock, amethystBlock;
@@ -29,7 +29,8 @@ public class ZeiyoBlocks {
         barleyCrops = new ZBlockCrops("barleyCrops", 0);
         grapeCrops = new ZBlockCrops("grapeCrops", 1);
         hempCrops = new ZBlockCrops("hempCrops", 2);
-        
+        chiliPepperCrops = new ZBlockCrops("chiliPepperCrops", 3);
+
         // Miscellaneous
         
         chair = new ZBlockSittable("chair", Material.WOOD);
@@ -72,6 +73,7 @@ public class ZeiyoBlocks {
         {
             registerBlock(blockChocolateCake);
             registerBlock(blockWeirdCake);
+            registerBlock(chiliPepperCrops);
         }
 
         if(ZeiyoConfig.isAlcoholEnabled)

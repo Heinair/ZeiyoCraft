@@ -154,7 +154,7 @@ item.amethystBoots.name=Bottes en améthyste
 tile.amethystOre.name=Minerai d'améthyste
 
 item.vodkaExtract.name=Extrait de vodka
-item.malt.name=Graine de malt
+item.malt.name=Graines de malt
 tile.barleyCrops.name=Orge
 item.barleySeeds.name=Graines d'orge
 item.barley.name=Orge
@@ -174,5 +174,7 @@ item.silverCoin.name=Pièce en argent
 item.goldCoin.name=Pièce en or
 item.key.name=Clé
 tile.chair.name=Chaise
+tile.rottenFleshBlock.name=Bloc de chair putréfiée
 item.pipe.name=Pipe
 item.hempPipe.name=Chanvre en pipe
+item.chiliPepper.name=Piment

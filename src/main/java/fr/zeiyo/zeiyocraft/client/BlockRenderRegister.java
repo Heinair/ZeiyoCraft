@@ -32,6 +32,7 @@ public class BlockRenderRegister
         {
             reg(ZeiyoBlocks.blockChocolateCake);
             reg(ZeiyoBlocks.blockWeirdCake);
+            reg(ZeiyoBlocks.chiliPepperCrops);
         }
 
         // Miscellaneous

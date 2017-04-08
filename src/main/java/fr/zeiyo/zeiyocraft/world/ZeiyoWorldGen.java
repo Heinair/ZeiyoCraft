@@ -11,6 +11,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
+import org.lwjgl.Sys;
 
 import java.util.Random;
 
@@ -53,20 +54,21 @@ public class ZeiyoWorldGen implements IWorldGenerator {
 
             case 0: // Overworld
 
-                if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(2) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(17) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(35) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(36) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(37) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(38) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(39)) {
-                    this.runGenerator(this.gen_ruby, world, random, chunkX, chunkZ, 2, 2, 11);
+                if (world.getBiome(forBiome).getRainfall() < 0.05F) {
+                    System.out.println("BANG BANG");
+                    this.runGenerator(this.gen_ruby, world, random, chunkX, chunkZ, 2, 0, 13);
                 }
 
-                if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(0) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(24)) {
+                if (world.getBiome(forBiome) == Biome.getBiome(0) || world.getBiome(forBiome) == Biome.getBiome(24) || world.getBiome(forBiome) == Biome.getBiome(10)) {
                     this.runGenerator(this.gen_nacre, world, random, chunkX, chunkZ, 4, 0, 46);
                 }
                 
-                if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(5) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(19) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(12) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(13) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(30) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(31)) {
-                    this.runGenerator(this.gen_sapphire, world, random, chunkX, chunkZ, 2, 2, 14);
+                if (world.getBiome(forBiome).isSnowyBiome()) {
+                    this.runGenerator(this.gen_sapphire, world, random, chunkX, chunkZ, 2, 0, 14);
                 }
                 
-                if (world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(6) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(21) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(22) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(23) || world.provider.getBiomeForCoords(forBiome) == Biome.getBiome(29)) {
-                    this.runGenerator(this.gen_jade, world, random, chunkX, chunkZ, 2, 2, 14);
+                if (world.getBiome(forBiome) == Biome.getBiome(6) || world.getBiome(forBiome) == Biome.getBiome(21) || world.getBiome(forBiome) == Biome.getBiome(21) || world.getBiome(forBiome) == Biome.getBiome(23) || world.getBiome(forBiome) == Biome.getBiome(29)) {
+                    this.runGenerator(this.gen_jade, world, random, chunkX, chunkZ,2, 0,14);
                 }                              
 
                 this.runGenerator(this.gen_copper, world, random, chunkX, chunkZ, 27, 0, 72);

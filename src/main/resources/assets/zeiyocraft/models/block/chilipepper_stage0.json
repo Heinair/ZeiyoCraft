@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "zeiyocraft:blocks/chilipepper_stage_0"
+    }
+}

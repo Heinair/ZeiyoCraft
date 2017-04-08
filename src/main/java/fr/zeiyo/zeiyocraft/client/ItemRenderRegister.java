@@ -2,6 +2,7 @@ package fr.zeiyo.zeiyocraft.client;
 
 import fr.zeiyo.zeiyocraft.ZeiyoConfig;
 import fr.zeiyo.zeiyocraft.ZeiyoMain;
+import fr.zeiyo.zeiyocraft.block.ZeiyoBlocks;
 import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -21,7 +22,6 @@ public class ItemRenderRegister
 
         if(ZeiyoConfig.isNewFoodEnabled)
         {
-
             reg(ZeiyoItems.chocolateCake);
             reg(ZeiyoItems.weirdCake);
             reg(ZeiyoItems.hardboiledEgg);
@@ -30,7 +30,7 @@ public class ItemRenderRegister
             reg(ZeiyoItems.vodkaExtract);
             reg(ZeiyoItems.puriFlesh);
             reg(ZeiyoItems.cheese);
-
+            reg(ZeiyoItems.chiliPepper);
         }
 
         // Alcohols

@@ -21,7 +21,7 @@ public final class ZeiyoItems
 
     public static Item chocolateCake, weirdCake;
     public static Item hardboiledEgg, applePie, puriFlesh, vegetableStew, vodkaExtract, cheese;
-    public static Item barleySeeds, barley, malt, grapeSeeds, grape, hempSeeds, hemp;
+    public static Item barleySeeds, barley, malt, grapeSeeds, grape, hempSeeds, hemp, chiliPepper;
     public static Item tankard, beerTankard, wineTankard, ciderTankard, vodkaTankard;
     public static Item pipe, hempPipe;
 
@@ -106,6 +106,7 @@ public final class ZeiyoItems
         malt = new ZItem("malt").setCreativeTab(CreativeTabs.MATERIALS);
         barleySeeds = new ZItemSeeds("barleySeeds", ZeiyoBlocks.barleyCrops, Blocks.FARMLAND);
         barley = new ZItem("barley").setCreativeTab(CreativeTabs.MATERIALS);
+        chiliPepper = new ZItemSeedFood("chiliPepper", 3, 0.1F, ZeiyoBlocks.chiliPepperCrops, Blocks.FARMLAND);
         grapeSeeds = new ZItemSeeds("grapeSeeds", ZeiyoBlocks.grapeCrops, Blocks.FARMLAND);
         grape = new ZItemFood("grape", 4, 0.3F, false);
         hempSeeds = new ZItemSeeds("hempSeeds", ZeiyoBlocks.hempCrops, Blocks.FARMLAND);
@@ -275,6 +276,7 @@ public final class ZeiyoItems
             registerItem(puriFlesh);
             registerItem(vegetableStew);
             registerItem(cheese);
+            registerItem(chiliPepper);
 
         }
 
