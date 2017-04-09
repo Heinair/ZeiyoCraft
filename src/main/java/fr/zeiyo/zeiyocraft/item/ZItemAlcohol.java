@@ -8,7 +8,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumAction;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -22,14 +21,10 @@ import net.minecraft.world.World;
 
 public class ZItemAlcohol extends ItemFood
 {
-    /** The amount this food item heals the player. */
     private final int healAmount;
     private final float saturationModifier;
-    /** If this field is true, the food can be consumed even if the player don't need to eat. */
     private boolean alwaysEdible;
-    /** represents the potion effect that will occurr upon eating this food. Set by setPotionEffect */
     private Potion potionId;
-    /** probably of the set potion effect occurring */
     private float potionEffectProbability;
 
     private int effectDuration, effectAmplifier;
@@ -47,15 +42,10 @@ public class ZItemAlcohol extends ItemFood
         this.potionId = potion;
         this.effectAmplifier = amplifier;
         this.effectDuration = duration;
-        this.setMaxStackSize(1);
+        this.setMaxStackSize(16);
     }
 
-    /**
-     * Called when the player finishes using this Item (E.g. finishes eating.). Not called when the player stops using
-     * the Item before the action is complete.
-     */
-
-    public ItemStack onItemUseFinish1(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
+    public ItemStack onItemUseEnd(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
     {
         stack.func_190918_g(1);
 
@@ -75,16 +65,13 @@ public class ZItemAlcohol extends ItemFood
     @Override
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
     {
-        if (!worldIn.isRemote && this.potionId != null && worldIn.rand.nextFloat() < this.potionEffectProbability)
+        if (!worldIn.isRemote)
         {
             player.addPotionEffect(new PotionEffect(this.potionId));
             player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 300, 0, false, false));
         }
     }
 
-    /**
-     * returns the action that specifies what animation to play when the items is being used
-     */
     @Override
     public EnumAction getItemUseAction(ItemStack stack)
     {
@@ -110,7 +97,7 @@ public class ZItemAlcohol extends ItemFood
     @Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
     {
-        this.onItemUseFinish1(stack, worldIn, entityLiving);
+        this.onItemUseEnd(stack, worldIn, entityLiving);
         return new ItemStack(ZeiyoItems.tankard);
     }
 

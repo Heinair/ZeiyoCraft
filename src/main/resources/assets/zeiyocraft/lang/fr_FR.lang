@@ -178,3 +178,5 @@ tile.rottenFleshBlock.name=Bloc de chair putréfiée
 item.pipe.name=Pipe
 item.hempPipe.name=Chanvre en pipe
 item.chiliPepper.name=Piment
+item.tomato.name=Tomate
+item.tomatoSeeds.name=Graines de tomate

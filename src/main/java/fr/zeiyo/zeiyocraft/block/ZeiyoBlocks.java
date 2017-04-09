@@ -1,12 +1,10 @@
 package fr.zeiyo.zeiyocraft.block;
 
 import fr.zeiyo.zeiyocraft.ZeiyoConfig;
-import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.audio.Sound;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.potion.PotionEffect;
@@ -15,7 +13,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ZeiyoBlocks {
 
     public static Block blockChocolateCake, blockWeirdCake;
-    public static Block barleyCrops, grapeCrops, hempCrops, chiliPepperCrops;
+    public static Block barleyCrops, grapeCrops, hempCrops, chiliPepperCrops, tomatoCrops;
     public static Block chair, rottenFleshBlock;
     public static Block amethystOre, jadeOre, nacreOre, onyxOre, rubyOre, sapphireOre, copperOre, tinOre, silverOre;
     public static Block onyxBlock, steelBlock, rubyBlock, sapphireBlock, copperBlock, tinBlock,  bronzeBlock, silverBlock, electrumBlock, jadeBlock, nacreBlock, amethystBlock;
@@ -26,10 +24,12 @@ public class ZeiyoBlocks {
 
         blockChocolateCake = new ZBlockCake("blockChocolateCake", 4, 0.5F);
         blockWeirdCake = new ZBlockCake("blockWeirdCake", 2, 0.2F, new PotionEffect(MobEffects.REGENERATION, 350, 1, false, false));
-        barleyCrops = new ZBlockCrops("barleyCrops", 0);
-        grapeCrops = new ZBlockCrops("grapeCrops", 1);
-        hempCrops = new ZBlockCrops("hempCrops", 2);
-        chiliPepperCrops = new ZBlockCrops("chiliPepperCrops", 3);
+        barleyCrops = new ZBlockCrops("barleyCrops", 0, "vanilla");
+        grapeCrops = new ZBlockCrops("grapeCrops", 1, "harvestable");
+        hempCrops = new ZBlockCrops("hempCrops", 2, "harvestable");
+        chiliPepperCrops = new ZBlockCrops("chiliPepperCrops", 3, "harvestable");
+        tomatoCrops = new ZBlockCrops("tomatoCrops", 4, "harvestable");
+
 
         // Miscellaneous
         
@@ -74,6 +74,7 @@ public class ZeiyoBlocks {
             registerBlock(blockChocolateCake);
             registerBlock(blockWeirdCake);
             registerBlock(chiliPepperCrops);
+            registerBlock(tomatoCrops);
         }
 
         if(ZeiyoConfig.isAlcoholEnabled)

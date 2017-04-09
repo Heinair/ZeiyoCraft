@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "zeiyocraft:tomatoCrops_stage0" },
+        "age=1": { "model": "zeiyocraft:tomatoCrops_stage1" },
+        "age=2": { "model": "zeiyocraft:tomatoCrops_stage2" },
+        "age=3": { "model": "zeiyocraft:tomatoCrops_stage2" },
+        "age=4": { "model": "zeiyocraft:tomatoCrops_stage3" },
+        "age=5": { "model": "zeiyocraft:tomatoCrops_stage4" },
+        "age=6": { "model": "zeiyocraft:tomatoCrops_stage4" },
+        "age=7": { "model": "zeiyocraft:tomatoCrops_stage5" }
+    }
+}

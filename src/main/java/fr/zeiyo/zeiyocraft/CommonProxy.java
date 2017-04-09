@@ -1,6 +1,5 @@
 package fr.zeiyo.zeiyocraft;
 
-import fr.zeiyo.zeiyocraft.achievement.ZAchievement;
 import fr.zeiyo.zeiyocraft.block.ZeiyoBlocks;
 import fr.zeiyo.zeiyocraft.crafting.ZeiyoCrafting;
 import fr.zeiyo.zeiyocraft.entity.ZEntitySittable;
@@ -36,6 +35,7 @@ public class CommonProxy {
         ZeiyoCrafting.createCrafts();
         MinecraftForge.addGrassSeed(new ItemStack(ZeiyoItems.grapeSeeds), 2);
         MinecraftForge.addGrassSeed(new ItemStack(ZeiyoItems.hempSeeds), 1);
+        MinecraftForge.addGrassSeed(new ItemStack(ZeiyoItems.hempSeeds), 4);
         if(ZeiyoConfig.isKeyEnabled)MinecraftForge.EVENT_BUS.register(new ZKeyEvent());
         EntityRegistry.registerModEntity(new ResourceLocation(ZeiyoMain.MODID + ":" + "chair") , ZEntitySittable.class, "Chair", 4200, ZeiyoMain.instance, 80, 1, false);
 

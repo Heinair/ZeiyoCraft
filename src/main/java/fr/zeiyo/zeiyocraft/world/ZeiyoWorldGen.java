@@ -11,7 +11,6 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
-import org.lwjgl.Sys;
 
 import java.util.Random;
 
@@ -55,7 +54,6 @@ public class ZeiyoWorldGen implements IWorldGenerator {
             case 0: // Overworld
 
                 if (world.getBiome(forBiome).getRainfall() < 0.05F) {
-                    System.out.println("BANG BANG");
                     this.runGenerator(this.gen_ruby, world, random, chunkX, chunkZ, 2, 0, 13);
                 }
 

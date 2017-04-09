@@ -1,7 +1,6 @@
 package fr.zeiyo.zeiyocraft.item;
 
 import fr.zeiyo.zeiyocraft.ZeiyoConfig;
-import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.block.ZeiyoBlocks;
 import fr.zeiyo.zeiyocraft.material.ZArmorMaterial;
 import fr.zeiyo.zeiyocraft.material.ZToolMaterial;
@@ -10,7 +9,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
-import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public final class ZeiyoItems
@@ -21,7 +19,7 @@ public final class ZeiyoItems
 
     public static Item chocolateCake, weirdCake;
     public static Item hardboiledEgg, applePie, puriFlesh, vegetableStew, vodkaExtract, cheese;
-    public static Item barleySeeds, barley, malt, grapeSeeds, grape, hempSeeds, hemp, chiliPepper;
+    public static Item barleySeeds, barley, malt, grapeSeeds, grape, hempSeeds, hemp, chiliPepper, tomato, tomatoSeeds;
     public static Item tankard, beerTankard, wineTankard, ciderTankard, vodkaTankard;
     public static Item pipe, hempPipe;
 
@@ -29,6 +27,7 @@ public final class ZeiyoItems
 
     public static Item copperCoin, silverCoin, goldCoin;
     public static Item key;
+    public static Item turtleEgg;
 
     // Vanilla
 
@@ -106,6 +105,8 @@ public final class ZeiyoItems
         malt = new ZItem("malt").setCreativeTab(CreativeTabs.MATERIALS);
         barleySeeds = new ZItemSeeds("barleySeeds", ZeiyoBlocks.barleyCrops, Blocks.FARMLAND);
         barley = new ZItem("barley").setCreativeTab(CreativeTabs.MATERIALS);
+        tomatoSeeds = new ZItemSeeds("tomatoSeeds", ZeiyoBlocks.tomatoCrops, Blocks.FARMLAND);
+        tomato = new ZItem("tomato").setCreativeTab(CreativeTabs.FOOD);
         chiliPepper = new ZItemSeedFood("chiliPepper", 3, 0.1F, ZeiyoBlocks.chiliPepperCrops, Blocks.FARMLAND);
         grapeSeeds = new ZItemSeeds("grapeSeeds", ZeiyoBlocks.grapeCrops, Blocks.FARMLAND);
         grape = new ZItemFood("grape", 4, 0.3F, false);
@@ -126,6 +127,7 @@ public final class ZeiyoItems
         silverCoin = new ZItem("silverCoin").setCreativeTab(CreativeTabs.SEARCH);
         goldCoin = new ZItem("goldCoin").setCreativeTab(CreativeTabs.SEARCH);
         key = new ZItem("key").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
+        turtleEgg = new ZItemMonsterPlacer("turtleEgg");
 
         // Vanilla
 
@@ -268,7 +270,6 @@ public final class ZeiyoItems
 
         if(ZeiyoConfig.isNewFoodEnabled)
         {
-
             registerItem(chocolateCake);
             registerItem(weirdCake);
             registerItem(hardboiledEgg);
@@ -277,7 +278,8 @@ public final class ZeiyoItems
             registerItem(vegetableStew);
             registerItem(cheese);
             registerItem(chiliPepper);
-
+            registerItem(tomato);
+            registerItem(tomatoSeeds);
         }
 
         // Alcohols
@@ -317,6 +319,7 @@ public final class ZeiyoItems
 
         // Miscellaneous
 
+        registerItem(turtleEgg);
         registerItem(copperCoin);
         registerItem(silverCoin);
         registerItem(goldCoin);

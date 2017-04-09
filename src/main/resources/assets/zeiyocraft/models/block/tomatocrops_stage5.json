@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "zeiyocraft:blocks/tomatocrops_stage_5"
+    }
+}
