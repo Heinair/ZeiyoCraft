@@ -47,7 +47,7 @@ public class ZeiyoWorldGen implements IWorldGenerator {
 
             case -1: // Nether
 
-                this.runGenerator(this.gen_onyx, world, random, chunkX, chunkZ, 5, 0, 80);
+                this.runGenerator(this.gen_onyx, world, random, chunkX, chunkZ, 4, 0, 80);
 
                 break;
 
@@ -58,7 +58,7 @@ public class ZeiyoWorldGen implements IWorldGenerator {
                 }
 
                 if (world.getBiome(forBiome) == Biome.getBiome(0) || world.getBiome(forBiome) == Biome.getBiome(24) || world.getBiome(forBiome) == Biome.getBiome(10)) {
-                    this.runGenerator(this.gen_nacre, world, random, chunkX, chunkZ, 4, 0, 46);
+                    this.runGenerator(this.gen_nacre, world, random, chunkX, chunkZ, 3, 0, 46);
                 }
                 
                 if (world.getBiome(forBiome).isSnowyBiome()) {

@@ -42,12 +42,11 @@ public class ZItemAlcohol extends ItemFood
         this.potionId = potion;
         this.effectAmplifier = amplifier;
         this.effectDuration = duration;
-        this.setMaxStackSize(16);
+        this.setMaxStackSize(1);
     }
 
     public ItemStack onItemUseEnd(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
     {
-        stack.func_190918_g(1);
 
         if (entityLiving instanceof EntityPlayer)
         {
@@ -58,6 +57,7 @@ public class ZItemAlcohol extends ItemFood
             entityplayer.addStat(StatList.getObjectUseStats(this));
         }
 
+        stack.func_190918_g(1);
         return stack;
     }
 
@@ -67,8 +67,8 @@ public class ZItemAlcohol extends ItemFood
     {
         if (!worldIn.isRemote)
         {
-            player.addPotionEffect(new PotionEffect(this.potionId));
-            player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 300, 0, false, false));
+            player.addPotionEffect(new PotionEffect(potionId, effectDuration, effectAmplifier, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, effectDuration, effectAmplifier, false, false));
         }
     }
 

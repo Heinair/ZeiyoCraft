@@ -9,6 +9,7 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class ZeiyoBlocks {
 
@@ -104,6 +105,18 @@ public class ZeiyoBlocks {
             registerBlock(bronzeBlock);
             registerBlock(silverBlock);
             registerBlock(electrumBlock);
+
+            OreDictionary.registerOre("oreCopper", copperOre);
+            OreDictionary.registerOre("oreTin", tinOre);
+            OreDictionary.registerOre("oreSilver", silverOre);
+
+            OreDictionary.registerOre("blockSteel", steelBlock);
+            OreDictionary.registerOre("blockCopper", copperBlock);
+            OreDictionary.registerOre("blockTin", tinBlock);
+            OreDictionary.registerOre("blockBronze", bronzeBlock);
+            OreDictionary.registerOre("blockSilver", silverBlock);
+            OreDictionary.registerOre("blockElectrum", electrumBlock);
+
         }
 
         // New Ores Related Blocks
@@ -124,6 +137,24 @@ public class ZeiyoBlocks {
             registerBlock(jadeBlock);
             registerBlock(amethystBlock);
             registerBlock(nacreBlock);
+
+            OreDictionary.registerOre("oreOnyx", onyxOre);
+            OreDictionary.registerOre("blockOnyx", onyxBlock);
+
+            OreDictionary.registerOre("oreRuby", rubyOre);
+            OreDictionary.registerOre("blockRuby", rubyBlock);
+
+            OreDictionary.registerOre("oreSapphire", sapphireOre);
+            OreDictionary.registerOre("blockSapphire", sapphireBlock);
+
+            OreDictionary.registerOre("oreJade", jadeOre);
+            OreDictionary.registerOre("blockJade", jadeBlock);
+
+            OreDictionary.registerOre("oreAmethyst", amethystOre);
+            OreDictionary.registerOre("blockAmethyst", amethystBlock);
+
+            OreDictionary.registerOre("oreNacre", nacreOre);
+            OreDictionary.registerOre("blockNacre", nacreBlock);
 
         }
         

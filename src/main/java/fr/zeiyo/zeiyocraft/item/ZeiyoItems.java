@@ -10,6 +10,7 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 public final class ZeiyoItems
 
@@ -109,7 +110,7 @@ public final class ZeiyoItems
         tomato = new ZItem("tomato").setCreativeTab(CreativeTabs.FOOD);
         chiliPepper = new ZItemSeedFood("chiliPepper", 3, 0.1F, ZeiyoBlocks.chiliPepperCrops, Blocks.FARMLAND);
         grapeSeeds = new ZItemSeeds("grapeSeeds", ZeiyoBlocks.grapeCrops, Blocks.FARMLAND);
-        grape = new ZItemFood("grape", 4, 0.3F, false);
+        grape = new ZItemFood("grape", 4, 0.2F, false);
         hempSeeds = new ZItemSeeds("hempSeeds", ZeiyoBlocks.hempCrops, Blocks.FARMLAND);
         hemp = new ZItem("hemp").setCreativeTab(CreativeTabs.MATERIALS);
         tankard = new ZItem("tankard").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(16);
@@ -319,7 +320,7 @@ public final class ZeiyoItems
 
         // Miscellaneous
 
-        registerItem(turtleEgg);
+        //registerItem(turtleEgg);
         registerItem(copperCoin);
         registerItem(silverCoin);
         registerItem(goldCoin);
@@ -345,6 +346,7 @@ public final class ZeiyoItems
             // Steel
 
             registerItem(steelIngot);
+            OreDictionary.registerOre("ingotSteel", steelIngot);
             registerItem(steelPickaxe);
             registerItem(steelAxe);
             registerItem(steelSpade);
@@ -359,8 +361,11 @@ public final class ZeiyoItems
             // Bronze-related Items
 
             registerItem(copperIngot);
+            OreDictionary.registerOre("ingotCopper", copperIngot);
             registerItem(tinIngot);
+            OreDictionary.registerOre("ingotTin", tinIngot);
             registerItem(bronzeIngot);
+            OreDictionary.registerOre("ingotBronze", bronzeIngot);
             registerItem(bronzePickaxe);
             registerItem(bronzeAxe);
             registerItem(bronzeSpade);
@@ -375,7 +380,9 @@ public final class ZeiyoItems
             // Electrum-related Items
 
             registerItem(silverIngot);
+            OreDictionary.registerOre("ingotSilver", silverIngot);
             registerItem(electrumIngot);
+            OreDictionary.registerOre("ingotElectrum", electrumIngot);
             registerItem(electrumPickaxe);
             registerItem(electrumAxe);
             registerItem(electrumSpade);
@@ -478,11 +485,17 @@ public final class ZeiyoItems
     {
 
         registerItem(onyx = new ZItem("onyx").setCreativeTab(CreativeTabs.MATERIALS));
+        OreDictionary.registerOre("gemOnyx", onyx);
         registerItem(ruby = new ZItem("ruby").setCreativeTab(CreativeTabs.MATERIALS));
+        OreDictionary.registerOre("gemRuby", ruby);
         registerItem(sapphire = new ZItem("sapphire").setCreativeTab(CreativeTabs.MATERIALS));
+        OreDictionary.registerOre("gemSapphire", sapphire);
         registerItem(jade = new ZItem("jade").setCreativeTab(CreativeTabs.MATERIALS));
+        OreDictionary.registerOre("gemJade", jade);
         registerItem(nacre = new ZItem("nacre").setCreativeTab(CreativeTabs.MATERIALS));
+        OreDictionary.registerOre("gemNacre", nacre);
         registerItem(amethyst = new ZItem("amethyst").setCreativeTab(CreativeTabs.MATERIALS));
+        OreDictionary.registerOre("gemAmethyst", amethyst);
 
     }
     

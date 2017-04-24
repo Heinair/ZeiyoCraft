@@ -34,19 +34,17 @@ public class ZItemDrug extends Item
         this.setMaxStackSize(16);
     }
 
-    public ItemStack onItemUseEnd(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
-    {
-        stack.func_190918_g(1);
+    public ItemStack onItemUseEnd(ItemStack stack, World worldIn, EntityLivingBase entityLiving) {
 
-        if (entityLiving instanceof EntityPlayer)
-        {
-            EntityPlayer entityplayer = (EntityPlayer)entityLiving;
+        if (entityLiving instanceof EntityPlayer) {
+            EntityPlayer entityplayer = (EntityPlayer) entityLiving;
             entityplayer.getFoodStats().addStats(healAmount, saturationModifier);
-            worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
+            worldIn.playSound((EntityPlayer) null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
             this.onFoodEaten(stack, worldIn, entityplayer);
             entityplayer.addStat(StatList.getObjectUseStats(this));
         }
 
+        stack.func_190918_g(1);
         return stack;
     }
 
@@ -90,12 +88,21 @@ public class ZItemDrug extends Item
         return EnumAction.NONE;
     }
 
+
     @Override
     public ActionResult<ItemStack> onItemRightClick(World itemStackIn, EntityPlayer worldIn, EnumHand playerIn)
     {
         ItemStack itemstack = worldIn.getHeldItem(playerIn);
-        worldIn.setActiveHand(playerIn);
-        return new ActionResult(EnumActionResult.SUCCESS, itemstack);
+
+        if (worldIn.canEat(true))
+        {
+            worldIn.setActiveHand(playerIn);
+            return new ActionResult(EnumActionResult.SUCCESS, itemstack);
+        }
+        else
+        {
+            return new ActionResult(EnumActionResult.FAIL, itemstack);
+        }
     }
 
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)

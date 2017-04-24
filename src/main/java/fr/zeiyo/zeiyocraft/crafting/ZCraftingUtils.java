@@ -6,8 +6,19 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class ZCraftingUtils {
+
+
+
+    public static String getOreDictionnaryName(Item item)
+    {
+        String oreDictName;
+        oreDictName = ZeiyoItems.onyx == item ? "gemOnyx" : ZeiyoItems.ruby == item ? "gemRuby" : ZeiyoItems.sapphire == item ? "gemSapphire" : ZeiyoItems.jade == item ? "gemJade" : ZeiyoItems.nacre == item ? "gemNacre" : "gemAmethyst";
+
+        return oreDictName;
+    }
 
     public static void oreCompressedCraft(Item item, Block block, Block ore, float exp) {
 
