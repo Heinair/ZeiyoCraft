@@ -85,7 +85,7 @@ public class ZBlockCrops extends BlockCrops implements IGrowable
                     ItemStack itemstack = new ItemStack(this.getCrop(), ( (int)(Math.random() * 4+1) ));
                     EntityItem entityitem = new EntityItem(worldIn, (double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), itemstack);
                     entityitem.setDefaultPickupDelay();
-                    worldIn.spawnEntityInWorld(entityitem);
+                    worldIn.spawnEntity(entityitem);
 
                     return true;
                 }

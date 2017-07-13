@@ -27,13 +27,14 @@ public class ZItemAxe extends ItemTool {
         this.id = nmb;
     }
 
-    @Override
-    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-        return ZCraftingUtils.getRepairItem(id) == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
-    }
 
     public float getStrVsBlock(ItemStack stack, IBlockState state) {
         return state.getMaterial() != Material.WOOD && state.getMaterial() != Material.PLANTS && state.getMaterial() != Material.VINE ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
+    }
+
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return ZCraftingUtils.getRepairItem(id) == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
     }
 
 }

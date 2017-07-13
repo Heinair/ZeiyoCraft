@@ -2,13 +2,13 @@
 {
   "modid": "zeiyocraft",
   "name": "ZeiyoCraft",
-  "description": "Zeiyo's minecraft mod.",
+  "description": "Various additions",
   "version": "${version}",
-  "mcversion": "1.10.2",
+  "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["Heinair","Mawadinger","MyZoom"],
-  "credits": "Forge",
+  "authorList": ["Heinair"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

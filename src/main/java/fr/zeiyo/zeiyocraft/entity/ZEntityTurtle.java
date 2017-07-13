@@ -1,4 +1,4 @@
-package fr.zeiyo.zeiyocraft.entity;
+/*package fr.zeiyo.zeiyocraft.entity;
 
 import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.Block;
@@ -77,9 +77,6 @@ public class ZEntityTurtle extends EntityAnimal
         this.playSound(SoundEvents.ENTITY_COW_STEP, 0.15F, 1.0F);
     }
 
-    /**
-     * Returns the volume for the sounds this mob makes.
-     */
     protected float getSoundVolume()
     {
         return 0.4F;
@@ -91,3 +88,4 @@ public class ZEntityTurtle extends EntityAnimal
         return LootTableList.ENTITIES_SHULKER;
     }
 }
+*/

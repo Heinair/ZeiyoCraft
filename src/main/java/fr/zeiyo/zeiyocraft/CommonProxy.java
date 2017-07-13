@@ -24,24 +24,18 @@ public class CommonProxy {
         ZeiyoItems.initItems();
         ZeiyoBlocks.registerBlocks();
         ZeiyoItems.registerItems();
-       //ZAchievement.initAchievement();
-       //ZAchievement.registerAchievements();
 
     }
 
     public void init(FMLInitializationEvent e) {
 
         GameRegistry.registerWorldGenerator(new ZeiyoWorldGen(), 0);
-        ZeiyoCrafting.createCrafts();
+        ZeiyoCrafting.registerCrafting();
         MinecraftForge.addGrassSeed(new ItemStack(ZeiyoItems.grapeSeeds), 2);
         MinecraftForge.addGrassSeed(new ItemStack(ZeiyoItems.hempSeeds), 1);
         MinecraftForge.addGrassSeed(new ItemStack(ZeiyoItems.hempSeeds), 4);
         if(ZeiyoConfig.isKeyEnabled)MinecraftForge.EVENT_BUS.register(new ZKeyEvent());
         EntityRegistry.registerModEntity(new ResourceLocation(ZeiyoMain.MODID + ":" + "chair") , ZEntitySittable.class, "Chair", 4200, ZeiyoMain.instance, 80, 1, false);
-
-        //MinecraftForge.addGrassSeed(new ItemStack(ZeiyoItems.barleySeeds), 5);
-        //ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(new WeightedRandomChestContent(new ItemStack(ZeiyoItems.grapeSeeds), 3, 9, 55));
-        //ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(ZeiyoItems.grapeSeeds), 3, 9, 55));
 
     }
 

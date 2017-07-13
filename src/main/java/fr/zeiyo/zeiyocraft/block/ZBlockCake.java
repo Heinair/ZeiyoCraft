@@ -48,7 +48,7 @@ public class ZBlockCake extends BlockCake
         else
         {
             ItemStack itemstack = playerIn.getHeldItem(hand);
-            return this.eatCake(worldIn, pos, state, playerIn) || itemstack.func_190926_b();
+            return this.eatCake(worldIn, pos, state, playerIn) || itemstack.isEmpty();
         }
     }
 

@@ -1,4 +1,6 @@
 {
-    "parent": "zeiyocraft:block/chair"
-    
+    "parent":"zeiyocraft:item/standard_item",
+    "textures": {
+        "layer0":"zeiyocraft:items/itemchair"
+    }
 }

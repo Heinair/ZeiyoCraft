@@ -12,6 +12,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -66,44 +67,22 @@ public class ZBlockSittable extends Block {
 
         return false;
     }
-    /*
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public boolean addHitEffects(IBlockState state, World worldObj, RayTraceResult target, net.minecraft.client.particle.ParticleManager manager) {
-        return true;
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public boolean addDestroyEffects(World world, BlockPos pos, net.minecraft.client.particle.ParticleManager manager) {
-        return true;
-    }
     
-    */
     @Override
     public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
         return null;
-    } 
-    
+    }
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
         return SITTABLE_AABB;
     }
-   
-   /* @Override
-    public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB p_185477_4_, List<AxisAlignedBB> p_185477_5_, Entity p_185477_6_) {
-        addCollisionBoxToList(pos, this.SITTABLE_AABB, p_185477_5_, state.getSelectedBoundingBox(worldIn, pos));
-           }
-   
-*/
-    @Override
-    public IBlockState onBlockPlaced(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
-        IBlockState state = super.onBlockPlaced(world, pos, facing, hitX, hitY, hitZ, meta, placer);
-        state = state.withProperty(FACING, placer.getHorizontalFacing());
-        return state;
+
+    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack)
+    {
+        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing()), 2);
     }
+
 
     @Override
     public int getMetaFromState(IBlockState state) {
@@ -126,11 +105,11 @@ public class ZBlockSittable extends Block {
     }
 
 
-    public static boolean sitOnBlock(World par1World, double x, double y, double z, EntityPlayer par5EntityPlayer, double par6) {
-        if (!checkForExistingEntity(par1World, x, y, z, par5EntityPlayer)) {
-            ZEntitySittable nemb = new ZEntitySittable(par1World, x, y, z, par6);
-            par1World.spawnEntityInWorld(nemb);
-            par5EntityPlayer.startRiding(nemb);
+    public static boolean sitOnBlock(World world, double x, double y, double z, EntityPlayer player, double par6) {
+        if (!checkForExistingEntity(world, x, y, z, player)) {
+            ZEntitySittable nemb = new ZEntitySittable(world, x, y, z, par6);
+            world.spawnEntity(nemb);
+            player.startRiding(nemb);
         }
 
         return true;

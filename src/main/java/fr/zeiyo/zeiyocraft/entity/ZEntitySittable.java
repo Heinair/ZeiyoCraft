@@ -1,9 +1,20 @@
 package fr.zeiyo.zeiyocraft.entity;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.MoverType;
+import net.minecraft.entity.item.EntityBoat;
+import net.minecraft.entity.passive.EntityWaterMob;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.play.client.CPacketSteerBoat;
+import net.minecraft.util.EntitySelectors;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class ZEntitySittable extends Entity {
     public int blockPosX;
@@ -63,10 +74,10 @@ public class ZEntitySittable extends Entity {
 
     @Override
     public void onEntityUpdate() {
-        if (!this.worldObj.isRemote) {
-            if (this.isBeingRidden() == false | this.worldObj.isAirBlock(new BlockPos(blockPosX, blockPosY, blockPosZ))) {
+        if (!this.world.isRemote) {
+            if (this.isBeingRidden() == false | this.world.isAirBlock(new BlockPos(blockPosX, blockPosY, blockPosZ))) {
                 this.setDead();
-                worldObj.updateComparatorOutputLevel(getPosition(), worldObj.getBlockState(getPosition()).getBlock());
+                world.updateComparatorOutputLevel(getPosition(), world.getBlockState(getPosition()).getBlock());
             }
         }
     }

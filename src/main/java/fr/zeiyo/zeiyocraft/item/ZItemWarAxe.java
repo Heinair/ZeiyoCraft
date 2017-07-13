@@ -35,27 +35,19 @@ public class ZItemWarAxe extends ItemTool {
         this(unlocalizedName, material, -1);
     }
 
-    /*
-    @Override
-    public Set<String> getToolClasses(ItemStack stack)
-    {
-        return ImmutableSet.of("axe", "sword");
-    }
-	*/
-
     @Override
     public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
         stack.damageItem(1, attacker);
         return true;
     }
 
+    public float getStrVsBlock(ItemStack stack, IBlockState state) {
+        return state.getMaterial() != Material.WOOD && state.getMaterial() != Material.PLANTS && state.getMaterial() != Material.VINE ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
+    }
+
     @Override
     public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
         return ZCraftingUtils.getRepairItem(id) == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
-    }
-
-    public float getStrVsBlock(ItemStack stack, IBlockState state) {
-        return state.getMaterial() != Material.WOOD && state.getMaterial() != Material.PLANTS && state.getMaterial() != Material.VINE ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
     }
 
 }

@@ -10,6 +10,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class ZBlockOre extends BlockOre {
 
@@ -46,20 +47,22 @@ public class ZBlockOre extends BlockOre {
             int i = 0;
 
             if (this == ZeiyoBlocks.rubyOre) {
-                i = MathHelper.getRandomIntegerInRange(rand, 5, 9);
-            } else if (this == ZeiyoBlocks.sapphireOre) {
-                i = MathHelper.getRandomIntegerInRange(rand, 5, 9);
-            } else if (this == ZeiyoBlocks.onyxOre) {
-                i = MathHelper.getRandomIntegerInRange(rand, 5, 9);
+                i = ThreadLocalRandom.current().nextInt(5, 10);
+            }
+            else if (this == ZeiyoBlocks.sapphireOre) {
+                i = ThreadLocalRandom.current().nextInt(5, 10);
+            }
+            else if (this == ZeiyoBlocks.onyxOre) {
+                i = ThreadLocalRandom.current().nextInt(5, 10);
             }
               else if (this == ZeiyoBlocks.amethystOre) {
-                i = MathHelper.getRandomIntegerInRange(rand, 5, 9);
+                i = ThreadLocalRandom.current().nextInt(5, 10);
             }
               else if (this == ZeiyoBlocks.nacreOre) {
-                i = MathHelper.getRandomIntegerInRange(rand, 5, 9);
+                i = ThreadLocalRandom.current().nextInt(5, 10);
             }
               else if (this == ZeiyoBlocks.jadeOre) {
-                i = MathHelper.getRandomIntegerInRange(rand, 5, 9);
+                i = ThreadLocalRandom.current().nextInt(5, 10);
             }
 
             return i;

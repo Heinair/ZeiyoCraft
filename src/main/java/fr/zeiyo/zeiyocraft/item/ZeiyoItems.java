@@ -9,6 +9,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -500,7 +501,7 @@ public final class ZeiyoItems
     }
     
     private static void registerItem(Item item) {
-        GameRegistry.register(item);
+        ForgeRegistries.ITEMS.register(item);
     }
 
 }

@@ -6,8 +6,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.MobEffects;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.potion.PotionEffect;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -162,8 +164,10 @@ public class ZeiyoBlocks {
 
     private static void registerBlock(Block block) {
 
-        GameRegistry.register(block);
-        GameRegistry.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
+        ForgeRegistries.BLOCKS.register(block);
+        Item itemBlock = new ItemBlock(block);
+        itemBlock.setRegistryName(block.getRegistryName());
+        ForgeRegistries.ITEMS.register(itemBlock);
         }
 
 }

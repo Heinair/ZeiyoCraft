@@ -59,7 +59,7 @@ public class ZItemArmor extends ItemArmor
 
 	private void effectPlayer(EntityPlayer player, Potion potion, int amplifier, int duration)
 	{
-		if(!player.worldObj.isRemote)
+		if(!player.world.isRemote)
 		{
 			if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 1)
 				player.addPotionEffect(new PotionEffect(potion , duration, amplifier, false, false));
@@ -68,7 +68,7 @@ public class ZItemArmor extends ItemArmor
 
 	private boolean isWearingFullSet(EntityPlayer player, ItemStack helmet, ItemStack chestplate, ItemStack leggings, ItemStack boots)
 	{
-		if(player.worldObj.isRemote) return false;
+		if(player.world.isRemote) return false;
 
 		for(ItemStack is : player.getArmorInventoryList())
 		{
@@ -89,4 +89,5 @@ public class ZItemArmor extends ItemArmor
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
 		return ZCraftingUtils.getRepairItem(id) == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
 	}
+
 }

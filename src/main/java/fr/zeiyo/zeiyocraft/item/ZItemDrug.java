@@ -2,9 +2,11 @@ package fr.zeiyo.zeiyocraft.item;
 
 
 import fr.zeiyo.zeiyocraft.ZeiyoMain;
+import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumAction;
@@ -42,9 +44,14 @@ public class ZItemDrug extends Item
             worldIn.playSound((EntityPlayer) null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
             this.onFoodEaten(stack, worldIn, entityplayer);
             entityplayer.addStat(StatList.getObjectUseStats(this));
+
+            if (entityplayer instanceof EntityPlayerMP)
+            {
+                CriteriaTriggers.CONSUME_ITEM.trigger((EntityPlayerMP)entityplayer, stack);
+            }
         }
 
-        stack.func_190918_g(1);
+        stack.shrink(1);
         return stack;
     }
 

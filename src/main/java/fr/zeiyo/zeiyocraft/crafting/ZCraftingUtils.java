@@ -5,12 +5,33 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class ZCraftingUtils {
 
+    public static void registerToolCrafting(Item axe, Item hoe, Item pickaxe, Item spade, Item sword, Item warAxe, Item item) {
+        GameRegistry.addShapedRecipe(new ResourceLocation("" + axe.getRegistryName()), new ResourceLocation("zeiyocraft:weaponsandtools"), new ItemStack(axe), new Object[]{"II ", "IS ", " S ", 'S', Items.STICK, 'I', item});
+        GameRegistry.addShapedRecipe(new ResourceLocation("" + hoe.getRegistryName()), new ResourceLocation("zeiyocraft:weaponsandtools"), new ItemStack(hoe), new Object[]{"II ", " S ", " S ", 'S', Items.STICK, 'I', item});
+        GameRegistry.addShapedRecipe(new ResourceLocation("" + pickaxe.getRegistryName()), new ResourceLocation("zeiyocraft:weaponsandtools"), new ItemStack(pickaxe), new Object[]{"III", " S ", " S ", 'S', Items.STICK, 'I', item});
+        GameRegistry.addShapedRecipe(new ResourceLocation("" + spade.getRegistryName()), new ResourceLocation("zeiyocraft:weaponsandtools"), new ItemStack(spade), new Object[]{" I ", " S ", " S ", 'S', Items.STICK, 'I', item});
+        GameRegistry.addShapedRecipe(new ResourceLocation("" + sword.getRegistryName()), new ResourceLocation("zeiyocraft:weaponsandtools"), new ItemStack(sword), new Object[]{" I ", " I ", " S ", 'S', Items.STICK, 'I', item});
+        registerWarAxeCrafting(item, warAxe);
+    }
 
+    public static void registerWarAxeCrafting(Item item, Item warAxe) {
+        GameRegistry.addShapedRecipe(new ResourceLocation("" + warAxe.getRegistryName()), new ResourceLocation("zeiyocraft:weaponsandtools"), new ItemStack(warAxe), new Object[]{"III", "ISI", " S ", 'S', Items.STICK, 'I', item});
+    }
+
+    public static void registerArmorCrafting(Item helmet, Item chestplate, Item leggings, Item boots, Item item) {
+        GameRegistry.addShapedRecipe(new ResourceLocation("" + helmet.getRegistryName()), new ResourceLocation("zeiyocraft:armors"), new ItemStack(helmet), new Object[]{"III", "I I", "   ", 'I', item});
+        GameRegistry.addShapedRecipe(new ResourceLocation("" + chestplate.getRegistryName()), new ResourceLocation("zeiyocraft:armors"), new ItemStack(chestplate), new Object[]{"I I", "III", "III", 'I', item});
+        GameRegistry.addShapedRecipe(new ResourceLocation("" + leggings.getRegistryName()), new ResourceLocation("zeiyocraft:armors"), new ItemStack(leggings), new Object[]{"III", "I I", "I I", 'I', item});
+        GameRegistry.addShapedRecipe(new ResourceLocation("" + boots.getRegistryName()), new ResourceLocation("zeiyocraft:armors"), new ItemStack(boots), new Object[]{"I I", "I I", "   ", 'I', item});
+    }
 
     public static String getOreDictionnaryName(Item item)
     {
@@ -25,9 +46,8 @@ public class ZCraftingUtils {
         if (ore != null)
             GameRegistry.addSmelting(ore, new ItemStack(item), exp);
 
-        GameRegistry.addRecipe(new ItemStack(block), new Object[]{"###", "###", "###", '#', item});
-        GameRegistry.addShapelessRecipe(new ItemStack(item, 9), new Object[]{block});
-
+        GameRegistry.addShapedRecipe(new ResourceLocation("" + block.getRegistryName()), new ResourceLocation("zeiyocraft:blocks"), new ItemStack(block), new Object[]{"III", "III", "III",'I', item});
+        GameRegistry.addShapelessRecipe(new ResourceLocation("" + item.getRegistryName()), new ResourceLocation("zeiyocraft:items"), new ItemStack(item, 9), Ingredient.fromStacks(new ItemStack(block)));
     }
 
     public static void compressedCraft(Item item, Block block) {
@@ -35,55 +55,6 @@ public class ZCraftingUtils {
         oreCompressedCraft(item, block, null, 0.0F);
 
     }
-
-    public static void armorCraft(Item item, Item armorHelmet, Item armorChestplate, Item armorLeggings, Item armorBoots) {
-
-        GameRegistry.addRecipe(new ItemStack(armorHelmet), new Object[]{"###", "# #", '#', item});
-        GameRegistry.addRecipe(new ItemStack(armorChestplate), new Object[]{"# #", "###", "###", '#', item});
-        GameRegistry.addRecipe(new ItemStack(armorLeggings), new Object[]{"###", "# #", "# #", '#', item});
-        GameRegistry.addRecipe(new ItemStack(armorBoots), new Object[]{"# #", "# #", '#', item});
-
-    }
-
-    public static void toolsCraft(Item item, Item pickaxe, Item axe, Item spade, Item hoe, Item sword, Item warAxe) {
-
-        pickaxeCraft(item, pickaxe);
-        axeCraft(item, axe);
-        spadeCraft(item, spade);
-        hoeCraft(item, hoe);
-        swordCraft(item, sword);
-        warAxeCraft(item, warAxe);
-
-    }
-
-    public static void pickaxeCraft(Item item, Item pickaxe) {
-        GameRegistry.addRecipe(new ItemStack(pickaxe), new Object[]{"###", " P ", " P ", 'P', Items.STICK, '#', item});
-    }
-
-    public static void axeCraft(Item item, Item axe) {
-        GameRegistry.addRecipe(new ItemStack(axe), new Object[]{"## ", "#P ", " P ", 'P', Items.STICK, '#', item});
-    }
-
-    public static void spadeCraft(Item item, Item spade) {
-        GameRegistry.addRecipe(new ItemStack(spade), new Object[]{" # ", " P ", " P ", 'P', Items.STICK, '#', item});
-    }
-
-    public static void hoeCraft(Item item, Item hoe) {
-        GameRegistry.addRecipe(new ItemStack(hoe), new Object[]{"## ", " P ", " P ", 'P', Items.STICK, '#', item});
-    }
-
-    public static void swordCraft(Item item, Item sword) {
-        GameRegistry.addRecipe(new ItemStack(sword), new Object[]{" # ", " # ", " P ", 'P', Items.STICK, '#', item});
-    }
-
-    public static void warAxeCraft(Item item, Item warAxe) {
-        GameRegistry.addRecipe(new ItemStack(warAxe), new Object[]{"###", "#P#", " P ", 'P', Items.STICK, '#', item});
-    }
-
-    public static void warAxeCraft(Block block, Item warAxe) {
-        GameRegistry.addRecipe(new ItemStack(warAxe), new Object[]{"###", "#P#", " P ", 'P', Items.STICK, '#', block});
-    }
-    
     public static Item getRepairItem(int id) {
 
         switch (id) {

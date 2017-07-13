@@ -21,7 +21,6 @@ public class ZItemSword extends ItemSword {
     public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
         return ZCraftingUtils.getRepairItem(id) == repair.getItem() ? true : super.getIsRepairable(toRepair, repair);
     }
-
 }
 
 

@@ -50,13 +50,13 @@ public class ZKeyEvent
                         {
                             tileEntityLockable.setLockCode(new LockCode(""));
                             world.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, SoundEvents.UI_BUTTON_CLICK, SoundCategory.BLOCKS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
-                            player.addChatComponentMessage(new TextComponentTranslation("text.key.successOnUnlock", new Object[0]), true);
+                            player.sendMessage(new TextComponentTranslation("text.key.successOnUnlock", new Object[0]));
 
                         }
 
                         else if(!tileEntityLockable.getLockCode().getLock().equals(current.getDisplayName())) {
                             world.playSound((EntityPlayer) null, player.posX, player.posY, player.posZ, SoundEvents.UI_BUTTON_CLICK, SoundCategory.BLOCKS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
-                            player.addChatComponentMessage(new TextComponentTranslation("text.key.errorOnKey", new Object[0]), true);
+                            player.sendMessage(new TextComponentTranslation("text.key.errorOnKey", new Object[0]));
                             event.setCanceled(true);
                         }
                     }
@@ -64,7 +64,7 @@ public class ZKeyEvent
                     else
                     {
                         world.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, SoundEvents.UI_BUTTON_CLICK, SoundCategory.BLOCKS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
-                    	player.addChatComponentMessage(new TextComponentTranslation("text.key.errorOnBlock", new Object[0]), true);
+                    	player.sendMessage(new TextComponentTranslation("text.key.errorOnBlock", new Object[0]));
                         event.setCanceled(true);
                     }
                 }
@@ -76,13 +76,13 @@ public class ZKeyEvent
                         {
                             tileEntityLockable.setLockCode(new LockCode(current.getDisplayName()));
                             world.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, SoundEvents.UI_BUTTON_CLICK, SoundCategory.BLOCKS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
-                            player.addChatComponentMessage(new TextComponentTranslation("text.key.successOnLock", new Object[0]), true);
+                            player.sendMessage(new TextComponentTranslation("text.key.successOnLock", new Object[0]));
 
                         }
                         else
                         {
                         	
-                            player.addChatComponentMessage(new TextComponentTranslation("text.key.errorOnKeyName", new Object[0]), true);
+                            player.sendMessage(new TextComponentTranslation("text.key.errorOnKeyName", new Object[0]));
                         }
                         event.setCanceled(true);
                     }
@@ -107,7 +107,7 @@ public class ZKeyEvent
             {
                 if(!hasRequiredKey(event.getPlayer(), tileEntityLockable))
                 {
-                    player.addChatComponentMessage(new TextComponentTranslation("text.key.errorOnDestroyBlock", new Object[0]), true);
+                    player.sendMessage(new TextComponentTranslation("text.key.errorOnDestroyBlock", new Object[0]));
 
                 	event.setCanceled(true);
                 }
