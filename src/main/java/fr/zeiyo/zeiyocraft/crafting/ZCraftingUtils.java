@@ -47,7 +47,7 @@ public class ZCraftingUtils {
             GameRegistry.addSmelting(ore, new ItemStack(item), exp);
 
         GameRegistry.addShapedRecipe(new ResourceLocation("" + block.getRegistryName()), new ResourceLocation("zeiyocraft:blocks"), new ItemStack(block), new Object[]{"III", "III", "III",'I', item});
-        GameRegistry.addShapelessRecipe(new ResourceLocation("" + item.getRegistryName()), new ResourceLocation("zeiyocraft:items"), new ItemStack(item, 9), Ingredient.fromStacks(new ItemStack(block)));
+        GameRegistry.addShapedRecipe(new ResourceLocation("" + item.getRegistryName()+ "fromBlock"), new ResourceLocation("zeiyocraft:items"), new ItemStack(item, 9), new Object[]{"I", 'I', block});
     }
 
     public static void compressedCraft(Item item, Block block) {

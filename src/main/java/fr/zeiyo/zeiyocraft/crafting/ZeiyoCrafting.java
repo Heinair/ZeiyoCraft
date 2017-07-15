@@ -1,6 +1,7 @@
 package fr.zeiyo.zeiyocraft.crafting;
 
 import fr.zeiyo.zeiyocraft.ZeiyoConfig;
+import fr.zeiyo.zeiyocraft.ZeiyoMain;
 import fr.zeiyo.zeiyocraft.block.ZeiyoBlocks;
 import fr.zeiyo.zeiyocraft.item.ZeiyoItems;
 import net.minecraft.block.Block;
@@ -62,10 +63,11 @@ public class ZeiyoCrafting {
         if(ZeiyoConfig.isKeyEnabled)GameRegistry.addShapedRecipe(new ResourceLocation("" + ZeiyoItems.key.getRegistryName()), new ResourceLocation("zeiyocraft:items"), new ItemStack(ZeiyoItems.key), new Object[]{" EP", " EP", " P ", 'P', Items.GOLD_INGOT, 'E', Items.GOLD_NUGGET});
 
         GameRegistry.addShapedRecipe(new ResourceLocation("" + ZeiyoBlocks.rottenFleshBlock.getRegistryName()), new ResourceLocation("zeiyocraft:blocks"), new ItemStack(ZeiyoBlocks.rottenFleshBlock), new Object[]{"XXX", "XXX", "XXX", 'X', Items.ROTTEN_FLESH});
-        GameRegistry.addShapedRecipe(new ResourceLocation("" + Blocks.WOOL.getRegistryName()), new ResourceLocation("zeiyocraft:blocks"), new ItemStack(Blocks.WOOL), new Object[]{"PP", "PP",'P', Items.STRING});
-        GameRegistry.addShapedRecipe(new ResourceLocation("" + Items.SADDLE.getRegistryName()), new ResourceLocation("zeiyocraft:items"), new ItemStack(Items.SADDLE), new Object[]{"PPP", "# #", "F F", 'F', Items.IRON_INGOT, 'P', Items.LEATHER, '#', Items.STRING});
-        GameRegistry.addShapelessRecipe(new ResourceLocation("" + Items.NAME_TAG.getRegistryName()), new ResourceLocation("zeiyocraft:items"), new ItemStack(Items.NAME_TAG), Ingredient.fromItems(Items.LEATHER, Items.STRING));
-        GameRegistry.addShapelessRecipe(new ResourceLocation("" + Items.ROTTEN_FLESH.getRegistryName()), new ResourceLocation("zeiyocraft:food"), new ItemStack(Items.ROTTEN_FLESH, 9), Ingredient.fromStacks(new ItemStack(ZeiyoBlocks.rottenFleshBlock)));
+
+        GameRegistry.addShapedRecipe(new ResourceLocation(ZeiyoMain.MODID + "" + Blocks.WOOL.getUnlocalizedName().substring(5)), new ResourceLocation("zeiyocraft:blocks"), new ItemStack(Blocks.WOOL), new Object[]{"PP", "PP",'P', Items.STRING});
+        GameRegistry.addShapedRecipe(new ResourceLocation(ZeiyoMain.MODID + "" + Items.SADDLE.getUnlocalizedName().substring(5)), new ResourceLocation("zeiyocraft:items"), new ItemStack(Items.SADDLE), new Object[]{"PPP", "# #", "F F", 'F', Items.IRON_INGOT, 'P', Items.LEATHER, '#', Items.STRING});
+        GameRegistry.addShapedRecipe(new ResourceLocation(ZeiyoMain.MODID + "" + Items.NAME_TAG.getUnlocalizedName().substring(5)), new ResourceLocation("zeiyocraft:items"), new ItemStack(Items.NAME_TAG), new Object[]{"P", "C", 'P', Items.LEATHER, 'C', Items.STRING});
+        GameRegistry.addShapedRecipe(new ResourceLocation(ZeiyoMain.MODID + "" + Items.ROTTEN_FLESH.getUnlocalizedName().substring(5)), new ResourceLocation("zeiyocraft:food"), new ItemStack(Items.ROTTEN_FLESH, 9), new Object[]{"P", 'P', ZeiyoBlocks.rottenFleshBlock});
 
 
         if(ZeiyoConfig.areNewOresEnabled)
@@ -100,9 +102,9 @@ public class ZeiyoCrafting {
         if(ZeiyoConfig.areAlloysEnabled)
         {
 
-            GameRegistry.addShapedRecipe(new ResourceLocation("" + ZeiyoItems.bronzeIngot.getRegistryName()), new ResourceLocation("zeiyocraft:items"), new ItemStack(ZeiyoItems.bronzeIngot), new Object[]{"II", "SI",  'S', ZeiyoItems.tinIngot, 'I', ZeiyoItems.copperIngot});
-            GameRegistry.addShapedRecipe(new ResourceLocation("" + ZeiyoItems.steelIngot.getRegistryName()), new ResourceLocation("zeiyocraft:items"), new ItemStack(ZeiyoItems.steelIngot), new Object[]{" I ", "ISI", " I ",  'S', Items.IRON_INGOT, 'I', Items.COAL});
-            GameRegistry.addShapedRecipe(new ResourceLocation("" + ZeiyoItems.electrumIngot.getRegistryName()), new ResourceLocation("zeiyocraft:items"), new ItemStack(ZeiyoItems.electrumIngot), new Object[]{"ISI",  'S', Items.GOLD_INGOT, 'I', ZeiyoItems.silverIngot});
+            GameRegistry.addShapedRecipe(new ResourceLocation("" + ZeiyoItems.bronzeIngot.getRegistryName()), new ResourceLocation("zeiyocraft:items"), new ItemStack(ZeiyoItems.bronzeIngot, 2), new Object[]{"XX ", "CX ", 'X', ZeiyoItems.copperIngot, 'C', ZeiyoItems.tinIngot});
+            GameRegistry.addShapedRecipe(new ResourceLocation("" + ZeiyoItems.steelIngot.getRegistryName()), new ResourceLocation("zeiyocraft:items"), new ItemStack(ZeiyoItems.steelIngot), new Object[]{" X ", "XSX", " X ", 'X', Items.COAL, 'S', Items.IRON_INGOT});
+            GameRegistry.addShapedRecipe(new ResourceLocation("" + ZeiyoItems.electrumIngot.getRegistryName()), new ResourceLocation("zeiyocraft:items"), new ItemStack(ZeiyoItems.electrumIngot, 2), new Object[]{"XSX", 'X', ZeiyoItems.silverIngot, 'S', Items.GOLD_INGOT});
 
             oreCompressedCraft(ZeiyoItems.copperIngot, ZeiyoBlocks.copperBlock, ZeiyoBlocks.copperOre, 0.5F);
             oreCompressedCraft(ZeiyoItems.tinIngot, ZeiyoBlocks.tinBlock, ZeiyoBlocks.tinOre, 0.7F);
